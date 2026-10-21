@@ -1,0 +1,88 @@
+{
+  "id": "FF_CallPanel",
+  "title": "Lift call panel",
+  "category": "Fixtures",
+  "parts": [
+    {
+      "name": "Backplate",
+      "center": [
+        0,
+        16,
+        -13
+      ],
+      "size": [
+        12,
+        22,
+        4
+      ],
+      "material": "steel",
+      "group": null
+    },
+    {
+      "name": "Face",
+      "center": [
+        0,
+        16,
+        -10
+      ],
+      "size": [
+        10,
+        18,
+        2
+      ],
+      "material": "yellow",
+      "group": null
+    },
+    {
+      "name": "UpButton",
+      "center": [
+        0,
+        20,
+        -8
+      ],
+      "size": [
+        4,
+        4,
+        2
+      ],
+      "material": "green",
+      "group": null
+    },
+    {
+      "name": "DownButton",
+      "center": [
+        0,
+        12,
+        -8
+      ],
+      "size": [
+        4,
+        4,
+        2
+      ],
+      "material": "red",
+      "group": null
+    },
+    {
+      "name": "Conduit",
+      "center": [
+        0,
+        4,
+        -14
+      ],
+      "size": [
+        3,
+        8,
+        3
+      ],
+      "material": "dark",
+      "group": null
+    }
+  ],
+  "description": "Wall control model with separate up/down buttons; reserved for a server lift controller.",
+  "cost": 3,
+  "quantity": 1,
+  "groups": {},
+  "motion": null,
+  "collision": null
+}

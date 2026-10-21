@@ -1,0 +1,31 @@
+{
+  "formatVersion": 1,
+  "duration": 48,
+  "holdLastKeyframe": true,
+  "nodeAnimations": {
+    "Door": {
+      "orientation": [
+        {
+          "time": 0,
+          "delta": {
+            "x": -0.0,
+            "y": -0.7372773368101241,
+            "z": -0.0,
+            "w": 0.6755902076156602
+          },
+          "interpolationType": "smooth"
+        },
+        {
+          "time": 48,
+          "delta": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 1.0
+          },
+          "interpolationType": "smooth"
+        }
+      ]
+    }
+  }
+}

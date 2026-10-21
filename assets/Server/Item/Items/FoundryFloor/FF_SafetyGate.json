@@ -1,0 +1,76 @@
+{
+  "TranslationProperties": {
+    "Name": "server.foundryFloor.FF_SafetyGate.name",
+    "Description": "server.foundryFloor.FF_SafetyGate.description"
+  },
+  "Icon": "Icons/Items/FF_SafetyGate.png",
+  "MaxStack": 64,
+  "Categories": [
+    "Furniture.Doors"
+  ],
+  "PlayerAnimationsId": "Block",
+  "Interactions": {
+    "Primary": "Block_Primary",
+    "Secondary": "Block_Secondary"
+  },
+  "BlockType": {
+    "Material": "Solid",
+    "DrawType": "Model",
+    "Opacity": "Transparent",
+    "CustomModel": "Blocks/FoundryFloor/FF_SafetyGate.blockymodel",
+    "CustomModelTexture": [
+      {
+        "Texture": "Blocks/FoundryFloor/FactoryAtlas.png",
+        "Weight": 1
+      }
+    ],
+    "VariantRotation": "NESW",
+    "HitboxType": "FF_SafetyGate",
+    "BlockSoundSetId": "FF_Metal",
+    "PhysicalMaterialId": "Metal",
+    "BlockParticleSetId": "Metal",
+    "ParticleColor": "#657578",
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "Benches"
+      }
+    },
+    "InteractionHint": "server.foundryFloor.toggle",
+    "Interactions": {
+      "Use": "FF_RuntimeUse"
+    },
+    "State": {
+      "Definitions": {
+        "Open": {
+          "HitboxType": "FF_SafetyGate_Open",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_SafetyGate_Open.blockyanim",
+          "SoundOcclusionOpacity": 0
+        },
+        "Closed": {
+          "HitboxType": "FF_SafetyGate",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_SafetyGate_Close.blockyanim"
+        }
+      }
+    }
+  },
+  "ItemSoundSetId": "FF_ISS_Metal",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Ingredient_Bar_Iron",
+        "Quantity": 5
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Id": "FoundryFloor",
+        "Categories": [
+          "Foundry_Mechanisms"
+        ]
+      }
+    ],
+    "TimeSeconds": 2,
+    "OutputQuantity": 1
+  }
+}

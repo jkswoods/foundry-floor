@@ -1,0 +1,118 @@
+{
+  "id": "FF_HazardFloor",
+  "title": "Safety edge floor",
+  "category": "Floors",
+  "parts": [
+    {
+      "name": "Foundation",
+      "center": [
+        0,
+        14,
+        0
+      ],
+      "size": [
+        32,
+        28,
+        32
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "Deck",
+      "center": [
+        0,
+        30,
+        0
+      ],
+      "size": [
+        32,
+        4,
+        32
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "SafetyStrip",
+      "center": [
+        0,
+        32.25,
+        12
+      ],
+      "size": [
+        32,
+        0.5,
+        8
+      ],
+      "material": "hazard",
+      "group": null
+    },
+    {
+      "name": "Bolt0",
+      "center": [
+        -12,
+        32.5,
+        -9
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "Bolt1",
+      "center": [
+        12,
+        32.5,
+        -9
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "Bolt2",
+      "center": [
+        -12,
+        32.5,
+        9
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "Bolt3",
+      "center": [
+        12,
+        32.5,
+        9
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "material": "edge",
+      "group": null
+    }
+  ],
+  "description": "A directional safety stripe marks loading bays and changes in level.",
+  "cost": 4,
+  "quantity": 4,
+  "groups": {},
+  "motion": null,
+  "collision": null
+}

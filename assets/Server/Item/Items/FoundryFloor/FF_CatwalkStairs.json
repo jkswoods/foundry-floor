@@ -1,0 +1,59 @@
+{
+  "TranslationProperties": {
+    "Name": "server.foundryFloor.FF_CatwalkStairs.name",
+    "Description": "server.foundryFloor.FF_CatwalkStairs.description"
+  },
+  "Icon": "Icons/Items/FF_CatwalkStairs.png",
+  "MaxStack": 64,
+  "Categories": [
+    "Furniture.Furniture"
+  ],
+  "PlayerAnimationsId": "Block",
+  "Interactions": {
+    "Primary": "Block_Primary",
+    "Secondary": "Block_Secondary"
+  },
+  "BlockType": {
+    "Material": "Solid",
+    "DrawType": "Model",
+    "Opacity": "Transparent",
+    "CustomModel": "Blocks/FoundryFloor/FF_CatwalkStairs.blockymodel",
+    "CustomModelTexture": [
+      {
+        "Texture": "Blocks/FoundryFloor/FactoryAtlas.png",
+        "Weight": 1
+      }
+    ],
+    "VariantRotation": "NESW",
+    "HitboxType": "FF_CatwalkStairs",
+    "BlockSoundSetId": "FF_Metal",
+    "PhysicalMaterialId": "Metal",
+    "BlockParticleSetId": "Metal",
+    "ParticleColor": "#657578",
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "Benches"
+      }
+    }
+  },
+  "ItemSoundSetId": "FF_ISS_Metal",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Ingredient_Bar_Iron",
+        "Quantity": 8
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Id": "FoundryFloor",
+        "Categories": [
+          "Foundry_Walkways"
+        ]
+      }
+    ],
+    "TimeSeconds": 2,
+    "OutputQuantity": 1
+  }
+}

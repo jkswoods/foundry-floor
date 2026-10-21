@@ -1,0 +1,107 @@
+{
+  "id": "FF_WallLamp",
+  "title": "Guarded factory lamp",
+  "category": "Fixtures",
+  "parts": [
+    {
+      "name": "LampBracket",
+      "center": [
+        0,
+        18,
+        -13
+      ],
+      "size": [
+        10,
+        18,
+        6
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "LampHousing",
+      "center": [
+        0,
+        20,
+        -7
+      ],
+      "size": [
+        18,
+        12,
+        8
+      ],
+      "material": "steel",
+      "group": null
+    },
+    {
+      "name": "Diffuser",
+      "center": [
+        0,
+        20,
+        -2
+      ],
+      "size": [
+        14,
+        8,
+        2
+      ],
+      "material": "light",
+      "group": null
+    },
+    {
+      "name": "Guard-6",
+      "center": [
+        -6,
+        20,
+        0
+      ],
+      "size": [
+        1,
+        10,
+        2
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "Guard0",
+      "center": [
+        0,
+        20,
+        0
+      ],
+      "size": [
+        1,
+        10,
+        2
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "Guard6",
+      "center": [
+        6,
+        20,
+        0
+      ],
+      "size": [
+        1,
+        10,
+        2
+      ],
+      "material": "dark",
+      "group": null
+    }
+  ],
+  "description": "Caged wall light with native light on/off states.",
+  "cost": 3,
+  "quantity": 2,
+  "groups": {},
+  "motion": {
+    "kind": "lamp",
+    "duration": 0.1,
+    "targets": {}
+  },
+  "collision": null
+}

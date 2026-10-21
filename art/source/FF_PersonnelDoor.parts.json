@@ -1,0 +1,152 @@
+{
+  "id": "FF_PersonnelDoor",
+  "title": "Factory personnel door",
+  "category": "Interactive",
+  "parts": [
+    {
+      "name": "DoorFrameL",
+      "center": [
+        -15,
+        32,
+        0
+      ],
+      "size": [
+        2,
+        64,
+        6
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "DoorFrameR",
+      "center": [
+        15,
+        32,
+        0
+      ],
+      "size": [
+        2,
+        64,
+        6
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "DoorLintel",
+      "center": [
+        0,
+        63,
+        0
+      ],
+      "size": [
+        28,
+        2,
+        6
+      ],
+      "material": "yellow",
+      "group": null
+    },
+    {
+      "name": "DoorPanel",
+      "center": [
+        0,
+        31,
+        0
+      ],
+      "size": [
+        28,
+        62,
+        3
+      ],
+      "material": "steel",
+      "group": "Door"
+    },
+    {
+      "name": "LowerKickPlate",
+      "center": [
+        0,
+        10,
+        2
+      ],
+      "size": [
+        26,
+        16,
+        1
+      ],
+      "material": "dark",
+      "group": "Door"
+    },
+    {
+      "name": "WindowRecess",
+      "center": [
+        0,
+        43,
+        2
+      ],
+      "size": [
+        18,
+        18,
+        1
+      ],
+      "material": "dark",
+      "group": "Door"
+    },
+    {
+      "name": "WiredWindow",
+      "center": [
+        0,
+        43,
+        3
+      ],
+      "size": [
+        14,
+        14,
+        1
+      ],
+      "material": "green",
+      "group": "Door"
+    },
+    {
+      "name": "DoorHandle",
+      "center": [
+        10,
+        28,
+        3
+      ],
+      "size": [
+        2,
+        7,
+        2
+      ],
+      "material": "yellow",
+      "group": "Door"
+    }
+  ],
+  "description": "A 1 \u00d7 2 steel door with inspection window and kick plate.",
+  "cost": 8,
+  "quantity": 1,
+  "groups": {
+    "Door": [
+      -14,
+      31,
+      0
+    ]
+  },
+  "motion": {
+    "kind": "hinge",
+    "duration": 0.8,
+    "targets": {
+      "Door": {
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle": -95
+      }
+    }
+  },
+  "collision": null
+}

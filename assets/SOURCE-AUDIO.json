@@ -1,0 +1,112 @@
+[
+  {
+    "cue": "shutter_travel",
+    "provider": "ElevenLabs",
+    "transport": "connected plugin",
+    "model": "eleven_text_to_sound_v2",
+    "prompt": "Close dry game sound effect of a heavy factory roller shutter travelling in its steel guide rails, low geared motor with soft slatted metal rattle, a restrained heavy latch at the end. Warm industrial",
+    "requested_settings": {
+      "duration_seconds": 2.5,
+      "loop": false
+    },
+    "actual_duration_seconds": 2.48,
+    "generation_id": "FCIbXPhmXMulufJLYQlY",
+    "original_sha256": "e1731ebb5cf9e034d3887468fe0cf3e667eebb20587a79cf21bfd2c7599bf564",
+    "runtime_file": "Common/Sounds/FoundryFloor/shutter_travel.ogg",
+    "runtime_sha256": "a631196dc2338155174d01eb6100c2e59589ecae034b53b44da8a22320755462",
+    "export_gain_db": -1.2217848094761403,
+    "human_listening": "pending"
+  },
+  {
+    "cue": "lift_travel",
+    "provider": "ElevenLabs",
+    "transport": "connected plugin",
+    "model": "eleven_text_to_sound_v2",
+    "prompt": "Seamlessly looping quiet freight elevator drive in a stylized industrial factory: deep soft electric gear motor, gentle cable pulley movement and subtle steel vibration at steady speed. Even sustained",
+    "requested_settings": {
+      "duration_seconds": 4,
+      "loop": true
+    },
+    "actual_duration_seconds": 4,
+    "generation_id": "Fm711UpBZXDT8N09CBTT",
+    "original_sha256": "a0b938e08430c247b6e8ae4ed52fa2d09ebf70ce0841b6b077f9e7ea43653aee",
+    "runtime_file": "Common/Sounds/FoundryFloor/lift_travel.ogg",
+    "runtime_sha256": "b869c5d325de5580403069105cc0ef4ba738bc052ba4365980f2fd275fbf56a1",
+    "export_gain_db": -1.76643391341178,
+    "human_listening": "pending"
+  },
+  {
+    "cue": "mechanical_latch",
+    "provider": "ElevenLabs",
+    "transport": "connected plugin",
+    "model": "eleven_text_to_sound_v2",
+    "prompt": "One compact factory safety gate latch operation: a soft steel hinge movement, one warm muted metallic clunk and a short spring latch click. Dry close perspective, restrained and satisfying for a game ",
+    "requested_settings": {
+      "duration_seconds": 0.8,
+      "loop": false
+    },
+    "actual_duration_seconds": 0.8,
+    "generation_id": "PvcBtQcSHOWDCyqr1tta",
+    "original_sha256": "d307f60cb5308b1059d651302088e66347d48fd816f84ca188b196c14f052234",
+    "runtime_file": "Common/Sounds/FoundryFloor/mechanical_latch.ogg",
+    "runtime_sha256": "069870256b5d6cdf4852e6b091031d95faf38af8c654737939532cb98c105f0d",
+    "export_gain_db": -6.405153681883464,
+    "human_listening": "pending"
+  },
+  {
+    "cue": "metal_handling",
+    "provider": "ElevenLabs",
+    "transport": "connected plugin",
+    "model": "eleven_text_to_sound_v2",
+    "prompt": "One small sturdy industrial steel construction part being seated into place, muted metal tap with a slight low bolted-frame resonance and a short scrape. Restrained quiet game crafting and placement f",
+    "requested_settings": {
+      "duration_seconds": 0.7,
+      "loop": false
+    },
+    "actual_duration_seconds": 0.6802494331065759,
+    "generation_id": "FIbCKTLLxghMzcyUp4ZK",
+    "original_sha256": "09d86cb9bf664baba4626a35af572a7e7f8e39c667127f61fb8c78c5c273ed04",
+    "runtime_file": "Common/Sounds/FoundryFloor/metal_handling.ogg",
+    "runtime_sha256": "7ebd92a21699bb4d12abe85f34a81e728c48524acaed803724d9089e755c7f0f",
+    "export_gain_db": -13.49502974306101,
+    "human_listening": "pending"
+  },
+  {
+    "cue": "bench_tools",
+    "provider": "ElevenLabs",
+    "transport": "connected plugin",
+    "model": "eleven_text_to_sound_v2",
+    "prompt": "One restrained warm factory workbench tool-and-latch sound: a short soft steel drawer slide, one muted ratchet turn and a compact heavy metal clack. Quiet satisfying game crafting bench feedback, clos",
+    "requested_settings": {
+      "duration_seconds": 1,
+      "prompt_influence": 0.45,
+      "loop": false
+    },
+    "actual_duration_seconds": 1,
+    "generation_id": "iuIYCNTaggBTTRngtUFG",
+    "original_sha256": "99d446e2ef58f941cfc49f17844eb1750588225d30832f4a1e1f79a69fc87137",
+    "runtime_file": "Common/Sounds/FoundryFloor/bench_tools.ogg",
+    "runtime_sha256": "8573b39880854efbd0f62af70bcd284219c0a19c4b41a72640c2de837f70e01d",
+    "export_gain_db": -12.139022535550733,
+    "human_listening": "pending"
+  },
+  {
+    "cue": "control_accept",
+    "provider": "ElevenLabs",
+    "transport": "connected plugin",
+    "model": "eleven_text_to_sound_v2",
+    "prompt": "One quiet industrial control accepted sound for a factory game: a soft spring-loaded steel button press, a low muted relay click, and a tiny warm mechanical latch settlement. Compact dry single action",
+    "requested_settings": {
+      "duration_seconds": 0.7,
+      "prompt_influence": 0.45,
+      "loop": false
+    },
+    "actual_duration_seconds": 0.6802494331065759,
+    "generation_id": "St17K77cJp7lQxVTDXVS",
+    "original_sha256": "6f23c751591eac182f9d58e11859d1460aa0c86fd938c2278ca1851d38bedf07",
+    "runtime_file": "Common/Sounds/FoundryFloor/control_accept.ogg",
+    "runtime_sha256": "f3c12eeacc739721111f4a9a1cbfba3cf900e627a08d324b3e02aae98204a5e5",
+    "export_gain_db": -7.102603969595368,
+    "human_listening": "pending"
+  }
+]

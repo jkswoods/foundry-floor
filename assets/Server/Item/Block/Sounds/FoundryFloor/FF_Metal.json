@@ -1,0 +1,7 @@
+{
+  "Parent": "Metal",
+  "SoundEvents": {
+    "Build": "FF_SFX_metal_handling",
+    "Break": "FF_SFX_metal_handling"
+  }
+}

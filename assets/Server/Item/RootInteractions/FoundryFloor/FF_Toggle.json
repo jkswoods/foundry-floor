@@ -1,0 +1,12 @@
+{
+  "Interactions": [
+    {
+      "Type": "ChangeState",
+      "Changes": {
+        "default": "Open",
+        "Closed": "Open",
+        "Open": "Closed"
+      }
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "id": "FF_SteelBeam",
+  "title": "I-section crossbeam",
+  "category": "Structure",
+  "parts": [
+    {
+      "name": "Web",
+      "center": [
+        0,
+        16,
+        0
+      ],
+      "size": [
+        4,
+        22,
+        32
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "TopFlange",
+      "center": [
+        0,
+        28,
+        0
+      ],
+      "size": [
+        20,
+        4,
+        32
+      ],
+      "material": "steel",
+      "group": null
+    },
+    {
+      "name": "BottomFlange",
+      "center": [
+        0,
+        4,
+        0
+      ],
+      "size": [
+        20,
+        4,
+        32
+      ],
+      "material": "steel",
+      "group": null
+    }
+  ],
+  "description": "A one-block beam module for overhead frames and gantries.",
+  "cost": 4,
+  "quantity": 2,
+  "groups": {},
+  "motion": null,
+  "collision": null
+}

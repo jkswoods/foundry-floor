@@ -1,0 +1,403 @@
+{
+  "id": "FF_FoundryBench",
+  "title": "Foundry Workbench",
+  "category": "Crafting",
+  "parts": [
+    {
+      "name": "BenchTop",
+      "center": [
+        0,
+        29,
+        0
+      ],
+      "size": [
+        56,
+        6,
+        28
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "FrontSafetyLip",
+      "center": [
+        0,
+        27,
+        14
+      ],
+      "size": [
+        56,
+        3,
+        2
+      ],
+      "material": "hazard",
+      "group": null
+    },
+    {
+      "name": "LowerShelf",
+      "center": [
+        0,
+        6,
+        0
+      ],
+      "size": [
+        50,
+        3,
+        24
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "BenchLeg-23-10",
+      "center": [
+        -23,
+        16,
+        -10
+      ],
+      "size": [
+        4,
+        26,
+        4
+      ],
+      "material": "steel",
+      "group": null
+    },
+    {
+      "name": "BenchFoot-23-10",
+      "center": [
+        -23,
+        2,
+        -10
+      ],
+      "size": [
+        7,
+        4,
+        7
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "BenchLeg-2310",
+      "center": [
+        -23,
+        16,
+        10
+      ],
+      "size": [
+        4,
+        26,
+        4
+      ],
+      "material": "steel",
+      "group": null
+    },
+    {
+      "name": "BenchFoot-2310",
+      "center": [
+        -23,
+        2,
+        10
+      ],
+      "size": [
+        7,
+        4,
+        7
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "BenchLeg23-10",
+      "center": [
+        23,
+        16,
+        -10
+      ],
+      "size": [
+        4,
+        26,
+        4
+      ],
+      "material": "steel",
+      "group": null
+    },
+    {
+      "name": "BenchFoot23-10",
+      "center": [
+        23,
+        2,
+        -10
+      ],
+      "size": [
+        7,
+        4,
+        7
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "BenchLeg2310",
+      "center": [
+        23,
+        16,
+        10
+      ],
+      "size": [
+        4,
+        26,
+        4
+      ],
+      "material": "steel",
+      "group": null
+    },
+    {
+      "name": "BenchFoot2310",
+      "center": [
+        23,
+        2,
+        10
+      ],
+      "size": [
+        7,
+        4,
+        7
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "DrawerBody",
+      "center": [
+        -10,
+        20,
+        0
+      ],
+      "size": [
+        26,
+        12,
+        22
+      ],
+      "material": "steel",
+      "group": null
+    },
+    {
+      "name": "DrawerFace",
+      "center": [
+        -10,
+        20,
+        12
+      ],
+      "size": [
+        24,
+        10,
+        2
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "DrawerHandle",
+      "center": [
+        -10,
+        22,
+        14
+      ],
+      "size": [
+        12,
+        2,
+        3
+      ],
+      "material": "yellow",
+      "group": null
+    },
+    {
+      "name": "ViceBase",
+      "center": [
+        17,
+        34,
+        0
+      ],
+      "size": [
+        12,
+        4,
+        14
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "ViceJawL",
+      "center": [
+        13,
+        39,
+        0
+      ],
+      "size": [
+        4,
+        8,
+        12
+      ],
+      "material": "steel",
+      "group": null
+    },
+    {
+      "name": "ViceJawR",
+      "center": [
+        21,
+        39,
+        0
+      ],
+      "size": [
+        4,
+        8,
+        12
+      ],
+      "material": "steel",
+      "group": null
+    },
+    {
+      "name": "ViceScrew",
+      "center": [
+        17,
+        36,
+        9
+      ],
+      "size": [
+        14,
+        3,
+        3
+      ],
+      "material": "copper",
+      "group": null
+    },
+    {
+      "name": "ToolBoard",
+      "center": [
+        0,
+        46,
+        -12
+      ],
+      "size": [
+        50,
+        26,
+        3
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "BoardTop",
+      "center": [
+        0,
+        59,
+        -12
+      ],
+      "size": [
+        54,
+        2,
+        4
+      ],
+      "material": "yellow",
+      "group": null
+    },
+    {
+      "name": "HangingTool0",
+      "center": [
+        -18,
+        47,
+        -9
+      ],
+      "size": [
+        3,
+        14,
+        2
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "ToolHead0",
+      "center": [
+        -18,
+        53,
+        -8
+      ],
+      "size": [
+        8,
+        3,
+        3
+      ],
+      "material": "copper",
+      "group": null
+    },
+    {
+      "name": "HangingTool1",
+      "center": [
+        -8,
+        47,
+        -9
+      ],
+      "size": [
+        3,
+        14,
+        2
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "ToolHead1",
+      "center": [
+        -8,
+        53,
+        -8
+      ],
+      "size": [
+        8,
+        3,
+        3
+      ],
+      "material": "copper",
+      "group": null
+    },
+    {
+      "name": "HangingTool2",
+      "center": [
+        2,
+        47,
+        -9
+      ],
+      "size": [
+        3,
+        14,
+        2
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "ToolHead2",
+      "center": [
+        2,
+        53,
+        -8
+      ],
+      "size": [
+        8,
+        3,
+        3
+      ],
+      "material": "copper",
+      "group": null
+    }
+  ],
+  "description": "Craft the factory block collection in dedicated Floors, Walkways, Structure, Fixtures and Mechanisms tabs.",
+  "cost": 8,
+  "quantity": 1,
+  "groups": {},
+  "motion": null,
+  "collision": null
+}

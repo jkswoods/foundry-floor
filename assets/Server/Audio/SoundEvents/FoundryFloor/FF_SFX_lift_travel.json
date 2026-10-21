@@ -1,0 +1,18 @@
+{
+  "Parent": "SFX_Attn_Quiet",
+  "AudioCategory": "AudioCat_Ambient",
+  "Volume": -3,
+  "MaxInstance": 3,
+  "StartAttenuationDistance": 1.5,
+  "MaxDistance": 10,
+  "SpatialBlend": 1,
+  "Layers": [
+    {
+      "Files": [
+        "Sounds/FoundryFloor/lift_travel.ogg"
+      ],
+      "Looping": true,
+      "Volume": 0
+    }
+  ]
+}

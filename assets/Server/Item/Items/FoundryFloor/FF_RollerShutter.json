@@ -1,0 +1,76 @@
+{
+  "TranslationProperties": {
+    "Name": "server.foundryFloor.FF_RollerShutter.name",
+    "Description": "server.foundryFloor.FF_RollerShutter.description"
+  },
+  "Icon": "Icons/Items/FF_RollerShutter.png",
+  "MaxStack": 16,
+  "Categories": [
+    "Furniture.Doors"
+  ],
+  "PlayerAnimationsId": "Block",
+  "Interactions": {
+    "Primary": "Block_Primary",
+    "Secondary": "Block_Secondary"
+  },
+  "BlockType": {
+    "Material": "Solid",
+    "DrawType": "Model",
+    "Opacity": "Transparent",
+    "CustomModel": "Blocks/FoundryFloor/FF_RollerShutter.blockymodel",
+    "CustomModelTexture": [
+      {
+        "Texture": "Blocks/FoundryFloor/FactoryAtlas.png",
+        "Weight": 1
+      }
+    ],
+    "VariantRotation": "NESW",
+    "HitboxType": "FF_RollerShutter",
+    "BlockSoundSetId": "FF_Metal",
+    "PhysicalMaterialId": "Metal",
+    "BlockParticleSetId": "Metal",
+    "ParticleColor": "#657578",
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "Benches"
+      }
+    },
+    "InteractionHint": "server.foundryFloor.toggle",
+    "Interactions": {
+      "Use": "FF_RuntimeUse"
+    },
+    "State": {
+      "Definitions": {
+        "Open": {
+          "HitboxType": "FF_RollerShutter_Open",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_RollerShutter_Open.blockyanim",
+          "SoundOcclusionOpacity": 0
+        },
+        "Closed": {
+          "HitboxType": "FF_RollerShutter",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_RollerShutter_Close.blockyanim"
+        }
+      }
+    }
+  },
+  "ItemSoundSetId": "FF_ISS_Metal",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Ingredient_Bar_Iron",
+        "Quantity": 18
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Id": "FoundryFloor",
+        "Categories": [
+          "Foundry_Mechanisms"
+        ]
+      }
+    ],
+    "TimeSeconds": 2,
+    "OutputQuantity": 1
+  }
+}

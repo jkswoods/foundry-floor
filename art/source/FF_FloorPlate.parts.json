@@ -1,0 +1,103 @@
+{
+  "id": "FF_FloorPlate",
+  "title": "Riveted floor plate",
+  "category": "Floors",
+  "parts": [
+    {
+      "name": "Foundation",
+      "center": [
+        0,
+        14,
+        0
+      ],
+      "size": [
+        32,
+        28,
+        32
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "SteelTread",
+      "center": [
+        0,
+        30,
+        0
+      ],
+      "size": [
+        32,
+        4,
+        32
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "Bolt0",
+      "center": [
+        -12,
+        32.5,
+        -12
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "Bolt1",
+      "center": [
+        12,
+        32.5,
+        -12
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "Bolt2",
+      "center": [
+        -12,
+        32.5,
+        12
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "Bolt3",
+      "center": [
+        12,
+        32.5,
+        12
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "material": "edge",
+      "group": null
+    }
+  ],
+  "description": "A full block of treaded steel with corner fasteners; tiles on a 1 \u00d7 1 grid.",
+  "cost": 4,
+  "quantity": 4,
+  "groups": {},
+  "motion": null,
+  "collision": null
+}

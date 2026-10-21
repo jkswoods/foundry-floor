@@ -1,0 +1,88 @@
+{
+  "id": "FF_PipeStraight",
+  "title": "Flanged utility duct",
+  "category": "Fixtures",
+  "parts": [
+    {
+      "name": "Duct",
+      "center": [
+        0,
+        16,
+        0
+      ],
+      "size": [
+        12,
+        12,
+        32
+      ],
+      "material": "copper",
+      "group": null
+    },
+    {
+      "name": "Flange-14",
+      "center": [
+        0,
+        16,
+        -14
+      ],
+      "size": [
+        18,
+        18,
+        4
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "Band-14",
+      "center": [
+        0,
+        16,
+        -14
+      ],
+      "size": [
+        20,
+        2,
+        5
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "Flange14",
+      "center": [
+        0,
+        16,
+        14
+      ],
+      "size": [
+        18,
+        18,
+        4
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "Band14",
+      "center": [
+        0,
+        16,
+        14
+      ],
+      "size": [
+        20,
+        2,
+        5
+      ],
+      "material": "edge",
+      "group": null
+    }
+  ],
+  "description": "One-block utility duct with matched 12-unit ports.",
+  "cost": 3,
+  "quantity": 2,
+  "groups": {},
+  "motion": null,
+  "collision": null
+}

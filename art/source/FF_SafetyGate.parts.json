@@ -1,0 +1,152 @@
+{
+  "id": "FF_SafetyGate",
+  "title": "Hinged catwalk safety gate",
+  "category": "Interactive",
+  "parts": [
+    {
+      "name": "HingePost",
+      "center": [
+        -14,
+        16,
+        0
+      ],
+      "size": [
+        4,
+        32,
+        4
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "CatchPost",
+      "center": [
+        14,
+        16,
+        0
+      ],
+      "size": [
+        4,
+        32,
+        4
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "GateTop",
+      "center": [
+        0,
+        28,
+        0
+      ],
+      "size": [
+        24,
+        2,
+        2
+      ],
+      "material": "yellow",
+      "group": "Gate"
+    },
+    {
+      "name": "GateMid",
+      "center": [
+        0,
+        16,
+        0
+      ],
+      "size": [
+        24,
+        2,
+        2
+      ],
+      "material": "yellow",
+      "group": "Gate"
+    },
+    {
+      "name": "GateToe",
+      "center": [
+        0,
+        4,
+        0
+      ],
+      "size": [
+        24,
+        6,
+        2
+      ],
+      "material": "hazard",
+      "group": "Gate"
+    },
+    {
+      "name": "GateLatch",
+      "center": [
+        11,
+        22,
+        2
+      ],
+      "size": [
+        3,
+        5,
+        3
+      ],
+      "material": "edge",
+      "group": "Gate"
+    },
+    {
+      "name": "GateUpright-10",
+      "center": [
+        -10,
+        16,
+        0
+      ],
+      "size": [
+        2,
+        26,
+        2
+      ],
+      "material": "yellow",
+      "group": "Gate"
+    },
+    {
+      "name": "GateUpright10",
+      "center": [
+        10,
+        16,
+        0
+      ],
+      "size": [
+        2,
+        26,
+        2
+      ],
+      "material": "yellow",
+      "group": "Gate"
+    }
+  ],
+  "description": "A one-block safety gate with an offset hinge and matching toe board.",
+  "cost": 5,
+  "quantity": 1,
+  "groups": {
+    "Gate": [
+      -12,
+      16,
+      0
+    ]
+  },
+  "motion": {
+    "kind": "hinge",
+    "duration": 0.8,
+    "targets": {
+      "Gate": {
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle": -95
+      }
+    }
+  },
+  "collision": null
+}

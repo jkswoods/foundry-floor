@@ -1,0 +1,107 @@
+{
+  "TranslationProperties": {
+    "Name": "server.foundryFloor.FF_FoundryBench.name",
+    "Description": "server.foundryFloor.FF_FoundryBench.description"
+  },
+  "Icon": "Icons/Items/FF_FoundryBench.png",
+  "MaxStack": 1,
+  "Categories": [
+    "Furniture.Benches"
+  ],
+  "PlayerAnimationsId": "Block",
+  "Interactions": {
+    "Primary": "Block_Primary",
+    "Secondary": "Block_Secondary"
+  },
+  "BlockType": {
+    "Material": "Solid",
+    "DrawType": "Model",
+    "Opacity": "Transparent",
+    "CustomModel": "Blocks/FoundryFloor/FF_FoundryBench.blockymodel",
+    "CustomModelTexture": [
+      {
+        "Texture": "Blocks/FoundryFloor/FactoryAtlas.png",
+        "Weight": 1
+      }
+    ],
+    "VariantRotation": "NESW",
+    "HitboxType": "FF_FoundryBench",
+    "BlockSoundSetId": "FF_Metal",
+    "PhysicalMaterialId": "Metal",
+    "BlockParticleSetId": "Metal",
+    "ParticleColor": "#657578",
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "Benches"
+      }
+    },
+    "Bench": {
+      "Type": "Crafting",
+      "Id": "FoundryFloor",
+      "Categories": [
+        {
+          "Id": "Foundry_Floors",
+          "Icon": "Icons/CraftingCategories/FoundryFloor/FF_FloorPlate.png",
+          "Name": "server.foundryFloor.bench.Floors"
+        },
+        {
+          "Id": "Foundry_Walkways",
+          "Icon": "Icons/CraftingCategories/FoundryFloor/FF_CatwalkBridge.png",
+          "Name": "server.foundryFloor.bench.Walkways"
+        },
+        {
+          "Id": "Foundry_Structure",
+          "Icon": "Icons/CraftingCategories/FoundryFloor/FF_SteelColumn.png",
+          "Name": "server.foundryFloor.bench.Structure"
+        },
+        {
+          "Id": "Foundry_Fixtures",
+          "Icon": "Icons/CraftingCategories/FoundryFloor/FF_WallVent.png",
+          "Name": "server.foundryFloor.bench.Fixtures"
+        },
+        {
+          "Id": "Foundry_Mechanisms",
+          "Icon": "Icons/CraftingCategories/FoundryFloor/FF_RollerShutter.png",
+          "Name": "server.foundryFloor.bench.Mechanisms"
+        }
+      ],
+      "TierLevels": [
+        {
+          "CraftingTimeReductionModifier": 0
+        }
+      ],
+      "LocalOpenSoundEventId": "FF_SFX_bench_tools_ui",
+      "LocalCloseSoundEventId": "FF_SFX_bench_tools_ui",
+      "CompletedSoundEventId": "FF_SFX_bench_tools"
+    },
+    "BlockEntity": {
+      "Components": {
+        "BenchBlock": {}
+      }
+    }
+  },
+  "ItemSoundSetId": "FF_ISS_Metal",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Ingredient_Bar_Iron",
+        "Quantity": 8
+      },
+      {
+        "ItemId": "Ingredient_Bar_Copper",
+        "Quantity": 4
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Id": "Workbench",
+        "Categories": [
+          "Workbench_Crafting"
+        ]
+      }
+    ],
+    "TimeSeconds": 2,
+    "OutputQuantity": 1
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "Parent": "ISS_Default",
+  "SoundEvents": {
+    "Drag": "FF_SFX_metal_handling_ui",
+    "Drop": "FF_SFX_metal_handling_ui"
+  }
+}

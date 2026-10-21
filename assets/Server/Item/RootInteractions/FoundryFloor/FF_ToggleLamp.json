@@ -1,0 +1,12 @@
+{
+  "Interactions": [
+    {
+      "Type": "ChangeState",
+      "Changes": {
+        "default": "Off",
+        "Off": "On",
+        "On": "Off"
+      }
+    }
+  ]
+}

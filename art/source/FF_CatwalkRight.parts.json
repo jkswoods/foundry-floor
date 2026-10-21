@@ -1,0 +1,313 @@
+{
+  "id": "FF_CatwalkRight",
+  "title": "Catwalk \u00b7 right rail",
+  "category": "Catwalks",
+  "parts": [
+    {
+      "name": "DeckLeft",
+      "center": [
+        -15.0,
+        2,
+        0
+      ],
+      "size": [
+        2,
+        4,
+        32
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "DeckRight",
+      "center": [
+        15.0,
+        2,
+        0
+      ],
+      "size": [
+        2,
+        4,
+        32
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "DeckFront",
+      "center": [
+        0,
+        2,
+        15.0
+      ],
+      "size": [
+        28,
+        4,
+        2
+      ],
+      "material": "yellow",
+      "group": null
+    },
+    {
+      "name": "DeckBack",
+      "center": [
+        0,
+        2,
+        -15.0
+      ],
+      "size": [
+        28,
+        4,
+        2
+      ],
+      "material": "yellow",
+      "group": null
+    },
+    {
+      "name": "DeckGrating0",
+      "center": [
+        -12.0,
+        3,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        28
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "DeckGrating1",
+      "center": [
+        -8.0,
+        3,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        28
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "DeckGrating2",
+      "center": [
+        -4.0,
+        3,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        28
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "DeckGrating3",
+      "center": [
+        0.0,
+        3,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        28
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "DeckGrating4",
+      "center": [
+        4.0,
+        3,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        28
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "DeckGrating5",
+      "center": [
+        8.0,
+        3,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        28
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "DeckGrating6",
+      "center": [
+        12.0,
+        3,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        28
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "DeckBearer0",
+      "center": [
+        0,
+        1,
+        -8.0
+      ],
+      "size": [
+        28,
+        2,
+        2
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "DeckBearer1",
+      "center": [
+        0,
+        1,
+        8.0
+      ],
+      "size": [
+        28,
+        2,
+        2
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "RailPost0",
+      "center": [
+        14,
+        18,
+        -14
+      ],
+      "size": [
+        2,
+        28,
+        2
+      ],
+      "material": "yellow",
+      "group": null
+    },
+    {
+      "name": "RailPost1",
+      "center": [
+        14,
+        18,
+        14
+      ],
+      "size": [
+        2,
+        28,
+        2
+      ],
+      "material": "yellow",
+      "group": null
+    },
+    {
+      "name": "RailTop",
+      "center": [
+        14,
+        32,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        30
+      ],
+      "material": "yellow",
+      "group": null
+    },
+    {
+      "name": "RailMid",
+      "center": [
+        14,
+        20,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        28
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "RailToe",
+      "center": [
+        14,
+        8,
+        0
+      ],
+      "size": [
+        2,
+        6,
+        28
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "RailFoot0",
+      "center": [
+        14,
+        4.5,
+        -14
+      ],
+      "size": [
+        4,
+        1,
+        4
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "RailFoot1",
+      "center": [
+        14,
+        4.5,
+        14
+      ],
+      "size": [
+        4,
+        1,
+        4
+      ],
+      "material": "edge",
+      "group": null
+    }
+  ],
+  "description": "Walkway with right handrail and toe board.",
+  "cost": 5,
+  "quantity": 2,
+  "groups": {},
+  "motion": null,
+  "collision": null
+}

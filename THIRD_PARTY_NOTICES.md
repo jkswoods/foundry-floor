@@ -1,0 +1,3 @@
+# Third-party notices
+
+Hytale is a separately licensed runtime and build dependency. No Hytale server, client, stock textures, models, audio or toolchains are included. Stock assets are referenced by native IDs. All Foundry Floor geometry, textures and implementation in this repository are original project sources. Blockbench and its Hytale Models plugin are external authoring tools and are not bundled. Python authoring dependencies are not vendored. Runtime sound candidates were generated using ElevenLabs; selected mod-relevant generation/export metadata is supplied separately from private source recordings. No third-party reference mod implementation or artwork was copied.

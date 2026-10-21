@@ -1,0 +1,148 @@
+{
+  "id": "FF_SteelColumn",
+  "title": "Bolted I-section column",
+  "category": "Structure",
+  "parts": [
+    {
+      "name": "ColumnFoot",
+      "center": [
+        0,
+        2,
+        0
+      ],
+      "size": [
+        24,
+        4,
+        24
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "ColumnWeb",
+      "center": [
+        0,
+        18,
+        0
+      ],
+      "size": [
+        5,
+        28,
+        12
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "FrontFlange",
+      "center": [
+        0,
+        18,
+        7
+      ],
+      "size": [
+        16,
+        28,
+        3
+      ],
+      "material": "steel",
+      "group": null
+    },
+    {
+      "name": "BackFlange",
+      "center": [
+        0,
+        18,
+        -7
+      ],
+      "size": [
+        16,
+        28,
+        3
+      ],
+      "material": "steel",
+      "group": null
+    },
+    {
+      "name": "ColumnCap",
+      "center": [
+        0,
+        31,
+        0
+      ],
+      "size": [
+        24,
+        2,
+        24
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "Bolt0",
+      "center": [
+        -9,
+        4.5,
+        -9
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "Bolt1",
+      "center": [
+        9,
+        4.5,
+        -9
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "Bolt2",
+      "center": [
+        -9,
+        4.5,
+        9
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "Bolt3",
+      "center": [
+        9,
+        4.5,
+        9
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "material": "edge",
+      "group": null
+    }
+  ],
+  "description": "Stackable one-block structural column with broad bolted feet.",
+  "cost": 4,
+  "quantity": 2,
+  "groups": {},
+  "motion": null,
+  "collision": null
+}

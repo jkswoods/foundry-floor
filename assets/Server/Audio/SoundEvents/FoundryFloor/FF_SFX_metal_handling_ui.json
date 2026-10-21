@@ -1,0 +1,13 @@
+{
+  "AudioCategory": "AudioCat_Inventory",
+  "Volume": -3,
+  "MaxInstance": 3,
+  "SpatialBlend": 0,
+  "Layers": [
+    {
+      "Files": [
+        "Sounds/FoundryFloor/metal_handling_ui.ogg"
+      ]
+    }
+  ]
+}

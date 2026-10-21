@@ -1,0 +1,103 @@
+{
+  "id": "FF_LiftGuide",
+  "title": "Lift guide extension",
+  "category": "Structure",
+  "parts": [
+    {
+      "name": "Rail",
+      "center": [
+        0,
+        32,
+        0
+      ],
+      "size": [
+        4,
+        64,
+        5
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "RailBack",
+      "center": [
+        0,
+        32,
+        -4
+      ],
+      "size": [
+        12,
+        64,
+        3
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "Bracket8",
+      "center": [
+        0,
+        8,
+        -8
+      ],
+      "size": [
+        20,
+        4,
+        8
+      ],
+      "material": "steel",
+      "group": null
+    },
+    {
+      "name": "Bolt8",
+      "center": [
+        0,
+        8,
+        3
+      ],
+      "size": [
+        3,
+        3,
+        1
+      ],
+      "material": "copper",
+      "group": null
+    },
+    {
+      "name": "Bracket56",
+      "center": [
+        0,
+        56,
+        -8
+      ],
+      "size": [
+        20,
+        4,
+        8
+      ],
+      "material": "steel",
+      "group": null
+    },
+    {
+      "name": "Bolt56",
+      "center": [
+        0,
+        56,
+        3
+      ],
+      "size": [
+        3,
+        3,
+        1
+      ],
+      "material": "copper",
+      "group": null
+    }
+  ],
+  "description": "Two-block guide segment for elevator shaft construction.",
+  "cost": 4,
+  "quantity": 2,
+  "groups": {},
+  "motion": null,
+  "collision": null
+}

@@ -1,0 +1,43 @@
+{
+  "id": "FF_ConcreteFloor",
+  "title": "Poured factory concrete",
+  "category": "Floors",
+  "parts": [
+    {
+      "name": "Concrete",
+      "center": [
+        0,
+        15,
+        0
+      ],
+      "size": [
+        32,
+        30,
+        32
+      ],
+      "material": "concrete",
+      "group": null
+    },
+    {
+      "name": "TopPanel",
+      "center": [
+        0,
+        31,
+        0
+      ],
+      "size": [
+        31,
+        2,
+        31
+      ],
+      "material": "concrete",
+      "group": null
+    }
+  ],
+  "description": "Quiet neutral infill for large factory floors.",
+  "cost": 2,
+  "quantity": 4,
+  "groups": {},
+  "motion": null,
+  "collision": null
+}

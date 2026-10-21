@@ -1,0 +1,118 @@
+{
+  "id": "FF_SafetyRail",
+  "title": "Safety railing",
+  "category": "Structure",
+  "parts": [
+    {
+      "name": "RailPost0",
+      "center": [
+        -14,
+        14,
+        -14
+      ],
+      "size": [
+        2,
+        28,
+        2
+      ],
+      "material": "yellow",
+      "group": null
+    },
+    {
+      "name": "RailPost1",
+      "center": [
+        -14,
+        14,
+        14
+      ],
+      "size": [
+        2,
+        28,
+        2
+      ],
+      "material": "yellow",
+      "group": null
+    },
+    {
+      "name": "RailTop",
+      "center": [
+        -14,
+        28,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        30
+      ],
+      "material": "yellow",
+      "group": null
+    },
+    {
+      "name": "RailMid",
+      "center": [
+        -14,
+        16,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        28
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "RailToe",
+      "center": [
+        -14,
+        4,
+        0
+      ],
+      "size": [
+        2,
+        6,
+        28
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "RailFoot0",
+      "center": [
+        -14,
+        0.5,
+        -14
+      ],
+      "size": [
+        4,
+        1,
+        4
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "RailFoot1",
+      "center": [
+        -14,
+        0.5,
+        14
+      ],
+      "size": [
+        4,
+        1,
+        4
+      ],
+      "material": "edge",
+      "group": null
+    }
+  ],
+  "description": "Independent handrail with a kick plate; rotates through four directions.",
+  "cost": 3,
+  "quantity": 2,
+  "groups": {},
+  "motion": null,
+  "collision": null
+}

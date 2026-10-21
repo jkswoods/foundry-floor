@@ -1,0 +1,152 @@
+{
+  "id": "FF_ServiceHatch",
+  "title": "Floor service hatch",
+  "category": "Interactive",
+  "parts": [
+    {
+      "name": "DeckLeft",
+      "center": [
+        -15.0,
+        2,
+        0
+      ],
+      "size": [
+        2,
+        4,
+        32
+      ],
+      "material": "dark",
+      "group": "Hatch"
+    },
+    {
+      "name": "DeckRight",
+      "center": [
+        15.0,
+        2,
+        0
+      ],
+      "size": [
+        2,
+        4,
+        32
+      ],
+      "material": "dark",
+      "group": "Hatch"
+    },
+    {
+      "name": "DeckFront",
+      "center": [
+        0,
+        2,
+        15.0
+      ],
+      "size": [
+        28,
+        4,
+        2
+      ],
+      "material": "yellow",
+      "group": "Hatch"
+    },
+    {
+      "name": "DeckBack",
+      "center": [
+        0,
+        2,
+        -15.0
+      ],
+      "size": [
+        28,
+        4,
+        2
+      ],
+      "material": "yellow",
+      "group": "Hatch"
+    },
+    {
+      "name": "DeckPlate",
+      "center": [
+        0,
+        2,
+        0
+      ],
+      "size": [
+        28,
+        4,
+        28
+      ],
+      "material": "steel",
+      "group": "Hatch"
+    },
+    {
+      "name": "HatchHandle",
+      "center": [
+        0,
+        5,
+        8
+      ],
+      "size": [
+        8,
+        2,
+        2
+      ],
+      "material": "edge",
+      "group": "Hatch"
+    },
+    {
+      "name": "HatchHingeL",
+      "center": [
+        -10,
+        3,
+        -15
+      ],
+      "size": [
+        5,
+        4,
+        4
+      ],
+      "material": "copper",
+      "group": null
+    },
+    {
+      "name": "HatchHingeR",
+      "center": [
+        10,
+        3,
+        -15
+      ],
+      "size": [
+        5,
+        4,
+        4
+      ],
+      "material": "copper",
+      "group": null
+    }
+  ],
+  "description": "A one-block hinged maintenance cover. The whole deck pivots from its rear edge.",
+  "cost": 5,
+  "quantity": 1,
+  "groups": {
+    "Hatch": [
+      0,
+      3,
+      -14
+    ]
+  },
+  "motion": {
+    "kind": "hatch",
+    "duration": 0.8,
+    "targets": {
+      "Hatch": {
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle": -95
+      }
+    }
+  },
+  "collision": null
+}
