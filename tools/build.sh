@@ -22,4 +22,7 @@ find src/test/java -name '*.java' | sort > build/test-sources.txt
 if [[ "${1:-}" == '--core' ]]; then exit 0; fi
 find src/main/java/dev/foundryfloor/hytale -name '*.java' | sort > build/plugin-sources.txt
 "$FF_JDK/bin/javac" --release 25 -Xlint:all -cp "build/classes:$FF_SERVER" -d build/classes @build/plugin-sources.txt
+find src/test/native -name '*.java' | sort > build/native-test-sources.txt
+"$FF_JDK/bin/javac" --release 25 -Xlint:all -cp "build/classes:$FF_SERVER" -d build/test-classes @build/native-test-sources.txt
+"$FF_JDK/bin/java" -ea -cp "build/classes:build/test-classes:$FF_SERVER" dev.foundryfloor.hytale.NativeFootprintTests | tee build/reports/native-tests.txt
 python3 tools/package_runtime.py

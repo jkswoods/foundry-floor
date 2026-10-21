@@ -303,17 +303,18 @@ def main():
     for m in MODELS:lines += ['foundryFloor.'+m['id']+'.name = '+m['title'],'foundryFloor.'+m['id']+'.description = '+m['description']]
     lang=SERVER/'Languages/en-US/server.lang';lang.parent.mkdir(parents=True,exist_ok=True);lang.write_text('\n'.join(lines)+'\n')
     write(ROOT/'data/catalog.json',MODELS)
-    plan=dict(provider='ElevenLabs connected plugin only',nativeListening='pending: user requested no active Hytale use',items=[])
+    plan=dict(provider='ElevenLabs connected plugin only',nativeListening='pending acquired shared-client slot and human listening',items=[])
     checklist=[]
     for m in MODELS:
         kind=(m['motion'] or {}).get('kind');cues=['metal_handling']
         if kind=='shutter':cues+=['shutter_travel']
         if kind in ['hinge','hatch','lamp']:cues+=['mechanical_latch']
         if kind=='lift':cues+=['lift_travel','mechanical_latch']
-        if m['id']=='FF_CallPanel':cues+=['mechanical_latch']
+        if m['id']=='FF_CallPanel':cues+=['mechanical_latch','control_accept']
+        if m['id']=='FF_FreightLift':cues+=['control_accept']
         if m['id']=='FF_FoundryBench':cues+=['bench_tools']
-        plan['items'].append(dict(itemId=m['id'],cues=cues,handlingTrigger='inventory move / confirmed placement and removal',actionTrigger='accepted state change' if kind in ['shutter','hinge','hatch','lamp'] else 'server-authoritative movement start/stop; controller pending' if kind=='lift' else 'none',nativeListening='pending',loopLifecycle='stop on arrived, blocked, cancelled, unload, removal and disconnect' if kind=='lift' else 'no loop'))
-        checklist.append(dict(itemId=m['id'],model='exported',editableSource='exported',animation='exported' if m['groups'] else 'static',icon='pending render',schema='pending',nativeAppearance='pending: no Hytale use',nativeInteraction='pending' if kind else 'static',audioCues=cues,nativeListening='pending'))
+        plan['items'].append(dict(itemId=m['id'],cues=cues,handlingTrigger='inventory move / confirmed placement and removal',actionTrigger='native bench UI open/close and committed craft completion' if m['id']=='FF_FoundryBench' else 'accepted state change' if kind in ['shutter','hinge','hatch','lamp'] else 'server-authoritative movement start/stop; controller pending' if kind=='lift' else 'none',nativeListening='pending',loopLifecycle='stop on arrived, blocked, cancelled, unload, removal and disconnect' if kind=='lift' else 'no loop'))
+        checklist.append(dict(itemId=m['id'],model='exported',editableSource='exported',animation='exported' if m['groups'] else 'static',icon='pending render',schema='pending',nativeAppearance='pending acquired shared-client slot',nativeInteraction='pending' if kind or m['id']=='FF_FoundryBench' else 'static',audioCues=cues,nativeListening='pending'))
     write(ROOT/'data/audio-plan.json',plan);write(ROOT/'data/asset-checklist.json',checklist)
     print(f'Exported {len(MODELS)} original models, editable sources, recipes and interaction candidates.')
 

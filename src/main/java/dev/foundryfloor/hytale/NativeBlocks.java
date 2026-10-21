@@ -38,7 +38,7 @@ final class NativeBlocks {
             BlockType type=state.equals("default")?base:base.getBlockForState(state);if(type==null)continue;
             var boxes=BlockBoundingBoxes.getAssetMap().getAsset(type.getHitboxTypeIndex());
             if(boxes==null)throw new IllegalArgumentException("Missing native assembly collision");
-            FillerBlockUtil.forEachFillerBlock(type.getCustomModelScale(),boxes.get(rot),(x,y,z)->cells.add(p.add(x,y,z)));
+            FillerBlockUtil.forEachFillerBlock(boxes.get(rot),(x,y,z)->cells.add(p.add(x,y,z)));
         }
         // The cab's whole shaft is a reservation, including its empty passenger volume.
         if(id.equals("FF_FreightLift"))for(int x=-1;x<=1;x++)for(int z=-1;z<=1;z++)for(int y=0;y<7;y++)cells.add(p.add(x,y,z));
@@ -47,7 +47,7 @@ final class NativeBlocks {
     static Footprint placedFootprint(BlockType type,BlockPos p,int rot) {
         if(type==null)return Footprint.single(p);
         Set<BlockPos> cells=new HashSet<>();cells.add(p);var boxes=BlockBoundingBoxes.getAssetMap().getAsset(type.getHitboxTypeIndex());
-        if(boxes!=null)FillerBlockUtil.forEachFillerBlock(type.getCustomModelScale(),boxes.get(rot),(x,y,z)->cells.add(p.add(x,y,z)));
+        if(boxes!=null)FillerBlockUtil.forEachFillerBlock(boxes.get(rot),(x,y,z)->cells.add(p.add(x,y,z)));
         return new Footprint(cells);
     }
     static boolean clear(World w,Footprint footprint,BlockPos own) {
