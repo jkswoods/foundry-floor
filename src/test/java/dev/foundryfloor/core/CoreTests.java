@@ -3,7 +3,7 @@ package dev.foundryfloor.core;
 import java.io.*;
 import java.util.*;
 
-/** Changed-path conservation/ownership/persistence and lift safety tests; no game process. */
+/** Changed-path conservation/ownership/persistence and legacy data tests; no game process. */
 public final class CoreTests {
     private static int checks;
     private static void check(boolean b,String why) { if(!b)throw new AssertionError(why);checks++; }
@@ -37,17 +37,21 @@ public final class CoreTests {
             var legacy=FoundryRegistry.restore(bytes.toByteArray()).at(p);
             check(legacy.owner().equals(owner)&&legacy.state().equals("Open")&&legacy.passengers().isEmpty()&&legacy.linkedTo()==null,"v1 saves migrate ownership/state without inventing passenger tickets");
         }
-        FreightMotion lift=new FreightMotion(0);check(lift.request(true),"upper call accepted");check(!lift.request(false),"in-flight competing call rejected");
-        List<Integer> path=new ArrayList<>();for(int i=0;i<200;i++)lift.advance(1.0/30,(a,b)->{check(b-a==1,"no skipped upward collision steps");path.add(b);return true;});
-        check(lift.step()==60&&lift.offset()==3&&lift.state()==FreightMotion.State.RAISED&&path.size()==60,"bounded three-block arrival");
-        check(!lift.request(true),"repeat arrival request has no effect");check(lift.request(false),"lower call accepted");
-        for(int i=0;i<12;i++)lift.advance(.1,(a,b)->b>=50);
-        check(lift.step()==50&&lift.state()==FreightMotion.State.BLOCKED,"obstruction stops before unsafe collision commit");
-        double held=lift.offset();for(int i=0;i<100;i++)lift.advance(.1,(a,b)->true);check(lift.offset()==held,"blocked platform stays physical at its last committed height");
-        FreightMotion reload=new FreightMotion(lift.step());check(reload.state()==FreightMotion.State.DISABLED&&reload.step()==50,"mid-travel reload holds, never teleports to a stop");
-        check(reload.request(false),"clear lower request resumes from held height");for(int i=0;i<200;i++)reload.advance(1.0/30,(a,b)->true);
-        check(reload.step()==0&&reload.state()==FreightMotion.State.LOWERED,"resume reaches exact lower stop");
-        check(reload.request(true),"new trip");reload.disable();reload.advance(20,(a,b)->{throw new AssertionError("disabled travel committed");});check(reload.step()==0&&!reload.moving(),"unload/disconnect disables movement without catch-up");
+        var registry=new FoundryRegistry();var liftClaim=new FoundryRegistry.Claim(p,"FF_FreightLift",0,owner,new Footprint(Set.of(p,q)),"Lowered",0);
+        check(registry.reserve(liftClaim),"height fixture reserved");registry.finishPlacement(p,true);
+        check(registry.footprint(p,owner,Footprint.single(p))&&!registry.reserved(q),"resize releases old decorative reservation");
+        check(registry.reserve(claim(q,other,Footprint.single(q))),"released wall cell reusable");registry.finishPlacement(q,true);
+        check(!registry.footprint(p,owner,new Footprint(Set.of(p,q)))&&!registry.reserved(p.add(0,1,0)),"resize cannot steal another assembly");
+        registry.state(p,owner,"Disabled",59);
+        check(FoundryRegistry.restore(registry.snapshot()).at(p).travelBlocks()==3&&FoundryRegistry.restore(registry.snapshot()).at(p).liftStep()==59,"retired travel and held height remain readable together");
+        var panelPos=p.add(10,0,0);var panel=new FoundryRegistry.Claim(panelPos,"FF_CallPanel",0,owner,Footprint.single(panelPos),"Disabled",0,Set.of(),p,3,4);
+        check(registry.reserve(panel),"legacy panel reserved");registry.finishPlacement(panelPos,true);
+        var restored=FoundryRegistry.restore(registry.snapshot());check(restored.at(panelPos).panelStop()==4&&restored.at(panelPos).linkedTo().equals(p),"FFR4 retired link and landing remain readable");
+        // Exact old FFR3 bytes: height is retained; old panels are deliberately unprogrammed.
+        try(var bytes=new ByteArrayOutputStream();var out=new DataOutputStream(bytes)) {
+            out.writeInt(0x46465233);out.writeInt(1);out.writeInt(p.x());out.writeInt(p.y());out.writeInt(p.z());out.writeUTF("FF_CallPanel");out.writeInt(0);out.writeLong(owner.getMostSignificantBits());out.writeLong(owner.getLeastSignificantBits());out.writeUTF("default");out.writeInt(0);out.writeInt(1);out.writeInt(p.x());out.writeInt(p.y());out.writeInt(p.z());out.writeInt(0);out.writeBoolean(false);out.writeInt(7);
+            var old=FoundryRegistry.restore(bytes.toByteArray()).at(p);check(old.travelBlocks()==7&&old.panelStop()==-1&&old.owner().equals(owner),"FFR3 migration retains capacity and ownership without guessing a landing");
+        }
         System.out.println(checks+" Foundry core invariants passed.");
     }
 }

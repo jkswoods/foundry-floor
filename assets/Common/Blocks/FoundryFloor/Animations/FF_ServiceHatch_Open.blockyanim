@@ -4,6 +4,7 @@
   "holdLastKeyframe": true,
   "nodeAnimations": {
     "Hatch": {
+      "position": [],
       "orientation": [
         {
           "time": 0,
@@ -25,7 +26,10 @@
           },
           "interpolationType": "smooth"
         }
-      ]
+      ],
+      "shapeStretch": [],
+      "shapeVisible": [],
+      "shapeUvOffset": []
     }
   }
 }

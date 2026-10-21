@@ -32,8 +32,7 @@
             "x": 32,
             "y": 28,
             "z": 32
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -140,8 +139,7 @@
             "x": 32,
             "y": 4,
             "z": 32
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -248,8 +246,7 @@
             "x": 2,
             "y": 1,
             "z": 2
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -356,8 +353,7 @@
             "x": 2,
             "y": 1,
             "z": 2
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -464,8 +460,7 @@
             "x": 2,
             "y": 1,
             "z": 2
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -572,8 +567,7 @@
             "x": 2,
             "y": 1,
             "z": 2
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,

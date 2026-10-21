@@ -32,116 +32,7 @@
             "x": 32,
             "y": 24,
             "z": 32
-          },
-          "isStaticBox": true
-        },
-        "unwrapMode": "custom",
-        "visible": true,
-        "doubleSided": false,
-        "shadingMode": "standard",
-        "textureLayout": {
-          "front": {
-            "offset": {
-              "x": 384,
-              "y": 128
-            },
-            "mirror": {
-              "x": false,
-              "y": false
-            },
-            "angle": 0
-          },
-          "back": {
-            "offset": {
-              "x": 384,
-              "y": 128
-            },
-            "mirror": {
-              "x": false,
-              "y": false
-            },
-            "angle": 0
-          },
-          "left": {
-            "offset": {
-              "x": 384,
-              "y": 128
-            },
-            "mirror": {
-              "x": false,
-              "y": false
-            },
-            "angle": 0
-          },
-          "right": {
-            "offset": {
-              "x": 384,
-              "y": 128
-            },
-            "mirror": {
-              "x": false,
-              "y": false
-            },
-            "angle": 0
-          },
-          "top": {
-            "offset": {
-              "x": 384,
-              "y": 128
-            },
-            "mirror": {
-              "x": false,
-              "y": false
-            },
-            "angle": 0
-          },
-          "bottom": {
-            "offset": {
-              "x": 384,
-              "y": 128
-            },
-            "mirror": {
-              "x": false,
-              "y": false
-            },
-            "angle": 0
           }
-        }
-      }
-    },
-    {
-      "id": "418965cf-5d54-583b-9b2c-3ec8f96b91c4",
-      "name": "DrainRecess",
-      "position": {
-        "x": 0,
-        "y": 26,
-        "z": 0
-      },
-      "orientation": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0,
-        "w": 1.0
-      },
-      "shape": {
-        "type": "box",
-        "offset": {
-          "x": 0,
-          "y": 0,
-          "z": 0
-        },
-        "stretch": {
-          "x": 1,
-          "y": 1,
-          "z": 1
-        },
-        "settings": {
-          "size": {
-            "x": 28,
-            "y": 4,
-            "z": 28
-          },
-          "isStaticBox": true
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -151,7 +42,7 @@
           "front": {
             "offset": {
               "x": 384,
-              "y": 0
+              "y": 128
             },
             "mirror": {
               "x": false,
@@ -162,7 +53,7 @@
           "back": {
             "offset": {
               "x": 384,
-              "y": 0
+              "y": 128
             },
             "mirror": {
               "x": false,
@@ -173,7 +64,7 @@
           "left": {
             "offset": {
               "x": 384,
-              "y": 0
+              "y": 128
             },
             "mirror": {
               "x": false,
@@ -184,7 +75,7 @@
           "right": {
             "offset": {
               "x": 384,
-              "y": 0
+              "y": 128
             },
             "mirror": {
               "x": false,
@@ -195,7 +86,7 @@
           "top": {
             "offset": {
               "x": 384,
-              "y": 0
+              "y": 128
             },
             "mirror": {
               "x": false,
@@ -206,7 +97,7 @@
           "bottom": {
             "offset": {
               "x": 384,
-              "y": 0
+              "y": 128
             },
             "mirror": {
               "x": false,
@@ -221,7 +112,7 @@
       "id": "a4a402a9-4f46-5fce-a74d-91e0b47da4c5",
       "name": "DrainLeft",
       "position": {
-        "x": -15.0,
+        "x": -15,
         "y": 30,
         "z": 0
       },
@@ -248,8 +139,7 @@
             "x": 2,
             "y": 4,
             "z": 32
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -329,7 +219,7 @@
       "id": "d8cda3a4-dfbe-5a05-b455-d5d1137ca74e",
       "name": "DrainRight",
       "position": {
-        "x": 15.0,
+        "x": 15,
         "y": 30,
         "z": 0
       },
@@ -356,8 +246,7 @@
             "x": 2,
             "y": 4,
             "z": 32
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -439,7 +328,7 @@
       "position": {
         "x": 0,
         "y": 30,
-        "z": 15.0
+        "z": 15
       },
       "orientation": {
         "x": 0.0,
@@ -464,8 +353,7 @@
             "x": 28,
             "y": 4,
             "z": 2
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -547,7 +435,7 @@
       "position": {
         "x": 0,
         "y": 30,
-        "z": -15.0
+        "z": -15
       },
       "orientation": {
         "x": 0.0,
@@ -572,8 +460,7 @@
             "x": 28,
             "y": 4,
             "z": 2
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -653,9 +540,9 @@
       "id": "957f9c98-4886-5c17-9428-848a79c9cc2d",
       "name": "DrainGrating0",
       "position": {
-        "x": -12.0,
+        "x": -13.5,
         "y": 31,
-        "z": 0
+        "z": 0.0
       },
       "orientation": {
         "x": 0.0,
@@ -677,11 +564,10 @@
         },
         "settings": {
           "size": {
-            "x": 2,
+            "x": 1,
             "y": 2,
             "z": 28
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -761,9 +647,9 @@
       "id": "656f76b4-2cb1-52b1-8051-ff1cc3aa1d5b",
       "name": "DrainGrating1",
       "position": {
-        "x": -8.0,
+        "x": -10.0,
         "y": 31,
-        "z": 0
+        "z": 0.0
       },
       "orientation": {
         "x": 0.0,
@@ -788,8 +674,7 @@
             "x": 2,
             "y": 2,
             "z": 28
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -869,9 +754,9 @@
       "id": "3845d7e0-c092-5f98-ae36-2d59037006df",
       "name": "DrainGrating2",
       "position": {
-        "x": -4.0,
+        "x": -6.0,
         "y": 31,
-        "z": 0
+        "z": 0.0
       },
       "orientation": {
         "x": 0.0,
@@ -896,8 +781,7 @@
             "x": 2,
             "y": 2,
             "z": 28
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -977,9 +861,9 @@
       "id": "da649dff-753b-5362-8658-cf3c1629ea7d",
       "name": "DrainGrating3",
       "position": {
-        "x": 0.0,
+        "x": -2.0,
         "y": 31,
-        "z": 0
+        "z": 0.0
       },
       "orientation": {
         "x": 0.0,
@@ -1004,8 +888,7 @@
             "x": 2,
             "y": 2,
             "z": 28
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -1085,9 +968,9 @@
       "id": "abbd1373-1a52-5a76-8ac4-982b380a5c1e",
       "name": "DrainGrating4",
       "position": {
-        "x": 4.0,
+        "x": 2.0,
         "y": 31,
-        "z": 0
+        "z": 0.0
       },
       "orientation": {
         "x": 0.0,
@@ -1112,8 +995,7 @@
             "x": 2,
             "y": 2,
             "z": 28
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -1193,9 +1075,9 @@
       "id": "6e18b6f3-ff53-5b82-b29c-87de8c2027f5",
       "name": "DrainGrating5",
       "position": {
-        "x": 8.0,
+        "x": 6.0,
         "y": 31,
-        "z": 0
+        "z": 0.0
       },
       "orientation": {
         "x": 0.0,
@@ -1220,8 +1102,7 @@
             "x": 2,
             "y": 2,
             "z": 28
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -1301,9 +1182,9 @@
       "id": "1bd61d1d-e8ff-52e3-a1bc-e380f17ccfc7",
       "name": "DrainGrating6",
       "position": {
-        "x": 12.0,
+        "x": 10.0,
         "y": 31,
-        "z": 0
+        "z": 0.0
       },
       "orientation": {
         "x": 0.0,
@@ -1328,8 +1209,114 @@
             "x": 2,
             "y": 2,
             "z": 28
+          }
+        },
+        "unwrapMode": "custom",
+        "visible": true,
+        "doubleSided": false,
+        "shadingMode": "standard",
+        "textureLayout": {
+          "front": {
+            "offset": {
+              "x": 384,
+              "y": 256
+            },
+            "mirror": {
+              "x": false,
+              "y": false
+            },
+            "angle": 0
           },
-          "isStaticBox": true
+          "back": {
+            "offset": {
+              "x": 384,
+              "y": 256
+            },
+            "mirror": {
+              "x": false,
+              "y": false
+            },
+            "angle": 0
+          },
+          "left": {
+            "offset": {
+              "x": 384,
+              "y": 256
+            },
+            "mirror": {
+              "x": false,
+              "y": false
+            },
+            "angle": 0
+          },
+          "right": {
+            "offset": {
+              "x": 384,
+              "y": 256
+            },
+            "mirror": {
+              "x": false,
+              "y": false
+            },
+            "angle": 0
+          },
+          "top": {
+            "offset": {
+              "x": 384,
+              "y": 256
+            },
+            "mirror": {
+              "x": false,
+              "y": false
+            },
+            "angle": 0
+          },
+          "bottom": {
+            "offset": {
+              "x": 384,
+              "y": 256
+            },
+            "mirror": {
+              "x": false,
+              "y": false
+            },
+            "angle": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "ead9367c-d449-5b52-ad9c-ff1e4b9e0c34",
+      "name": "DrainGrating7",
+      "position": {
+        "x": 13.5,
+        "y": 31,
+        "z": 0.0
+      },
+      "orientation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 1.0
+      },
+      "shape": {
+        "type": "box",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "stretch": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        },
+        "settings": {
+          "size": {
+            "x": 1,
+            "y": 2,
+            "z": 28
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -1409,9 +1396,9 @@
       "id": "6d647248-5075-5d87-a2ad-2d4ffb348e1a",
       "name": "DrainBearer0",
       "position": {
-        "x": 0,
+        "x": 0.0,
         "y": 29,
-        "z": -8.0
+        "z": -8
       },
       "orientation": {
         "x": 0.0,
@@ -1436,8 +1423,7 @@
             "x": 28,
             "y": 2,
             "z": 2
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -1517,9 +1503,9 @@
       "id": "d7981efc-053e-5159-8349-560a3778572a",
       "name": "DrainBearer1",
       "position": {
-        "x": 0,
+        "x": 0.0,
         "y": 29,
-        "z": 8.0
+        "z": 8
       },
       "orientation": {
         "x": 0.0,
@@ -1544,8 +1530,7 @@
             "x": 28,
             "y": 2,
             "z": 2
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,

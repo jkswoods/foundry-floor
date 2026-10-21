@@ -15,8 +15,11 @@ public final class FoundryWorld implements Resource<EntityStore> {
         .append(new KeyedCodec<>("Snapshot",Codec.STRING),FoundryWorld::read,FoundryWorld::write).add().build();
     FoundryRegistry registry=new FoundryRegistry();
     final ArrayDeque<Runnable> confirmedActions=new ArrayDeque<>();
+    final Set<BlockPos> connectionUpdates=new HashSet<>();
+    final Set<BlockPos> reconciledConnections=new HashSet<>();
+    int connectionScan;
     final Map<BlockPos,Long> cooldowns=new HashMap<>();
-    final Map<BlockPos,FreightMotion> lifts=new HashMap<>();
+    final Set<BlockPos> retiredReconciled=new HashSet<>();
     private String write() { return Base64.getEncoder().encodeToString(registry.snapshot()); }
     private void read(String value) {
         try { registry=FoundryRegistry.restore(Base64.getDecoder().decode(value)); }

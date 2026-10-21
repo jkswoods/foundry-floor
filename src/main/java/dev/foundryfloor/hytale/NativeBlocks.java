@@ -33,35 +33,21 @@ final class NativeBlocks {
     }
     static int rotation(World w,BlockPos p) { var s=section(w,p);if(s==null)throw new IllegalArgumentException("Assembly is not loaded");return s.getRotationIndex(p.x()&31,p.y()&31,p.z()&31); }
     static Footprint footprint(String id,BlockPos p,int rot) {
+        return footprint(id,p,rot,3);
+    }
+    static Footprint footprint(String id,BlockPos p,int rot,int travel) {
         Set<BlockPos> cells=new HashSet<>();cells.add(p);BlockType base=BlockType.getAssetMap().getAsset(id);
         if(base==null)throw new IllegalArgumentException("Unknown Foundry block");
-        for(String state:List.of("default","Open","Closed","On","Off")) {
+        for(String state:List.of("default")) {
             BlockType type=state.equals("default")?base:base.getBlockForState(state);if(type==null)continue;
             var boxes=BlockBoundingBoxes.getAssetMap().getAsset(type.getHitboxTypeIndex());
             if(boxes==null)throw new IllegalArgumentException("Missing native assembly collision");
             FillerBlockUtil.forEachFillerBlock(boxes.get(rot),(x,y,z)->cells.add(p.add(x,y,z)));
         }
-        // The cab's whole shaft is a reservation, including its empty passenger volume.
-        if(id.equals("FF_FreightLift")) {
-            BlockPos shaft=liftOrigin(p,rot);
-            for(int x=-1;x<=1;x++)for(int z=-1;z<=1;z++)for(int y=0;y<7;y++)cells.add(shaft.add(x,y,z));
-        }
         return new Footprint(cells);
     }
     static BlockPos liftOrigin(BlockPos p,int rotation) {
         var offset=new org.joml.Vector3i(0,0,-3);RotationTuple.get(rotation).applyRotationTo(offset);return p.add(offset.x,offset.y,offset.z);
-    }
-    static boolean clearLift(World w,FoundryRegistry.Claim claim) {
-        BlockPos shaft=liftOrigin(claim.origin(),claim.rotation());
-        for(BlockPos cell:claim.footprint().cells()) {
-            if(empty(w,cell))continue;
-            if(section(w,cell)==null)return false;
-            BlockPos origin=origin(w,cell);
-            if(origin.equals(claim.origin())&&claim.itemId().equals(itemId(block(w,origin))))continue;
-            if(origin.equals(shaft)&&"FF_LiftAssembly".equals(itemId(block(w,origin))))continue;
-            return false;
-        }
-        return true;
     }
     static Footprint placedFootprint(BlockType type,BlockPos p,int rot) {
         if(type==null)return Footprint.single(p);
@@ -82,6 +68,29 @@ final class NativeBlocks {
         BlockType base=BlockType.getAssetMap().getAsset(claim.itemId());BlockType target=state.equals("default")?base:base.getBlockForState(state);
         if(target==null)return false;
         return set(w,claim.origin(),target,claim.rotation());
+    }
+    /** Retire only loaded legacy filler cells which still point to this assembly.
+     * Asset updates shrink collision, but native removal enumerates the new shape,
+     * so it cannot discover old decorations outside that shape on its own. */
+    static boolean repairLegacyFillers(World w,FoundryRegistry registry,FoundryRegistry.Claim claim) {
+        String id=claim.itemId();
+        if(!Set.of("FF_RollerShutter","FF_CatwalkStairs","FF_PersonnelDoor","FF_SafetyGate","FF_PipeStraight","FF_PipeElbow","FF_LiftAssembly").contains(id))return true;
+        BlockPos root=claim.origin();BlockType actual=block(w,root);
+        if(!id.equals(itemId(actual)))return false;
+        Set<BlockPos> expected=placedFootprint(actual,root,claim.rotation()).cells();
+        int radius=id.equals("FF_RollerShutter")?2:1,top=id.equals("FF_LiftAssembly")?claim.travelBlocks()+3:id.equals("FF_RollerShutter")?4:2;
+        boolean loaded=true;
+        for(int x=-radius;x<=radius;x++)for(int y=-1;y<=top;y++)for(int z=-radius;z<=radius;z++) {
+            BlockPos cell=root.add(x,y,z);if(expected.contains(cell)||registry.at(cell)!=null)continue;
+            var section=section(w,cell);if(section==null) { loaded=false;continue; }
+            if(section.getFiller(cell.x()&31,cell.y()&31,cell.z()&31)==0||!origin(w,cell).equals(root)||!id.equals(itemId(block(w,cell))))continue;
+            var chunks=w.getChunkStore();var ref=chunks.getChunkSectionReferenceAtBlock(cell.x(),cell.y(),cell.z());
+            BlockType empty=BlockType.getAssetMap().getAsset("Empty");
+            // Native publish/save flags + skip recursive filler removal/creation.
+            // Removing a filler normally can otherwise remove its whole parent.
+            BlockOperations.setBlock(chunks,ref,cell.x(),cell.y(),cell.z(),BlockType.EMPTY_ID,empty,0,0,198|16|8);
+        }
+        return loaded;
     }
     static boolean set(World w,BlockPos p,BlockType target,int rotation) {
         var chunks=w.getChunkStore();var ref=chunks.getChunkSectionReferenceAtBlock(p.x(),p.y(),p.z());

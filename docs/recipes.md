@@ -1,6 +1,6 @@
 # Recipes
 
-These are the recipes for 0.1.0. Native server transactions have verified the bench and all 25 factory input/output quantities, including conserved remainders and wrong-bench refusal. Complete player UI and crafting-time verification remain in progress.
+These are the configured recipes for 0.2.0 on Hytale 0.7.3. The native crafting registry resolves all 27 factory recipes. Earlier server transaction checks cover the original 25 recipes; the five new pieces and current player UI/timing are under playtest.
 
 ## Foundry Workbench
 
@@ -37,17 +37,20 @@ Every recipe below uses **Iron Ingots** at the Foundry Workbench and takes **2 s
 | Safety railing | 3 | 2 |
 | Bolted I-section column | 4 | 2 |
 | I-section crossbeam | 4 | 2 |
-| Lift guide extension | 4 | 2 |
+| Steel factory wall | 4 | 4 |
+| Corrugated factory roof | 4 | 4 |
+| Steel-framed factory window | 3 | 2 |
+| Industrial window pane | 3 | 2 |
 
 ### Fixtures
 
 | Block | Iron | Makes |
 | --- | ---: | ---: |
-| Lift call panel | 3 | 1 |
 | Flanged utility duct | 3 | 2 |
 | Utility duct elbow | 3 | 2 |
 | Louvred wall vent | 4 | 2 |
 | Guarded factory lamp | 3 | 2 |
+| High-bay industrial pendant | 6 | 1 |
 | Steel cargo pallet | 3 | 2 |
 
 ### Mechanisms
@@ -58,6 +61,5 @@ Every recipe below uses **Iron Ingots** at the Foundry Workbench and takes **2 s
 | Hinged catwalk safety gate | 5 | 1 |
 | Factory personnel door | 8 | 1 |
 | Floor service hatch | 5 | 1 |
-| Caged freight elevator | 28 | 1 |
 
 Return to [the workbench](features/workbench.md) or [first factory bay](getting-started.md).

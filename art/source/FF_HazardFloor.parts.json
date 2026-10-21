@@ -34,24 +34,9 @@
       "group": null
     },
     {
-      "name": "SafetyStrip",
-      "center": [
-        0,
-        32.25,
-        12
-      ],
-      "size": [
-        32,
-        0.5,
-        8
-      ],
-      "material": "hazard",
-      "group": null
-    },
-    {
       "name": "Bolt0",
       "center": [
-        -12,
+        -9,
         32.5,
         -9
       ],
@@ -66,7 +51,7 @@
     {
       "name": "Bolt1",
       "center": [
-        12,
+        9,
         32.5,
         -9
       ],
@@ -81,7 +66,7 @@
     {
       "name": "Bolt2",
       "center": [
-        -12,
+        -9,
         32.5,
         9
       ],
@@ -96,7 +81,7 @@
     {
       "name": "Bolt3",
       "center": [
-        12,
+        9,
         32.5,
         9
       ],
@@ -107,9 +92,69 @@
       ],
       "material": "edge",
       "group": null
+    },
+    {
+      "name": "Boundary1",
+      "center": [
+        0,
+        32.25,
+        -14
+      ],
+      "size": [
+        32,
+        0.5,
+        4
+      ],
+      "material": "hazard",
+      "group": null
+    },
+    {
+      "name": "Boundary2",
+      "center": [
+        14,
+        32.25,
+        0.0
+      ],
+      "size": [
+        4,
+        0.5,
+        24
+      ],
+      "material": "hazard",
+      "group": null
+    },
+    {
+      "name": "Boundary4",
+      "center": [
+        0,
+        32.25,
+        14
+      ],
+      "size": [
+        32,
+        0.5,
+        4
+      ],
+      "material": "hazard",
+      "group": null
+    },
+    {
+      "name": "Boundary8",
+      "center": [
+        -14,
+        32.25,
+        0.0
+      ],
+      "size": [
+        4,
+        0.5,
+        24
+      ],
+      "material": "hazard",
+      "group": null
     }
   ],
-  "description": "A directional safety stripe marks loading bays and changes in level.",
+  "description": "Safety stripes follow the exposed perimeter and join at corners.",
   "cost": 4,
   "quantity": 4,
   "groups": {},

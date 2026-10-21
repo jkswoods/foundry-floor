@@ -35,7 +35,6 @@ nav:
       - Overview: features/index.md
       - Floors and walkways: features/architecture.md
       - Doors, shutters and lighting: features/mechanisms.md
-      - Freight lift and call panels: features/lift.md
   - Recipes: recipes.md
   - Building progression: progression.md
   - Configuration and access: configuration.md

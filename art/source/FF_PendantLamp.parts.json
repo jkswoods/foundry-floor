@@ -1,0 +1,212 @@
+{
+  "id": "FF_PendantLamp",
+  "title": "High-bay industrial pendant",
+  "category": "Fixtures",
+  "parts": [
+    {
+      "name": "CeilingRose",
+      "center": [
+        0,
+        31,
+        0
+      ],
+      "size": [
+        12,
+        2,
+        12
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "Suspension",
+      "center": [
+        0,
+        25,
+        0
+      ],
+      "size": [
+        3,
+        12,
+        3
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "Ballast",
+      "center": [
+        0,
+        20,
+        0
+      ],
+      "size": [
+        10,
+        6,
+        10
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "ReflectorTop",
+      "center": [
+        0,
+        17,
+        0
+      ],
+      "size": [
+        16,
+        4,
+        16
+      ],
+      "material": "steel",
+      "group": null
+    },
+    {
+      "name": "Reflector",
+      "center": [
+        0,
+        13,
+        0
+      ],
+      "size": [
+        24,
+        5,
+        24
+      ],
+      "material": "steel",
+      "group": null
+    },
+    {
+      "name": "LightLens",
+      "center": [
+        0,
+        9.4,
+        0
+      ],
+      "size": [
+        24,
+        1,
+        24
+      ],
+      "material": "light",
+      "group": null
+    },
+    {
+      "name": "RimX-1",
+      "center": [
+        -13,
+        10,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        28
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "RimZ-1",
+      "center": [
+        0,
+        10,
+        -13
+      ],
+      "size": [
+        24,
+        2,
+        2
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "RimX1",
+      "center": [
+        13,
+        10,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        28
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "RimZ1",
+      "center": [
+        0,
+        10,
+        13
+      ],
+      "size": [
+        24,
+        2,
+        2
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "LensGuard-9",
+      "center": [
+        -9,
+        8.5,
+        0
+      ],
+      "size": [
+        1,
+        1,
+        26
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "LensGuard0",
+      "center": [
+        0,
+        8.5,
+        0
+      ],
+      "size": [
+        1,
+        1,
+        26
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "LensGuard9",
+      "center": [
+        9,
+        8.5,
+        0
+      ],
+      "size": [
+        1,
+        1,
+        26
+      ],
+      "material": "edge",
+      "group": null
+    }
+  ],
+  "description": "Large warehouse ceiling light. Place beneath a roof and use F to switch it on or off.",
+  "cost": 6,
+  "quantity": 1,
+  "groups": {},
+  "motion": {
+    "kind": "lamp",
+    "duration": 0.1,
+    "targets": {}
+  },
+  "collision": null
+}

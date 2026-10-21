@@ -1,0 +1,118 @@
+{
+  "id": "FF_CargoPallet_Connect0D",
+  "title": "Steel cargo pallet",
+  "category": "Fixtures",
+  "parts": [
+    {
+      "name": "Runner-10",
+      "center": [
+        -10,
+        2,
+        0
+      ],
+      "size": [
+        5,
+        4,
+        32
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "Runner10",
+      "center": [
+        10,
+        2,
+        0
+      ],
+      "size": [
+        5,
+        4,
+        32
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "CargoSlat0",
+      "center": [
+        -12.0,
+        5,
+        0.0
+      ],
+      "size": [
+        6,
+        2,
+        32
+      ],
+      "material": "copper",
+      "group": null
+    },
+    {
+      "name": "CargoSlat1",
+      "center": [
+        -4.0,
+        5,
+        0.0
+      ],
+      "size": [
+        6,
+        2,
+        32
+      ],
+      "material": "copper",
+      "group": null
+    },
+    {
+      "name": "CargoSlat2",
+      "center": [
+        4.0,
+        5,
+        0.0
+      ],
+      "size": [
+        6,
+        2,
+        32
+      ],
+      "material": "copper",
+      "group": null
+    },
+    {
+      "name": "CargoSlat3",
+      "center": [
+        11.5,
+        5,
+        0.0
+      ],
+      "size": [
+        5,
+        2,
+        32
+      ],
+      "material": "copper",
+      "group": null
+    },
+    {
+      "name": "PalletRim2",
+      "center": [
+        15,
+        5,
+        0.0
+      ],
+      "size": [
+        2,
+        2,
+        32
+      ],
+      "material": "steel",
+      "group": null
+    }
+  ],
+  "description": "A low loading-bay prop with visible forklift pockets.",
+  "cost": 3,
+  "quantity": 2,
+  "groups": {},
+  "motion": null,
+  "collision": null
+}

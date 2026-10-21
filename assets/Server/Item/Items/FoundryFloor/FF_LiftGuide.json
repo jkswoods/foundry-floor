@@ -5,9 +5,7 @@
   },
   "Icon": "Icons/Items/FF_LiftGuide.png",
   "MaxStack": 64,
-  "Categories": [
-    "Furniture.Furniture"
-  ],
+  "Categories": [],
   "PlayerAnimationsId": "Block",
   "Interactions": {
     "Primary": "Block_Primary",
@@ -34,26 +32,12 @@
       "Breaking": {
         "GatherType": "Benches"
       }
+    },
+    "PlacementSettings": {
+      "BlockPreviewVisibility": "AlwaysVisible",
+      "AllowRotationKey": true
     }
   },
   "ItemSoundSetId": "FF_ISS_Metal",
-  "Recipe": {
-    "Input": [
-      {
-        "ItemId": "Ingredient_Bar_Iron",
-        "Quantity": 4
-      }
-    ],
-    "BenchRequirement": [
-      {
-        "Type": "Crafting",
-        "Id": "FoundryFloor",
-        "Categories": [
-          "Foundry_Structure"
-        ]
-      }
-    ],
-    "TimeSeconds": 2,
-    "OutputQuantity": 2
-  }
+  "Scale": 0.55
 }

@@ -1,0 +1,118 @@
+{
+  "id": "FF_FactoryWindow",
+  "title": "Steel-framed factory window",
+  "category": "Structure",
+  "parts": [
+    {
+      "name": "Glass",
+      "center": [
+        0,
+        16,
+        0
+      ],
+      "size": [
+        28,
+        28,
+        1
+      ],
+      "material": "glass",
+      "group": null
+    },
+    {
+      "name": "FrameX-15",
+      "center": [
+        -15,
+        16,
+        0
+      ],
+      "size": [
+        2,
+        32,
+        32
+      ],
+      "material": "steel",
+      "group": null
+    },
+    {
+      "name": "FrameX15",
+      "center": [
+        15,
+        16,
+        0
+      ],
+      "size": [
+        2,
+        32,
+        32
+      ],
+      "material": "steel",
+      "group": null
+    },
+    {
+      "name": "FrameY1",
+      "center": [
+        0,
+        1,
+        0
+      ],
+      "size": [
+        28,
+        2,
+        32
+      ],
+      "material": "steel",
+      "group": null
+    },
+    {
+      "name": "FrameY31",
+      "center": [
+        0,
+        31,
+        0
+      ],
+      "size": [
+        28,
+        2,
+        32
+      ],
+      "material": "steel",
+      "group": null
+    },
+    {
+      "name": "WireX",
+      "center": [
+        0,
+        16,
+        0.6
+      ],
+      "size": [
+        27.5,
+        0.35,
+        0.35
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "WireY",
+      "center": [
+        0,
+        16,
+        0.7
+      ],
+      "size": [
+        0.35,
+        27.5,
+        0.35
+      ],
+      "material": "edge",
+      "group": null
+    }
+  ],
+  "description": "A glazed industrial window with a steel frame and wire cross; use R to rotate the pane.",
+  "cost": 3,
+  "quantity": 2,
+  "groups": {},
+  "motion": null,
+  "collision": null
+}

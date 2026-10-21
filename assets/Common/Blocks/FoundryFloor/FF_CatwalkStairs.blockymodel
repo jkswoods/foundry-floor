@@ -5,7 +5,7 @@
       "id": "d4f22725-1d3c-53d4-8fb1-fb8ab8580c07",
       "name": "Tread0",
       "position": {
-        "x": 0,
+        "x": 0.0,
         "y": 2,
         "z": 14
       },
@@ -32,8 +32,7 @@
             "x": 28,
             "y": 4,
             "z": 4
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -113,7 +112,7 @@
       "id": "be3745f2-f8a9-5a95-805e-0e2610e7f61c",
       "name": "Nosing0",
       "position": {
-        "x": 0,
+        "x": 0.0,
         "y": 4.25,
         "z": 15
       },
@@ -140,8 +139,7 @@
             "x": 28,
             "y": 0.5,
             "z": 2
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -248,8 +246,7 @@
             "x": 2,
             "y": 2,
             "z": 4
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -356,8 +353,7 @@
             "x": 2,
             "y": 2,
             "z": 4
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -437,7 +433,7 @@
       "id": "6762b9b8-51d2-5434-bb81-74cb981d2ca2",
       "name": "Tread1",
       "position": {
-        "x": 0,
+        "x": 0.0,
         "y": 6,
         "z": 10
       },
@@ -464,8 +460,7 @@
             "x": 28,
             "y": 4,
             "z": 4
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -545,7 +540,7 @@
       "id": "88c876cf-ec09-5593-ba7a-f90b87dbce7b",
       "name": "Nosing1",
       "position": {
-        "x": 0,
+        "x": 0.0,
         "y": 8.25,
         "z": 11
       },
@@ -572,8 +567,7 @@
             "x": 28,
             "y": 0.5,
             "z": 2
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -680,8 +674,7 @@
             "x": 2,
             "y": 6,
             "z": 4
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -788,8 +781,7 @@
             "x": 2,
             "y": 6,
             "z": 4
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -869,7 +861,7 @@
       "id": "154f3888-796e-5537-bad4-ba896be3ae40",
       "name": "Tread2",
       "position": {
-        "x": 0,
+        "x": 0.0,
         "y": 10,
         "z": 6
       },
@@ -896,8 +888,7 @@
             "x": 28,
             "y": 4,
             "z": 4
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -977,7 +968,7 @@
       "id": "5460f239-9794-5292-8ab6-65930e547ee9",
       "name": "Nosing2",
       "position": {
-        "x": 0,
+        "x": 0.0,
         "y": 12.25,
         "z": 7
       },
@@ -1004,8 +995,7 @@
             "x": 28,
             "y": 0.5,
             "z": 2
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -1112,8 +1102,7 @@
             "x": 2,
             "y": 10,
             "z": 4
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -1220,8 +1209,7 @@
             "x": 2,
             "y": 10,
             "z": 4
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -1301,7 +1289,7 @@
       "id": "c58d8a1b-fbb6-530a-a7d5-e3d12c015b75",
       "name": "Tread3",
       "position": {
-        "x": 0,
+        "x": 0.0,
         "y": 14,
         "z": 2
       },
@@ -1328,8 +1316,7 @@
             "x": 28,
             "y": 4,
             "z": 4
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -1409,7 +1396,7 @@
       "id": "340a3cd0-ba32-5494-b3b1-cdd49d6938b6",
       "name": "Nosing3",
       "position": {
-        "x": 0,
+        "x": 0.0,
         "y": 16.25,
         "z": 3
       },
@@ -1436,8 +1423,7 @@
             "x": 28,
             "y": 0.5,
             "z": 2
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -1544,8 +1530,7 @@
             "x": 2,
             "y": 14,
             "z": 4
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -1652,8 +1637,7 @@
             "x": 2,
             "y": 14,
             "z": 4
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -1733,7 +1717,7 @@
       "id": "b5e38073-c820-5d1c-b9f8-7a4b583865e7",
       "name": "Tread4",
       "position": {
-        "x": 0,
+        "x": 0.0,
         "y": 18,
         "z": -2
       },
@@ -1760,8 +1744,7 @@
             "x": 28,
             "y": 4,
             "z": 4
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -1841,7 +1824,7 @@
       "id": "c2faafe6-f91b-5026-85dc-8f2a13945401",
       "name": "Nosing4",
       "position": {
-        "x": 0,
+        "x": 0.0,
         "y": 20.25,
         "z": -1
       },
@@ -1868,8 +1851,7 @@
             "x": 28,
             "y": 0.5,
             "z": 2
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -1976,8 +1958,7 @@
             "x": 2,
             "y": 18,
             "z": 4
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -2084,8 +2065,7 @@
             "x": 2,
             "y": 18,
             "z": 4
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -2165,7 +2145,7 @@
       "id": "1ab2fbc4-d077-5407-9d65-6c1df507798b",
       "name": "Tread5",
       "position": {
-        "x": 0,
+        "x": 0.0,
         "y": 22,
         "z": -6
       },
@@ -2192,8 +2172,7 @@
             "x": 28,
             "y": 4,
             "z": 4
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -2273,7 +2252,7 @@
       "id": "b1749c9a-b023-5821-955e-689c355d1f78",
       "name": "Nosing5",
       "position": {
-        "x": 0,
+        "x": 0.0,
         "y": 24.25,
         "z": -5
       },
@@ -2300,8 +2279,7 @@
             "x": 28,
             "y": 0.5,
             "z": 2
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -2408,8 +2386,7 @@
             "x": 2,
             "y": 22,
             "z": 4
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -2516,8 +2493,7 @@
             "x": 2,
             "y": 22,
             "z": 4
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -2597,7 +2573,7 @@
       "id": "0ab4e322-9221-5259-9d05-01a5f1dc17e6",
       "name": "Tread6",
       "position": {
-        "x": 0,
+        "x": 0.0,
         "y": 26,
         "z": -10
       },
@@ -2624,8 +2600,7 @@
             "x": 28,
             "y": 4,
             "z": 4
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -2705,7 +2680,7 @@
       "id": "8f096eb6-b78a-5e9c-b049-545bab723f00",
       "name": "Nosing6",
       "position": {
-        "x": 0,
+        "x": 0.0,
         "y": 28.25,
         "z": -9
       },
@@ -2732,8 +2707,7 @@
             "x": 28,
             "y": 0.5,
             "z": 2
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -2840,8 +2814,7 @@
             "x": 2,
             "y": 26,
             "z": 4
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -2948,8 +2921,7 @@
             "x": 2,
             "y": 26,
             "z": 4
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -3029,7 +3001,7 @@
       "id": "f304d8c5-34b6-5fb6-b93a-9e34494ba43a",
       "name": "Tread7",
       "position": {
-        "x": 0,
+        "x": 0.0,
         "y": 30,
         "z": -14
       },
@@ -3056,8 +3028,7 @@
             "x": 28,
             "y": 4,
             "z": 4
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -3137,7 +3108,7 @@
       "id": "a057e3b8-2385-5876-9a27-725d5045a7d6",
       "name": "Nosing7",
       "position": {
-        "x": 0,
+        "x": 0.0,
         "y": 32.25,
         "z": -13
       },
@@ -3164,8 +3135,7 @@
             "x": 28,
             "y": 0.5,
             "z": 2
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -3272,8 +3242,7 @@
             "x": 2,
             "y": 30,
             "z": 4
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -3380,8 +3349,7 @@
             "x": 2,
             "y": 30,
             "z": 4
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -3488,8 +3456,7 @@
             "x": 2,
             "y": 28,
             "z": 2
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -3596,8 +3563,7 @@
             "x": 2,
             "y": 28,
             "z": 2
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -3677,7 +3643,7 @@
       "id": "0b02d8e3-101c-5609-af1c-0806e5820531",
       "name": "Handrail-1",
       "position": {
-        "x": -15,
+        "x": -14,
         "y": 46,
         "z": 0
       },
@@ -3703,9 +3669,8 @@
           "size": {
             "x": 2,
             "y": 2,
-            "z": 44
-          },
-          "isStaticBox": true
+            "z": 40
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -3812,8 +3777,7 @@
             "x": 2,
             "y": 28,
             "z": 2
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -3920,8 +3884,7 @@
             "x": 2,
             "y": 28,
             "z": 2
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -4001,7 +3964,7 @@
       "id": "561600be-66b0-5329-89c9-3e6fe30e7227",
       "name": "Handrail1",
       "position": {
-        "x": 15,
+        "x": 14,
         "y": 46,
         "z": 0
       },
@@ -4027,9 +3990,8 @@
           "size": {
             "x": 2,
             "y": 2,
-            "z": 44
-          },
-          "isStaticBox": true
+            "z": 40
+          }
         },
         "unwrapMode": "custom",
         "visible": true,

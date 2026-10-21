@@ -35,6 +35,10 @@
         "GatherType": "Benches"
       }
     },
+    "PlacementSettings": {
+      "BlockPreviewVisibility": "AlwaysVisible",
+      "AllowRotationKey": true
+    },
     "Light": {
       "Color": "#DB9",
       "Radius": 5
@@ -76,5 +80,6 @@
     ],
     "TimeSeconds": 2,
     "OutputQuantity": 2
-  }
+  },
+  "Scale": 0.7
 }

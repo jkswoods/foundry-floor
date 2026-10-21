@@ -12,7 +12,7 @@
       ],
       "size": [
         2,
-        28,
+        26,
         2
       ],
       "material": "yellow",
@@ -27,7 +27,7 @@
       ],
       "size": [
         2,
-        28,
+        26,
         2
       ],
       "material": "yellow",
@@ -58,7 +58,7 @@
       "size": [
         2,
         2,
-        28
+        26
       ],
       "material": "edge",
       "group": null
@@ -73,7 +73,7 @@
       "size": [
         2,
         6,
-        28
+        26
       ],
       "material": "dark",
       "group": null

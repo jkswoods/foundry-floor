@@ -5,9 +5,7 @@
   },
   "Icon": "Icons/Items/FF_CallPanel.png",
   "MaxStack": 64,
-  "Categories": [
-    "Furniture.Furniture"
-  ],
+  "Categories": [],
   "PlayerAnimationsId": "Block",
   "Interactions": {
     "Primary": "Block_Primary",
@@ -35,29 +33,11 @@
         "GatherType": "Benches"
       }
     },
-    "Interactions": {
-      "Use": "FF_RuntimeUse"
-    },
-    "InteractionHint": "server.foundryFloor.liftUse"
+    "PlacementSettings": {
+      "BlockPreviewVisibility": "AlwaysVisible",
+      "AllowRotationKey": true
+    }
   },
   "ItemSoundSetId": "FF_ISS_Metal",
-  "Recipe": {
-    "Input": [
-      {
-        "ItemId": "Ingredient_Bar_Iron",
-        "Quantity": 3
-      }
-    ],
-    "BenchRequirement": [
-      {
-        "Type": "Crafting",
-        "Id": "FoundryFloor",
-        "Categories": [
-          "Foundry_Fixtures"
-        ]
-      }
-    ],
-    "TimeSeconds": 2,
-    "OutputQuantity": 1
-  }
+  "Scale": 0.7
 }

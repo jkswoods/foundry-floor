@@ -30,10 +30,9 @@
         "settings": {
           "size": {
             "x": 4,
-            "y": 22,
+            "y": 20,
             "z": 32
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -140,8 +139,7 @@
             "x": 20,
             "y": 4,
             "z": 32
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -248,8 +246,7 @@
             "x": 20,
             "y": 4,
             "z": 32
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,

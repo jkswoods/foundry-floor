@@ -1,0 +1,148 @@
+{
+  "id": "FF_CargoPallet_Connect01",
+  "title": "Steel cargo pallet",
+  "category": "Fixtures",
+  "parts": [
+    {
+      "name": "Runner-10",
+      "center": [
+        -10,
+        2,
+        0
+      ],
+      "size": [
+        5,
+        4,
+        32
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "Runner10",
+      "center": [
+        10,
+        2,
+        0
+      ],
+      "size": [
+        5,
+        4,
+        32
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "CargoSlat0",
+      "center": [
+        -11.5,
+        5,
+        -1.0
+      ],
+      "size": [
+        5,
+        2,
+        30
+      ],
+      "material": "copper",
+      "group": null
+    },
+    {
+      "name": "CargoSlat1",
+      "center": [
+        -4.0,
+        5,
+        -1.0
+      ],
+      "size": [
+        6,
+        2,
+        30
+      ],
+      "material": "copper",
+      "group": null
+    },
+    {
+      "name": "CargoSlat2",
+      "center": [
+        4.0,
+        5,
+        -1.0
+      ],
+      "size": [
+        6,
+        2,
+        30
+      ],
+      "material": "copper",
+      "group": null
+    },
+    {
+      "name": "CargoSlat3",
+      "center": [
+        11.5,
+        5,
+        -1.0
+      ],
+      "size": [
+        5,
+        2,
+        30
+      ],
+      "material": "copper",
+      "group": null
+    },
+    {
+      "name": "PalletRim2",
+      "center": [
+        15,
+        5,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        30
+      ],
+      "material": "steel",
+      "group": null
+    },
+    {
+      "name": "PalletRim4",
+      "center": [
+        0,
+        5,
+        15
+      ],
+      "size": [
+        32,
+        2,
+        2
+      ],
+      "material": "steel",
+      "group": null
+    },
+    {
+      "name": "PalletRim8",
+      "center": [
+        -15,
+        5,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        30
+      ],
+      "material": "steel",
+      "group": null
+    }
+  ],
+  "description": "A low loading-bay prop with visible forklift pockets.",
+  "cost": 3,
+  "quantity": 2,
+  "groups": {},
+  "motion": null,
+  "collision": null
+}

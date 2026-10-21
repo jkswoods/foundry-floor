@@ -108,5 +108,24 @@
     "runtime_sha256": "f3c12eeacc739721111f4a9a1cbfba3cf900e627a08d324b3e02aae98204a5e5",
     "export_gain_db": -7.102603969595368,
     "human_listening": "pending"
+  },
+  {
+    "cue": "glass_handling",
+    "provider": "ElevenLabs",
+    "transport": "connected plugin",
+    "model": "eleven_text_to_sound_v2",
+    "prompt": "A short close dry game sound of setting a heavy steel-framed glass window panel into its mount: one soft padded metal clunk followed by a tiny clear glass tick, sturdy factory construction, restrained",
+    "requested_settings": {
+      "duration_seconds": 0.8,
+      "prompt_influence": 0.7,
+      "loop": false
+    },
+    "actual_duration_seconds": 0.8,
+    "generation_id": "WO7qnLlsGwobulIBCViq",
+    "original_sha256": "dc225c3695f09e8b2522c65c6c5a4db0edc491035b1a69aa97c8f628dcf8d004",
+    "runtime_file": "Common/Sounds/FoundryFloor/glass_handling.ogg",
+    "runtime_sha256": "8c4a41929a6b0cafc419399736454289ae14348a9b96719dcc0589583ca63a22",
+    "export_gain_db": -13.2060392871428,
+    "human_listening": "pending"
   }
 ]

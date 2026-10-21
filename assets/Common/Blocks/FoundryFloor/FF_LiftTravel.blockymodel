@@ -15,6 +15,27 @@
         "z": 0.0,
         "w": 1.0
       },
+      "shape": {
+        "type": "none",
+        "offset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "stretch": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        },
+        "settings": {
+          "isPiece": false
+        },
+        "visible": true,
+        "doubleSided": false,
+        "shadingMode": "standard",
+        "unwrapMode": "custom",
+        "textureLayout": {}
+      },
       "children": [
         {
           "id": "19b96ff8-34fe-55d7-92e7-e8037f378a0f",
@@ -47,8 +68,7 @@
                 "x": 2,
                 "y": 4,
                 "z": 80
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -155,8 +175,7 @@
                 "x": 2,
                 "y": 4,
                 "z": 80
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -263,8 +282,7 @@
                 "x": 84,
                 "y": 4,
                 "z": 2
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -371,8 +389,7 @@
                 "x": 84,
                 "y": 4,
                 "z": 2
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -479,8 +496,7 @@
                 "x": 2,
                 "y": 2,
                 "z": 76
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -587,8 +603,7 @@
                 "x": 2,
                 "y": 2,
                 "z": 76
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -695,8 +710,7 @@
                 "x": 2,
                 "y": 2,
                 "z": 76
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -803,8 +817,7 @@
                 "x": 2,
                 "y": 2,
                 "z": 76
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -911,8 +924,7 @@
                 "x": 2,
                 "y": 2,
                 "z": 76
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -1019,8 +1031,7 @@
                 "x": 2,
                 "y": 2,
                 "z": 76
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -1127,8 +1138,7 @@
                 "x": 2,
                 "y": 2,
                 "z": 76
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -1235,8 +1245,7 @@
                 "x": 2,
                 "y": 2,
                 "z": 76
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -1343,8 +1352,7 @@
                 "x": 2,
                 "y": 2,
                 "z": 76
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -1451,8 +1459,7 @@
                 "x": 2,
                 "y": 2,
                 "z": 76
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -1559,8 +1566,7 @@
                 "x": 2,
                 "y": 2,
                 "z": 76
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -1667,8 +1673,7 @@
                 "x": 2,
                 "y": 2,
                 "z": 76
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -1775,8 +1780,7 @@
                 "x": 2,
                 "y": 2,
                 "z": 76
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -1883,8 +1887,7 @@
                 "x": 2,
                 "y": 2,
                 "z": 76
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -1991,8 +1994,7 @@
                 "x": 2,
                 "y": 2,
                 "z": 76
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -2099,8 +2101,7 @@
                 "x": 2,
                 "y": 2,
                 "z": 76
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -2207,8 +2208,7 @@
                 "x": 2,
                 "y": 2,
                 "z": 76
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -2315,8 +2315,7 @@
                 "x": 2,
                 "y": 2,
                 "z": 76
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -2423,8 +2422,7 @@
                 "x": 2,
                 "y": 2,
                 "z": 76
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -2531,8 +2529,7 @@
                 "x": 2,
                 "y": 2,
                 "z": 76
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -2639,8 +2636,7 @@
                 "x": 2,
                 "y": 2,
                 "z": 76
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -2747,8 +2743,7 @@
                 "x": 84,
                 "y": 2,
                 "z": 2
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -2855,8 +2850,7 @@
                 "x": 84,
                 "y": 2,
                 "z": 2
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -2963,8 +2957,7 @@
                 "x": 3,
                 "y": 72,
                 "z": 3
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -3071,8 +3064,7 @@
                 "x": 3,
                 "y": 72,
                 "z": 3
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -3176,11 +3168,10 @@
             },
             "settings": {
               "size": {
-                "x": 3,
+                "x": 2.5,
                 "y": 3,
                 "z": 76
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -3287,8 +3278,7 @@
                 "x": 2,
                 "y": 2,
                 "z": 72
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -3395,8 +3385,7 @@
                 "x": 2,
                 "y": 8,
                 "z": 72
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -3503,8 +3492,7 @@
                 "x": 3,
                 "y": 72,
                 "z": 3
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -3611,8 +3599,7 @@
                 "x": 3,
                 "y": 72,
                 "z": 3
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -3716,11 +3703,10 @@
             },
             "settings": {
               "size": {
-                "x": 3,
+                "x": 2.5,
                 "y": 3,
                 "z": 76
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -3827,8 +3813,7 @@
                 "x": 2,
                 "y": 2,
                 "z": 72
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -3935,8 +3920,7 @@
                 "x": 2,
                 "y": 8,
                 "z": 72
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -4043,8 +4027,7 @@
                 "x": 80,
                 "y": 3,
                 "z": 3
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -4151,8 +4134,7 @@
                 "x": 80,
                 "y": 2,
                 "z": 2
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -4259,8 +4241,7 @@
                 "x": 80,
                 "y": 8,
                 "z": 2
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -4367,8 +4348,7 @@
                 "x": 1,
                 "y": 50,
                 "z": 1
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -4475,8 +4455,7 @@
                 "x": 1,
                 "y": 50,
                 "z": 1
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -4583,8 +4562,7 @@
                 "x": 1,
                 "y": 50,
                 "z": 1
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -4691,8 +4669,7 @@
                 "x": 1,
                 "y": 50,
                 "z": 1
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -4799,8 +4776,7 @@
                 "x": 1,
                 "y": 50,
                 "z": 1
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -4907,8 +4883,7 @@
                 "x": 1,
                 "y": 50,
                 "z": 1
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -5015,8 +4990,7 @@
                 "x": 1,
                 "y": 50,
                 "z": 1
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -5123,8 +5097,7 @@
                 "x": 1,
                 "y": 50,
                 "z": 1
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -5231,8 +5204,7 @@
                 "x": 1,
                 "y": 50,
                 "z": 1
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -5339,8 +5311,7 @@
                 "x": 5,
                 "y": 14,
                 "z": 4
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -5447,8 +5418,7 @@
                 "x": 2,
                 "y": 3,
                 "z": 1
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -5555,8 +5525,7 @@
                 "x": 80,
                 "y": 3,
                 "z": 3
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -5663,8 +5632,7 @@
                 "x": 80,
                 "y": 3,
                 "z": 3
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -5771,8 +5739,7 @@
                 "x": 80,
                 "y": 8,
                 "z": 3
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -5879,8 +5846,7 @@
                 "x": 1,
                 "y": 58,
                 "z": 1
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -5987,8 +5953,7 @@
                 "x": 1,
                 "y": 58,
                 "z": 1
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -6095,8 +6060,7 @@
                 "x": 1,
                 "y": 58,
                 "z": 1
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -6203,8 +6167,7 @@
                 "x": 1,
                 "y": 58,
                 "z": 1
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -6311,8 +6274,7 @@
                 "x": 1,
                 "y": 58,
                 "z": 1
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -6419,8 +6381,7 @@
                 "x": 1,
                 "y": 58,
                 "z": 1
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -6527,8 +6488,7 @@
                 "x": 1,
                 "y": 58,
                 "z": 1
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -6635,8 +6595,7 @@
                 "x": 1,
                 "y": 58,
                 "z": 1
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -6743,8 +6702,7 @@
                 "x": 1,
                 "y": 58,
                 "z": 1
-              },
-              "isStaticBox": true
+              }
             },
             "unwrapMode": "custom",
             "visible": true,
@@ -6823,11 +6781,11 @@
       ]
     },
     {
-      "id": "252e4b8b-48e7-5ebb-accd-fc5efb77c5de",
-      "name": "Guide-4648",
+      "id": "6037cf7a-3969-59c0-8587-d1fafe22d017",
+      "name": "Guide-46",
       "position": {
         "x": -46,
-        "y": 48,
+        "y": 92,
         "z": -40
       },
       "orientation": {
@@ -6851,10 +6809,9 @@
         "settings": {
           "size": {
             "x": 4,
-            "y": 96,
+            "y": 184,
             "z": 6
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -6931,11 +6888,11 @@
       }
     },
     {
-      "id": "e7643d37-7d4a-5bf4-9c73-954416568097",
-      "name": "GuideBack-4648",
+      "id": "fc811f07-8924-5cec-9064-7ade08f5a6d8",
+      "name": "GuideBack-46",
       "position": {
         "x": -43.5,
-        "y": 48,
+        "y": 92,
         "z": -44
       },
       "orientation": {
@@ -6959,10 +6916,9 @@
         "settings": {
           "size": {
             "x": 9,
-            "y": 96,
+            "y": 184,
             "z": 2
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -7039,227 +6995,11 @@
       }
     },
     {
-      "id": "feac6771-d5a8-586e-9d1f-0142c43a32e4",
-      "name": "Guide-46144",
-      "position": {
-        "x": -46,
-        "y": 144,
-        "z": -40
-      },
-      "orientation": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0,
-        "w": 1.0
-      },
-      "shape": {
-        "type": "box",
-        "offset": {
-          "x": 0,
-          "y": 0,
-          "z": 0
-        },
-        "stretch": {
-          "x": 1,
-          "y": 1,
-          "z": 1
-        },
-        "settings": {
-          "size": {
-            "x": 4,
-            "y": 96,
-            "z": 6
-          },
-          "isStaticBox": true
-        },
-        "unwrapMode": "custom",
-        "visible": true,
-        "doubleSided": false,
-        "shadingMode": "standard",
-        "textureLayout": {
-          "front": {
-            "offset": {
-              "x": 128,
-              "y": 0
-            },
-            "mirror": {
-              "x": false,
-              "y": false
-            },
-            "angle": 0
-          },
-          "back": {
-            "offset": {
-              "x": 128,
-              "y": 0
-            },
-            "mirror": {
-              "x": false,
-              "y": false
-            },
-            "angle": 0
-          },
-          "left": {
-            "offset": {
-              "x": 128,
-              "y": 0
-            },
-            "mirror": {
-              "x": false,
-              "y": false
-            },
-            "angle": 0
-          },
-          "right": {
-            "offset": {
-              "x": 128,
-              "y": 0
-            },
-            "mirror": {
-              "x": false,
-              "y": false
-            },
-            "angle": 0
-          },
-          "top": {
-            "offset": {
-              "x": 128,
-              "y": 0
-            },
-            "mirror": {
-              "x": false,
-              "y": false
-            },
-            "angle": 0
-          },
-          "bottom": {
-            "offset": {
-              "x": 128,
-              "y": 0
-            },
-            "mirror": {
-              "x": false,
-              "y": false
-            },
-            "angle": 0
-          }
-        }
-      }
-    },
-    {
-      "id": "536f451c-b5b6-5e73-bdd1-ef762cda9a4f",
-      "name": "GuideBack-46144",
-      "position": {
-        "x": -43.5,
-        "y": 144,
-        "z": -44
-      },
-      "orientation": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0,
-        "w": 1.0
-      },
-      "shape": {
-        "type": "box",
-        "offset": {
-          "x": 0,
-          "y": 0,
-          "z": 0
-        },
-        "stretch": {
-          "x": 1,
-          "y": 1,
-          "z": 1
-        },
-        "settings": {
-          "size": {
-            "x": 9,
-            "y": 96,
-            "z": 2
-          },
-          "isStaticBox": true
-        },
-        "unwrapMode": "custom",
-        "visible": true,
-        "doubleSided": false,
-        "shadingMode": "standard",
-        "textureLayout": {
-          "front": {
-            "offset": {
-              "x": 256,
-              "y": 0
-            },
-            "mirror": {
-              "x": false,
-              "y": false
-            },
-            "angle": 0
-          },
-          "back": {
-            "offset": {
-              "x": 256,
-              "y": 0
-            },
-            "mirror": {
-              "x": false,
-              "y": false
-            },
-            "angle": 0
-          },
-          "left": {
-            "offset": {
-              "x": 256,
-              "y": 0
-            },
-            "mirror": {
-              "x": false,
-              "y": false
-            },
-            "angle": 0
-          },
-          "right": {
-            "offset": {
-              "x": 256,
-              "y": 0
-            },
-            "mirror": {
-              "x": false,
-              "y": false
-            },
-            "angle": 0
-          },
-          "top": {
-            "offset": {
-              "x": 256,
-              "y": 0
-            },
-            "mirror": {
-              "x": false,
-              "y": false
-            },
-            "angle": 0
-          },
-          "bottom": {
-            "offset": {
-              "x": 256,
-              "y": 0
-            },
-            "mirror": {
-              "x": false,
-              "y": false
-            },
-            "angle": 0
-          }
-        }
-      }
-    },
-    {
-      "id": "925620c7-21d4-5bbe-a781-a136fe8d036f",
-      "name": "Guide4648",
+      "id": "e2e2ecaf-2b22-57b1-8208-43dd98e6ef65",
+      "name": "Guide46",
       "position": {
         "x": 46,
-        "y": 48,
+        "y": 92,
         "z": -40
       },
       "orientation": {
@@ -7283,10 +7023,9 @@
         "settings": {
           "size": {
             "x": 4,
-            "y": 96,
+            "y": 184,
             "z": 6
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -7363,11 +7102,11 @@
       }
     },
     {
-      "id": "3c0cf884-d95f-5093-b4cd-0dfce2fd0d1d",
-      "name": "GuideBack4648",
+      "id": "4614798a-f75d-5db5-a9cd-2d83bbbb971b",
+      "name": "GuideBack46",
       "position": {
         "x": 43.5,
-        "y": 48,
+        "y": 92,
         "z": -44
       },
       "orientation": {
@@ -7391,226 +7130,9 @@
         "settings": {
           "size": {
             "x": 9,
-            "y": 96,
+            "y": 184,
             "z": 2
-          },
-          "isStaticBox": true
-        },
-        "unwrapMode": "custom",
-        "visible": true,
-        "doubleSided": false,
-        "shadingMode": "standard",
-        "textureLayout": {
-          "front": {
-            "offset": {
-              "x": 256,
-              "y": 0
-            },
-            "mirror": {
-              "x": false,
-              "y": false
-            },
-            "angle": 0
-          },
-          "back": {
-            "offset": {
-              "x": 256,
-              "y": 0
-            },
-            "mirror": {
-              "x": false,
-              "y": false
-            },
-            "angle": 0
-          },
-          "left": {
-            "offset": {
-              "x": 256,
-              "y": 0
-            },
-            "mirror": {
-              "x": false,
-              "y": false
-            },
-            "angle": 0
-          },
-          "right": {
-            "offset": {
-              "x": 256,
-              "y": 0
-            },
-            "mirror": {
-              "x": false,
-              "y": false
-            },
-            "angle": 0
-          },
-          "top": {
-            "offset": {
-              "x": 256,
-              "y": 0
-            },
-            "mirror": {
-              "x": false,
-              "y": false
-            },
-            "angle": 0
-          },
-          "bottom": {
-            "offset": {
-              "x": 256,
-              "y": 0
-            },
-            "mirror": {
-              "x": false,
-              "y": false
-            },
-            "angle": 0
           }
-        }
-      }
-    },
-    {
-      "id": "f2a13ef4-33b5-5f8a-b371-bdcc56fa6aad",
-      "name": "Guide46144",
-      "position": {
-        "x": 46,
-        "y": 144,
-        "z": -40
-      },
-      "orientation": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0,
-        "w": 1.0
-      },
-      "shape": {
-        "type": "box",
-        "offset": {
-          "x": 0,
-          "y": 0,
-          "z": 0
-        },
-        "stretch": {
-          "x": 1,
-          "y": 1,
-          "z": 1
-        },
-        "settings": {
-          "size": {
-            "x": 4,
-            "y": 96,
-            "z": 6
-          },
-          "isStaticBox": true
-        },
-        "unwrapMode": "custom",
-        "visible": true,
-        "doubleSided": false,
-        "shadingMode": "standard",
-        "textureLayout": {
-          "front": {
-            "offset": {
-              "x": 128,
-              "y": 0
-            },
-            "mirror": {
-              "x": false,
-              "y": false
-            },
-            "angle": 0
-          },
-          "back": {
-            "offset": {
-              "x": 128,
-              "y": 0
-            },
-            "mirror": {
-              "x": false,
-              "y": false
-            },
-            "angle": 0
-          },
-          "left": {
-            "offset": {
-              "x": 128,
-              "y": 0
-            },
-            "mirror": {
-              "x": false,
-              "y": false
-            },
-            "angle": 0
-          },
-          "right": {
-            "offset": {
-              "x": 128,
-              "y": 0
-            },
-            "mirror": {
-              "x": false,
-              "y": false
-            },
-            "angle": 0
-          },
-          "top": {
-            "offset": {
-              "x": 128,
-              "y": 0
-            },
-            "mirror": {
-              "x": false,
-              "y": false
-            },
-            "angle": 0
-          },
-          "bottom": {
-            "offset": {
-              "x": 128,
-              "y": 0
-            },
-            "mirror": {
-              "x": false,
-              "y": false
-            },
-            "angle": 0
-          }
-        }
-      }
-    },
-    {
-      "id": "1c8bca27-f3be-501a-be80-28fbedc27483",
-      "name": "GuideBack46144",
-      "position": {
-        "x": 43.5,
-        "y": 144,
-        "z": -44
-      },
-      "orientation": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0,
-        "w": 1.0
-      },
-      "shape": {
-        "type": "box",
-        "offset": {
-          "x": 0,
-          "y": 0,
-          "z": 0
-        },
-        "stretch": {
-          "x": 1,
-          "y": 1,
-          "z": 1
-        },
-        "settings": {
-          "size": {
-            "x": 9,
-            "y": 96,
-            "z": 2
-          },
-          "isStaticBox": true
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -7717,8 +7239,7 @@
             "x": 96,
             "y": 8,
             "z": 12
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -7799,7 +7320,7 @@
       "name": "MotorHousing",
       "position": {
         "x": 0,
-        "y": 196,
+        "y": 198,
         "z": -38
       },
       "orientation": {
@@ -7824,9 +7345,8 @@
           "size": {
             "x": 28,
             "y": 12,
-            "z": 16
-          },
-          "isStaticBox": true
+            "z": 12
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -7907,7 +7427,7 @@
       "name": "Sheave",
       "position": {
         "x": 0,
-        "y": 193,
+        "y": 196,
         "z": -28
       },
       "orientation": {
@@ -7931,10 +7451,9 @@
         "settings": {
           "size": {
             "x": 16,
-            "y": 16,
+            "y": 12,
             "z": 4
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,

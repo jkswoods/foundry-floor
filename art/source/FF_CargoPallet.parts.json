@@ -4,7 +4,7 @@
   "category": "Fixtures",
   "parts": [
     {
-      "name": "RunnerL",
+      "name": "Runner-10",
       "center": [
         -10,
         2,
@@ -13,13 +13,13 @@
       "size": [
         5,
         4,
-        30
+        32
       ],
       "material": "dark",
       "group": null
     },
     {
-      "name": "RunnerR",
+      "name": "Runner10",
       "center": [
         10,
         2,
@@ -28,7 +28,7 @@
       "size": [
         5,
         4,
-        30
+        32
       ],
       "material": "dark",
       "group": null
@@ -36,14 +36,14 @@
     {
       "name": "CargoSlat0",
       "center": [
-        -12,
+        -11.5,
         5,
-        0
+        0.0
       ],
       "size": [
         5,
         2,
-        32
+        28
       ],
       "material": "copper",
       "group": null
@@ -51,14 +51,14 @@
     {
       "name": "CargoSlat1",
       "center": [
-        -6,
+        -4.0,
         5,
-        0
+        0.0
       ],
       "size": [
-        5,
+        6,
         2,
-        32
+        28
       ],
       "material": "copper",
       "group": null
@@ -66,14 +66,14 @@
     {
       "name": "CargoSlat2",
       "center": [
-        0,
+        4.0,
         5,
-        0
+        0.0
       ],
       "size": [
-        5,
+        6,
         2,
-        32
+        28
       ],
       "material": "copper",
       "group": null
@@ -81,31 +81,76 @@
     {
       "name": "CargoSlat3",
       "center": [
-        6,
+        11.5,
         5,
-        0
+        0.0
       ],
       "size": [
         5,
         2,
-        32
+        28
       ],
       "material": "copper",
       "group": null
     },
     {
-      "name": "CargoSlat4",
+      "name": "PalletRim1",
       "center": [
-        12,
+        0,
         5,
-        0
+        -15
       ],
       "size": [
-        5,
+        32,
         2,
-        32
+        2
       ],
-      "material": "copper",
+      "material": "steel",
+      "group": null
+    },
+    {
+      "name": "PalletRim2",
+      "center": [
+        15,
+        5,
+        0.0
+      ],
+      "size": [
+        2,
+        2,
+        28
+      ],
+      "material": "steel",
+      "group": null
+    },
+    {
+      "name": "PalletRim4",
+      "center": [
+        0,
+        5,
+        15
+      ],
+      "size": [
+        32,
+        2,
+        2
+      ],
+      "material": "steel",
+      "group": null
+    },
+    {
+      "name": "PalletRim8",
+      "center": [
+        -15,
+        5,
+        0.0
+      ],
+      "size": [
+        2,
+        2,
+        28
+      ],
+      "material": "steel",
       "group": null
     }
   ],

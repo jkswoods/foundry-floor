@@ -7,13 +7,13 @@
       "name": "DuctRear",
       "center": [
         0,
-        16,
-        -8
+        11,
+        0
       ],
       "size": [
         12,
-        12,
-        16
+        22,
+        12
       ],
       "material": "copper",
       "group": null
@@ -21,12 +21,12 @@
     {
       "name": "DuctSide",
       "center": [
-        8,
+        11,
         16,
         0
       ],
       "size": [
-        16,
+        10,
         12,
         12
       ],
@@ -34,37 +34,127 @@
       "group": null
     },
     {
-      "name": "RearFlange",
+      "name": "RearSide-7.5",
       "center": [
-        0,
-        16,
-        -14
+        -7.5,
+        2,
+        0
       ],
       "size": [
-        18,
-        18,
-        4
+        3,
+        3,
+        18
       ],
       "material": "dark",
       "group": null
     },
     {
-      "name": "SideFlange",
+      "name": "RearSide7.5",
       "center": [
-        14,
-        16,
+        7.5,
+        2,
         0
       ],
       "size": [
-        4,
-        18,
+        3,
+        3,
         18
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "RearEdge8.5",
+      "center": [
+        0,
+        2,
+        -7.5
+      ],
+      "size": [
+        12,
+        3,
+        3
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "RearEdge23.5",
+      "center": [
+        0,
+        2,
+        7.5
+      ],
+      "size": [
+        12,
+        3,
+        3
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "SideSide-7.5",
+      "center": [
+        14,
+        8.5,
+        0
+      ],
+      "size": [
+        3,
+        3,
+        18
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "SideSide7.5",
+      "center": [
+        14,
+        23.5,
+        0
+      ],
+      "size": [
+        3,
+        3,
+        18
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "SideEdge8.5",
+      "center": [
+        14,
+        16,
+        -7.5
+      ],
+      "size": [
+        3,
+        12,
+        3
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "SideEdge23.5",
+      "center": [
+        14,
+        16,
+        7.5
+      ],
+      "size": [
+        3,
+        12,
+        3
       ],
       "material": "dark",
       "group": null
     }
   ],
-  "description": "A 90-degree return with the same port centers as the straight duct.",
+  "description": "A 90-degree return with the same block-face port centers as the straight duct.",
   "cost": 3,
   "quantity": 2,
   "groups": {},

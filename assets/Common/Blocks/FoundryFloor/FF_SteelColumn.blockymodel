@@ -32,8 +32,7 @@
             "x": 24,
             "y": 4,
             "z": 24
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -114,7 +113,7 @@
       "name": "ColumnWeb",
       "position": {
         "x": 0,
-        "y": 18,
+        "y": 17,
         "z": 0
       },
       "orientation": {
@@ -138,10 +137,9 @@
         "settings": {
           "size": {
             "x": 5,
-            "y": 28,
+            "y": 26,
             "z": 12
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -222,8 +220,8 @@
       "name": "FrontFlange",
       "position": {
         "x": 0,
-        "y": 18,
-        "z": 7
+        "y": 17,
+        "z": 7.5
       },
       "orientation": {
         "x": 0.0,
@@ -246,10 +244,9 @@
         "settings": {
           "size": {
             "x": 16,
-            "y": 28,
+            "y": 26,
             "z": 3
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -330,8 +327,8 @@
       "name": "BackFlange",
       "position": {
         "x": 0,
-        "y": 18,
-        "z": -7
+        "y": 17,
+        "z": -7.5
       },
       "orientation": {
         "x": 0.0,
@@ -354,10 +351,9 @@
         "settings": {
           "size": {
             "x": 16,
-            "y": 28,
+            "y": 26,
             "z": 3
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -464,8 +460,7 @@
             "x": 24,
             "y": 2,
             "z": 24
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -572,8 +567,7 @@
             "x": 2,
             "y": 1,
             "z": 2
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -680,8 +674,7 @@
             "x": 2,
             "y": 1,
             "z": 2
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -788,8 +781,7 @@
             "x": 2,
             "y": 1,
             "z": 2
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -896,8 +888,7 @@
             "x": 2,
             "y": 1,
             "z": 2
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,

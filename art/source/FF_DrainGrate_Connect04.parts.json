@@ -1,0 +1,223 @@
+{
+  "id": "FF_DrainGrate_Connect04",
+  "title": "Recessed drain grate",
+  "category": "Floors",
+  "parts": [
+    {
+      "name": "ConcreteBed",
+      "center": [
+        0,
+        12,
+        0
+      ],
+      "size": [
+        32,
+        24,
+        32
+      ],
+      "material": "concrete",
+      "group": null
+    },
+    {
+      "name": "DrainLeft",
+      "center": [
+        -15,
+        30,
+        0
+      ],
+      "size": [
+        2,
+        4,
+        32
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "DrainRight",
+      "center": [
+        15,
+        30,
+        0
+      ],
+      "size": [
+        2,
+        4,
+        32
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "DrainBack",
+      "center": [
+        0,
+        30,
+        -15
+      ],
+      "size": [
+        28,
+        4,
+        2
+      ],
+      "material": "yellow",
+      "group": null
+    },
+    {
+      "name": "DrainGrating0",
+      "center": [
+        -13.5,
+        31,
+        1.0
+      ],
+      "size": [
+        1,
+        2,
+        30
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "DrainGrating1",
+      "center": [
+        -10.0,
+        31,
+        1.0
+      ],
+      "size": [
+        2,
+        2,
+        30
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "DrainGrating2",
+      "center": [
+        -6.0,
+        31,
+        1.0
+      ],
+      "size": [
+        2,
+        2,
+        30
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "DrainGrating3",
+      "center": [
+        -2.0,
+        31,
+        1.0
+      ],
+      "size": [
+        2,
+        2,
+        30
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "DrainGrating4",
+      "center": [
+        2.0,
+        31,
+        1.0
+      ],
+      "size": [
+        2,
+        2,
+        30
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "DrainGrating5",
+      "center": [
+        6.0,
+        31,
+        1.0
+      ],
+      "size": [
+        2,
+        2,
+        30
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "DrainGrating6",
+      "center": [
+        10.0,
+        31,
+        1.0
+      ],
+      "size": [
+        2,
+        2,
+        30
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "DrainGrating7",
+      "center": [
+        13.5,
+        31,
+        1.0
+      ],
+      "size": [
+        1,
+        2,
+        30
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "DrainBearer0",
+      "center": [
+        0.0,
+        29,
+        -8
+      ],
+      "size": [
+        28,
+        2,
+        2
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "DrainBearer1",
+      "center": [
+        0.0,
+        29,
+        8
+      ],
+      "size": [
+        28,
+        2,
+        2
+      ],
+      "material": "edge",
+      "group": null
+    }
+  ],
+  "description": "An open grate set flush into a full-height concrete floor.",
+  "cost": 3,
+  "quantity": 2,
+  "groups": {},
+  "motion": null,
+  "collision": null
+}

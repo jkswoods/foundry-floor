@@ -35,6 +35,10 @@
         "GatherType": "Benches"
       }
     },
+    "PlacementSettings": {
+      "BlockPreviewVisibility": "AlwaysVisible",
+      "AllowRotationKey": true
+    },
     "Bench": {
       "Type": "Crafting",
       "Id": "FoundryFloor",
@@ -103,5 +107,6 @@
     ],
     "TimeSeconds": 2,
     "OutputQuantity": 1
-  }
+  },
+  "Scale": 0.55
 }

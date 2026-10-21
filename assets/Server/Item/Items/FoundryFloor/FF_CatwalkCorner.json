@@ -34,6 +34,78 @@
       "Breaking": {
         "GatherType": "Benches"
       }
+    },
+    "PlacementSettings": {
+      "BlockPreviewVisibility": "AlwaysVisible",
+      "AllowRotationKey": true
+    },
+    "State": {
+      "Definitions": {
+        "Connect00": {
+          "CustomModel": "Blocks/FoundryFloor/FF_CatwalkCorner.blockymodel",
+          "HitboxType": "FF_CatwalkCorner"
+        },
+        "Connect01": {
+          "CustomModel": "Blocks/FoundryFloor/FF_CatwalkCorner_Connect01.blockymodel",
+          "HitboxType": "FF_CatwalkCorner_Connect01"
+        },
+        "Connect02": {
+          "CustomModel": "Blocks/FoundryFloor/FF_CatwalkCorner_Connect02.blockymodel",
+          "HitboxType": "FF_CatwalkCorner_Connect02"
+        },
+        "Connect03": {
+          "CustomModel": "Blocks/FoundryFloor/FF_CatwalkCorner_Connect03.blockymodel",
+          "HitboxType": "FF_CatwalkCorner_Connect03"
+        },
+        "Connect04": {
+          "CustomModel": "Blocks/FoundryFloor/FF_CatwalkCorner_Connect04.blockymodel",
+          "HitboxType": "FF_CatwalkCorner_Connect04"
+        },
+        "Connect05": {
+          "CustomModel": "Blocks/FoundryFloor/FF_CatwalkCorner_Connect05.blockymodel",
+          "HitboxType": "FF_CatwalkCorner_Connect05"
+        },
+        "Connect06": {
+          "CustomModel": "Blocks/FoundryFloor/FF_CatwalkCorner_Connect06.blockymodel",
+          "HitboxType": "FF_CatwalkCorner_Connect06"
+        },
+        "Connect07": {
+          "CustomModel": "Blocks/FoundryFloor/FF_CatwalkCorner_Connect07.blockymodel",
+          "HitboxType": "FF_CatwalkCorner_Connect07"
+        },
+        "Connect08": {
+          "CustomModel": "Blocks/FoundryFloor/FF_CatwalkCorner_Connect08.blockymodel",
+          "HitboxType": "FF_CatwalkCorner_Connect08"
+        },
+        "Connect09": {
+          "CustomModel": "Blocks/FoundryFloor/FF_CatwalkCorner_Connect09.blockymodel",
+          "HitboxType": "FF_CatwalkCorner_Connect09"
+        },
+        "Connect0A": {
+          "CustomModel": "Blocks/FoundryFloor/FF_CatwalkCorner_Connect0A.blockymodel",
+          "HitboxType": "FF_CatwalkCorner_Connect0A"
+        },
+        "Connect0B": {
+          "CustomModel": "Blocks/FoundryFloor/FF_CatwalkCorner_Connect0B.blockymodel",
+          "HitboxType": "FF_CatwalkCorner_Connect0B"
+        },
+        "Connect0C": {
+          "CustomModel": "Blocks/FoundryFloor/FF_CatwalkCorner_Connect0C.blockymodel",
+          "HitboxType": "FF_CatwalkCorner_Connect0C"
+        },
+        "Connect0D": {
+          "CustomModel": "Blocks/FoundryFloor/FF_CatwalkCorner_Connect0D.blockymodel",
+          "HitboxType": "FF_CatwalkCorner_Connect0D"
+        },
+        "Connect0E": {
+          "CustomModel": "Blocks/FoundryFloor/FF_CatwalkCorner_Connect0E.blockymodel",
+          "HitboxType": "FF_CatwalkCorner_Connect0E"
+        },
+        "Connect0F": {
+          "CustomModel": "Blocks/FoundryFloor/FF_CatwalkCorner_Connect0F.blockymodel",
+          "HitboxType": "FF_CatwalkCorner_Connect0F"
+        }
+      }
     }
   },
   "ItemSoundSetId": "FF_ISS_Metal",
@@ -55,5 +127,6 @@
     ],
     "TimeSeconds": 2,
     "OutputQuantity": 2
-  }
+  },
+  "Scale": 0.7
 }

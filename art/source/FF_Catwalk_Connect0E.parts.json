@@ -1,0 +1,178 @@
+{
+  "id": "FF_Catwalk_Connect0E",
+  "title": "Open grated catwalk",
+  "category": "Catwalks",
+  "parts": [
+    {
+      "name": "DeckBack",
+      "center": [
+        0,
+        2,
+        -15
+      ],
+      "size": [
+        28,
+        4,
+        2
+      ],
+      "material": "yellow",
+      "group": null
+    },
+    {
+      "name": "DeckGrating0",
+      "center": [
+        -14.0,
+        3,
+        1.0
+      ],
+      "size": [
+        2,
+        2,
+        30
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "DeckGrating1",
+      "center": [
+        -10.0,
+        3,
+        1.0
+      ],
+      "size": [
+        2,
+        2,
+        30
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "DeckGrating2",
+      "center": [
+        -6.0,
+        3,
+        1.0
+      ],
+      "size": [
+        2,
+        2,
+        30
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "DeckGrating3",
+      "center": [
+        -2.0,
+        3,
+        1.0
+      ],
+      "size": [
+        2,
+        2,
+        30
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "DeckGrating4",
+      "center": [
+        2.0,
+        3,
+        1.0
+      ],
+      "size": [
+        2,
+        2,
+        30
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "DeckGrating5",
+      "center": [
+        6.0,
+        3,
+        1.0
+      ],
+      "size": [
+        2,
+        2,
+        30
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "DeckGrating6",
+      "center": [
+        10.0,
+        3,
+        1.0
+      ],
+      "size": [
+        2,
+        2,
+        30
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "DeckGrating7",
+      "center": [
+        14.0,
+        3,
+        1.0
+      ],
+      "size": [
+        2,
+        2,
+        30
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "DeckBearer0",
+      "center": [
+        0.0,
+        1,
+        -8
+      ],
+      "size": [
+        32,
+        2,
+        2
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "DeckBearer1",
+      "center": [
+        0.0,
+        1,
+        8
+      ],
+      "size": [
+        32,
+        2,
+        2
+      ],
+      "material": "edge",
+      "group": null
+    }
+  ],
+  "description": "A thin 1 \u00d7 1 deck with real gaps and an underside support frame.",
+  "cost": 3,
+  "quantity": 2,
+  "groups": {},
+  "motion": null,
+  "collision": null
+}

@@ -1,0 +1,148 @@
+{
+  "id": "FF_FactoryRoof",
+  "title": "Corrugated factory roof",
+  "category": "Structure",
+  "parts": [
+    {
+      "name": "InsulatedRoof",
+      "center": [
+        0,
+        14,
+        0
+      ],
+      "size": [
+        32,
+        28,
+        32
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "RoofRib0",
+      "center": [
+        -14,
+        30,
+        0
+      ],
+      "size": [
+        3,
+        4,
+        32
+      ],
+      "material": "steel",
+      "group": null
+    },
+    {
+      "name": "RoofRib1",
+      "center": [
+        -10,
+        30,
+        0
+      ],
+      "size": [
+        3,
+        4,
+        32
+      ],
+      "material": "steel",
+      "group": null
+    },
+    {
+      "name": "RoofRib2",
+      "center": [
+        -6,
+        30,
+        0
+      ],
+      "size": [
+        3,
+        4,
+        32
+      ],
+      "material": "steel",
+      "group": null
+    },
+    {
+      "name": "RoofRib3",
+      "center": [
+        -2,
+        30,
+        0
+      ],
+      "size": [
+        3,
+        4,
+        32
+      ],
+      "material": "steel",
+      "group": null
+    },
+    {
+      "name": "RoofRib4",
+      "center": [
+        2,
+        30,
+        0
+      ],
+      "size": [
+        3,
+        4,
+        32
+      ],
+      "material": "steel",
+      "group": null
+    },
+    {
+      "name": "RoofRib5",
+      "center": [
+        6,
+        30,
+        0
+      ],
+      "size": [
+        3,
+        4,
+        32
+      ],
+      "material": "steel",
+      "group": null
+    },
+    {
+      "name": "RoofRib6",
+      "center": [
+        10,
+        30,
+        0
+      ],
+      "size": [
+        3,
+        4,
+        32
+      ],
+      "material": "steel",
+      "group": null
+    },
+    {
+      "name": "RoofRib7",
+      "center": [
+        14,
+        30,
+        0
+      ],
+      "size": [
+        3,
+        4,
+        32
+      ],
+      "material": "steel",
+      "group": null
+    }
+  ],
+  "description": "Full one-block corrugated steel roof. Rotate to align its continuous ribs.",
+  "cost": 4,
+  "quantity": 4,
+  "groups": {},
+  "motion": null,
+  "collision": null
+}

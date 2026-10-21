@@ -19,24 +19,9 @@
       "group": null
     },
     {
-      "name": "DrainRecess",
-      "center": [
-        0,
-        26,
-        0
-      ],
-      "size": [
-        28,
-        4,
-        28
-      ],
-      "material": "black",
-      "group": null
-    },
-    {
       "name": "DrainLeft",
       "center": [
-        -15.0,
+        -15,
         30,
         0
       ],
@@ -51,7 +36,7 @@
     {
       "name": "DrainRight",
       "center": [
-        15.0,
+        15,
         30,
         0
       ],
@@ -68,7 +53,7 @@
       "center": [
         0,
         30,
-        15.0
+        15
       ],
       "size": [
         28,
@@ -83,7 +68,7 @@
       "center": [
         0,
         30,
-        -15.0
+        -15
       ],
       "size": [
         28,
@@ -96,12 +81,12 @@
     {
       "name": "DrainGrating0",
       "center": [
-        -12.0,
+        -13.5,
         31,
-        0
+        0.0
       ],
       "size": [
-        2,
+        1,
         2,
         28
       ],
@@ -111,9 +96,9 @@
     {
       "name": "DrainGrating1",
       "center": [
-        -8.0,
+        -10.0,
         31,
-        0
+        0.0
       ],
       "size": [
         2,
@@ -126,9 +111,9 @@
     {
       "name": "DrainGrating2",
       "center": [
-        -4.0,
+        -6.0,
         31,
-        0
+        0.0
       ],
       "size": [
         2,
@@ -141,9 +126,9 @@
     {
       "name": "DrainGrating3",
       "center": [
-        0.0,
+        -2.0,
         31,
-        0
+        0.0
       ],
       "size": [
         2,
@@ -156,9 +141,9 @@
     {
       "name": "DrainGrating4",
       "center": [
-        4.0,
+        2.0,
         31,
-        0
+        0.0
       ],
       "size": [
         2,
@@ -171,9 +156,9 @@
     {
       "name": "DrainGrating5",
       "center": [
-        8.0,
+        6.0,
         31,
-        0
+        0.0
       ],
       "size": [
         2,
@@ -186,9 +171,9 @@
     {
       "name": "DrainGrating6",
       "center": [
-        12.0,
+        10.0,
         31,
-        0
+        0.0
       ],
       "size": [
         2,
@@ -199,11 +184,26 @@
       "group": null
     },
     {
+      "name": "DrainGrating7",
+      "center": [
+        13.5,
+        31,
+        0.0
+      ],
+      "size": [
+        1,
+        2,
+        28
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
       "name": "DrainBearer0",
       "center": [
-        0,
+        0.0,
         29,
-        -8.0
+        -8
       ],
       "size": [
         28,
@@ -216,9 +216,9 @@
     {
       "name": "DrainBearer1",
       "center": [
-        0,
+        0.0,
         29,
-        8.0
+        8
       ],
       "size": [
         28,

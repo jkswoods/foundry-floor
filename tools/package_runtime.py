@@ -3,7 +3,7 @@
 from pathlib import Path
 import hashlib,json,zipfile
 ROOT=Path(__file__).resolve().parents[1]
-out=ROOT/'build/libs/FoundryFloor-0.1.0-dev.jar'
+out=ROOT/'build/libs/FoundryFloor-0.2.0-dev.jar'
 entries={}
 for folder in [ROOT/'build/classes',ROOT/'assets']:
     for p in folder.rglob('*'):

@@ -13,10 +13,10 @@ for path in sorted(site.rglob('*')):
     if path.is_symlink() or path.suffix not in allowed:raise SystemExit('Unexpected guide asset: '+path.name)
     entries['site/'+path.relative_to(site).as_posix()]=path.read_bytes()
 entries['DOCUMENTATION-NOTICES.md']=(ROOT/'docs/third-party.md').read_bytes()
-entries['README.txt']=b'''FOUNDRY FLOOR 0.1.0 - PRIVATE PLAYER GUIDE PREVIEW
+entries['README.txt']=b'''FOUNDRY FLOOR 0.2.0 - PRIVATE PLAYER GUIDE PREVIEW
 
 This archive is the built documentation site, not the installable gameplay mod.
-It describes the Hytale0.7.2 private development build and its known limits.
+It describes the Hytale0.7.3 private development build and its known limits.
 Current-build native screenshots and complete gameplay acceptance are pending.
 No public hosting or production support is declared.
 
@@ -30,7 +30,7 @@ Third-party documentation notices are retained in DOCUMENTATION-NOTICES.md
 and the site's Documentation notices page. No new original-mod license is granted.
 '''
 entries['SHA256SUMS.txt']=''.join(hashlib.sha256(data).hexdigest()+'  '+name+'\n' for name,data in sorted(entries.items())).encode()
-output=ROOT/'build/FoundryFloor-0.1.0-player-guide-preview.zip'
+output=ROOT/'build/FoundryFloor-0.2.0-player-guide-preview.zip'
 with zipfile.ZipFile(output,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=9) as archive:
     for name,data in sorted(entries.items()):
         info=zipfile.ZipInfo(name,(2026,10,21,0,0,0));info.compress_type=zipfile.ZIP_DEFLATED;info.external_attr=0o100644<<16;archive.writestr(info,data)

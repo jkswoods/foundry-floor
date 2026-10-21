@@ -49,22 +49,157 @@
       "group": null
     },
     {
-      "name": "DoorPanel",
+      "name": "DoorLower",
       "center": [
         0,
-        31,
+        17.5,
         0
       ],
       "size": [
         28,
-        62,
+        35,
         3
       ],
-      "material": "steel",
+      "material": "wall",
       "group": "Door"
     },
     {
-      "name": "LowerKickPlate",
+      "name": "DoorUpper",
+      "center": [
+        0,
+        56.5,
+        0
+      ],
+      "size": [
+        28,
+        11,
+        3
+      ],
+      "material": "wall",
+      "group": "Door"
+    },
+    {
+      "name": "DoorSide-1",
+      "center": [
+        -11,
+        43,
+        0
+      ],
+      "size": [
+        6,
+        16,
+        3
+      ],
+      "material": "wall",
+      "group": "Door"
+    },
+    {
+      "name": "LowerKickPlate-1",
+      "center": [
+        0,
+        10,
+        -2
+      ],
+      "size": [
+        26,
+        16,
+        1
+      ],
+      "material": "dark",
+      "group": "Door"
+    },
+    {
+      "name": "DoorHandle-1",
+      "center": [
+        10,
+        28,
+        -3
+      ],
+      "size": [
+        2,
+        7,
+        2
+      ],
+      "material": "yellow",
+      "group": "Door"
+    },
+    {
+      "name": "WindowJamb-1-7.5",
+      "center": [
+        -7.5,
+        43,
+        -1.75
+      ],
+      "size": [
+        1,
+        16,
+        0.5
+      ],
+      "material": "edge",
+      "group": "Door"
+    },
+    {
+      "name": "WindowJamb-17.5",
+      "center": [
+        7.5,
+        43,
+        -1.75
+      ],
+      "size": [
+        1,
+        16,
+        0.5
+      ],
+      "material": "edge",
+      "group": "Door"
+    },
+    {
+      "name": "WindowEdge-135.5",
+      "center": [
+        0,
+        35.5,
+        -1.75
+      ],
+      "size": [
+        14,
+        1,
+        0.5
+      ],
+      "material": "edge",
+      "group": "Door"
+    },
+    {
+      "name": "WindowEdge-150.5",
+      "center": [
+        0,
+        50.5,
+        -1.75
+      ],
+      "size": [
+        14,
+        1,
+        0.5
+      ],
+      "material": "edge",
+      "group": "Door"
+    },
+    {
+      "name": "DoorSide1",
+      "center": [
+        11,
+        43,
+        0
+      ],
+      "size": [
+        6,
+        16,
+        3
+      ],
+      "material": "wall",
+      "group": "Door"
+    },
+    {
+      "name": "LowerKickPlate1",
       "center": [
         0,
         10,
@@ -79,37 +214,7 @@
       "group": "Door"
     },
     {
-      "name": "WindowRecess",
-      "center": [
-        0,
-        43,
-        2
-      ],
-      "size": [
-        18,
-        18,
-        1
-      ],
-      "material": "dark",
-      "group": "Door"
-    },
-    {
-      "name": "WiredWindow",
-      "center": [
-        0,
-        43,
-        3
-      ],
-      "size": [
-        14,
-        14,
-        1
-      ],
-      "material": "green",
-      "group": "Door"
-    },
-    {
-      "name": "DoorHandle",
+      "name": "DoorHandle1",
       "center": [
         10,
         28,
@@ -122,6 +227,111 @@
       ],
       "material": "yellow",
       "group": "Door"
+    },
+    {
+      "name": "WindowJamb1-7.5",
+      "center": [
+        -7.5,
+        43,
+        1.75
+      ],
+      "size": [
+        1,
+        16,
+        0.5
+      ],
+      "material": "edge",
+      "group": "Door"
+    },
+    {
+      "name": "WindowJamb17.5",
+      "center": [
+        7.5,
+        43,
+        1.75
+      ],
+      "size": [
+        1,
+        16,
+        0.5
+      ],
+      "material": "edge",
+      "group": "Door"
+    },
+    {
+      "name": "WindowEdge135.5",
+      "center": [
+        0,
+        35.5,
+        1.75
+      ],
+      "size": [
+        14,
+        1,
+        0.5
+      ],
+      "material": "edge",
+      "group": "Door"
+    },
+    {
+      "name": "WindowEdge150.5",
+      "center": [
+        0,
+        50.5,
+        1.75
+      ],
+      "size": [
+        14,
+        1,
+        0.5
+      ],
+      "material": "edge",
+      "group": "Door"
+    },
+    {
+      "name": "WiredWindow",
+      "center": [
+        0,
+        43,
+        0
+      ],
+      "size": [
+        14,
+        14,
+        0.5
+      ],
+      "material": "glass",
+      "group": "Door"
+    },
+    {
+      "name": "WindowWireX",
+      "center": [
+        0,
+        43,
+        0.4
+      ],
+      "size": [
+        13.5,
+        0.35,
+        0.35
+      ],
+      "material": "edge",
+      "group": "Door"
+    },
+    {
+      "name": "WindowWireY",
+      "center": [
+        0,
+        43,
+        0.5
+      ],
+      "size": [
+        0.35,
+        13.5,
+        0.35
+      ],
+      "material": "edge",
+      "group": "Door"
     }
   ],
   "description": "A 1 \u00d7 2 steel door with inspection window and kick plate.",
@@ -129,7 +339,7 @@
   "quantity": 1,
   "groups": {
     "Door": [
-      -14,
+      -12,
       31,
       0
     ]
@@ -144,7 +354,7 @@
           1,
           0
         ],
-        "angle": -95
+        "angle": -90
       }
     }
   },

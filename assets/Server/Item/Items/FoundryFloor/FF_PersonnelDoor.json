@@ -35,6 +35,11 @@
         "GatherType": "Benches"
       }
     },
+    "PlacementSettings": {
+      "BlockPreviewVisibility": "AlwaysVisible",
+      "AllowRotationKey": true
+    },
+    "RequiresAlphaBlending": true,
     "InteractionHint": "server.foundryFloor.toggle",
     "Interactions": {
       "Use": "FF_RuntimeUse"
@@ -72,5 +77,6 @@
     ],
     "TimeSeconds": 2,
     "OutputQuantity": 1
-  }
+  },
+  "Scale": 0.55
 }

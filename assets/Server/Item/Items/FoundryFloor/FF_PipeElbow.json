@@ -24,7 +24,7 @@
         "Weight": 1
       }
     ],
-    "VariantRotation": "NESW",
+    "VariantRotation": "All",
     "HitboxType": "FF_PipeElbow",
     "BlockSoundSetId": "FF_Metal",
     "PhysicalMaterialId": "Metal",
@@ -34,7 +34,13 @@
       "Breaking": {
         "GatherType": "Benches"
       }
-    }
+    },
+    "PlacementSettings": {
+      "BlockPreviewVisibility": "AlwaysVisible",
+      "AllowRotationKey": true,
+      "RotationMode": "BlockNormal"
+    },
+    "IgnoreSupportWhenPlaced": true
   },
   "ItemSoundSetId": "FF_ISS_Metal",
   "Recipe": {
@@ -55,5 +61,6 @@
     ],
     "TimeSeconds": 2,
     "OutputQuantity": 2
-  }
+  },
+  "Scale": 0.7
 }

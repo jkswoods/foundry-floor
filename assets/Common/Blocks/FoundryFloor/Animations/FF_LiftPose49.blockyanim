@@ -23,7 +23,11 @@
           },
           "interpolationType": "linear"
         }
-      ]
+      ],
+      "orientation": [],
+      "shapeStretch": [],
+      "shapeVisible": [],
+      "shapeUvOffset": []
     }
   }
 }

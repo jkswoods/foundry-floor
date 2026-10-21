@@ -12,10 +12,10 @@ final class NativeCraftingChecks {
     private NativeCraftingChecks() {}
     static void verify() {
         for(String id:FoundryPlugin.ITEMS)if(!id.equals(Item.getAssetMap().getAsset(id).getBlockId()))throw new IllegalStateException("Foundry item cannot place its native block: "+id);
-        var lift=BlockType.getAssetMap().getAsset("FF_LiftAssembly");
-        if(lift==null)throw new IllegalStateException("Native freight lift assembly is missing");
-        for(int step=0;step<=60;step++)if(lift.getBlockForState(String.format(Locale.ROOT,"Step%02d",step))==null)throw new IllegalStateException("Native lift held pose is missing: "+step);
-        if(lift.getBlockForState("Dock00")==null||lift.getBlockForState("Dock60")==null)throw new IllegalStateException("Native lift dock configuration is missing");
+        for(String id:NativeRetiredLift.IDS) {
+            var old=Item.getAssetMap().getAsset(id);var block=BlockType.getAssetMap().getAsset(id);
+            if(old==null||block==null||old.hasRecipesToGenerate())throw new IllegalStateException("Retired elevator compatibility asset missing or craftable: "+id);
+        }
         var type=BlockType.getAssetMap().getAsset("FF_FoundryBench");
         if(type==null||!(type.getBench() instanceof CraftingBench bench)||!bench.getId().equals("FoundryFloor")||bench.getCategories().length!=5)throw new IllegalStateException("Foundry Workbench requires its native five-category crafting configuration");
         Set<String> expected=new HashSet<>(FoundryPlugin.ITEMS);expected.remove("FF_FoundryBench");Set<String> actual=new HashSet<>();
@@ -23,7 +23,7 @@ final class NativeCraftingChecks {
             var output=recipe.getPrimaryOutput();if(output==null||output.getItemId()==null||!expected.contains(output.getItemId()))throw new IllegalStateException("Unexpected Foundry bench output");
             if(!actual.add(output.getItemId())||recipe.getInput().length!=1||!"Ingredient_Bar_Iron".equals(recipe.getInput()[0].getItemId())||recipe.getInput()[0].getQuantity()<1||recipe.isKnowledgeRequired())throw new IllegalStateException("Foundry block recipe has invalid acquisition requirements: "+output.getItemId());
         }
-        if(!actual.equals(expected))throw new IllegalStateException("Native Foundry Workbench registry does not offer all25 factory block recipes");
+        if(!actual.equals(expected))throw new IllegalStateException("Native Foundry Workbench registry does not offer all27 factory block recipes");
         boolean benchRecipe=false;
         for(var recipe:CraftingPlugin.getBenchRecipes(BenchType.Crafting,"Workbench")) {
             var output=recipe.getPrimaryOutput();if(output==null||!"FF_FoundryBench".equals(output.getItemId()))continue;

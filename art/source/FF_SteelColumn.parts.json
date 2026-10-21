@@ -22,12 +22,12 @@
       "name": "ColumnWeb",
       "center": [
         0,
-        18,
+        17,
         0
       ],
       "size": [
         5,
-        28,
+        26,
         12
       ],
       "material": "dark",
@@ -37,12 +37,12 @@
       "name": "FrontFlange",
       "center": [
         0,
-        18,
-        7
+        17,
+        7.5
       ],
       "size": [
         16,
-        28,
+        26,
         3
       ],
       "material": "steel",
@@ -52,12 +52,12 @@
       "name": "BackFlange",
       "center": [
         0,
-        18,
-        -7
+        17,
+        -7.5
       ],
       "size": [
         16,
-        28,
+        26,
         3
       ],
       "material": "steel",

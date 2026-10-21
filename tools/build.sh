@@ -2,9 +2,9 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 FF_JDK="${FF_JAVA_HOME:-$PWD/../.tools/jdk-25.0.4.1+1/Contents/Home}"
-FF_SERVER="${FF_SERVER_JAR:-$PWD/../.cache/hytale/Server-0.7.2.jar}"
+FF_SERVER="${FF_SERVER_JAR:-$PWD/.cache/pins/0.7.3/Server-0.7.3.jar}"
 if [[ ! -x "$FF_JDK/bin/javac" || ! -f "$FF_SERVER" ]]; then
-  echo 'Set FF_JAVA_HOME to JDK25 and FF_SERVER_JAR to the pinned Hytale0.7.2 server.' >&2
+  echo 'Set FF_JAVA_HOME to JDK25 and FF_SERVER_JAR to the pinned Hytale0.7.3 server.' >&2
   exit 1
 fi
 mkdir -p build/classes build/test-classes build/reports build/libs

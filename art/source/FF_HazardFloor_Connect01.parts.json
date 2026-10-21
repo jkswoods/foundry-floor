@@ -1,0 +1,148 @@
+{
+  "id": "FF_HazardFloor_Connect01",
+  "title": "Safety edge floor",
+  "category": "Floors",
+  "parts": [
+    {
+      "name": "Foundation",
+      "center": [
+        0,
+        14,
+        0
+      ],
+      "size": [
+        32,
+        28,
+        32
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "Deck",
+      "center": [
+        0,
+        30,
+        0
+      ],
+      "size": [
+        32,
+        4,
+        32
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "Bolt0",
+      "center": [
+        -9,
+        32.5,
+        -9
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "Bolt1",
+      "center": [
+        9,
+        32.5,
+        -9
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "Bolt2",
+      "center": [
+        -9,
+        32.5,
+        9
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "Bolt3",
+      "center": [
+        9,
+        32.5,
+        9
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "Boundary2",
+      "center": [
+        14,
+        32.25,
+        -2.0
+      ],
+      "size": [
+        4,
+        0.5,
+        28
+      ],
+      "material": "hazard",
+      "group": null
+    },
+    {
+      "name": "Boundary4",
+      "center": [
+        0,
+        32.25,
+        14
+      ],
+      "size": [
+        32,
+        0.5,
+        4
+      ],
+      "material": "hazard",
+      "group": null
+    },
+    {
+      "name": "Boundary8",
+      "center": [
+        -14,
+        32.25,
+        -2.0
+      ],
+      "size": [
+        4,
+        0.5,
+        28
+      ],
+      "material": "hazard",
+      "group": null
+    }
+  ],
+  "description": "Safety stripes follow the exposed perimeter and join at corners.",
+  "cost": 4,
+  "quantity": 4,
+  "groups": {},
+  "motion": null,
+  "collision": null
+}

@@ -5,9 +5,7 @@
   },
   "Icon": "Icons/Items/FF_FreightLift.png",
   "MaxStack": 16,
-  "Categories": [
-    "Furniture.Furniture"
-  ],
+  "Categories": [],
   "PlayerAnimationsId": "Block",
   "Interactions": {
     "Primary": "Block_Primary",
@@ -17,7 +15,7 @@
     "Material": "Solid",
     "DrawType": "Model",
     "Opacity": "Transparent",
-    "CustomModel": "Blocks/FoundryFloor/FF_LiftController.blockymodel",
+    "CustomModel": "Blocks/FoundryFloor/FF_LiftPlacement.blockymodel",
     "CustomModelTexture": [
       {
         "Texture": "Blocks/FoundryFloor/FactoryAtlas.png",
@@ -35,43 +33,36 @@
         "GatherType": "Benches"
       }
     },
-    "Interactions": {
-      "Use": "FF_RuntimeUse"
+    "PlacementSettings": {
+      "BlockPreviewVisibility": "AlwaysVisible",
+      "AllowRotationKey": true
     },
-    "InteractionHint": "server.foundryFloor.liftUse",
     "State": {
       "Definitions": {
-        "Lowered": {},
+        "Lowered": {
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftController.blockymodel"
+        },
         "Raising": {
-          "AmbientSoundEventId": "FF_SFX_lift_travel"
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftController.blockymodel"
         },
-        "Raised": {},
+        "Raised": {
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftController.blockymodel"
+        },
+        "Docked": {
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftController.blockymodel"
+        },
         "Lowering": {
-          "AmbientSoundEventId": "FF_SFX_lift_travel"
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftController.blockymodel"
         },
-        "Blocked": {},
-        "Disabled": {}
+        "Blocked": {
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftController.blockymodel"
+        },
+        "Disabled": {
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftController.blockymodel"
+        }
       }
     }
   },
   "ItemSoundSetId": "FF_ISS_Metal",
-  "Recipe": {
-    "Input": [
-      {
-        "ItemId": "Ingredient_Bar_Iron",
-        "Quantity": 28
-      }
-    ],
-    "BenchRequirement": [
-      {
-        "Type": "Crafting",
-        "Id": "FoundryFloor",
-        "Categories": [
-          "Foundry_Mechanisms"
-        ]
-      }
-    ],
-    "TimeSeconds": 2,
-    "OutputQuantity": 1
-  }
+  "Scale": 0.15
 }

@@ -1,0 +1,253 @@
+{
+  "id": "FF_CatwalkStairs_Connect0B",
+  "title": "Grated stair flight",
+  "category": "Catwalks",
+  "parts": [
+    {
+      "name": "Tread0",
+      "center": [
+        0.0,
+        2,
+        14
+      ],
+      "size": [
+        32,
+        4,
+        4
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "Nosing0",
+      "center": [
+        0.0,
+        4.25,
+        15
+      ],
+      "size": [
+        32,
+        0.5,
+        2
+      ],
+      "material": "yellow",
+      "group": null
+    },
+    {
+      "name": "Tread1",
+      "center": [
+        0.0,
+        6,
+        10
+      ],
+      "size": [
+        32,
+        4,
+        4
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "Nosing1",
+      "center": [
+        0.0,
+        8.25,
+        11
+      ],
+      "size": [
+        32,
+        0.5,
+        2
+      ],
+      "material": "yellow",
+      "group": null
+    },
+    {
+      "name": "Tread2",
+      "center": [
+        0.0,
+        10,
+        6
+      ],
+      "size": [
+        32,
+        4,
+        4
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "Nosing2",
+      "center": [
+        0.0,
+        12.25,
+        7
+      ],
+      "size": [
+        32,
+        0.5,
+        2
+      ],
+      "material": "yellow",
+      "group": null
+    },
+    {
+      "name": "Tread3",
+      "center": [
+        0.0,
+        14,
+        2
+      ],
+      "size": [
+        32,
+        4,
+        4
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "Nosing3",
+      "center": [
+        0.0,
+        16.25,
+        3
+      ],
+      "size": [
+        32,
+        0.5,
+        2
+      ],
+      "material": "yellow",
+      "group": null
+    },
+    {
+      "name": "Tread4",
+      "center": [
+        0.0,
+        18,
+        -2
+      ],
+      "size": [
+        32,
+        4,
+        4
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "Nosing4",
+      "center": [
+        0.0,
+        20.25,
+        -1
+      ],
+      "size": [
+        32,
+        0.5,
+        2
+      ],
+      "material": "yellow",
+      "group": null
+    },
+    {
+      "name": "Tread5",
+      "center": [
+        0.0,
+        22,
+        -6
+      ],
+      "size": [
+        32,
+        4,
+        4
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "Nosing5",
+      "center": [
+        0.0,
+        24.25,
+        -5
+      ],
+      "size": [
+        32,
+        0.5,
+        2
+      ],
+      "material": "yellow",
+      "group": null
+    },
+    {
+      "name": "Tread6",
+      "center": [
+        0.0,
+        26,
+        -10
+      ],
+      "size": [
+        32,
+        4,
+        4
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "Nosing6",
+      "center": [
+        0.0,
+        28.25,
+        -9
+      ],
+      "size": [
+        32,
+        0.5,
+        2
+      ],
+      "material": "yellow",
+      "group": null
+    },
+    {
+      "name": "Tread7",
+      "center": [
+        0.0,
+        30,
+        -14
+      ],
+      "size": [
+        32,
+        4,
+        4
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "Nosing7",
+      "center": [
+        0.0,
+        32.25,
+        -13
+      ],
+      "size": [
+        32,
+        0.5,
+        2
+      ],
+      "material": "yellow",
+      "group": null
+    }
+  ],
+  "description": "Eight treads rise exactly one block over one block of run. Repeat for taller landings.",
+  "cost": 8,
+  "quantity": 1,
+  "groups": {},
+  "motion": null,
+  "collision": null
+}

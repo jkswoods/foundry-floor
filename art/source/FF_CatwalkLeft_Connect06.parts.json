@@ -1,0 +1,298 @@
+{
+  "id": "FF_CatwalkLeft_Connect06",
+  "title": "Catwalk \u00b7 left rail",
+  "category": "Catwalks",
+  "parts": [
+    {
+      "name": "RailPost0",
+      "center": [
+        -14,
+        18,
+        -14
+      ],
+      "size": [
+        2,
+        26,
+        2
+      ],
+      "material": "yellow",
+      "group": null
+    },
+    {
+      "name": "RailPost1",
+      "center": [
+        -14,
+        18,
+        14
+      ],
+      "size": [
+        2,
+        26,
+        2
+      ],
+      "material": "yellow",
+      "group": null
+    },
+    {
+      "name": "RailTop",
+      "center": [
+        -14,
+        32,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        30
+      ],
+      "material": "yellow",
+      "group": null
+    },
+    {
+      "name": "RailMid",
+      "center": [
+        -14,
+        20,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        26
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "RailToe",
+      "center": [
+        -14,
+        8,
+        0
+      ],
+      "size": [
+        2,
+        6,
+        26
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "RailFoot0",
+      "center": [
+        -14,
+        4.5,
+        -14
+      ],
+      "size": [
+        4,
+        1,
+        4
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "RailFoot1",
+      "center": [
+        -14,
+        4.5,
+        14
+      ],
+      "size": [
+        4,
+        1,
+        4
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "DeckLeft",
+      "center": [
+        -15,
+        2,
+        0
+      ],
+      "size": [
+        2,
+        4,
+        32
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "DeckBack",
+      "center": [
+        0,
+        2,
+        -15
+      ],
+      "size": [
+        28,
+        4,
+        2
+      ],
+      "material": "yellow",
+      "group": null
+    },
+    {
+      "name": "DeckGrating0",
+      "center": [
+        -13.5,
+        3,
+        1.0
+      ],
+      "size": [
+        1,
+        2,
+        30
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "DeckGrating1",
+      "center": [
+        -10.0,
+        3,
+        1.0
+      ],
+      "size": [
+        2,
+        2,
+        30
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "DeckGrating2",
+      "center": [
+        -6.0,
+        3,
+        1.0
+      ],
+      "size": [
+        2,
+        2,
+        30
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "DeckGrating3",
+      "center": [
+        -2.0,
+        3,
+        1.0
+      ],
+      "size": [
+        2,
+        2,
+        30
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "DeckGrating4",
+      "center": [
+        2.0,
+        3,
+        1.0
+      ],
+      "size": [
+        2,
+        2,
+        30
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "DeckGrating5",
+      "center": [
+        6.0,
+        3,
+        1.0
+      ],
+      "size": [
+        2,
+        2,
+        30
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "DeckGrating6",
+      "center": [
+        10.0,
+        3,
+        1.0
+      ],
+      "size": [
+        2,
+        2,
+        30
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "DeckGrating7",
+      "center": [
+        14.0,
+        3,
+        1.0
+      ],
+      "size": [
+        2,
+        2,
+        30
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "DeckBearer0",
+      "center": [
+        1.0,
+        1,
+        -8
+      ],
+      "size": [
+        30,
+        2,
+        2
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "DeckBearer1",
+      "center": [
+        1.0,
+        1,
+        8
+      ],
+      "size": [
+        30,
+        2,
+        2
+      ],
+      "material": "edge",
+      "group": null
+    }
+  ],
+  "description": "Walkway with left handrail and toe board.",
+  "cost": 5,
+  "quantity": 2,
+  "groups": {},
+  "motion": null,
+  "collision": null
+}

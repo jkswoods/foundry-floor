@@ -32,8 +32,7 @@
             "x": 32,
             "y": 30,
             "z": 32
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -140,8 +139,7 @@
             "x": 31,
             "y": 2,
             "z": 31
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,

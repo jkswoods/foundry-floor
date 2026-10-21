@@ -138,24 +138,9 @@
         "group": null
       },
       {
-        "name": "SafetyStrip",
-        "center": [
-          0,
-          32.25,
-          12
-        ],
-        "size": [
-          32,
-          0.5,
-          8
-        ],
-        "material": "hazard",
-        "group": null
-      },
-      {
         "name": "Bolt0",
         "center": [
-          -12,
+          -9,
           32.5,
           -9
         ],
@@ -170,7 +155,7 @@
       {
         "name": "Bolt1",
         "center": [
-          12,
+          9,
           32.5,
           -9
         ],
@@ -185,7 +170,7 @@
       {
         "name": "Bolt2",
         "center": [
-          -12,
+          -9,
           32.5,
           9
         ],
@@ -200,7 +185,7 @@
       {
         "name": "Bolt3",
         "center": [
-          12,
+          9,
           32.5,
           9
         ],
@@ -211,9 +196,69 @@
         ],
         "material": "edge",
         "group": null
+      },
+      {
+        "name": "Boundary1",
+        "center": [
+          0,
+          32.25,
+          -14
+        ],
+        "size": [
+          32,
+          0.5,
+          4
+        ],
+        "material": "hazard",
+        "group": null
+      },
+      {
+        "name": "Boundary2",
+        "center": [
+          14,
+          32.25,
+          0.0
+        ],
+        "size": [
+          4,
+          0.5,
+          24
+        ],
+        "material": "hazard",
+        "group": null
+      },
+      {
+        "name": "Boundary4",
+        "center": [
+          0,
+          32.25,
+          14
+        ],
+        "size": [
+          32,
+          0.5,
+          4
+        ],
+        "material": "hazard",
+        "group": null
+      },
+      {
+        "name": "Boundary8",
+        "center": [
+          -14,
+          32.25,
+          0.0
+        ],
+        "size": [
+          4,
+          0.5,
+          24
+        ],
+        "material": "hazard",
+        "group": null
       }
     ],
-    "description": "A directional safety stripe marks loading bays and changes in level.",
+    "description": "Safety stripes follow the exposed perimeter and join at corners.",
     "cost": 4,
     "quantity": 4,
     "groups": {},
@@ -284,24 +329,9 @@
         "group": null
       },
       {
-        "name": "DrainRecess",
-        "center": [
-          0,
-          26,
-          0
-        ],
-        "size": [
-          28,
-          4,
-          28
-        ],
-        "material": "black",
-        "group": null
-      },
-      {
         "name": "DrainLeft",
         "center": [
-          -15.0,
+          -15,
           30,
           0
         ],
@@ -316,7 +346,7 @@
       {
         "name": "DrainRight",
         "center": [
-          15.0,
+          15,
           30,
           0
         ],
@@ -333,7 +363,7 @@
         "center": [
           0,
           30,
-          15.0
+          15
         ],
         "size": [
           28,
@@ -348,7 +378,7 @@
         "center": [
           0,
           30,
-          -15.0
+          -15
         ],
         "size": [
           28,
@@ -361,12 +391,12 @@
       {
         "name": "DrainGrating0",
         "center": [
-          -12.0,
+          -13.5,
           31,
-          0
+          0.0
         ],
         "size": [
-          2,
+          1,
           2,
           28
         ],
@@ -376,9 +406,9 @@
       {
         "name": "DrainGrating1",
         "center": [
-          -8.0,
+          -10.0,
           31,
-          0
+          0.0
         ],
         "size": [
           2,
@@ -391,9 +421,9 @@
       {
         "name": "DrainGrating2",
         "center": [
-          -4.0,
+          -6.0,
           31,
-          0
+          0.0
         ],
         "size": [
           2,
@@ -406,9 +436,9 @@
       {
         "name": "DrainGrating3",
         "center": [
-          0.0,
+          -2.0,
           31,
-          0
+          0.0
         ],
         "size": [
           2,
@@ -421,9 +451,9 @@
       {
         "name": "DrainGrating4",
         "center": [
-          4.0,
+          2.0,
           31,
-          0
+          0.0
         ],
         "size": [
           2,
@@ -436,9 +466,9 @@
       {
         "name": "DrainGrating5",
         "center": [
-          8.0,
+          6.0,
           31,
-          0
+          0.0
         ],
         "size": [
           2,
@@ -451,9 +481,9 @@
       {
         "name": "DrainGrating6",
         "center": [
-          12.0,
+          10.0,
           31,
-          0
+          0.0
         ],
         "size": [
           2,
@@ -464,11 +494,26 @@
         "group": null
       },
       {
+        "name": "DrainGrating7",
+        "center": [
+          13.5,
+          31,
+          0.0
+        ],
+        "size": [
+          1,
+          2,
+          28
+        ],
+        "material": "grip",
+        "group": null
+      },
+      {
         "name": "DrainBearer0",
         "center": [
-          0,
+          0.0,
           29,
-          -8.0
+          -8
         ],
         "size": [
           28,
@@ -481,9 +526,9 @@
       {
         "name": "DrainBearer1",
         "center": [
-          0,
+          0.0,
           29,
-          8.0
+          8
         ],
         "size": [
           28,
@@ -509,7 +554,7 @@
       {
         "name": "DeckLeft",
         "center": [
-          -15.0,
+          -15,
           2,
           0
         ],
@@ -524,7 +569,7 @@
       {
         "name": "DeckRight",
         "center": [
-          15.0,
+          15,
           2,
           0
         ],
@@ -541,7 +586,7 @@
         "center": [
           0,
           2,
-          15.0
+          15
         ],
         "size": [
           28,
@@ -556,7 +601,7 @@
         "center": [
           0,
           2,
-          -15.0
+          -15
         ],
         "size": [
           28,
@@ -569,12 +614,12 @@
       {
         "name": "DeckGrating0",
         "center": [
-          -12.0,
+          -13.5,
           3,
-          0
+          0.0
         ],
         "size": [
-          2,
+          1,
           2,
           28
         ],
@@ -584,9 +629,9 @@
       {
         "name": "DeckGrating1",
         "center": [
-          -8.0,
+          -10.0,
           3,
-          0
+          0.0
         ],
         "size": [
           2,
@@ -599,9 +644,9 @@
       {
         "name": "DeckGrating2",
         "center": [
-          -4.0,
+          -6.0,
           3,
-          0
+          0.0
         ],
         "size": [
           2,
@@ -614,9 +659,9 @@
       {
         "name": "DeckGrating3",
         "center": [
-          0.0,
+          -2.0,
           3,
-          0
+          0.0
         ],
         "size": [
           2,
@@ -629,9 +674,9 @@
       {
         "name": "DeckGrating4",
         "center": [
-          4.0,
+          2.0,
           3,
-          0
+          0.0
         ],
         "size": [
           2,
@@ -644,9 +689,9 @@
       {
         "name": "DeckGrating5",
         "center": [
-          8.0,
+          6.0,
           3,
-          0
+          0.0
         ],
         "size": [
           2,
@@ -659,9 +704,9 @@
       {
         "name": "DeckGrating6",
         "center": [
-          12.0,
+          10.0,
           3,
-          0
+          0.0
         ],
         "size": [
           2,
@@ -672,11 +717,26 @@
         "group": null
       },
       {
+        "name": "DeckGrating7",
+        "center": [
+          13.5,
+          3,
+          0.0
+        ],
+        "size": [
+          1,
+          2,
+          28
+        ],
+        "material": "grip",
+        "group": null
+      },
+      {
         "name": "DeckBearer0",
         "center": [
-          0,
+          0.0,
           1,
-          -8.0
+          -8
         ],
         "size": [
           28,
@@ -689,9 +749,9 @@
       {
         "name": "DeckBearer1",
         "center": [
-          0,
+          0.0,
           1,
-          8.0
+          8
         ],
         "size": [
           28,
@@ -715,201 +775,6 @@
     "category": "Catwalks",
     "parts": [
       {
-        "name": "DeckLeft",
-        "center": [
-          -15.0,
-          2,
-          0
-        ],
-        "size": [
-          2,
-          4,
-          32
-        ],
-        "material": "dark",
-        "group": null
-      },
-      {
-        "name": "DeckRight",
-        "center": [
-          15.0,
-          2,
-          0
-        ],
-        "size": [
-          2,
-          4,
-          32
-        ],
-        "material": "dark",
-        "group": null
-      },
-      {
-        "name": "DeckFront",
-        "center": [
-          0,
-          2,
-          15.0
-        ],
-        "size": [
-          28,
-          4,
-          2
-        ],
-        "material": "yellow",
-        "group": null
-      },
-      {
-        "name": "DeckBack",
-        "center": [
-          0,
-          2,
-          -15.0
-        ],
-        "size": [
-          28,
-          4,
-          2
-        ],
-        "material": "yellow",
-        "group": null
-      },
-      {
-        "name": "DeckGrating0",
-        "center": [
-          -12.0,
-          3,
-          0
-        ],
-        "size": [
-          2,
-          2,
-          28
-        ],
-        "material": "grip",
-        "group": null
-      },
-      {
-        "name": "DeckGrating1",
-        "center": [
-          -8.0,
-          3,
-          0
-        ],
-        "size": [
-          2,
-          2,
-          28
-        ],
-        "material": "grip",
-        "group": null
-      },
-      {
-        "name": "DeckGrating2",
-        "center": [
-          -4.0,
-          3,
-          0
-        ],
-        "size": [
-          2,
-          2,
-          28
-        ],
-        "material": "grip",
-        "group": null
-      },
-      {
-        "name": "DeckGrating3",
-        "center": [
-          0.0,
-          3,
-          0
-        ],
-        "size": [
-          2,
-          2,
-          28
-        ],
-        "material": "grip",
-        "group": null
-      },
-      {
-        "name": "DeckGrating4",
-        "center": [
-          4.0,
-          3,
-          0
-        ],
-        "size": [
-          2,
-          2,
-          28
-        ],
-        "material": "grip",
-        "group": null
-      },
-      {
-        "name": "DeckGrating5",
-        "center": [
-          8.0,
-          3,
-          0
-        ],
-        "size": [
-          2,
-          2,
-          28
-        ],
-        "material": "grip",
-        "group": null
-      },
-      {
-        "name": "DeckGrating6",
-        "center": [
-          12.0,
-          3,
-          0
-        ],
-        "size": [
-          2,
-          2,
-          28
-        ],
-        "material": "grip",
-        "group": null
-      },
-      {
-        "name": "DeckBearer0",
-        "center": [
-          0,
-          1,
-          -8.0
-        ],
-        "size": [
-          28,
-          2,
-          2
-        ],
-        "material": "edge",
-        "group": null
-      },
-      {
-        "name": "DeckBearer1",
-        "center": [
-          0,
-          1,
-          8.0
-        ],
-        "size": [
-          28,
-          2,
-          2
-        ],
-        "material": "edge",
-        "group": null
-      },
-      {
         "name": "RailPost0",
         "center": [
           -14,
@@ -918,7 +783,7 @@
         ],
         "size": [
           2,
-          28,
+          26,
           2
         ],
         "material": "yellow",
@@ -933,7 +798,7 @@
         ],
         "size": [
           2,
-          28,
+          26,
           2
         ],
         "material": "yellow",
@@ -964,7 +829,7 @@
         "size": [
           2,
           2,
-          28
+          26
         ],
         "material": "edge",
         "group": null
@@ -979,7 +844,7 @@
         "size": [
           2,
           6,
-          28
+          26
         ],
         "material": "dark",
         "group": null
@@ -1010,6 +875,216 @@
           4,
           1,
           4
+        ],
+        "material": "edge",
+        "group": null
+      },
+      {
+        "name": "DeckLeft",
+        "center": [
+          -15,
+          2,
+          0
+        ],
+        "size": [
+          2,
+          4,
+          32
+        ],
+        "material": "dark",
+        "group": null
+      },
+      {
+        "name": "DeckRight",
+        "center": [
+          15,
+          2,
+          0
+        ],
+        "size": [
+          2,
+          4,
+          32
+        ],
+        "material": "dark",
+        "group": null
+      },
+      {
+        "name": "DeckFront",
+        "center": [
+          0,
+          2,
+          15
+        ],
+        "size": [
+          28,
+          4,
+          2
+        ],
+        "material": "yellow",
+        "group": null
+      },
+      {
+        "name": "DeckBack",
+        "center": [
+          0,
+          2,
+          -15
+        ],
+        "size": [
+          28,
+          4,
+          2
+        ],
+        "material": "yellow",
+        "group": null
+      },
+      {
+        "name": "DeckGrating0",
+        "center": [
+          -13.5,
+          3,
+          0.0
+        ],
+        "size": [
+          1,
+          2,
+          28
+        ],
+        "material": "grip",
+        "group": null
+      },
+      {
+        "name": "DeckGrating1",
+        "center": [
+          -10.0,
+          3,
+          0.0
+        ],
+        "size": [
+          2,
+          2,
+          28
+        ],
+        "material": "grip",
+        "group": null
+      },
+      {
+        "name": "DeckGrating2",
+        "center": [
+          -6.0,
+          3,
+          0.0
+        ],
+        "size": [
+          2,
+          2,
+          28
+        ],
+        "material": "grip",
+        "group": null
+      },
+      {
+        "name": "DeckGrating3",
+        "center": [
+          -2.0,
+          3,
+          0.0
+        ],
+        "size": [
+          2,
+          2,
+          28
+        ],
+        "material": "grip",
+        "group": null
+      },
+      {
+        "name": "DeckGrating4",
+        "center": [
+          2.0,
+          3,
+          0.0
+        ],
+        "size": [
+          2,
+          2,
+          28
+        ],
+        "material": "grip",
+        "group": null
+      },
+      {
+        "name": "DeckGrating5",
+        "center": [
+          6.0,
+          3,
+          0.0
+        ],
+        "size": [
+          2,
+          2,
+          28
+        ],
+        "material": "grip",
+        "group": null
+      },
+      {
+        "name": "DeckGrating6",
+        "center": [
+          10.0,
+          3,
+          0.0
+        ],
+        "size": [
+          2,
+          2,
+          28
+        ],
+        "material": "grip",
+        "group": null
+      },
+      {
+        "name": "DeckGrating7",
+        "center": [
+          13.5,
+          3,
+          0.0
+        ],
+        "size": [
+          1,
+          2,
+          28
+        ],
+        "material": "grip",
+        "group": null
+      },
+      {
+        "name": "DeckBearer0",
+        "center": [
+          0.0,
+          1,
+          -8
+        ],
+        "size": [
+          28,
+          2,
+          2
+        ],
+        "material": "edge",
+        "group": null
+      },
+      {
+        "name": "DeckBearer1",
+        "center": [
+          0.0,
+          1,
+          8
+        ],
+        "size": [
+          28,
+          2,
+          2
         ],
         "material": "edge",
         "group": null
@@ -1028,201 +1103,6 @@
     "category": "Catwalks",
     "parts": [
       {
-        "name": "DeckLeft",
-        "center": [
-          -15.0,
-          2,
-          0
-        ],
-        "size": [
-          2,
-          4,
-          32
-        ],
-        "material": "dark",
-        "group": null
-      },
-      {
-        "name": "DeckRight",
-        "center": [
-          15.0,
-          2,
-          0
-        ],
-        "size": [
-          2,
-          4,
-          32
-        ],
-        "material": "dark",
-        "group": null
-      },
-      {
-        "name": "DeckFront",
-        "center": [
-          0,
-          2,
-          15.0
-        ],
-        "size": [
-          28,
-          4,
-          2
-        ],
-        "material": "yellow",
-        "group": null
-      },
-      {
-        "name": "DeckBack",
-        "center": [
-          0,
-          2,
-          -15.0
-        ],
-        "size": [
-          28,
-          4,
-          2
-        ],
-        "material": "yellow",
-        "group": null
-      },
-      {
-        "name": "DeckGrating0",
-        "center": [
-          -12.0,
-          3,
-          0
-        ],
-        "size": [
-          2,
-          2,
-          28
-        ],
-        "material": "grip",
-        "group": null
-      },
-      {
-        "name": "DeckGrating1",
-        "center": [
-          -8.0,
-          3,
-          0
-        ],
-        "size": [
-          2,
-          2,
-          28
-        ],
-        "material": "grip",
-        "group": null
-      },
-      {
-        "name": "DeckGrating2",
-        "center": [
-          -4.0,
-          3,
-          0
-        ],
-        "size": [
-          2,
-          2,
-          28
-        ],
-        "material": "grip",
-        "group": null
-      },
-      {
-        "name": "DeckGrating3",
-        "center": [
-          0.0,
-          3,
-          0
-        ],
-        "size": [
-          2,
-          2,
-          28
-        ],
-        "material": "grip",
-        "group": null
-      },
-      {
-        "name": "DeckGrating4",
-        "center": [
-          4.0,
-          3,
-          0
-        ],
-        "size": [
-          2,
-          2,
-          28
-        ],
-        "material": "grip",
-        "group": null
-      },
-      {
-        "name": "DeckGrating5",
-        "center": [
-          8.0,
-          3,
-          0
-        ],
-        "size": [
-          2,
-          2,
-          28
-        ],
-        "material": "grip",
-        "group": null
-      },
-      {
-        "name": "DeckGrating6",
-        "center": [
-          12.0,
-          3,
-          0
-        ],
-        "size": [
-          2,
-          2,
-          28
-        ],
-        "material": "grip",
-        "group": null
-      },
-      {
-        "name": "DeckBearer0",
-        "center": [
-          0,
-          1,
-          -8.0
-        ],
-        "size": [
-          28,
-          2,
-          2
-        ],
-        "material": "edge",
-        "group": null
-      },
-      {
-        "name": "DeckBearer1",
-        "center": [
-          0,
-          1,
-          8.0
-        ],
-        "size": [
-          28,
-          2,
-          2
-        ],
-        "material": "edge",
-        "group": null
-      },
-      {
         "name": "RailPost0",
         "center": [
           14,
@@ -1231,7 +1111,7 @@
         ],
         "size": [
           2,
-          28,
+          26,
           2
         ],
         "material": "yellow",
@@ -1246,7 +1126,7 @@
         ],
         "size": [
           2,
-          28,
+          26,
           2
         ],
         "material": "yellow",
@@ -1277,7 +1157,7 @@
         "size": [
           2,
           2,
-          28
+          26
         ],
         "material": "edge",
         "group": null
@@ -1292,7 +1172,7 @@
         "size": [
           2,
           6,
-          28
+          26
         ],
         "material": "dark",
         "group": null
@@ -1326,24 +1206,11 @@
         ],
         "material": "edge",
         "group": null
-      }
-    ],
-    "description": "Walkway with right handrail and toe board.",
-    "cost": 5,
-    "quantity": 2,
-    "groups": {},
-    "motion": null,
-    "collision": null
-  },
-  {
-    "id": "FF_CatwalkBridge",
-    "title": "Catwalk \u00b7 both rails",
-    "category": "Catwalks",
-    "parts": [
+      },
       {
         "name": "DeckLeft",
         "center": [
-          -15.0,
+          -15,
           2,
           0
         ],
@@ -1358,7 +1225,7 @@
       {
         "name": "DeckRight",
         "center": [
-          15.0,
+          15,
           2,
           0
         ],
@@ -1375,7 +1242,7 @@
         "center": [
           0,
           2,
-          15.0
+          15
         ],
         "size": [
           28,
@@ -1390,7 +1257,7 @@
         "center": [
           0,
           2,
-          -15.0
+          -15
         ],
         "size": [
           28,
@@ -1403,12 +1270,12 @@
       {
         "name": "DeckGrating0",
         "center": [
-          -12.0,
+          -13.5,
           3,
-          0
+          0.0
         ],
         "size": [
-          2,
+          1,
           2,
           28
         ],
@@ -1418,9 +1285,9 @@
       {
         "name": "DeckGrating1",
         "center": [
-          -8.0,
+          -10.0,
           3,
-          0
+          0.0
         ],
         "size": [
           2,
@@ -1433,9 +1300,9 @@
       {
         "name": "DeckGrating2",
         "center": [
-          -4.0,
+          -6.0,
           3,
-          0
+          0.0
         ],
         "size": [
           2,
@@ -1448,9 +1315,9 @@
       {
         "name": "DeckGrating3",
         "center": [
-          0.0,
+          -2.0,
           3,
-          0
+          0.0
         ],
         "size": [
           2,
@@ -1463,9 +1330,9 @@
       {
         "name": "DeckGrating4",
         "center": [
-          4.0,
+          2.0,
           3,
-          0
+          0.0
         ],
         "size": [
           2,
@@ -1478,9 +1345,9 @@
       {
         "name": "DeckGrating5",
         "center": [
-          8.0,
+          6.0,
           3,
-          0
+          0.0
         ],
         "size": [
           2,
@@ -1493,9 +1360,9 @@
       {
         "name": "DeckGrating6",
         "center": [
-          12.0,
+          10.0,
           3,
-          0
+          0.0
         ],
         "size": [
           2,
@@ -1506,11 +1373,26 @@
         "group": null
       },
       {
+        "name": "DeckGrating7",
+        "center": [
+          13.5,
+          3,
+          0.0
+        ],
+        "size": [
+          1,
+          2,
+          28
+        ],
+        "material": "grip",
+        "group": null
+      },
+      {
         "name": "DeckBearer0",
         "center": [
-          0,
+          0.0,
           1,
-          -8.0
+          -8
         ],
         "size": [
           28,
@@ -1523,9 +1405,9 @@
       {
         "name": "DeckBearer1",
         "center": [
-          0,
+          0.0,
           1,
-          8.0
+          8
         ],
         "size": [
           28,
@@ -1534,7 +1416,20 @@
         ],
         "material": "edge",
         "group": null
-      },
+      }
+    ],
+    "description": "Walkway with right handrail and toe board.",
+    "cost": 5,
+    "quantity": 2,
+    "groups": {},
+    "motion": null,
+    "collision": null
+  },
+  {
+    "id": "FF_CatwalkBridge",
+    "title": "Catwalk \u00b7 both rails",
+    "category": "Catwalks",
+    "parts": [
       {
         "name": "RailPost0",
         "center": [
@@ -1544,7 +1439,7 @@
         ],
         "size": [
           2,
-          28,
+          26,
           2
         ],
         "material": "yellow",
@@ -1559,7 +1454,7 @@
         ],
         "size": [
           2,
-          28,
+          26,
           2
         ],
         "material": "yellow",
@@ -1590,7 +1485,7 @@
         "size": [
           2,
           2,
-          28
+          26
         ],
         "material": "edge",
         "group": null
@@ -1605,7 +1500,7 @@
         "size": [
           2,
           6,
-          28
+          26
         ],
         "material": "dark",
         "group": null
@@ -1649,7 +1544,7 @@
         ],
         "size": [
           2,
-          28,
+          26,
           2
         ],
         "material": "yellow",
@@ -1664,7 +1559,7 @@
         ],
         "size": [
           2,
-          28,
+          26,
           2
         ],
         "material": "yellow",
@@ -1695,7 +1590,7 @@
         "size": [
           2,
           2,
-          28
+          26
         ],
         "material": "edge",
         "group": null
@@ -1710,7 +1605,7 @@
         "size": [
           2,
           6,
-          28
+          26
         ],
         "material": "dark",
         "group": null
@@ -1744,24 +1639,11 @@
         ],
         "material": "edge",
         "group": null
-      }
-    ],
-    "description": "A protected straight bridge segment.",
-    "cost": 7,
-    "quantity": 2,
-    "groups": {},
-    "motion": null,
-    "collision": null
-  },
-  {
-    "id": "FF_CatwalkCorner",
-    "title": "Catwalk \u00b7 outer corner",
-    "category": "Catwalks",
-    "parts": [
+      },
       {
         "name": "DeckLeft",
         "center": [
-          -15.0,
+          -15,
           2,
           0
         ],
@@ -1776,7 +1658,7 @@
       {
         "name": "DeckRight",
         "center": [
-          15.0,
+          15,
           2,
           0
         ],
@@ -1793,7 +1675,7 @@
         "center": [
           0,
           2,
-          15.0
+          15
         ],
         "size": [
           28,
@@ -1808,7 +1690,7 @@
         "center": [
           0,
           2,
-          -15.0
+          -15
         ],
         "size": [
           28,
@@ -1821,12 +1703,12 @@
       {
         "name": "DeckGrating0",
         "center": [
-          -12.0,
+          -13.5,
           3,
-          0
+          0.0
         ],
         "size": [
-          2,
+          1,
           2,
           28
         ],
@@ -1836,9 +1718,9 @@
       {
         "name": "DeckGrating1",
         "center": [
-          -8.0,
+          -10.0,
           3,
-          0
+          0.0
         ],
         "size": [
           2,
@@ -1851,9 +1733,9 @@
       {
         "name": "DeckGrating2",
         "center": [
-          -4.0,
+          -6.0,
           3,
-          0
+          0.0
         ],
         "size": [
           2,
@@ -1866,9 +1748,9 @@
       {
         "name": "DeckGrating3",
         "center": [
-          0.0,
+          -2.0,
           3,
-          0
+          0.0
         ],
         "size": [
           2,
@@ -1881,9 +1763,9 @@
       {
         "name": "DeckGrating4",
         "center": [
-          4.0,
+          2.0,
           3,
-          0
+          0.0
         ],
         "size": [
           2,
@@ -1896,9 +1778,9 @@
       {
         "name": "DeckGrating5",
         "center": [
-          8.0,
+          6.0,
           3,
-          0
+          0.0
         ],
         "size": [
           2,
@@ -1911,9 +1793,9 @@
       {
         "name": "DeckGrating6",
         "center": [
-          12.0,
+          10.0,
           3,
-          0
+          0.0
         ],
         "size": [
           2,
@@ -1924,11 +1806,26 @@
         "group": null
       },
       {
+        "name": "DeckGrating7",
+        "center": [
+          13.5,
+          3,
+          0.0
+        ],
+        "size": [
+          1,
+          2,
+          28
+        ],
+        "material": "grip",
+        "group": null
+      },
+      {
         "name": "DeckBearer0",
         "center": [
-          0,
+          0.0,
           1,
-          -8.0
+          -8
         ],
         "size": [
           28,
@@ -1941,9 +1838,9 @@
       {
         "name": "DeckBearer1",
         "center": [
-          0,
+          0.0,
           1,
-          8.0
+          8
         ],
         "size": [
           28,
@@ -1952,7 +1849,20 @@
         ],
         "material": "edge",
         "group": null
-      },
+      }
+    ],
+    "description": "A protected straight bridge segment.",
+    "cost": 7,
+    "quantity": 2,
+    "groups": {},
+    "motion": null,
+    "collision": null
+  },
+  {
+    "id": "FF_CatwalkCorner",
+    "title": "Catwalk \u00b7 outer corner",
+    "category": "Catwalks",
+    "parts": [
       {
         "name": "RailPost0",
         "center": [
@@ -1962,7 +1872,7 @@
         ],
         "size": [
           2,
-          28,
+          26,
           2
         ],
         "material": "yellow",
@@ -1977,7 +1887,7 @@
         ],
         "size": [
           2,
-          28,
+          26,
           2
         ],
         "material": "yellow",
@@ -2008,7 +1918,7 @@
         "size": [
           2,
           2,
-          28
+          26
         ],
         "material": "edge",
         "group": null
@@ -2023,7 +1933,7 @@
         "size": [
           2,
           6,
-          28
+          26
         ],
         "material": "dark",
         "group": null
@@ -2067,22 +1977,7 @@
         ],
         "size": [
           2,
-          28,
-          2
-        ],
-        "material": "yellow",
-        "group": null
-      },
-      {
-        "name": "EndRailPost1",
-        "center": [
-          -14,
-          18,
-          -14
-        ],
-        "size": [
-          2,
-          28,
+          26,
           2
         ],
         "material": "yellow",
@@ -2091,12 +1986,12 @@
       {
         "name": "EndRailTop",
         "center": [
-          0,
+          1,
           32,
           -14
         ],
         "size": [
-          30,
+          28,
           2,
           2
         ],
@@ -2111,7 +2006,7 @@
           -14
         ],
         "size": [
-          28,
+          26,
           2,
           2
         ],
@@ -2126,7 +2021,7 @@
           -14
         ],
         "size": [
-          28,
+          26,
           6,
           2
         ],
@@ -2149,16 +2044,211 @@
         "group": null
       },
       {
-        "name": "EndRailFoot1",
+        "name": "DeckLeft",
         "center": [
-          -14,
-          4.5,
-          -14
+          -15,
+          2,
+          0
         ],
         "size": [
+          2,
           4,
+          32
+        ],
+        "material": "dark",
+        "group": null
+      },
+      {
+        "name": "DeckRight",
+        "center": [
+          15,
+          2,
+          0
+        ],
+        "size": [
+          2,
+          4,
+          32
+        ],
+        "material": "dark",
+        "group": null
+      },
+      {
+        "name": "DeckFront",
+        "center": [
+          0,
+          2,
+          15
+        ],
+        "size": [
+          28,
+          4,
+          2
+        ],
+        "material": "yellow",
+        "group": null
+      },
+      {
+        "name": "DeckBack",
+        "center": [
+          0,
+          2,
+          -15
+        ],
+        "size": [
+          28,
+          4,
+          2
+        ],
+        "material": "yellow",
+        "group": null
+      },
+      {
+        "name": "DeckGrating0",
+        "center": [
+          -13.5,
+          3,
+          0.0
+        ],
+        "size": [
           1,
-          4
+          2,
+          28
+        ],
+        "material": "grip",
+        "group": null
+      },
+      {
+        "name": "DeckGrating1",
+        "center": [
+          -10.0,
+          3,
+          0.0
+        ],
+        "size": [
+          2,
+          2,
+          28
+        ],
+        "material": "grip",
+        "group": null
+      },
+      {
+        "name": "DeckGrating2",
+        "center": [
+          -6.0,
+          3,
+          0.0
+        ],
+        "size": [
+          2,
+          2,
+          28
+        ],
+        "material": "grip",
+        "group": null
+      },
+      {
+        "name": "DeckGrating3",
+        "center": [
+          -2.0,
+          3,
+          0.0
+        ],
+        "size": [
+          2,
+          2,
+          28
+        ],
+        "material": "grip",
+        "group": null
+      },
+      {
+        "name": "DeckGrating4",
+        "center": [
+          2.0,
+          3,
+          0.0
+        ],
+        "size": [
+          2,
+          2,
+          28
+        ],
+        "material": "grip",
+        "group": null
+      },
+      {
+        "name": "DeckGrating5",
+        "center": [
+          6.0,
+          3,
+          0.0
+        ],
+        "size": [
+          2,
+          2,
+          28
+        ],
+        "material": "grip",
+        "group": null
+      },
+      {
+        "name": "DeckGrating6",
+        "center": [
+          10.0,
+          3,
+          0.0
+        ],
+        "size": [
+          2,
+          2,
+          28
+        ],
+        "material": "grip",
+        "group": null
+      },
+      {
+        "name": "DeckGrating7",
+        "center": [
+          13.5,
+          3,
+          0.0
+        ],
+        "size": [
+          1,
+          2,
+          28
+        ],
+        "material": "grip",
+        "group": null
+      },
+      {
+        "name": "DeckBearer0",
+        "center": [
+          0.0,
+          1,
+          -8
+        ],
+        "size": [
+          28,
+          2,
+          2
+        ],
+        "material": "edge",
+        "group": null
+      },
+      {
+        "name": "DeckBearer1",
+        "center": [
+          0.0,
+          1,
+          8
+        ],
+        "size": [
+          28,
+          2,
+          2
         ],
         "material": "edge",
         "group": null
@@ -2179,7 +2269,7 @@
       {
         "name": "Tread0",
         "center": [
-          0,
+          0.0,
           2,
           14
         ],
@@ -2194,7 +2284,7 @@
       {
         "name": "Nosing0",
         "center": [
-          0,
+          0.0,
           4.25,
           15
         ],
@@ -2239,7 +2329,7 @@
       {
         "name": "Tread1",
         "center": [
-          0,
+          0.0,
           6,
           10
         ],
@@ -2254,7 +2344,7 @@
       {
         "name": "Nosing1",
         "center": [
-          0,
+          0.0,
           8.25,
           11
         ],
@@ -2299,7 +2389,7 @@
       {
         "name": "Tread2",
         "center": [
-          0,
+          0.0,
           10,
           6
         ],
@@ -2314,7 +2404,7 @@
       {
         "name": "Nosing2",
         "center": [
-          0,
+          0.0,
           12.25,
           7
         ],
@@ -2359,7 +2449,7 @@
       {
         "name": "Tread3",
         "center": [
-          0,
+          0.0,
           14,
           2
         ],
@@ -2374,7 +2464,7 @@
       {
         "name": "Nosing3",
         "center": [
-          0,
+          0.0,
           16.25,
           3
         ],
@@ -2419,7 +2509,7 @@
       {
         "name": "Tread4",
         "center": [
-          0,
+          0.0,
           18,
           -2
         ],
@@ -2434,7 +2524,7 @@
       {
         "name": "Nosing4",
         "center": [
-          0,
+          0.0,
           20.25,
           -1
         ],
@@ -2479,7 +2569,7 @@
       {
         "name": "Tread5",
         "center": [
-          0,
+          0.0,
           22,
           -6
         ],
@@ -2494,7 +2584,7 @@
       {
         "name": "Nosing5",
         "center": [
-          0,
+          0.0,
           24.25,
           -5
         ],
@@ -2539,7 +2629,7 @@
       {
         "name": "Tread6",
         "center": [
-          0,
+          0.0,
           26,
           -10
         ],
@@ -2554,7 +2644,7 @@
       {
         "name": "Nosing6",
         "center": [
-          0,
+          0.0,
           28.25,
           -9
         ],
@@ -2599,7 +2689,7 @@
       {
         "name": "Tread7",
         "center": [
-          0,
+          0.0,
           30,
           -14
         ],
@@ -2614,7 +2704,7 @@
       {
         "name": "Nosing7",
         "center": [
-          0,
+          0.0,
           32.25,
           -13
         ],
@@ -2689,14 +2779,14 @@
       {
         "name": "Handrail-1",
         "center": [
-          -15,
+          -14,
           46,
           0
         ],
         "size": [
           2,
           2,
-          44
+          40
         ],
         "material": "yellow",
         "group": null,
@@ -2742,14 +2832,14 @@
       {
         "name": "Handrail1",
         "center": [
-          15,
+          14,
           46,
           0
         ],
         "size": [
           2,
           2,
-          44
+          40
         ],
         "material": "yellow",
         "group": null,
@@ -2784,7 +2874,7 @@
         ],
         "size": [
           2,
-          28,
+          26,
           2
         ],
         "material": "yellow",
@@ -2799,7 +2889,7 @@
         ],
         "size": [
           2,
-          28,
+          26,
           2
         ],
         "material": "yellow",
@@ -2830,7 +2920,7 @@
         "size": [
           2,
           2,
-          28
+          26
         ],
         "material": "edge",
         "group": null
@@ -2845,7 +2935,7 @@
         "size": [
           2,
           6,
-          28
+          26
         ],
         "material": "dark",
         "group": null
@@ -2912,12 +3002,12 @@
         "name": "ColumnWeb",
         "center": [
           0,
-          18,
+          17,
           0
         ],
         "size": [
           5,
-          28,
+          26,
           12
         ],
         "material": "dark",
@@ -2927,12 +3017,12 @@
         "name": "FrontFlange",
         "center": [
           0,
-          18,
-          7
+          17,
+          7.5
         ],
         "size": [
           16,
-          28,
+          26,
           3
         ],
         "material": "steel",
@@ -2942,12 +3032,12 @@
         "name": "BackFlange",
         "center": [
           0,
-          18,
-          -7
+          17,
+          -7.5
         ],
         "size": [
           16,
-          28,
+          26,
           3
         ],
         "material": "steel",
@@ -3050,7 +3140,7 @@
         ],
         "size": [
           4,
-          22,
+          20,
           32
         ],
         "material": "dark",
@@ -3168,25 +3258,10 @@
         ],
         "size": [
           88,
-          8,
+          7.8,
           3
         ],
         "material": "steel",
-        "group": "Slat0"
-      },
-      {
-        "name": "Slat0Rib",
-        "center": [
-          0,
-          1,
-          2
-        ],
-        "size": [
-          88,
-          1,
-          2
-        ],
-        "material": "edge",
         "group": "Slat0"
       },
       {
@@ -3198,21 +3273,36 @@
         ],
         "size": [
           88,
-          8,
+          7.8,
           3
         ],
         "material": "steel",
         "group": "Slat1"
       },
       {
-        "name": "Slat1Rib",
+        "name": "Slat1Rib-1",
+        "center": [
+          0,
+          9,
+          -2
+        ],
+        "size": [
+          87.5,
+          1,
+          2
+        ],
+        "material": "edge",
+        "group": "Slat1"
+      },
+      {
+        "name": "Slat1Rib1",
         "center": [
           0,
           9,
           2
         ],
         "size": [
-          88,
+          87.5,
           1,
           2
         ],
@@ -3228,21 +3318,36 @@
         ],
         "size": [
           88,
-          8,
+          7.8,
           3
         ],
         "material": "steel",
         "group": "Slat2"
       },
       {
-        "name": "Slat2Rib",
+        "name": "Slat2Rib-1",
+        "center": [
+          0,
+          17,
+          -2
+        ],
+        "size": [
+          87.5,
+          1,
+          2
+        ],
+        "material": "edge",
+        "group": "Slat2"
+      },
+      {
+        "name": "Slat2Rib1",
         "center": [
           0,
           17,
           2
         ],
         "size": [
-          88,
+          87.5,
           1,
           2
         ],
@@ -3258,21 +3363,36 @@
         ],
         "size": [
           88,
-          8,
+          7.8,
           3
         ],
         "material": "steel",
         "group": "Slat3"
       },
       {
-        "name": "Slat3Rib",
+        "name": "Slat3Rib-1",
+        "center": [
+          0,
+          25,
+          -2
+        ],
+        "size": [
+          87.5,
+          1,
+          2
+        ],
+        "material": "edge",
+        "group": "Slat3"
+      },
+      {
+        "name": "Slat3Rib1",
         "center": [
           0,
           25,
           2
         ],
         "size": [
-          88,
+          87.5,
           1,
           2
         ],
@@ -3288,21 +3408,36 @@
         ],
         "size": [
           88,
-          8,
+          7.8,
           3
         ],
         "material": "steel",
         "group": "Slat4"
       },
       {
-        "name": "Slat4Rib",
+        "name": "Slat4Rib-1",
+        "center": [
+          0,
+          33,
+          -2
+        ],
+        "size": [
+          87.5,
+          1,
+          2
+        ],
+        "material": "edge",
+        "group": "Slat4"
+      },
+      {
+        "name": "Slat4Rib1",
         "center": [
           0,
           33,
           2
         ],
         "size": [
-          88,
+          87.5,
           1,
           2
         ],
@@ -3318,21 +3453,36 @@
         ],
         "size": [
           88,
-          8,
+          7.8,
           3
         ],
         "material": "steel",
         "group": "Slat5"
       },
       {
-        "name": "Slat5Rib",
+        "name": "Slat5Rib-1",
+        "center": [
+          0,
+          41,
+          -2
+        ],
+        "size": [
+          87.5,
+          1,
+          2
+        ],
+        "material": "edge",
+        "group": "Slat5"
+      },
+      {
+        "name": "Slat5Rib1",
         "center": [
           0,
           41,
           2
         ],
         "size": [
-          88,
+          87.5,
           1,
           2
         ],
@@ -3348,21 +3498,36 @@
         ],
         "size": [
           88,
-          8,
+          7.8,
           3
         ],
         "material": "steel",
         "group": "Slat6"
       },
       {
-        "name": "Slat6Rib",
+        "name": "Slat6Rib-1",
+        "center": [
+          0,
+          49,
+          -2
+        ],
+        "size": [
+          87.5,
+          1,
+          2
+        ],
+        "material": "edge",
+        "group": "Slat6"
+      },
+      {
+        "name": "Slat6Rib1",
         "center": [
           0,
           49,
           2
         ],
         "size": [
-          88,
+          87.5,
           1,
           2
         ],
@@ -3378,21 +3543,36 @@
         ],
         "size": [
           88,
-          8,
+          7.8,
           3
         ],
         "material": "steel",
         "group": "Slat7"
       },
       {
-        "name": "Slat7Rib",
+        "name": "Slat7Rib-1",
+        "center": [
+          0,
+          57,
+          -2
+        ],
+        "size": [
+          87.5,
+          1,
+          2
+        ],
+        "material": "edge",
+        "group": "Slat7"
+      },
+      {
+        "name": "Slat7Rib1",
         "center": [
           0,
           57,
           2
         ],
         "size": [
-          88,
+          87.5,
           1,
           2
         ],
@@ -3408,21 +3588,36 @@
         ],
         "size": [
           88,
-          8,
+          7.8,
           3
         ],
         "material": "steel",
         "group": "Slat8"
       },
       {
-        "name": "Slat8Rib",
+        "name": "Slat8Rib-1",
+        "center": [
+          0,
+          65,
+          -2
+        ],
+        "size": [
+          87.5,
+          1,
+          2
+        ],
+        "material": "edge",
+        "group": "Slat8"
+      },
+      {
+        "name": "Slat8Rib1",
         "center": [
           0,
           65,
           2
         ],
         "size": [
-          88,
+          87.5,
           1,
           2
         ],
@@ -3438,21 +3633,36 @@
         ],
         "size": [
           88,
-          8,
+          7.8,
           3
         ],
         "material": "steel",
         "group": "Slat9"
       },
       {
-        "name": "Slat9Rib",
+        "name": "Slat9Rib-1",
+        "center": [
+          0,
+          73,
+          -2
+        ],
+        "size": [
+          87.5,
+          1,
+          2
+        ],
+        "material": "edge",
+        "group": "Slat9"
+      },
+      {
+        "name": "Slat9Rib1",
         "center": [
           0,
           73,
           2
         ],
         "size": [
-          88,
+          87.5,
           1,
           2
         ],
@@ -3468,21 +3678,21 @@
         ],
         "size": [
           88,
-          8,
+          7.8,
           3
         ],
         "material": "steel",
         "group": "Slat10"
       },
       {
-        "name": "Slat10Rib",
+        "name": "Slat10Rib-1",
         "center": [
           0,
           81,
-          2
+          -2
         ],
         "size": [
-          88,
+          87.5,
           1,
           2
         ],
@@ -3490,14 +3700,44 @@
         "group": "Slat10"
       },
       {
-        "name": "BottomSafetyBar",
+        "name": "Slat10Rib1",
         "center": [
           0,
-          1,
-          3
+          81,
+          2
         ],
         "size": [
-          88,
+          87.5,
+          1,
+          2
+        ],
+        "material": "edge",
+        "group": "Slat10"
+      },
+      {
+        "name": "Motor",
+        "center": [
+          -40,
+          91,
+          -12
+        ],
+        "size": [
+          15,
+          10,
+          8
+        ],
+        "material": "dark",
+        "group": null
+      },
+      {
+        "name": "BottomSafetyBar-1",
+        "center": [
+          0,
+          1.1,
+          -3
+        ],
+        "size": [
+          87.5,
           2,
           3
         ],
@@ -3505,10 +3745,70 @@
         "group": "Slat0"
       },
       {
-        "name": "PullHandle",
+        "name": "PullHandle-1",
         "center": [
           0,
-          7,
+          6.9,
+          -4
+        ],
+        "size": [
+          12,
+          2,
+          3
+        ],
+        "material": "dark",
+        "group": "Slat0"
+      },
+      {
+        "name": "ButtonBox-1",
+        "center": [
+          40,
+          32,
+          -5
+        ],
+        "size": [
+          6,
+          12,
+          5
+        ],
+        "material": "yellow",
+        "group": null
+      },
+      {
+        "name": "Button-1",
+        "center": [
+          40,
+          34,
+          -8
+        ],
+        "size": [
+          3,
+          3,
+          1
+        ],
+        "material": "green",
+        "group": null
+      },
+      {
+        "name": "BottomSafetyBar1",
+        "center": [
+          0,
+          1.1,
+          3
+        ],
+        "size": [
+          87.5,
+          2,
+          3
+        ],
+        "material": "hazard",
+        "group": "Slat0"
+      },
+      {
+        "name": "PullHandle1",
+        "center": [
+          0,
+          6.9,
           4
         ],
         "size": [
@@ -3520,24 +3820,9 @@
         "group": "Slat0"
       },
       {
-        "name": "Motor",
+        "name": "ButtonBox1",
         "center": [
-          -40,
-          92,
-          -10
-        ],
-        "size": [
-          15,
-          10,
-          10
-        ],
-        "material": "dark",
-        "group": null
-      },
-      {
-        "name": "ButtonBox",
-        "center": [
-          49,
+          40,
           32,
           5
         ],
@@ -3550,9 +3835,9 @@
         "group": null
       },
       {
-        "name": "Button",
+        "name": "Button1",
         "center": [
-          49,
+          40,
           34,
           8
         ],
@@ -3632,77 +3917,77 @@
         "Slat0": {
           "position": [
             0,
-            81.0,
+            88,
             0
           ]
         },
         "Slat1": {
           "position": [
             0,
-            73.3,
+            80,
             0
           ]
         },
         "Slat2": {
           "position": [
             0,
-            65.6,
+            72,
             0
           ]
         },
         "Slat3": {
           "position": [
             0,
-            57.900000000000006,
+            64,
             0
           ]
         },
         "Slat4": {
           "position": [
             0,
-            50.2,
+            56,
             0
           ]
         },
         "Slat5": {
           "position": [
             0,
-            42.5,
+            48,
             0
           ]
         },
         "Slat6": {
           "position": [
             0,
-            34.8,
+            40,
             0
           ]
         },
         "Slat7": {
           "position": [
             0,
-            27.099999999999994,
+            32,
             0
           ]
         },
         "Slat8": {
           "position": [
             0,
-            19.400000000000006,
+            24,
             0
           ]
         },
         "Slat9": {
           "position": [
             0,
-            11.700000000000003,
+            16,
             0
           ]
         },
         "Slat10": {
           "position": [
             0,
-            4.0,
+            8,
             0
           ]
         }
@@ -3749,13 +4034,13 @@
         "name": "GateTop",
         "center": [
           0,
-          28,
+          29,
           0
         ],
         "size": [
           24,
           2,
-          2
+          2.4
         ],
         "material": "yellow",
         "group": "Gate"
@@ -3770,7 +4055,7 @@
         "size": [
           24,
           2,
-          2
+          2.4
         ],
         "material": "yellow",
         "group": "Gate"
@@ -3785,7 +4070,7 @@
         "size": [
           24,
           6,
-          2
+          2.4
         ],
         "material": "hazard",
         "group": "Gate"
@@ -3814,7 +4099,7 @@
         ],
         "size": [
           2,
-          26,
+          24,
           2
         ],
         "material": "yellow",
@@ -3829,7 +4114,7 @@
         ],
         "size": [
           2,
-          26,
+          24,
           2
         ],
         "material": "yellow",
@@ -3856,7 +4141,7 @@
             1,
             0
           ],
-          "angle": -95
+          "angle": -90
         }
       }
     },
@@ -3913,22 +4198,157 @@
         "group": null
       },
       {
-        "name": "DoorPanel",
+        "name": "DoorLower",
         "center": [
           0,
-          31,
+          17.5,
           0
         ],
         "size": [
           28,
-          62,
+          35,
           3
         ],
-        "material": "steel",
+        "material": "wall",
         "group": "Door"
       },
       {
-        "name": "LowerKickPlate",
+        "name": "DoorUpper",
+        "center": [
+          0,
+          56.5,
+          0
+        ],
+        "size": [
+          28,
+          11,
+          3
+        ],
+        "material": "wall",
+        "group": "Door"
+      },
+      {
+        "name": "DoorSide-1",
+        "center": [
+          -11,
+          43,
+          0
+        ],
+        "size": [
+          6,
+          16,
+          3
+        ],
+        "material": "wall",
+        "group": "Door"
+      },
+      {
+        "name": "LowerKickPlate-1",
+        "center": [
+          0,
+          10,
+          -2
+        ],
+        "size": [
+          26,
+          16,
+          1
+        ],
+        "material": "dark",
+        "group": "Door"
+      },
+      {
+        "name": "DoorHandle-1",
+        "center": [
+          10,
+          28,
+          -3
+        ],
+        "size": [
+          2,
+          7,
+          2
+        ],
+        "material": "yellow",
+        "group": "Door"
+      },
+      {
+        "name": "WindowJamb-1-7.5",
+        "center": [
+          -7.5,
+          43,
+          -1.75
+        ],
+        "size": [
+          1,
+          16,
+          0.5
+        ],
+        "material": "edge",
+        "group": "Door"
+      },
+      {
+        "name": "WindowJamb-17.5",
+        "center": [
+          7.5,
+          43,
+          -1.75
+        ],
+        "size": [
+          1,
+          16,
+          0.5
+        ],
+        "material": "edge",
+        "group": "Door"
+      },
+      {
+        "name": "WindowEdge-135.5",
+        "center": [
+          0,
+          35.5,
+          -1.75
+        ],
+        "size": [
+          14,
+          1,
+          0.5
+        ],
+        "material": "edge",
+        "group": "Door"
+      },
+      {
+        "name": "WindowEdge-150.5",
+        "center": [
+          0,
+          50.5,
+          -1.75
+        ],
+        "size": [
+          14,
+          1,
+          0.5
+        ],
+        "material": "edge",
+        "group": "Door"
+      },
+      {
+        "name": "DoorSide1",
+        "center": [
+          11,
+          43,
+          0
+        ],
+        "size": [
+          6,
+          16,
+          3
+        ],
+        "material": "wall",
+        "group": "Door"
+      },
+      {
+        "name": "LowerKickPlate1",
         "center": [
           0,
           10,
@@ -3943,37 +4363,7 @@
         "group": "Door"
       },
       {
-        "name": "WindowRecess",
-        "center": [
-          0,
-          43,
-          2
-        ],
-        "size": [
-          18,
-          18,
-          1
-        ],
-        "material": "dark",
-        "group": "Door"
-      },
-      {
-        "name": "WiredWindow",
-        "center": [
-          0,
-          43,
-          3
-        ],
-        "size": [
-          14,
-          14,
-          1
-        ],
-        "material": "green",
-        "group": "Door"
-      },
-      {
-        "name": "DoorHandle",
+        "name": "DoorHandle1",
         "center": [
           10,
           28,
@@ -3986,6 +4376,111 @@
         ],
         "material": "yellow",
         "group": "Door"
+      },
+      {
+        "name": "WindowJamb1-7.5",
+        "center": [
+          -7.5,
+          43,
+          1.75
+        ],
+        "size": [
+          1,
+          16,
+          0.5
+        ],
+        "material": "edge",
+        "group": "Door"
+      },
+      {
+        "name": "WindowJamb17.5",
+        "center": [
+          7.5,
+          43,
+          1.75
+        ],
+        "size": [
+          1,
+          16,
+          0.5
+        ],
+        "material": "edge",
+        "group": "Door"
+      },
+      {
+        "name": "WindowEdge135.5",
+        "center": [
+          0,
+          35.5,
+          1.75
+        ],
+        "size": [
+          14,
+          1,
+          0.5
+        ],
+        "material": "edge",
+        "group": "Door"
+      },
+      {
+        "name": "WindowEdge150.5",
+        "center": [
+          0,
+          50.5,
+          1.75
+        ],
+        "size": [
+          14,
+          1,
+          0.5
+        ],
+        "material": "edge",
+        "group": "Door"
+      },
+      {
+        "name": "WiredWindow",
+        "center": [
+          0,
+          43,
+          0
+        ],
+        "size": [
+          14,
+          14,
+          0.5
+        ],
+        "material": "glass",
+        "group": "Door"
+      },
+      {
+        "name": "WindowWireX",
+        "center": [
+          0,
+          43,
+          0.4
+        ],
+        "size": [
+          13.5,
+          0.35,
+          0.35
+        ],
+        "material": "edge",
+        "group": "Door"
+      },
+      {
+        "name": "WindowWireY",
+        "center": [
+          0,
+          43,
+          0.5
+        ],
+        "size": [
+          0.35,
+          13.5,
+          0.35
+        ],
+        "material": "edge",
+        "group": "Door"
       }
     ],
     "description": "A 1 \u00d7 2 steel door with inspection window and kick plate.",
@@ -3993,7 +4488,7 @@
     "quantity": 1,
     "groups": {
       "Door": [
-        -14,
+        -12,
         31,
         0
       ]
@@ -4008,7 +4503,7 @@
             1,
             0
           ],
-          "angle": -95
+          "angle": -90
         }
       }
     },
@@ -4167,1158 +4662,6 @@
     "collision": null
   },
   {
-    "id": "FF_FreightLift",
-    "title": "Caged freight elevator",
-    "category": "Interactive",
-    "parts": [
-      {
-        "name": "Guide-4648",
-        "center": [
-          -46,
-          48,
-          -40
-        ],
-        "size": [
-          4,
-          96,
-          6
-        ],
-        "material": "edge",
-        "group": null
-      },
-      {
-        "name": "GuideBack-4648",
-        "center": [
-          -43.5,
-          48,
-          -44
-        ],
-        "size": [
-          9,
-          96,
-          2
-        ],
-        "material": "dark",
-        "group": null
-      },
-      {
-        "name": "Guide-46144",
-        "center": [
-          -46,
-          144,
-          -40
-        ],
-        "size": [
-          4,
-          96,
-          6
-        ],
-        "material": "edge",
-        "group": null
-      },
-      {
-        "name": "GuideBack-46144",
-        "center": [
-          -43.5,
-          144,
-          -44
-        ],
-        "size": [
-          9,
-          96,
-          2
-        ],
-        "material": "dark",
-        "group": null
-      },
-      {
-        "name": "Guide4648",
-        "center": [
-          46,
-          48,
-          -40
-        ],
-        "size": [
-          4,
-          96,
-          6
-        ],
-        "material": "edge",
-        "group": null
-      },
-      {
-        "name": "GuideBack4648",
-        "center": [
-          43.5,
-          48,
-          -44
-        ],
-        "size": [
-          9,
-          96,
-          2
-        ],
-        "material": "dark",
-        "group": null
-      },
-      {
-        "name": "Guide46144",
-        "center": [
-          46,
-          144,
-          -40
-        ],
-        "size": [
-          4,
-          96,
-          6
-        ],
-        "material": "edge",
-        "group": null
-      },
-      {
-        "name": "GuideBack46144",
-        "center": [
-          43.5,
-          144,
-          -44
-        ],
-        "size": [
-          9,
-          96,
-          2
-        ],
-        "material": "dark",
-        "group": null
-      },
-      {
-        "name": "HeadBeam",
-        "center": [
-          0,
-          188,
-          -40
-        ],
-        "size": [
-          96,
-          8,
-          12
-        ],
-        "material": "dark",
-        "group": null
-      },
-      {
-        "name": "MotorHousing",
-        "center": [
-          0,
-          196,
-          -38
-        ],
-        "size": [
-          28,
-          12,
-          16
-        ],
-        "material": "steel",
-        "group": null
-      },
-      {
-        "name": "Sheave",
-        "center": [
-          0,
-          193,
-          -28
-        ],
-        "size": [
-          16,
-          16,
-          4
-        ],
-        "material": "copper",
-        "group": null
-      },
-      {
-        "name": "CabDeckLeft",
-        "center": [
-          -43.0,
-          2,
-          0
-        ],
-        "size": [
-          2,
-          4,
-          80
-        ],
-        "material": "dark",
-        "group": "Platform"
-      },
-      {
-        "name": "CabDeckRight",
-        "center": [
-          43.0,
-          2,
-          0
-        ],
-        "size": [
-          2,
-          4,
-          80
-        ],
-        "material": "dark",
-        "group": "Platform"
-      },
-      {
-        "name": "CabDeckFront",
-        "center": [
-          0,
-          2,
-          39.0
-        ],
-        "size": [
-          84,
-          4,
-          2
-        ],
-        "material": "yellow",
-        "group": "Platform"
-      },
-      {
-        "name": "CabDeckBack",
-        "center": [
-          0,
-          2,
-          -39.0
-        ],
-        "size": [
-          84,
-          4,
-          2
-        ],
-        "material": "yellow",
-        "group": "Platform"
-      },
-      {
-        "name": "CabDeckGrating0",
-        "center": [
-          -40.0,
-          3,
-          0
-        ],
-        "size": [
-          2,
-          2,
-          76
-        ],
-        "material": "grip",
-        "group": "Platform"
-      },
-      {
-        "name": "CabDeckGrating1",
-        "center": [
-          -36.0,
-          3,
-          0
-        ],
-        "size": [
-          2,
-          2,
-          76
-        ],
-        "material": "grip",
-        "group": "Platform"
-      },
-      {
-        "name": "CabDeckGrating2",
-        "center": [
-          -32.0,
-          3,
-          0
-        ],
-        "size": [
-          2,
-          2,
-          76
-        ],
-        "material": "grip",
-        "group": "Platform"
-      },
-      {
-        "name": "CabDeckGrating3",
-        "center": [
-          -28.0,
-          3,
-          0
-        ],
-        "size": [
-          2,
-          2,
-          76
-        ],
-        "material": "grip",
-        "group": "Platform"
-      },
-      {
-        "name": "CabDeckGrating4",
-        "center": [
-          -24.0,
-          3,
-          0
-        ],
-        "size": [
-          2,
-          2,
-          76
-        ],
-        "material": "grip",
-        "group": "Platform"
-      },
-      {
-        "name": "CabDeckGrating5",
-        "center": [
-          -20.0,
-          3,
-          0
-        ],
-        "size": [
-          2,
-          2,
-          76
-        ],
-        "material": "grip",
-        "group": "Platform"
-      },
-      {
-        "name": "CabDeckGrating6",
-        "center": [
-          -16.0,
-          3,
-          0
-        ],
-        "size": [
-          2,
-          2,
-          76
-        ],
-        "material": "grip",
-        "group": "Platform"
-      },
-      {
-        "name": "CabDeckGrating7",
-        "center": [
-          -12.0,
-          3,
-          0
-        ],
-        "size": [
-          2,
-          2,
-          76
-        ],
-        "material": "grip",
-        "group": "Platform"
-      },
-      {
-        "name": "CabDeckGrating8",
-        "center": [
-          -8.0,
-          3,
-          0
-        ],
-        "size": [
-          2,
-          2,
-          76
-        ],
-        "material": "grip",
-        "group": "Platform"
-      },
-      {
-        "name": "CabDeckGrating9",
-        "center": [
-          -4.0,
-          3,
-          0
-        ],
-        "size": [
-          2,
-          2,
-          76
-        ],
-        "material": "grip",
-        "group": "Platform"
-      },
-      {
-        "name": "CabDeckGrating10",
-        "center": [
-          0.0,
-          3,
-          0
-        ],
-        "size": [
-          2,
-          2,
-          76
-        ],
-        "material": "grip",
-        "group": "Platform"
-      },
-      {
-        "name": "CabDeckGrating11",
-        "center": [
-          4.0,
-          3,
-          0
-        ],
-        "size": [
-          2,
-          2,
-          76
-        ],
-        "material": "grip",
-        "group": "Platform"
-      },
-      {
-        "name": "CabDeckGrating12",
-        "center": [
-          8.0,
-          3,
-          0
-        ],
-        "size": [
-          2,
-          2,
-          76
-        ],
-        "material": "grip",
-        "group": "Platform"
-      },
-      {
-        "name": "CabDeckGrating13",
-        "center": [
-          12.0,
-          3,
-          0
-        ],
-        "size": [
-          2,
-          2,
-          76
-        ],
-        "material": "grip",
-        "group": "Platform"
-      },
-      {
-        "name": "CabDeckGrating14",
-        "center": [
-          16.0,
-          3,
-          0
-        ],
-        "size": [
-          2,
-          2,
-          76
-        ],
-        "material": "grip",
-        "group": "Platform"
-      },
-      {
-        "name": "CabDeckGrating15",
-        "center": [
-          20.0,
-          3,
-          0
-        ],
-        "size": [
-          2,
-          2,
-          76
-        ],
-        "material": "grip",
-        "group": "Platform"
-      },
-      {
-        "name": "CabDeckGrating16",
-        "center": [
-          24.0,
-          3,
-          0
-        ],
-        "size": [
-          2,
-          2,
-          76
-        ],
-        "material": "grip",
-        "group": "Platform"
-      },
-      {
-        "name": "CabDeckGrating17",
-        "center": [
-          28.0,
-          3,
-          0
-        ],
-        "size": [
-          2,
-          2,
-          76
-        ],
-        "material": "grip",
-        "group": "Platform"
-      },
-      {
-        "name": "CabDeckGrating18",
-        "center": [
-          32.0,
-          3,
-          0
-        ],
-        "size": [
-          2,
-          2,
-          76
-        ],
-        "material": "grip",
-        "group": "Platform"
-      },
-      {
-        "name": "CabDeckGrating19",
-        "center": [
-          36.0,
-          3,
-          0
-        ],
-        "size": [
-          2,
-          2,
-          76
-        ],
-        "material": "grip",
-        "group": "Platform"
-      },
-      {
-        "name": "CabDeckGrating20",
-        "center": [
-          40.0,
-          3,
-          0
-        ],
-        "size": [
-          2,
-          2,
-          76
-        ],
-        "material": "grip",
-        "group": "Platform"
-      },
-      {
-        "name": "CabDeckBearer0",
-        "center": [
-          0,
-          1,
-          -20.0
-        ],
-        "size": [
-          84,
-          2,
-          2
-        ],
-        "material": "edge",
-        "group": "Platform"
-      },
-      {
-        "name": "CabDeckBearer1",
-        "center": [
-          0,
-          1,
-          20.0
-        ],
-        "size": [
-          84,
-          2,
-          2
-        ],
-        "material": "edge",
-        "group": "Platform"
-      },
-      {
-        "name": "CabPost-42-36",
-        "center": [
-          -42,
-          40,
-          -36
-        ],
-        "size": [
-          3,
-          72,
-          3
-        ],
-        "material": "yellow",
-        "group": "Platform"
-      },
-      {
-        "name": "CabPost-4236",
-        "center": [
-          -42,
-          40,
-          36
-        ],
-        "size": [
-          3,
-          72,
-          3
-        ],
-        "material": "yellow",
-        "group": "Platform"
-      },
-      {
-        "name": "CabSideTop-42",
-        "center": [
-          -42,
-          74,
-          0
-        ],
-        "size": [
-          3,
-          3,
-          76
-        ],
-        "material": "yellow",
-        "group": "Platform"
-      },
-      {
-        "name": "CabSideMid-42",
-        "center": [
-          -42,
-          35,
-          0
-        ],
-        "size": [
-          2,
-          2,
-          72
-        ],
-        "material": "edge",
-        "group": "Platform"
-      },
-      {
-        "name": "CabToe-42",
-        "center": [
-          -42,
-          9,
-          0
-        ],
-        "size": [
-          2,
-          8,
-          72
-        ],
-        "material": "dark",
-        "group": "Platform"
-      },
-      {
-        "name": "CabPost42-36",
-        "center": [
-          42,
-          40,
-          -36
-        ],
-        "size": [
-          3,
-          72,
-          3
-        ],
-        "material": "yellow",
-        "group": "Platform"
-      },
-      {
-        "name": "CabPost4236",
-        "center": [
-          42,
-          40,
-          36
-        ],
-        "size": [
-          3,
-          72,
-          3
-        ],
-        "material": "yellow",
-        "group": "Platform"
-      },
-      {
-        "name": "CabSideTop42",
-        "center": [
-          42,
-          74,
-          0
-        ],
-        "size": [
-          3,
-          3,
-          76
-        ],
-        "material": "yellow",
-        "group": "Platform"
-      },
-      {
-        "name": "CabSideMid42",
-        "center": [
-          42,
-          35,
-          0
-        ],
-        "size": [
-          2,
-          2,
-          72
-        ],
-        "material": "edge",
-        "group": "Platform"
-      },
-      {
-        "name": "CabToe42",
-        "center": [
-          42,
-          9,
-          0
-        ],
-        "size": [
-          2,
-          8,
-          72
-        ],
-        "material": "dark",
-        "group": "Platform"
-      },
-      {
-        "name": "CabBackTop",
-        "center": [
-          0,
-          74,
-          -36
-        ],
-        "size": [
-          80,
-          3,
-          3
-        ],
-        "material": "yellow",
-        "group": "Platform"
-      },
-      {
-        "name": "CabBackMid",
-        "center": [
-          0,
-          35,
-          -36
-        ],
-        "size": [
-          80,
-          2,
-          2
-        ],
-        "material": "edge",
-        "group": "Platform"
-      },
-      {
-        "name": "CabBackToe",
-        "center": [
-          0,
-          9,
-          -36
-        ],
-        "size": [
-          80,
-          8,
-          2
-        ],
-        "material": "hazard",
-        "group": "Platform"
-      },
-      {
-        "name": "RearMesh0",
-        "center": [
-          -36,
-          46,
-          -36
-        ],
-        "size": [
-          1,
-          50,
-          1
-        ],
-        "material": "dark",
-        "group": "Platform"
-      },
-      {
-        "name": "RearMesh1",
-        "center": [
-          -27,
-          46,
-          -36
-        ],
-        "size": [
-          1,
-          50,
-          1
-        ],
-        "material": "dark",
-        "group": "Platform"
-      },
-      {
-        "name": "RearMesh2",
-        "center": [
-          -18,
-          46,
-          -36
-        ],
-        "size": [
-          1,
-          50,
-          1
-        ],
-        "material": "dark",
-        "group": "Platform"
-      },
-      {
-        "name": "RearMesh3",
-        "center": [
-          -9,
-          46,
-          -36
-        ],
-        "size": [
-          1,
-          50,
-          1
-        ],
-        "material": "dark",
-        "group": "Platform"
-      },
-      {
-        "name": "RearMesh4",
-        "center": [
-          0,
-          46,
-          -36
-        ],
-        "size": [
-          1,
-          50,
-          1
-        ],
-        "material": "dark",
-        "group": "Platform"
-      },
-      {
-        "name": "RearMesh5",
-        "center": [
-          9,
-          46,
-          -36
-        ],
-        "size": [
-          1,
-          50,
-          1
-        ],
-        "material": "dark",
-        "group": "Platform"
-      },
-      {
-        "name": "RearMesh6",
-        "center": [
-          18,
-          46,
-          -36
-        ],
-        "size": [
-          1,
-          50,
-          1
-        ],
-        "material": "dark",
-        "group": "Platform"
-      },
-      {
-        "name": "RearMesh7",
-        "center": [
-          27,
-          46,
-          -36
-        ],
-        "size": [
-          1,
-          50,
-          1
-        ],
-        "material": "dark",
-        "group": "Platform"
-      },
-      {
-        "name": "RearMesh8",
-        "center": [
-          36,
-          46,
-          -36
-        ],
-        "size": [
-          1,
-          50,
-          1
-        ],
-        "material": "dark",
-        "group": "Platform"
-      },
-      {
-        "name": "CarControl",
-        "center": [
-          39,
-          40,
-          35
-        ],
-        "size": [
-          5,
-          14,
-          4
-        ],
-        "material": "dark",
-        "group": "Platform"
-      },
-      {
-        "name": "CarButton",
-        "center": [
-          39,
-          43,
-          38
-        ],
-        "size": [
-          2,
-          3,
-          1
-        ],
-        "material": "green",
-        "group": "Platform"
-      }
-    ],
-    "description": "Place the controller in front of a clear 3 \u00d7 3 \u00d7 7 shaft. The caged platform travels three blocks between two docks.",
-    "cost": 28,
-    "quantity": 1,
-    "groups": {
-      "Platform": [
-        0,
-        0,
-        0
-      ]
-    },
-    "motion": {
-      "kind": "lift",
-      "duration": 4,
-      "targets": {
-        "Platform": {
-          "position": [
-            0,
-            96,
-            0
-          ]
-        }
-      }
-    },
-    "collision": null
-  },
-  {
-    "id": "FF_LiftGuide",
-    "title": "Lift guide extension",
-    "category": "Structure",
-    "parts": [
-      {
-        "name": "Rail",
-        "center": [
-          0,
-          32,
-          0
-        ],
-        "size": [
-          4,
-          64,
-          5
-        ],
-        "material": "edge",
-        "group": null
-      },
-      {
-        "name": "RailBack",
-        "center": [
-          0,
-          32,
-          -4
-        ],
-        "size": [
-          12,
-          64,
-          3
-        ],
-        "material": "dark",
-        "group": null
-      },
-      {
-        "name": "Bracket8",
-        "center": [
-          0,
-          8,
-          -8
-        ],
-        "size": [
-          20,
-          4,
-          8
-        ],
-        "material": "steel",
-        "group": null
-      },
-      {
-        "name": "Bolt8",
-        "center": [
-          0,
-          8,
-          3
-        ],
-        "size": [
-          3,
-          3,
-          1
-        ],
-        "material": "copper",
-        "group": null
-      },
-      {
-        "name": "Bracket56",
-        "center": [
-          0,
-          56,
-          -8
-        ],
-        "size": [
-          20,
-          4,
-          8
-        ],
-        "material": "steel",
-        "group": null
-      },
-      {
-        "name": "Bolt56",
-        "center": [
-          0,
-          56,
-          3
-        ],
-        "size": [
-          3,
-          3,
-          1
-        ],
-        "material": "copper",
-        "group": null
-      }
-    ],
-    "description": "Two-block guide segment for elevator shaft construction.",
-    "cost": 4,
-    "quantity": 2,
-    "groups": {},
-    "motion": null,
-    "collision": null
-  },
-  {
-    "id": "FF_CallPanel",
-    "title": "Lift call panel",
-    "category": "Fixtures",
-    "parts": [
-      {
-        "name": "Backplate",
-        "center": [
-          0,
-          16,
-          -13
-        ],
-        "size": [
-          12,
-          22,
-          4
-        ],
-        "material": "steel",
-        "group": null
-      },
-      {
-        "name": "Face",
-        "center": [
-          0,
-          16,
-          -10
-        ],
-        "size": [
-          10,
-          18,
-          2
-        ],
-        "material": "yellow",
-        "group": null
-      },
-      {
-        "name": "UpButton",
-        "center": [
-          0,
-          20,
-          -8
-        ],
-        "size": [
-          4,
-          4,
-          2
-        ],
-        "material": "green",
-        "group": null
-      },
-      {
-        "name": "DownButton",
-        "center": [
-          0,
-          12,
-          -8
-        ],
-        "size": [
-          4,
-          4,
-          2
-        ],
-        "material": "red",
-        "group": null
-      },
-      {
-        "name": "Conduit",
-        "center": [
-          0,
-          4,
-          -14
-        ],
-        "size": [
-          3,
-          8,
-          3
-        ],
-        "material": "dark",
-        "group": null
-      }
-    ],
-    "description": "Use to link to the nearest owned freight lift within twelve blocks; calls the cab to this floor.",
-    "cost": 3,
-    "quantity": 1,
-    "groups": {},
-    "motion": null,
-    "collision": null
-  },
-  {
     "id": "FF_PipeStraight",
     "title": "Flanged utility duct",
     "category": "Fixtures",
@@ -5332,74 +4675,134 @@
         ],
         "size": [
           12,
-          12,
-          32
+          32,
+          12
         ],
         "material": "copper",
         "group": null
       },
       {
-        "name": "Flange-14",
+        "name": "LowerSide-7.5",
         "center": [
-          0,
-          16,
-          -14
+          -7.5,
+          30,
+          0
         ],
         "size": [
-          18,
-          18,
-          4
+          3,
+          3,
+          18
         ],
         "material": "dark",
         "group": null
       },
       {
-        "name": "Band-14",
+        "name": "LowerSide7.5",
         "center": [
-          0,
-          16,
-          -14
+          7.5,
+          30,
+          0
         ],
         "size": [
-          20,
-          2,
-          5
-        ],
-        "material": "edge",
-        "group": null
-      },
-      {
-        "name": "Flange14",
-        "center": [
-          0,
-          16,
-          14
-        ],
-        "size": [
-          18,
-          18,
-          4
+          3,
+          3,
+          18
         ],
         "material": "dark",
         "group": null
       },
       {
-        "name": "Band14",
+        "name": "LowerEdge8.5",
         "center": [
           0,
-          16,
-          14
+          30,
+          -7.5
         ],
         "size": [
-          20,
-          2,
-          5
+          12,
+          3,
+          3
         ],
-        "material": "edge",
+        "material": "dark",
+        "group": null
+      },
+      {
+        "name": "LowerEdge23.5",
+        "center": [
+          0,
+          30,
+          7.5
+        ],
+        "size": [
+          12,
+          3,
+          3
+        ],
+        "material": "dark",
+        "group": null
+      },
+      {
+        "name": "UpperSide-7.5",
+        "center": [
+          -7.5,
+          2,
+          0
+        ],
+        "size": [
+          3,
+          3,
+          18
+        ],
+        "material": "dark",
+        "group": null
+      },
+      {
+        "name": "UpperSide7.5",
+        "center": [
+          7.5,
+          2,
+          0
+        ],
+        "size": [
+          3,
+          3,
+          18
+        ],
+        "material": "dark",
+        "group": null
+      },
+      {
+        "name": "UpperEdge8.5",
+        "center": [
+          0,
+          2,
+          -7.5
+        ],
+        "size": [
+          12,
+          3,
+          3
+        ],
+        "material": "dark",
+        "group": null
+      },
+      {
+        "name": "UpperEdge23.5",
+        "center": [
+          0,
+          2,
+          7.5
+        ],
+        "size": [
+          12,
+          3,
+          3
+        ],
+        "material": "dark",
         "group": null
       }
     ],
-    "description": "One-block utility duct with matched 12-unit ports.",
+    "description": "One-block utility duct. Use R to select the pipe axis; ports align at block-face centers.",
     "cost": 3,
     "quantity": 2,
     "groups": {},
@@ -5415,13 +4818,13 @@
         "name": "DuctRear",
         "center": [
           0,
-          16,
-          -8
+          11,
+          0
         ],
         "size": [
           12,
-          12,
-          16
+          22,
+          12
         ],
         "material": "copper",
         "group": null
@@ -5429,12 +4832,12 @@
       {
         "name": "DuctSide",
         "center": [
-          8,
+          11,
           16,
           0
         ],
         "size": [
-          16,
+          10,
           12,
           12
         ],
@@ -5442,37 +4845,127 @@
         "group": null
       },
       {
-        "name": "RearFlange",
+        "name": "RearSide-7.5",
         "center": [
-          0,
-          16,
-          -14
+          -7.5,
+          2,
+          0
         ],
         "size": [
-          18,
-          18,
-          4
+          3,
+          3,
+          18
         ],
         "material": "dark",
         "group": null
       },
       {
-        "name": "SideFlange",
+        "name": "RearSide7.5",
         "center": [
-          14,
-          16,
+          7.5,
+          2,
           0
         ],
         "size": [
-          4,
-          18,
+          3,
+          3,
           18
+        ],
+        "material": "dark",
+        "group": null
+      },
+      {
+        "name": "RearEdge8.5",
+        "center": [
+          0,
+          2,
+          -7.5
+        ],
+        "size": [
+          12,
+          3,
+          3
+        ],
+        "material": "dark",
+        "group": null
+      },
+      {
+        "name": "RearEdge23.5",
+        "center": [
+          0,
+          2,
+          7.5
+        ],
+        "size": [
+          12,
+          3,
+          3
+        ],
+        "material": "dark",
+        "group": null
+      },
+      {
+        "name": "SideSide-7.5",
+        "center": [
+          14,
+          8.5,
+          0
+        ],
+        "size": [
+          3,
+          3,
+          18
+        ],
+        "material": "dark",
+        "group": null
+      },
+      {
+        "name": "SideSide7.5",
+        "center": [
+          14,
+          23.5,
+          0
+        ],
+        "size": [
+          3,
+          3,
+          18
+        ],
+        "material": "dark",
+        "group": null
+      },
+      {
+        "name": "SideEdge8.5",
+        "center": [
+          14,
+          16,
+          -7.5
+        ],
+        "size": [
+          3,
+          12,
+          3
+        ],
+        "material": "dark",
+        "group": null
+      },
+      {
+        "name": "SideEdge23.5",
+        "center": [
+          14,
+          16,
+          7.5
+        ],
+        "size": [
+          3,
+          12,
+          3
         ],
         "material": "dark",
         "group": null
       }
     ],
-    "description": "A 90-degree return with the same port centers as the straight duct.",
+    "description": "A 90-degree return with the same block-face port centers as the straight duct.",
     "cost": 3,
     "quantity": 2,
     "groups": {},
@@ -5485,44 +4978,89 @@
     "category": "Fixtures",
     "parts": [
       {
-        "name": "VentBody",
+        "name": "VentBack",
         "center": [
           0,
           16,
-          -11
+          -14
         ],
         "size": [
-          28,
-          28,
-          10
-        ],
-        "material": "steel",
-        "group": null
-      },
-      {
-        "name": "DarkRecess",
-        "center": [
-          0,
-          16,
-          -5
-        ],
-        "size": [
-          24,
-          24,
+          31.5,
+          31.5,
           2
         ],
         "material": "black",
         "group": null
       },
       {
-        "name": "Louvre0",
+        "name": "VentBorder1",
         "center": [
           0,
-          6,
-          -3
+          31,
+          -10
         ],
         "size": [
-          24,
+          32,
+          2,
+          6
+        ],
+        "material": "steel",
+        "group": null
+      },
+      {
+        "name": "VentBorder2",
+        "center": [
+          15,
+          16,
+          -10
+        ],
+        "size": [
+          2,
+          28,
+          6
+        ],
+        "material": "steel",
+        "group": null
+      },
+      {
+        "name": "VentBorder4",
+        "center": [
+          0,
+          1,
+          -10
+        ],
+        "size": [
+          32,
+          2,
+          6
+        ],
+        "material": "steel",
+        "group": null
+      },
+      {
+        "name": "VentBorder8",
+        "center": [
+          -15,
+          16,
+          -10
+        ],
+        "size": [
+          2,
+          28,
+          6
+        ],
+        "material": "steel",
+        "group": null
+      },
+      {
+        "name": "Louvre0",
+        "center": [
+          0.0,
+          3,
+          -9
+        ],
+        "size": [
+          28,
           2,
           3
         ],
@@ -5532,12 +5070,12 @@
       {
         "name": "Louvre1",
         "center": [
-          0,
-          10,
-          -3
+          0.0,
+          6,
+          -9
         ],
         "size": [
-          24,
+          28,
           2,
           3
         ],
@@ -5547,12 +5085,12 @@
       {
         "name": "Louvre2",
         "center": [
-          0,
-          14,
-          -3
+          0.0,
+          10,
+          -9
         ],
         "size": [
-          24,
+          28,
           2,
           3
         ],
@@ -5562,12 +5100,12 @@
       {
         "name": "Louvre3",
         "center": [
-          0,
-          18,
-          -3
+          0.0,
+          14,
+          -9
         ],
         "size": [
-          24,
+          28,
           2,
           3
         ],
@@ -5577,12 +5115,12 @@
       {
         "name": "Louvre4",
         "center": [
-          0,
-          22,
-          -3
+          0.0,
+          18,
+          -9
         ],
         "size": [
-          24,
+          28,
           2,
           3
         ],
@@ -5592,12 +5130,42 @@
       {
         "name": "Louvre5",
         "center": [
-          0,
-          26,
-          -3
+          0.0,
+          22,
+          -9
         ],
         "size": [
-          24,
+          28,
+          2,
+          3
+        ],
+        "material": "edge",
+        "group": null
+      },
+      {
+        "name": "Louvre6",
+        "center": [
+          0.0,
+          26,
+          -9
+        ],
+        "size": [
+          28,
+          2,
+          3
+        ],
+        "material": "edge",
+        "group": null
+      },
+      {
+        "name": "Louvre7",
+        "center": [
+          0.0,
+          29,
+          -9
+        ],
+        "size": [
+          28,
           2,
           3
         ],
@@ -5725,7 +5293,7 @@
     "category": "Fixtures",
     "parts": [
       {
-        "name": "RunnerL",
+        "name": "Runner-10",
         "center": [
           -10,
           2,
@@ -5734,13 +5302,13 @@
         "size": [
           5,
           4,
-          30
+          32
         ],
         "material": "dark",
         "group": null
       },
       {
-        "name": "RunnerR",
+        "name": "Runner10",
         "center": [
           10,
           2,
@@ -5749,7 +5317,7 @@
         "size": [
           5,
           4,
-          30
+          32
         ],
         "material": "dark",
         "group": null
@@ -5757,14 +5325,14 @@
       {
         "name": "CargoSlat0",
         "center": [
-          -12,
+          -11.5,
           5,
-          0
+          0.0
         ],
         "size": [
           5,
           2,
-          32
+          28
         ],
         "material": "copper",
         "group": null
@@ -5772,14 +5340,14 @@
       {
         "name": "CargoSlat1",
         "center": [
-          -6,
+          -4.0,
           5,
-          0
+          0.0
         ],
         "size": [
-          5,
+          6,
           2,
-          32
+          28
         ],
         "material": "copper",
         "group": null
@@ -5787,14 +5355,14 @@
       {
         "name": "CargoSlat2",
         "center": [
-          0,
+          4.0,
           5,
-          0
+          0.0
         ],
         "size": [
-          5,
+          6,
           2,
-          32
+          28
         ],
         "material": "copper",
         "group": null
@@ -5802,31 +5370,76 @@
       {
         "name": "CargoSlat3",
         "center": [
-          6,
+          11.5,
           5,
-          0
+          0.0
         ],
         "size": [
           5,
           2,
-          32
+          28
         ],
         "material": "copper",
         "group": null
       },
       {
-        "name": "CargoSlat4",
+        "name": "PalletRim1",
         "center": [
-          12,
+          0,
           5,
-          0
+          -15
         ],
         "size": [
-          5,
+          32,
           2,
-          32
+          2
         ],
-        "material": "copper",
+        "material": "steel",
+        "group": null
+      },
+      {
+        "name": "PalletRim2",
+        "center": [
+          15,
+          5,
+          0.0
+        ],
+        "size": [
+          2,
+          2,
+          28
+        ],
+        "material": "steel",
+        "group": null
+      },
+      {
+        "name": "PalletRim4",
+        "center": [
+          0,
+          5,
+          15
+        ],
+        "size": [
+          32,
+          2,
+          2
+        ],
+        "material": "steel",
+        "group": null
+      },
+      {
+        "name": "PalletRim8",
+        "center": [
+          -15,
+          5,
+          0.0
+        ],
+        "size": [
+          2,
+          2,
+          28
+        ],
+        "material": "steel",
         "group": null
       }
     ],
@@ -5865,7 +5478,7 @@
           14
         ],
         "size": [
-          56,
+          55,
           3,
           2
         ],
@@ -5880,9 +5493,9 @@
           0
         ],
         "size": [
-          50,
+          49,
           3,
-          24
+          23
         ],
         "material": "dark",
         "group": null
@@ -6071,7 +5684,7 @@
         "name": "ViceJawL",
         "center": [
           13,
-          39,
+          40,
           0
         ],
         "size": [
@@ -6086,7 +5699,7 @@
         "name": "ViceJawR",
         "center": [
           21,
-          39,
+          40,
           0
         ],
         "size": [
@@ -6238,6 +5851,630 @@
     "quantity": 1,
     "groups": {},
     "motion": null,
+    "collision": null
+  },
+  {
+    "id": "FF_FactoryWall",
+    "title": "Steel factory wall",
+    "category": "Structure",
+    "parts": [
+      {
+        "name": "FactoryWall",
+        "center": [
+          0,
+          16,
+          0
+        ],
+        "size": [
+          32,
+          32,
+          32
+        ],
+        "material": "wall",
+        "group": null
+      }
+    ],
+    "description": "Full one-block steel cladding for factory walls. Personnel doors fit a one-wide, two-high opening.",
+    "cost": 4,
+    "quantity": 4,
+    "groups": {},
+    "motion": null,
+    "collision": null
+  },
+  {
+    "id": "FF_FactoryRoof",
+    "title": "Corrugated factory roof",
+    "category": "Structure",
+    "parts": [
+      {
+        "name": "InsulatedRoof",
+        "center": [
+          0,
+          14,
+          0
+        ],
+        "size": [
+          32,
+          28,
+          32
+        ],
+        "material": "dark",
+        "group": null
+      },
+      {
+        "name": "RoofRib0",
+        "center": [
+          -14,
+          30,
+          0
+        ],
+        "size": [
+          3,
+          4,
+          32
+        ],
+        "material": "steel",
+        "group": null
+      },
+      {
+        "name": "RoofRib1",
+        "center": [
+          -10,
+          30,
+          0
+        ],
+        "size": [
+          3,
+          4,
+          32
+        ],
+        "material": "steel",
+        "group": null
+      },
+      {
+        "name": "RoofRib2",
+        "center": [
+          -6,
+          30,
+          0
+        ],
+        "size": [
+          3,
+          4,
+          32
+        ],
+        "material": "steel",
+        "group": null
+      },
+      {
+        "name": "RoofRib3",
+        "center": [
+          -2,
+          30,
+          0
+        ],
+        "size": [
+          3,
+          4,
+          32
+        ],
+        "material": "steel",
+        "group": null
+      },
+      {
+        "name": "RoofRib4",
+        "center": [
+          2,
+          30,
+          0
+        ],
+        "size": [
+          3,
+          4,
+          32
+        ],
+        "material": "steel",
+        "group": null
+      },
+      {
+        "name": "RoofRib5",
+        "center": [
+          6,
+          30,
+          0
+        ],
+        "size": [
+          3,
+          4,
+          32
+        ],
+        "material": "steel",
+        "group": null
+      },
+      {
+        "name": "RoofRib6",
+        "center": [
+          10,
+          30,
+          0
+        ],
+        "size": [
+          3,
+          4,
+          32
+        ],
+        "material": "steel",
+        "group": null
+      },
+      {
+        "name": "RoofRib7",
+        "center": [
+          14,
+          30,
+          0
+        ],
+        "size": [
+          3,
+          4,
+          32
+        ],
+        "material": "steel",
+        "group": null
+      }
+    ],
+    "description": "Full one-block corrugated steel roof. Rotate to align its continuous ribs.",
+    "cost": 4,
+    "quantity": 4,
+    "groups": {},
+    "motion": null,
+    "collision": null
+  },
+  {
+    "id": "FF_FactoryWindow",
+    "title": "Steel-framed factory window",
+    "category": "Structure",
+    "parts": [
+      {
+        "name": "Glass",
+        "center": [
+          0,
+          16,
+          0
+        ],
+        "size": [
+          28,
+          28,
+          1
+        ],
+        "material": "glass",
+        "group": null
+      },
+      {
+        "name": "FrameX-15",
+        "center": [
+          -15,
+          16,
+          0
+        ],
+        "size": [
+          2,
+          32,
+          32
+        ],
+        "material": "steel",
+        "group": null
+      },
+      {
+        "name": "FrameX15",
+        "center": [
+          15,
+          16,
+          0
+        ],
+        "size": [
+          2,
+          32,
+          32
+        ],
+        "material": "steel",
+        "group": null
+      },
+      {
+        "name": "FrameY1",
+        "center": [
+          0,
+          1,
+          0
+        ],
+        "size": [
+          28,
+          2,
+          32
+        ],
+        "material": "steel",
+        "group": null
+      },
+      {
+        "name": "FrameY31",
+        "center": [
+          0,
+          31,
+          0
+        ],
+        "size": [
+          28,
+          2,
+          32
+        ],
+        "material": "steel",
+        "group": null
+      },
+      {
+        "name": "WireX",
+        "center": [
+          0,
+          16,
+          0.6
+        ],
+        "size": [
+          27.5,
+          0.35,
+          0.35
+        ],
+        "material": "edge",
+        "group": null
+      },
+      {
+        "name": "WireY",
+        "center": [
+          0,
+          16,
+          0.7
+        ],
+        "size": [
+          0.35,
+          27.5,
+          0.35
+        ],
+        "material": "edge",
+        "group": null
+      }
+    ],
+    "description": "A glazed industrial window with a steel frame and wire cross; use R to rotate the pane.",
+    "cost": 3,
+    "quantity": 2,
+    "groups": {},
+    "motion": null,
+    "collision": null
+  },
+  {
+    "id": "FF_WindowPane",
+    "title": "Industrial window pane",
+    "category": "Structure",
+    "parts": [
+      {
+        "name": "Glass",
+        "center": [
+          0,
+          16,
+          0
+        ],
+        "size": [
+          28,
+          28,
+          1
+        ],
+        "material": "glass",
+        "group": null
+      },
+      {
+        "name": "FrameX-15",
+        "center": [
+          -15,
+          16,
+          0
+        ],
+        "size": [
+          2,
+          32,
+          3
+        ],
+        "material": "steel",
+        "group": null
+      },
+      {
+        "name": "FrameX15",
+        "center": [
+          15,
+          16,
+          0
+        ],
+        "size": [
+          2,
+          32,
+          3
+        ],
+        "material": "steel",
+        "group": null
+      },
+      {
+        "name": "FrameY1",
+        "center": [
+          0,
+          1,
+          0
+        ],
+        "size": [
+          28,
+          2,
+          3
+        ],
+        "material": "steel",
+        "group": null
+      },
+      {
+        "name": "FrameY31",
+        "center": [
+          0,
+          31,
+          0
+        ],
+        "size": [
+          28,
+          2,
+          3
+        ],
+        "material": "steel",
+        "group": null
+      },
+      {
+        "name": "WireX",
+        "center": [
+          0,
+          16,
+          0.6
+        ],
+        "size": [
+          27.5,
+          0.35,
+          0.35
+        ],
+        "material": "edge",
+        "group": null
+      },
+      {
+        "name": "WireY",
+        "center": [
+          0,
+          16,
+          0.7
+        ],
+        "size": [
+          0.35,
+          27.5,
+          0.35
+        ],
+        "material": "edge",
+        "group": null
+      }
+    ],
+    "description": "A glazed industrial window with a steel frame and wire cross; use R to rotate the pane.",
+    "cost": 3,
+    "quantity": 2,
+    "groups": {},
+    "motion": null,
+    "collision": null
+  },
+  {
+    "id": "FF_PendantLamp",
+    "title": "High-bay industrial pendant",
+    "category": "Fixtures",
+    "parts": [
+      {
+        "name": "CeilingRose",
+        "center": [
+          0,
+          31,
+          0
+        ],
+        "size": [
+          12,
+          2,
+          12
+        ],
+        "material": "dark",
+        "group": null
+      },
+      {
+        "name": "Suspension",
+        "center": [
+          0,
+          25,
+          0
+        ],
+        "size": [
+          3,
+          12,
+          3
+        ],
+        "material": "edge",
+        "group": null
+      },
+      {
+        "name": "Ballast",
+        "center": [
+          0,
+          20,
+          0
+        ],
+        "size": [
+          10,
+          6,
+          10
+        ],
+        "material": "dark",
+        "group": null
+      },
+      {
+        "name": "ReflectorTop",
+        "center": [
+          0,
+          17,
+          0
+        ],
+        "size": [
+          16,
+          4,
+          16
+        ],
+        "material": "steel",
+        "group": null
+      },
+      {
+        "name": "Reflector",
+        "center": [
+          0,
+          13,
+          0
+        ],
+        "size": [
+          24,
+          5,
+          24
+        ],
+        "material": "steel",
+        "group": null
+      },
+      {
+        "name": "LightLens",
+        "center": [
+          0,
+          9.4,
+          0
+        ],
+        "size": [
+          24,
+          1,
+          24
+        ],
+        "material": "light",
+        "group": null
+      },
+      {
+        "name": "RimX-1",
+        "center": [
+          -13,
+          10,
+          0
+        ],
+        "size": [
+          2,
+          2,
+          28
+        ],
+        "material": "dark",
+        "group": null
+      },
+      {
+        "name": "RimZ-1",
+        "center": [
+          0,
+          10,
+          -13
+        ],
+        "size": [
+          24,
+          2,
+          2
+        ],
+        "material": "dark",
+        "group": null
+      },
+      {
+        "name": "RimX1",
+        "center": [
+          13,
+          10,
+          0
+        ],
+        "size": [
+          2,
+          2,
+          28
+        ],
+        "material": "dark",
+        "group": null
+      },
+      {
+        "name": "RimZ1",
+        "center": [
+          0,
+          10,
+          13
+        ],
+        "size": [
+          24,
+          2,
+          2
+        ],
+        "material": "dark",
+        "group": null
+      },
+      {
+        "name": "LensGuard-9",
+        "center": [
+          -9,
+          8.5,
+          0
+        ],
+        "size": [
+          1,
+          1,
+          26
+        ],
+        "material": "edge",
+        "group": null
+      },
+      {
+        "name": "LensGuard0",
+        "center": [
+          0,
+          8.5,
+          0
+        ],
+        "size": [
+          1,
+          1,
+          26
+        ],
+        "material": "edge",
+        "group": null
+      },
+      {
+        "name": "LensGuard9",
+        "center": [
+          9,
+          8.5,
+          0
+        ],
+        "size": [
+          1,
+          1,
+          26
+        ],
+        "material": "edge",
+        "group": null
+      }
+    ],
+    "description": "Large warehouse ceiling light. Place beneath a roof and use F to switch it on or off.",
+    "cost": 6,
+    "quantity": 1,
+    "groups": {},
+    "motion": {
+      "kind": "lamp",
+      "duration": 0.1,
+      "targets": {}
+    },
     "collision": null
   }
 ]

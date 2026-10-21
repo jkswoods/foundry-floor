@@ -1,0 +1,28 @@
+{
+  "id": "FF_FactoryWall",
+  "title": "Steel factory wall",
+  "category": "Structure",
+  "parts": [
+    {
+      "name": "FactoryWall",
+      "center": [
+        0,
+        16,
+        0
+      ],
+      "size": [
+        32,
+        32,
+        32
+      ],
+      "material": "wall",
+      "group": null
+    }
+  ],
+  "description": "Full one-block steel cladding for factory walls. Personnel doors fit a one-wide, two-high opening.",
+  "cost": 4,
+  "quantity": 4,
+  "groups": {},
+  "motion": null,
+  "collision": null
+}

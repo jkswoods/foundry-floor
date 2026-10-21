@@ -12,74 +12,134 @@
       ],
       "size": [
         12,
-        12,
-        32
+        32,
+        12
       ],
       "material": "copper",
       "group": null
     },
     {
-      "name": "Flange-14",
+      "name": "LowerSide-7.5",
       "center": [
-        0,
-        16,
-        -14
+        -7.5,
+        30,
+        0
       ],
       "size": [
-        18,
-        18,
-        4
+        3,
+        3,
+        18
       ],
       "material": "dark",
       "group": null
     },
     {
-      "name": "Band-14",
+      "name": "LowerSide7.5",
       "center": [
-        0,
-        16,
-        -14
+        7.5,
+        30,
+        0
       ],
       "size": [
-        20,
-        2,
-        5
-      ],
-      "material": "edge",
-      "group": null
-    },
-    {
-      "name": "Flange14",
-      "center": [
-        0,
-        16,
-        14
-      ],
-      "size": [
-        18,
-        18,
-        4
+        3,
+        3,
+        18
       ],
       "material": "dark",
       "group": null
     },
     {
-      "name": "Band14",
+      "name": "LowerEdge8.5",
       "center": [
         0,
-        16,
-        14
+        30,
+        -7.5
       ],
       "size": [
-        20,
-        2,
-        5
+        12,
+        3,
+        3
       ],
-      "material": "edge",
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "LowerEdge23.5",
+      "center": [
+        0,
+        30,
+        7.5
+      ],
+      "size": [
+        12,
+        3,
+        3
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "UpperSide-7.5",
+      "center": [
+        -7.5,
+        2,
+        0
+      ],
+      "size": [
+        3,
+        3,
+        18
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "UpperSide7.5",
+      "center": [
+        7.5,
+        2,
+        0
+      ],
+      "size": [
+        3,
+        3,
+        18
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "UpperEdge8.5",
+      "center": [
+        0,
+        2,
+        -7.5
+      ],
+      "size": [
+        12,
+        3,
+        3
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "UpperEdge23.5",
+      "center": [
+        0,
+        2,
+        7.5
+      ],
+      "size": [
+        12,
+        3,
+        3
+      ],
+      "material": "dark",
       "group": null
     }
   ],
-  "description": "One-block utility duct with matched 12-unit ports.",
+  "description": "One-block utility duct. Use R to select the pipe axis; ports align at block-face centers.",
   "cost": 3,
   "quantity": 2,
   "groups": {},

@@ -1,0 +1,283 @@
+{
+  "id": "FF_CatwalkCorner_Connect08",
+  "title": "Catwalk \u00b7 outer corner",
+  "category": "Catwalks",
+  "parts": [
+    {
+      "name": "EndRailPost0",
+      "center": [
+        14,
+        18,
+        -14
+      ],
+      "size": [
+        2,
+        26,
+        2
+      ],
+      "material": "yellow",
+      "group": null
+    },
+    {
+      "name": "EndRailTop",
+      "center": [
+        1,
+        32,
+        -14
+      ],
+      "size": [
+        28,
+        2,
+        2
+      ],
+      "material": "yellow",
+      "group": null
+    },
+    {
+      "name": "EndRailMid",
+      "center": [
+        0,
+        20,
+        -14
+      ],
+      "size": [
+        26,
+        2,
+        2
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "EndRailToe",
+      "center": [
+        0,
+        8,
+        -14
+      ],
+      "size": [
+        26,
+        6,
+        2
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "EndRailFoot0",
+      "center": [
+        14,
+        4.5,
+        -14
+      ],
+      "size": [
+        4,
+        1,
+        4
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "DeckRight",
+      "center": [
+        15,
+        2,
+        0
+      ],
+      "size": [
+        2,
+        4,
+        32
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "DeckFront",
+      "center": [
+        0,
+        2,
+        15
+      ],
+      "size": [
+        28,
+        4,
+        2
+      ],
+      "material": "yellow",
+      "group": null
+    },
+    {
+      "name": "DeckBack",
+      "center": [
+        0,
+        2,
+        -15
+      ],
+      "size": [
+        28,
+        4,
+        2
+      ],
+      "material": "yellow",
+      "group": null
+    },
+    {
+      "name": "DeckGrating0",
+      "center": [
+        -14.0,
+        3,
+        0.0
+      ],
+      "size": [
+        2,
+        2,
+        28
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "DeckGrating1",
+      "center": [
+        -10.0,
+        3,
+        0.0
+      ],
+      "size": [
+        2,
+        2,
+        28
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "DeckGrating2",
+      "center": [
+        -6.0,
+        3,
+        0.0
+      ],
+      "size": [
+        2,
+        2,
+        28
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "DeckGrating3",
+      "center": [
+        -2.0,
+        3,
+        0.0
+      ],
+      "size": [
+        2,
+        2,
+        28
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "DeckGrating4",
+      "center": [
+        2.0,
+        3,
+        0.0
+      ],
+      "size": [
+        2,
+        2,
+        28
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "DeckGrating5",
+      "center": [
+        6.0,
+        3,
+        0.0
+      ],
+      "size": [
+        2,
+        2,
+        28
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "DeckGrating6",
+      "center": [
+        10.0,
+        3,
+        0.0
+      ],
+      "size": [
+        2,
+        2,
+        28
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "DeckGrating7",
+      "center": [
+        13.5,
+        3,
+        0.0
+      ],
+      "size": [
+        1,
+        2,
+        28
+      ],
+      "material": "grip",
+      "group": null
+    },
+    {
+      "name": "DeckBearer0",
+      "center": [
+        -1.0,
+        1,
+        -8
+      ],
+      "size": [
+        30,
+        2,
+        2
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "DeckBearer1",
+      "center": [
+        -1.0,
+        1,
+        8
+      ],
+      "size": [
+        30,
+        2,
+        2
+      ],
+      "material": "edge",
+      "group": null
+    }
+  ],
+  "description": "Outside railing for a right-angle landing.",
+  "cost": 6,
+  "quantity": 2,
+  "groups": {},
+  "motion": null,
+  "collision": null
+}

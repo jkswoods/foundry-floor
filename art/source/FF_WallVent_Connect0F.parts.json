@@ -1,0 +1,148 @@
+{
+  "id": "FF_WallVent_Connect0F",
+  "title": "Louvred wall vent",
+  "category": "Fixtures",
+  "parts": [
+    {
+      "name": "VentBack",
+      "center": [
+        0,
+        16,
+        -14
+      ],
+      "size": [
+        31.5,
+        31.5,
+        2
+      ],
+      "material": "black",
+      "group": null
+    },
+    {
+      "name": "Louvre0",
+      "center": [
+        0.0,
+        2,
+        -9
+      ],
+      "size": [
+        32,
+        2,
+        3
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "Louvre1",
+      "center": [
+        0.0,
+        6,
+        -9
+      ],
+      "size": [
+        32,
+        2,
+        3
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "Louvre2",
+      "center": [
+        0.0,
+        10,
+        -9
+      ],
+      "size": [
+        32,
+        2,
+        3
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "Louvre3",
+      "center": [
+        0.0,
+        14,
+        -9
+      ],
+      "size": [
+        32,
+        2,
+        3
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "Louvre4",
+      "center": [
+        0.0,
+        18,
+        -9
+      ],
+      "size": [
+        32,
+        2,
+        3
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "Louvre5",
+      "center": [
+        0.0,
+        22,
+        -9
+      ],
+      "size": [
+        32,
+        2,
+        3
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "Louvre6",
+      "center": [
+        0.0,
+        26,
+        -9
+      ],
+      "size": [
+        32,
+        2,
+        3
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "Louvre7",
+      "center": [
+        0.0,
+        30,
+        -9
+      ],
+      "size": [
+        32,
+        2,
+        3
+      ],
+      "material": "edge",
+      "group": null
+    }
+  ],
+  "description": "Recessed vent cover with separate louvres.",
+  "cost": 4,
+  "quantity": 2,
+  "groups": {},
+  "motion": null,
+  "collision": null
+}

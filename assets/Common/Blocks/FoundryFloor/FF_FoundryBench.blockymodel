@@ -32,8 +32,7 @@
             "x": 56,
             "y": 6,
             "z": 28
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -137,11 +136,10 @@
         },
         "settings": {
           "size": {
-            "x": 56,
+            "x": 55,
             "y": 3,
             "z": 2
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -245,11 +243,10 @@
         },
         "settings": {
           "size": {
-            "x": 50,
+            "x": 49,
             "y": 3,
-            "z": 24
-          },
-          "isStaticBox": true
+            "z": 23
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -356,8 +353,7 @@
             "x": 4,
             "y": 26,
             "z": 4
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -464,8 +460,7 @@
             "x": 7,
             "y": 4,
             "z": 7
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -572,8 +567,7 @@
             "x": 4,
             "y": 26,
             "z": 4
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -680,8 +674,7 @@
             "x": 7,
             "y": 4,
             "z": 7
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -788,8 +781,7 @@
             "x": 4,
             "y": 26,
             "z": 4
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -896,8 +888,7 @@
             "x": 7,
             "y": 4,
             "z": 7
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -1004,8 +995,7 @@
             "x": 4,
             "y": 26,
             "z": 4
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -1112,8 +1102,7 @@
             "x": 7,
             "y": 4,
             "z": 7
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -1220,8 +1209,7 @@
             "x": 26,
             "y": 12,
             "z": 22
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -1328,8 +1316,7 @@
             "x": 24,
             "y": 10,
             "z": 2
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -1436,8 +1423,7 @@
             "x": 12,
             "y": 2,
             "z": 3
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -1544,8 +1530,7 @@
             "x": 12,
             "y": 4,
             "z": 14
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -1626,7 +1611,7 @@
       "name": "ViceJawL",
       "position": {
         "x": 13,
-        "y": 39,
+        "y": 40,
         "z": 0
       },
       "orientation": {
@@ -1652,8 +1637,7 @@
             "x": 4,
             "y": 8,
             "z": 12
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -1734,7 +1718,7 @@
       "name": "ViceJawR",
       "position": {
         "x": 21,
-        "y": 39,
+        "y": 40,
         "z": 0
       },
       "orientation": {
@@ -1760,8 +1744,7 @@
             "x": 4,
             "y": 8,
             "z": 12
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -1868,8 +1851,7 @@
             "x": 14,
             "y": 3,
             "z": 3
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -1976,8 +1958,7 @@
             "x": 50,
             "y": 26,
             "z": 3
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -2084,8 +2065,7 @@
             "x": 54,
             "y": 2,
             "z": 4
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -2192,8 +2172,7 @@
             "x": 3,
             "y": 14,
             "z": 2
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -2300,8 +2279,7 @@
             "x": 8,
             "y": 3,
             "z": 3
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -2408,8 +2386,7 @@
             "x": 3,
             "y": 14,
             "z": 2
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -2516,8 +2493,7 @@
             "x": 8,
             "y": 3,
             "z": 3
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -2624,8 +2600,7 @@
             "x": 3,
             "y": 14,
             "z": 2
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,
@@ -2732,8 +2707,7 @@
             "x": 8,
             "y": 3,
             "z": 3
-          },
-          "isStaticBox": true
+          }
         },
         "unwrapMode": "custom",
         "visible": true,

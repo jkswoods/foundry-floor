@@ -4,6 +4,7 @@
   "holdLastKeyframe": true,
   "nodeAnimations": {
     "Door": {
+      "position": [],
       "orientation": [
         {
           "time": 0,
@@ -19,13 +20,16 @@
           "time": 48,
           "delta": {
             "x": -0.0,
-            "y": -0.7372773368101241,
+            "y": -0.7071067811865475,
             "z": -0.0,
-            "w": 0.6755902076156602
+            "w": 0.7071067811865476
           },
           "interpolationType": "smooth"
         }
-      ]
+      ],
+      "shapeStretch": [],
+      "shapeVisible": [],
+      "shapeUvOffset": []
     }
   }
 }

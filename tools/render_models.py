@@ -29,7 +29,7 @@ def faces(model,animation=None,amount=0):
             if a.get('orientation'):r=r@quat(sample(a['orientation'],time,True))
             rr=R@r;tt=T+R@p
             s=node.get('shape')
-            if s:
+            if s and s.get('type')=='box':
                 size=vec(s['settings']['size']);off=vec(s['offset']);lo=off-size/2;hi=off+size/2
                 x0,y0,z0=lo;x1,y1,z1=hi
                 specs=[('front',[[x1,y0,z1],[x0,y0,z1],[x0,y1,z1],[x1,y1,z1]],[0,0,1],size[[0,1]]),('back',[[x0,y0,z0],[x1,y0,z0],[x1,y1,z0],[x0,y1,z0]],[0,0,-1],size[[0,1]]),('left',[[x0,y0,z1],[x0,y0,z0],[x0,y1,z0],[x0,y1,z1]],[-1,0,0],size[[2,1]]),('right',[[x1,y0,z0],[x1,y0,z1],[x1,y1,z1],[x1,y1,z0]],[1,0,0],size[[2,1]]),('top',[[x0,y1,z0],[x1,y1,z0],[x1,y1,z1],[x0,y1,z1]],[0,1,0],size[[0,2]]),('bottom',[[x0,y0,z1],[x1,y0,z1],[x1,y0,z0],[x0,y0,z0]],[0,-1,0],size[[0,2]])]
@@ -39,7 +39,7 @@ def faces(model,animation=None,amount=0):
             if node.get('children'):walk(node['children'],rr,tt)
     walk(model['nodes']);return fs
 def render(fs,width=700,height=640,yaw=35,elev=24,transparent=False,fit=.88):
-    atlas=np.array(Image.open(TEX))[:,:,:3]
+    atlas=np.array(Image.open(TEX).convert('RGBA'))
     verts=np.array([p for f in fs for p in f['v']]);lo=verts.min(0);hi=verts.max(0);center=(lo+hi)/2
     a,b=np.radians([yaw,elev]);eye=np.array([math.sin(a)*math.cos(b),math.sin(b),math.cos(a)*math.cos(b)])
     right=np.cross([0,1,0],eye);right/=np.linalg.norm(right);up=np.cross(eye,right);basis=np.stack([right,up,eye])
@@ -51,7 +51,11 @@ def render(fs,width=700,height=640,yaw=35,elev=24,transparent=False,fit=.88):
     rgb=np.broadcast_to(np.array([19,30,34])*(1-yy)+np.array([31,46,49])*yy,(height,width,3)).copy()
     zbuf=np.full((height,width),-np.inf);alpha=np.zeros((height,width),dtype=np.uint8)
     light=np.array([-.45,.85,.6]);light/=np.linalg.norm(light)
-    for f in fs:
+    def translucent(f):
+        u,v=np.array(f['uv'][0]).astype(int).clip(0,511)
+        return atlas[v,u,3]<255
+    # Paint opaque geometry first, then transparent faces from back to front.
+    for f in sorted(fs,key=lambda f:(translucent(f),np.mean(project(f['v'])[:,2]))):
         n=np.array(f['n'])
         if n@eye<=0:continue
         shade=.53+.47*max(0,n@light);p=project(f['v']);uv=np.array(f['uv'])
@@ -66,7 +70,14 @@ def render(fs,width=700,height=640,yaw=35,elev=24,transparent=False,fit=.88):
             mask=(w0>=-1e-6)&(w1>=-1e-6)&(w2>=-1e-6)&(z>region)
             if not mask.any():continue
             u=(w0*tx[0,0]+w1*tx[1,0]+w2*tx[2,0]).astype(int).clip(0,511);v=(w0*tx[0,1]+w1*tx[1,1]+w2*tx[2,1]).astype(int).clip(0,511)
-            rgb[mn[1]:mx[1]+1,mn[0]:mx[0]+1][mask]=np.clip(atlas[v,u]*shade,0,255)[mask];region[mask]=z[mask];alpha[mn[1]:mx[1]+1,mn[0]:mx[0]+1][mask]=255
+            opacity=atlas[v,u,3]/255.0;colors=np.clip(atlas[v,u,:3]*shade,0,255)
+            target=rgb[mn[1]:mx[1]+1,mn[0]:mx[0]+1];alpha_region=alpha[mn[1]:mx[1]+1,mn[0]:mx[0]+1]
+            if transparent:
+                old=alpha_region/255.0;combined=opacity+old*(1-opacity)
+                mixed=(colors*opacity[...,None]+target*old[...,None]*(1-opacity[...,None]))/np.maximum(combined[...,None],1e-9)
+                target[mask]=mixed[mask];alpha_region[mask]=(combined[mask]*255).astype('uint8')
+            else:target[mask]=(colors*opacity[...,None]+target*(1-opacity[...,None]))[mask];alpha_region[mask]=255
+            if not translucent(f):region[mask]=z[mask]
     if transparent:return Image.fromarray(np.dstack([rgb.astype('uint8'),alpha]))
     return Image.fromarray(rgb.astype('uint8'))
 def font(size,bold=False):return ImageFont.truetype('/System/Library/Fonts/Supplemental/Arial'+(' Bold' if bold else '')+'.ttf',size)
@@ -78,9 +89,9 @@ def main():
         fs=faces(model);fsby[m['id']]=fs
         render(fs,600,520).save(OUT/(m['id']+'.png'))
         icon=render(fs,256,256,transparent=True,fit=.82).resize((64,64),Image.Resampling.LANCZOS)
-        dest=ROOT/'assets/Common/Icons/Items'/(m['id']+'.png');dest.parent.mkdir(parents=True,exist_ok=True);icon.save(dest)
+        dest=ROOT/'assets/Common/Icons/Items'/(m['id']+'.png');dest.parent.mkdir(parents=True,exist_ok=True);icon.save(dest,compress_level=9)
         if m['id'] in ['FF_FloorPlate','FF_CatwalkBridge','FF_SteelColumn','FF_WallVent','FF_RollerShutter']:
-            category=ROOT/'assets/Common/Icons/CraftingCategories/FoundryFloor'/(m['id']+'.png');category.parent.mkdir(parents=True,exist_ok=True);icon.save(category)
+            category=ROOT/'assets/Common/Icons/CraftingCategories/FoundryFloor'/(m['id']+'.png');category.parent.mkdir(parents=True,exist_ok=True);icon.save(category,compress_level=9)
         if anims:
             a=anims.get('Open',anims.get('Up'));render(faces(model,a,1),600,520).save(OUT/(m['id']+'_Open.png'))
         gallery.append({k:m[k] for k in ['id','title','category','description','cost','quantity','motion']}|dict(model=model,animations=anims))
@@ -89,7 +100,6 @@ def main():
     for x in range(-160,193,32):
         for z in range(-128,97,32):place('HazardFloor' if z==96 else 'FloorPlate' if x<64 else 'ConcreteFloor',x,-32,z)
     place('RollerShutter',-64,0,-112)
-    place('FreightLift',128,0,-16)
     for x in range(-128,65,32):place('CatwalkBridge',x,96,-64,90)
     for x in [-128,-32,64]:
         for y in [0,32,64]:place('SteelColumn',x,y,-64)
@@ -98,7 +108,6 @@ def main():
     for z in range(-96,65,32):place('PipeStraight',-160,54,z)
     place('PipeElbow',-160,54,96)
     place('SafetyGate',-96,96,-64,90)
-    place('CallPanel',80,0,-48)
     place('CargoPallet',-32,0,48);place('CargoPallet',0,0,48)
     place('FoundryBench',-80,0,40)
     place('ServiceHatch',32,0,16)
@@ -119,7 +128,7 @@ def main():
     sheet.save(OUT/'Factory-Contact-Sheet.png')
     inter=Image.new('RGB',(1800,1000),(16,28,32));d=ImageDraw.Draw(inter)
     d.text((38,25),'MOVING PARTS  /  CLOSED → OPEN',font=font(32,True),fill='#eee8d5')
-    for i,mid in enumerate(['FF_RollerShutter','FF_FreightLift','FF_SafetyGate']):
+    for i,mid in enumerate(['FF_RollerShutter','FF_PersonnelDoor','FF_SafetyGate']):
         for j,suffix in enumerate(['','_Open']):inter.paste(Image.open(OUT/(mid+suffix+'.png')).resize((560,440)),(i*600+20,j*440+100))
     inter.save(OUT/'Mechanical-States.png')
     # Embed data and texture: the viewer works when opened directly as a file.
