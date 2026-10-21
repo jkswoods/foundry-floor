@@ -8,7 +8,7 @@ The craftable **Caged freight elevator** places a controller pedestal. Its compl
 
 ![Original complete freight lift model](../assets/models/FF_FreightLift.png)
 
-*Original full-assembly render; the controller, in-game collision and passenger journey still need native screenshots and verification.*
+*Original full-assembly render; current in-game setup and passenger journeys still need screenshots and gameplay verification.*
 
 The lower deck is one eighth of a block above the shaft's base. The upper dock is exactly three blocks higher. Build landings outside the shaft reservation. Guide extensions are architectural additions; they do not add stops or increase travel.
 
@@ -24,4 +24,4 @@ The controller can be Lowered, Raising, Raised, Lowering, Blocked or Disabled. O
 
 After clearing a blockage, use the owner control to request a dock again. A saved offline passenger must return before the platform can leave them behind. Do not remove the internal cab block independently. Lower and empty the lift, then let its owner remove the controller pedestal; this removes its matching assembly and returns the craftable kit through normal block removal.
 
-Collision, passenger carrying, interruption/recovery, removal, audio loops and multiplayer behaviour all remain native acceptance requirements for this preview.
+Isolated native server checks have verified empty cab movement, solid decks at both docks, stopping for an entity obstruction, and holding the saved deck height across normal reload. Passenger carrying, in-game setup and removal, audio loops and multiplayer behaviour remain gameplay acceptance requirements for this preview.
