@@ -8,7 +8,7 @@ The Foundry Workbench is a separate crafting bench for the factory collection. I
 
 ## Make the bench
 
-At a standard **Workbench**, use **8 Iron Ingots + 4 Copper Ingots** to craft **1 Foundry Workbench**. The native crafting registry resolves this recipe and the 25 recipes on the new bench. Opening a placed Foundry Workbench and crafting a freight lift have been tested in game. The bench's own acquisition recipe and the complete catalog remain under test.
+At a standard **Workbench**, use **8 Iron Ingots + 4 Copper Ingots** to craft **1 Foundry Workbench**. Native server transactions have verified this cost and all 25 factory recipe input/output quantities. Opening a placed Foundry Workbench and crafting a freight lift have also been tested in game. The complete player crafting UI and timing remain under test.
 
 The bench's top spans nearly two blocks and its tool board rises above one block. Leave adjoining cells and overhead space clear. Rotate it before placing so the vice and drawer face your working area.
 

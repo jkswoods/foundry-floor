@@ -3,7 +3,7 @@
 ## 0.1.0 — development in progress
 
 - Added the original factory collection: 25 block models and a dedicated Foundry Workbench.
-- Added five bench tabs with native recipe definitions.
+- Added five bench tabs with native recipe definitions and verified native bench/catalog transaction quantities.
 - Added server-owned placement reservations, mechanical controls and saved ownership/state.
 - Implemented an experimental bounded freight-lift controller with cab collision poses, call-panel links and saved passenger records.
 - Verified empty lift motion, entity obstruction, and held-height normal reload in isolated native server checks. Passenger riding remains experimental.

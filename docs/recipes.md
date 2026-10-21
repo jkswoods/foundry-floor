@@ -1,6 +1,6 @@
 # Recipes
 
-These are the native configured recipes for 0.1.0. The server resolves the bench and all 25 factory outputs. Actual in-game input/output conservation is still undergoing verification.
+These are the recipes for 0.1.0. Native server transactions have verified the bench and all 25 factory input/output quantities, including conserved remainders and wrong-bench refusal. Complete player UI and crafting-time verification remain in progress.
 
 ## Foundry Workbench
 
