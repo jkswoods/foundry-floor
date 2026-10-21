@@ -21,7 +21,7 @@
     {
       "name": "GuideBack-4648",
       "center": [
-        -46,
+        -43.5,
         48,
         -44
       ],
@@ -51,7 +51,7 @@
     {
       "name": "GuideBack-46144",
       "center": [
-        -46,
+        -43.5,
         144,
         -44
       ],
@@ -81,7 +81,7 @@
     {
       "name": "GuideBack4648",
       "center": [
-        46,
+        43.5,
         48,
         -44
       ],
@@ -111,7 +111,7 @@
     {
       "name": "GuideBack46144",
       "center": [
-        46,
+        43.5,
         144,
         -44
       ],
@@ -143,12 +143,12 @@
       "center": [
         0,
         196,
-        -40
+        -38
       ],
       "size": [
         28,
         12,
-        18
+        16
       ],
       "material": "steel",
       "group": null
@@ -934,7 +934,7 @@
       "group": "Platform"
     }
   ],
-  "description": "3 \u00d7 3 cab in a 6-block shaft; platform rig travels 3 blocks. Model asset: passenger transport requires a server controller.",
+  "description": "Place the controller in front of a clear 3 \u00d7 3 \u00d7 7 shaft. The caged platform travels three blocks between two docks.",
   "cost": 28,
   "quantity": 1,
   "groups": {

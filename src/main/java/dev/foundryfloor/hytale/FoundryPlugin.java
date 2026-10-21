@@ -32,7 +32,7 @@ public final class FoundryPlugin extends JavaPlugin {
     @Override protected void start() {
         for(String id:ITEMS)if(Item.getAssetMap().getAsset(id)==null||BlockType.getAssetMap().getAsset(id)==null)throw new IllegalStateException("Required Foundry asset missing: "+id);
         NativeCraftingChecks.verify();
-        getLogger().atInfo().log("Foundry Floor0.1.0:26 original architecture/bench assets resolved; owned server controls registered. Development build.");
+        getLogger().atInfo().log("Foundry Floor0.1.0:26 original architecture/bench assets resolved;25 native recipes,63 lift poses and item/block links checked. Owned controls registered. Passenger acceptance pending.");
     }
     static FoundryWorld data(Store<EntityStore> store) { return store.getResource(worldType); }
     static void message(PlayerRef p,String m) { p.sendMessage(Message.raw(m)); }
@@ -40,8 +40,11 @@ public final class FoundryPlugin extends JavaPlugin {
         World w=store.getExternalData().getWorld();BlockPos p=NativeBlocks.origin(w,target);FoundryWorld state=data(store);
         try {
             if(player.getTransform().getPosition().distanceSquared(target.x()+.5,target.y()+.5,target.z()+.5)>64)throw new IllegalArgumentException("Stand within eight blocks of the control");
-            var claim=state.registry.owned(p,player.getUuid());
-            if(!claim.itemId().equals(NativeBlocks.itemId(NativeBlocks.block(w,p))))throw new IllegalArgumentException("The saved Foundry assembly is unavailable");
+            var claim=NativeLift.resolve(state,p);
+            if(claim==null)throw new IllegalArgumentException("This Foundry block is not registered");
+            claim=state.registry.owned(claim.origin(),player.getUuid());
+            if(!claim.itemId().equals(NativeBlocks.itemId(NativeBlocks.block(w,claim.origin()))))throw new IllegalArgumentException("The saved Foundry assembly is unavailable");
+            if(claim.itemId().equals("FF_FreightLift")||claim.itemId().equals("FF_CallPanel")) { NativeLift.use(store,player,claim);return; }
             if(!CONTROLS.contains(claim.itemId()))throw new IllegalArgumentException("This assembly's controller is not ready in this development build");
             long now=System.nanoTime();if(now<state.cooldowns.getOrDefault(p,0L))return;
             boolean lamp=claim.itemId().equals("FF_WallLamp");String next=lamp?(claim.state().equals("Off")?"On":"Off"):(claim.state().equals("Open")?"Closed":"Open");
@@ -71,7 +74,7 @@ public final class FoundryPlugin extends JavaPlugin {
         if(map.getAsset(id)!=null)SoundUtil.playSoundEvent3d(map.getIndex(id),com.hypixel.hytale.protocol.SoundCategory.SFX,p.x()+.5,p.y()+.5,p.z()+.5,store);
     }
     static final class Tick extends TickingSystem<EntityStore> {
-        @Override public void tick(float dt,int index,Store<EntityStore> store) { var s=data(store);int n=Math.min(256,s.confirmedActions.size());for(int i=0;i<n;i++)s.confirmedActions.remove().run(); }
+        @Override public void tick(float dt,int index,Store<EntityStore> store) { var s=data(store);int n=Math.min(256,s.confirmedActions.size());for(int i=0;i<n;i++)s.confirmedActions.remove().run();NativeLift.tick(store,dt); }
     }
     static final class Placement extends EntityEventSystem<EntityStore,PlaceBlockEvent> {
         Placement() { super(PlaceBlockEvent.class); }
@@ -79,6 +82,7 @@ public final class FoundryPlugin extends JavaPlugin {
         @Override public void handle(int index,ArchetypeChunk<EntityStore> chunk,Store<EntityStore> store,CommandBuffer<EntityStore> buffer,PlaceBlockEvent event) {
             if(event.isCancelled()||event.getItemInHand()==null)return;
             var s=data(store);World w=store.getExternalData().getWorld();BlockPos p=NativeBlocks.pos(event.getTargetBlock());PlayerRef player=chunk.getComponent(index,PlayerRef.getComponentType());String id=event.getItemInHand().getItemId();
+            if(id.equals("FF_LiftAssembly")) { event.setCancelled(true);message(player,"Place the craftable freight lift kit instead");return; }
             if(!ITEMS.contains(id)) {
                 String blockId=event.getItemInHand().getItem().getBlockId();BlockType type=blockId==null?null:BlockType.getAssetMap().getAsset(blockId);
                 int rotation=event.getRotation()==null?0:event.getRotation().index();
@@ -86,9 +90,18 @@ public final class FoundryPlugin extends JavaPlugin {
                 return;
             }
             if(event.getRotation()==null||s.confirmedActions.size()>=256) { event.setCancelled(true);return; }
+            if(id.equals("FF_FreightLift")&&(event.getRotation().pitch()!=com.hypixel.hytale.server.core.asset.type.blocktype.config.Rotation.None||event.getRotation().roll()!=com.hypixel.hytale.server.core.asset.type.blocktype.config.Rotation.None)) { event.setCancelled(true);return; }
             var footprint=NativeBlocks.footprint(id,p,event.getRotation().index());var claim=new FoundryRegistry.Claim(p,id,event.getRotation().index(),player.getUuid(),footprint,"default",0);
+            if(id.equals("FF_FreightLift")&&!NativeLift.placementClear(store,claim)) { event.setCancelled(true);message(player,"Move everyone out of the new freight-lift shaft before placing its controller");return; }
             if(!NativeBlocks.clear(w,footprint,null)||!s.registry.reserve(claim)) { event.setCancelled(true);message(player,"Clear the whole Foundry assembly footprint and load its surrounding chunks before placing it");return; }
-            s.confirmedActions.add(()->{s.registry.finishPlacement(p,id.equals(NativeBlocks.itemId(NativeBlocks.block(w,p))));});
+            s.confirmedActions.add(()->{
+                boolean placed=id.equals(NativeBlocks.itemId(NativeBlocks.block(w,p)));s.registry.finishPlacement(p,placed);
+                if(placed&&id.equals("FF_FreightLift")) {
+                    boolean ready=NativeLift.install(w,claim);String next=ready?"Lowered":"Disabled";
+                    NativeBlocks.state(w,claim,next);s.registry.state(p,claim.owner(),next,0);
+                    if(!ready)message(player,"Lift placed disabled; clear its reserved shaft, then use the controller to retry");
+                }
+            });
         }
     }
     static final class Breaking extends EntityEventSystem<EntityStore,BreakBlockEvent> {
@@ -96,10 +109,11 @@ public final class FoundryPlugin extends JavaPlugin {
         @Override public Query<EntityStore> getQuery() { return PlayerRef.getComponentType(); }
         @Override public void handle(int index,ArchetypeChunk<EntityStore> chunk,Store<EntityStore> store,CommandBuffer<EntityStore> buffer,BreakBlockEvent event) {
             if(event.isCancelled())return;
-            var s=data(store);World w=store.getExternalData().getWorld();BlockPos p=NativeBlocks.origin(w,NativeBlocks.pos(event.getTargetBlock()));var claim=s.registry.at(p);if(claim==null)return;
+            var s=data(store);World w=store.getExternalData().getWorld();BlockPos p=NativeBlocks.origin(w,NativeBlocks.pos(event.getTargetBlock()));var claim=NativeLift.resolve(s,p);if(claim==null)return;
             PlayerRef player=chunk.getComponent(index,PlayerRef.getComponentType());
-            if(!claim.owner().equals(player.getUuid())||claim.itemId().equals("FF_FreightLift")&&claim.liftStep()!=0||s.confirmedActions.size()>=256) { event.setCancelled(true);message(player,"Only the owner may remove this assembly; lower and empty a freight lift first");return; }
-            s.confirmedActions.add(()->{if(!claim.itemId().equals(NativeBlocks.itemId(NativeBlocks.block(w,p)))) { s.registry.remove(p,player.getUuid());s.cooldowns.remove(p);s.lifts.remove(p); }});
+            if(!p.equals(claim.origin())) { event.setCancelled(true);message(player,"Remove the lowered, empty freight lift at its controller pedestal");return; }
+            if(!claim.owner().equals(player.getUuid())||claim.itemId().equals("FF_FreightLift")&&(claim.liftStep()!=0||!NativeLift.empty(store,claim)||s.lifts.containsKey(p)&&s.lifts.get(p).moving())||s.confirmedActions.size()>=256) { event.setCancelled(true);message(player,"Only the owner may remove this assembly; lower and empty a freight lift first");return; }
+            s.confirmedActions.add(()->{if(!claim.itemId().equals(NativeBlocks.itemId(NativeBlocks.block(w,p)))) { if(claim.itemId().equals("FF_FreightLift"))NativeLift.remove(w,claim);s.registry.remove(p,player.getUuid());s.cooldowns.remove(p);s.lifts.remove(p); }});
         }
     }
 }

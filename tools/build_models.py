@@ -121,8 +121,8 @@ def models():
     # Elevator visual assembly: three-block cab, six-block shaft, three-block travel.
     lift=[]
     for x in [-46,46]:
-        for y in [48,144]:lift += [part('Guide'+str(x)+str(y),(x,y,-40),(4,96,6),'edge'),part('GuideBack'+str(x)+str(y),(x,y,-44),(9,96,2),'dark')]
-    lift += [part('HeadBeam',(0,188,-40),(96,8,12),'dark'),part('MotorHousing',(0,196,-40),(28,12,18),'steel'),part('Sheave',(0,193,-28),(16,16,4),'copper')]
+        for y in [48,144]:lift += [part('Guide'+str(x)+str(y),(x,y,-40),(4,96,6),'edge'),part('GuideBack'+str(x)+str(y),(x-math.copysign(2.5,x),y,-44),(9,96,2),'dark')]
+    lift += [part('HeadBeam',(0,188,-40),(96,8,12),'dark'),part('MotorHousing',(0,196,-38),(28,12,16),'steel'),part('Sheave',(0,193,-28),(16,16,4),'copper')]
     lift += deck(0,88,80,True,'CabDeck','Platform')
     for x in [-42,42]:
         for z in [-36,36]:lift.append(part('CabPost'+str(x)+str(z),(x,40,z),(3,72,3),'yellow','Platform'))
@@ -130,12 +130,12 @@ def models():
     lift += [part('CabBackTop',(0,74,-36),(80,3,3),'yellow','Platform'),part('CabBackMid',(0,35,-36),(80,2,2),'edge','Platform'),part('CabBackToe',(0,9,-36),(80,8,2),'hazard','Platform')]
     for i in range(9):lift.append(part('RearMesh'+str(i),(-36+i*9,46,-36),(1,50,1),'dark','Platform'))
     lift += [part('CarControl',(39,40,35),(5,14,4),'dark','Platform'),part('CarButton',(39,43,38),(2,3,1),'green','Platform')]
-    add('FreightLift','Caged freight elevator','Interactive',lift,'3 × 3 cab in a 6-block shaft; platform rig travels 3 blocks. Model asset: passenger transport requires a server controller.',28,1,{'Platform':[0,0,0]},dict(kind='lift',duration=4,targets={'Platform':dict(position=[0,96,0])}))
+    add('FreightLift','Caged freight elevator','Interactive',lift,'Place the controller in front of a clear 3 × 3 × 7 shaft. The caged platform travels three blocks between two docks.',28,1,{'Platform':[0,0,0]},dict(kind='lift',duration=4,targets={'Platform':dict(position=[0,96,0])}))
     liftguide=[part('Rail',(0,32,0),(4,64,5),'edge'),part('RailBack',(0,32,-4),(12,64,3),'dark')]
     for y in [8,56]:liftguide += [part('Bracket'+str(y),(0,y,-8),(20,4,8),'steel'),part('Bolt'+str(y),(0,y,3),(3,3,1),'copper')]
     add('LiftGuide','Lift guide extension','Structure',liftguide,'Two-block guide segment for elevator shaft construction.',4,2)
     call=[part('Backplate',(0,16,-13),(12,22,4),'steel'),part('Face',(0,16,-10),(10,18,2),'yellow'),part('UpButton',(0,20,-8),(4,4,2),'green'),part('DownButton',(0,12,-8),(4,4,2),'red'),part('Conduit',(0,4,-14),(3,8,3),'dark')]
-    add('CallPanel','Lift call panel','Fixtures',call,'Wall control model with separate up/down buttons; reserved for a server lift controller.',3,1)
+    add('CallPanel','Lift call panel','Fixtures',call,'Use to link to the nearest owned freight lift within twelve blocks; calls the cab to this floor.',3,1)
     pipe=[part('Duct',(0,16,0),(12,12,32),'copper')]
     for z in [-14,14]:pipe += [part('Flange'+str(z),(0,16,z),(18,18,4),'dark'),part('Band'+str(z),(0,16,z),(20,2,5),'edge')]
     add('PipeStraight','Flanged utility duct','Fixtures',pipe,'One-block utility duct with matched 12-unit ports.',3,2)
@@ -294,12 +294,14 @@ def export_item(m):
 def main():
     models();texture()
     for m in MODELS:export_model(m);export_item(m)
+    from build_lift import build as build_lift
+    build_lift(next(m for m in MODELS if m['id']=='FF_FreightLift'))
     write(SERVER/'Item/Block/Sounds/FoundryFloor/FF_Metal.json',dict(Parent='Metal',SoundEvents=dict(Build='FF_SFX_metal_handling',Break='FF_SFX_metal_handling')))
     write(ASSETS/'manifest.json',dict(Group='FoundryFloor',Name='FoundryFloor',Version='0.1.0',Description='Original modular factory architecture, crafting and mechanical controls. Private development build.',Main='dev.foundryfloor.hytale.FoundryPlugin',ServerVersion='=0.7.2',IncludesAssetPack=True))
     write(SERVER/'Item/RootInteractions/FoundryFloor/FF_RuntimeUse.json',dict(Interactions=[dict(Type='FF_Use')]))
     for id,changes in [('FF_Toggle',{'default':'Open','Closed':'Open','Open':'Closed'}),('FF_ToggleLamp',{'default':'Off','Off':'On','On':'Off'})]:
         write(SERVER/'Item/RootInteractions/FoundryFloor'/(id+'.json'),dict(Interactions=[dict(Type='ChangeState',Changes=changes)]))
-    lines=['foundryFloor.toggle = Toggle']+['foundryFloor.bench.'+c+' = '+c for c in ['Floors','Walkways','Structure','Fixtures','Mechanisms']]
+    lines=['foundryFloor.toggle = Toggle','foundryFloor.liftUse = Operate freight lift']+['foundryFloor.bench.'+c+' = '+c for c in ['Floors','Walkways','Structure','Fixtures','Mechanisms']]
     for m in MODELS:lines += ['foundryFloor.'+m['id']+'.name = '+m['title'],'foundryFloor.'+m['id']+'.description = '+m['description']]
     lang=SERVER/'Languages/en-US/server.lang';lang.parent.mkdir(parents=True,exist_ok=True);lang.write_text('\n'.join(lines)+'\n')
     write(ROOT/'data/catalog.json',MODELS)

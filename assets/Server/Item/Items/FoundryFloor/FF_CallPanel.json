@@ -34,7 +34,11 @@
       "Breaking": {
         "GatherType": "Benches"
       }
-    }
+    },
+    "Interactions": {
+      "Use": "FF_RuntimeUse"
+    },
+    "InteractionHint": "server.foundryFloor.liftUse"
   },
   "ItemSoundSetId": "FF_ISS_Metal",
   "Recipe": {

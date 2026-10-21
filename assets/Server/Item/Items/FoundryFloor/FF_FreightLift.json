@@ -17,7 +17,7 @@
     "Material": "Solid",
     "DrawType": "Model",
     "Opacity": "Transparent",
-    "CustomModel": "Blocks/FoundryFloor/FF_FreightLift.blockymodel",
+    "CustomModel": "Blocks/FoundryFloor/FF_LiftController.blockymodel",
     "CustomModelTexture": [
       {
         "Texture": "Blocks/FoundryFloor/FactoryAtlas.png",
@@ -25,7 +25,7 @@
       }
     ],
     "VariantRotation": "NESW",
-    "HitboxType": "FF_FreightLift",
+    "HitboxType": "FF_LiftController",
     "BlockSoundSetId": "FF_Metal",
     "PhysicalMaterialId": "Metal",
     "BlockParticleSetId": "Metal",
@@ -33,6 +33,24 @@
     "Gathering": {
       "Breaking": {
         "GatherType": "Benches"
+      }
+    },
+    "Interactions": {
+      "Use": "FF_RuntimeUse"
+    },
+    "InteractionHint": "server.foundryFloor.liftUse",
+    "State": {
+      "Definitions": {
+        "Lowered": {},
+        "Raising": {
+          "AmbientSoundEventId": "FF_SFX_lift_travel"
+        },
+        "Raised": {},
+        "Lowering": {
+          "AmbientSoundEventId": "FF_SFX_lift_travel"
+        },
+        "Blocked": {},
+        "Disabled": {}
       }
     }
   },

@@ -2,6 +2,7 @@ package dev.foundryfloor.hytale;
 
 import com.hypixel.hytale.server.core.asset.type.blockhitbox.BlockBoundingBoxes;
 import com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType;
+import com.hypixel.hytale.server.core.asset.type.blocktype.config.RotationTuple;
 import com.hypixel.hytale.server.core.universe.world.World;
 import com.hypixel.hytale.server.core.universe.world.chunk.BlockOperations;
 import com.hypixel.hytale.server.core.universe.world.chunk.section.BlockSection;
@@ -41,8 +42,26 @@ final class NativeBlocks {
             FillerBlockUtil.forEachFillerBlock(boxes.get(rot),(x,y,z)->cells.add(p.add(x,y,z)));
         }
         // The cab's whole shaft is a reservation, including its empty passenger volume.
-        if(id.equals("FF_FreightLift"))for(int x=-1;x<=1;x++)for(int z=-1;z<=1;z++)for(int y=0;y<7;y++)cells.add(p.add(x,y,z));
+        if(id.equals("FF_FreightLift")) {
+            BlockPos shaft=liftOrigin(p,rot);
+            for(int x=-1;x<=1;x++)for(int z=-1;z<=1;z++)for(int y=0;y<7;y++)cells.add(shaft.add(x,y,z));
+        }
         return new Footprint(cells);
+    }
+    static BlockPos liftOrigin(BlockPos p,int rotation) {
+        var offset=new org.joml.Vector3i(0,0,-3);RotationTuple.get(rotation).applyRotationTo(offset);return p.add(offset.x,offset.y,offset.z);
+    }
+    static boolean clearLift(World w,FoundryRegistry.Claim claim) {
+        BlockPos shaft=liftOrigin(claim.origin(),claim.rotation());
+        for(BlockPos cell:claim.footprint().cells()) {
+            if(empty(w,cell))continue;
+            if(section(w,cell)==null)return false;
+            BlockPos origin=origin(w,cell);
+            if(origin.equals(claim.origin())&&claim.itemId().equals(itemId(block(w,origin))))continue;
+            if(origin.equals(shaft)&&"FF_LiftAssembly".equals(itemId(block(w,origin))))continue;
+            return false;
+        }
+        return true;
     }
     static Footprint placedFootprint(BlockType type,BlockPos p,int rot) {
         if(type==null)return Footprint.single(p);
@@ -62,11 +81,15 @@ final class NativeBlocks {
         BlockType current=block(w,claim.origin());if(!claim.itemId().equals(itemId(current)))return false;
         BlockType base=BlockType.getAssetMap().getAsset(claim.itemId());BlockType target=state.equals("default")?base:base.getBlockForState(state);
         if(target==null)return false;
-        var p=claim.origin();var chunks=w.getChunkStore();var ref=chunks.getChunkSectionReferenceAtBlock(p.x(),p.y(),p.z());
+        return set(w,claim.origin(),target,claim.rotation());
+    }
+    static boolean set(World w,BlockPos p,BlockType target,int rotation) {
+        var chunks=w.getChunkStore();var ref=chunks.getChunkSectionReferenceAtBlock(p.x(),p.y(),p.z());
         if(ref==null||!ref.isValid())return false;
+        BlockType current=block(w,p);
         if(current.getId().equals(target.getId()))return true;
         // Same native flags as the pinned interaction-state helper: preserve rotation, recalculate fillers, publish state.
-        BlockOperations.setBlock(chunks,ref,p.x(),p.y(),p.z(),BlockType.getAssetMap().getIndex(target.getId()),target,claim.rotation(),0,198);
+        BlockOperations.setBlock(chunks,ref,p.x(),p.y(),p.z(),BlockType.getAssetMap().getIndex(target.getId()),target,rotation,0,198);
         BlockType after=block(w,p);return after!=null&&after.getId().equals(target.getId());
     }
 }

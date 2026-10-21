@@ -1,0 +1,1129 @@
+{
+  "id": "FF_LiftTravel",
+  "title": "Freight lift closed travel cab",
+  "category": "Interactive",
+  "parts": [
+    {
+      "name": "Guide-4648",
+      "center": [
+        -46,
+        48,
+        -40
+      ],
+      "size": [
+        4,
+        96,
+        6
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "GuideBack-4648",
+      "center": [
+        -43.5,
+        48,
+        -44
+      ],
+      "size": [
+        9,
+        96,
+        2
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "Guide-46144",
+      "center": [
+        -46,
+        144,
+        -40
+      ],
+      "size": [
+        4,
+        96,
+        6
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "GuideBack-46144",
+      "center": [
+        -43.5,
+        144,
+        -44
+      ],
+      "size": [
+        9,
+        96,
+        2
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "Guide4648",
+      "center": [
+        46,
+        48,
+        -40
+      ],
+      "size": [
+        4,
+        96,
+        6
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "GuideBack4648",
+      "center": [
+        43.5,
+        48,
+        -44
+      ],
+      "size": [
+        9,
+        96,
+        2
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "Guide46144",
+      "center": [
+        46,
+        144,
+        -40
+      ],
+      "size": [
+        4,
+        96,
+        6
+      ],
+      "material": "edge",
+      "group": null
+    },
+    {
+      "name": "GuideBack46144",
+      "center": [
+        43.5,
+        144,
+        -44
+      ],
+      "size": [
+        9,
+        96,
+        2
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "HeadBeam",
+      "center": [
+        0,
+        188,
+        -40
+      ],
+      "size": [
+        96,
+        8,
+        12
+      ],
+      "material": "dark",
+      "group": null
+    },
+    {
+      "name": "MotorHousing",
+      "center": [
+        0,
+        196,
+        -38
+      ],
+      "size": [
+        28,
+        12,
+        16
+      ],
+      "material": "steel",
+      "group": null
+    },
+    {
+      "name": "Sheave",
+      "center": [
+        0,
+        193,
+        -28
+      ],
+      "size": [
+        16,
+        16,
+        4
+      ],
+      "material": "copper",
+      "group": null
+    },
+    {
+      "name": "CabDeckLeft",
+      "center": [
+        -43.0,
+        2,
+        0
+      ],
+      "size": [
+        2,
+        4,
+        80
+      ],
+      "material": "dark",
+      "group": "Platform"
+    },
+    {
+      "name": "CabDeckRight",
+      "center": [
+        43.0,
+        2,
+        0
+      ],
+      "size": [
+        2,
+        4,
+        80
+      ],
+      "material": "dark",
+      "group": "Platform"
+    },
+    {
+      "name": "CabDeckFront",
+      "center": [
+        0,
+        2,
+        39.0
+      ],
+      "size": [
+        84,
+        4,
+        2
+      ],
+      "material": "yellow",
+      "group": "Platform"
+    },
+    {
+      "name": "CabDeckBack",
+      "center": [
+        0,
+        2,
+        -39.0
+      ],
+      "size": [
+        84,
+        4,
+        2
+      ],
+      "material": "yellow",
+      "group": "Platform"
+    },
+    {
+      "name": "CabDeckGrating0",
+      "center": [
+        -40.0,
+        3,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        76
+      ],
+      "material": "grip",
+      "group": "Platform"
+    },
+    {
+      "name": "CabDeckGrating1",
+      "center": [
+        -36.0,
+        3,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        76
+      ],
+      "material": "grip",
+      "group": "Platform"
+    },
+    {
+      "name": "CabDeckGrating2",
+      "center": [
+        -32.0,
+        3,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        76
+      ],
+      "material": "grip",
+      "group": "Platform"
+    },
+    {
+      "name": "CabDeckGrating3",
+      "center": [
+        -28.0,
+        3,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        76
+      ],
+      "material": "grip",
+      "group": "Platform"
+    },
+    {
+      "name": "CabDeckGrating4",
+      "center": [
+        -24.0,
+        3,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        76
+      ],
+      "material": "grip",
+      "group": "Platform"
+    },
+    {
+      "name": "CabDeckGrating5",
+      "center": [
+        -20.0,
+        3,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        76
+      ],
+      "material": "grip",
+      "group": "Platform"
+    },
+    {
+      "name": "CabDeckGrating6",
+      "center": [
+        -16.0,
+        3,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        76
+      ],
+      "material": "grip",
+      "group": "Platform"
+    },
+    {
+      "name": "CabDeckGrating7",
+      "center": [
+        -12.0,
+        3,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        76
+      ],
+      "material": "grip",
+      "group": "Platform"
+    },
+    {
+      "name": "CabDeckGrating8",
+      "center": [
+        -8.0,
+        3,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        76
+      ],
+      "material": "grip",
+      "group": "Platform"
+    },
+    {
+      "name": "CabDeckGrating9",
+      "center": [
+        -4.0,
+        3,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        76
+      ],
+      "material": "grip",
+      "group": "Platform"
+    },
+    {
+      "name": "CabDeckGrating10",
+      "center": [
+        0.0,
+        3,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        76
+      ],
+      "material": "grip",
+      "group": "Platform"
+    },
+    {
+      "name": "CabDeckGrating11",
+      "center": [
+        4.0,
+        3,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        76
+      ],
+      "material": "grip",
+      "group": "Platform"
+    },
+    {
+      "name": "CabDeckGrating12",
+      "center": [
+        8.0,
+        3,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        76
+      ],
+      "material": "grip",
+      "group": "Platform"
+    },
+    {
+      "name": "CabDeckGrating13",
+      "center": [
+        12.0,
+        3,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        76
+      ],
+      "material": "grip",
+      "group": "Platform"
+    },
+    {
+      "name": "CabDeckGrating14",
+      "center": [
+        16.0,
+        3,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        76
+      ],
+      "material": "grip",
+      "group": "Platform"
+    },
+    {
+      "name": "CabDeckGrating15",
+      "center": [
+        20.0,
+        3,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        76
+      ],
+      "material": "grip",
+      "group": "Platform"
+    },
+    {
+      "name": "CabDeckGrating16",
+      "center": [
+        24.0,
+        3,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        76
+      ],
+      "material": "grip",
+      "group": "Platform"
+    },
+    {
+      "name": "CabDeckGrating17",
+      "center": [
+        28.0,
+        3,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        76
+      ],
+      "material": "grip",
+      "group": "Platform"
+    },
+    {
+      "name": "CabDeckGrating18",
+      "center": [
+        32.0,
+        3,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        76
+      ],
+      "material": "grip",
+      "group": "Platform"
+    },
+    {
+      "name": "CabDeckGrating19",
+      "center": [
+        36.0,
+        3,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        76
+      ],
+      "material": "grip",
+      "group": "Platform"
+    },
+    {
+      "name": "CabDeckGrating20",
+      "center": [
+        40.0,
+        3,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        76
+      ],
+      "material": "grip",
+      "group": "Platform"
+    },
+    {
+      "name": "CabDeckBearer0",
+      "center": [
+        0,
+        1,
+        -20.0
+      ],
+      "size": [
+        84,
+        2,
+        2
+      ],
+      "material": "edge",
+      "group": "Platform"
+    },
+    {
+      "name": "CabDeckBearer1",
+      "center": [
+        0,
+        1,
+        20.0
+      ],
+      "size": [
+        84,
+        2,
+        2
+      ],
+      "material": "edge",
+      "group": "Platform"
+    },
+    {
+      "name": "CabPost-42-36",
+      "center": [
+        -42,
+        40,
+        -36
+      ],
+      "size": [
+        3,
+        72,
+        3
+      ],
+      "material": "yellow",
+      "group": "Platform"
+    },
+    {
+      "name": "CabPost-4236",
+      "center": [
+        -42,
+        40,
+        36
+      ],
+      "size": [
+        3,
+        72,
+        3
+      ],
+      "material": "yellow",
+      "group": "Platform"
+    },
+    {
+      "name": "CabSideTop-42",
+      "center": [
+        -42,
+        74,
+        0
+      ],
+      "size": [
+        3,
+        3,
+        76
+      ],
+      "material": "yellow",
+      "group": "Platform"
+    },
+    {
+      "name": "CabSideMid-42",
+      "center": [
+        -42,
+        35,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        72
+      ],
+      "material": "edge",
+      "group": "Platform"
+    },
+    {
+      "name": "CabToe-42",
+      "center": [
+        -42,
+        9,
+        0
+      ],
+      "size": [
+        2,
+        8,
+        72
+      ],
+      "material": "dark",
+      "group": "Platform"
+    },
+    {
+      "name": "CabPost42-36",
+      "center": [
+        42,
+        40,
+        -36
+      ],
+      "size": [
+        3,
+        72,
+        3
+      ],
+      "material": "yellow",
+      "group": "Platform"
+    },
+    {
+      "name": "CabPost4236",
+      "center": [
+        42,
+        40,
+        36
+      ],
+      "size": [
+        3,
+        72,
+        3
+      ],
+      "material": "yellow",
+      "group": "Platform"
+    },
+    {
+      "name": "CabSideTop42",
+      "center": [
+        42,
+        74,
+        0
+      ],
+      "size": [
+        3,
+        3,
+        76
+      ],
+      "material": "yellow",
+      "group": "Platform"
+    },
+    {
+      "name": "CabSideMid42",
+      "center": [
+        42,
+        35,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        72
+      ],
+      "material": "edge",
+      "group": "Platform"
+    },
+    {
+      "name": "CabToe42",
+      "center": [
+        42,
+        9,
+        0
+      ],
+      "size": [
+        2,
+        8,
+        72
+      ],
+      "material": "dark",
+      "group": "Platform"
+    },
+    {
+      "name": "CabBackTop",
+      "center": [
+        0,
+        74,
+        -36
+      ],
+      "size": [
+        80,
+        3,
+        3
+      ],
+      "material": "yellow",
+      "group": "Platform"
+    },
+    {
+      "name": "CabBackMid",
+      "center": [
+        0,
+        35,
+        -36
+      ],
+      "size": [
+        80,
+        2,
+        2
+      ],
+      "material": "edge",
+      "group": "Platform"
+    },
+    {
+      "name": "CabBackToe",
+      "center": [
+        0,
+        9,
+        -36
+      ],
+      "size": [
+        80,
+        8,
+        2
+      ],
+      "material": "hazard",
+      "group": "Platform"
+    },
+    {
+      "name": "RearMesh0",
+      "center": [
+        -36,
+        46,
+        -36
+      ],
+      "size": [
+        1,
+        50,
+        1
+      ],
+      "material": "dark",
+      "group": "Platform"
+    },
+    {
+      "name": "RearMesh1",
+      "center": [
+        -27,
+        46,
+        -36
+      ],
+      "size": [
+        1,
+        50,
+        1
+      ],
+      "material": "dark",
+      "group": "Platform"
+    },
+    {
+      "name": "RearMesh2",
+      "center": [
+        -18,
+        46,
+        -36
+      ],
+      "size": [
+        1,
+        50,
+        1
+      ],
+      "material": "dark",
+      "group": "Platform"
+    },
+    {
+      "name": "RearMesh3",
+      "center": [
+        -9,
+        46,
+        -36
+      ],
+      "size": [
+        1,
+        50,
+        1
+      ],
+      "material": "dark",
+      "group": "Platform"
+    },
+    {
+      "name": "RearMesh4",
+      "center": [
+        0,
+        46,
+        -36
+      ],
+      "size": [
+        1,
+        50,
+        1
+      ],
+      "material": "dark",
+      "group": "Platform"
+    },
+    {
+      "name": "RearMesh5",
+      "center": [
+        9,
+        46,
+        -36
+      ],
+      "size": [
+        1,
+        50,
+        1
+      ],
+      "material": "dark",
+      "group": "Platform"
+    },
+    {
+      "name": "RearMesh6",
+      "center": [
+        18,
+        46,
+        -36
+      ],
+      "size": [
+        1,
+        50,
+        1
+      ],
+      "material": "dark",
+      "group": "Platform"
+    },
+    {
+      "name": "RearMesh7",
+      "center": [
+        27,
+        46,
+        -36
+      ],
+      "size": [
+        1,
+        50,
+        1
+      ],
+      "material": "dark",
+      "group": "Platform"
+    },
+    {
+      "name": "RearMesh8",
+      "center": [
+        36,
+        46,
+        -36
+      ],
+      "size": [
+        1,
+        50,
+        1
+      ],
+      "material": "dark",
+      "group": "Platform"
+    },
+    {
+      "name": "CarControl",
+      "center": [
+        39,
+        40,
+        35
+      ],
+      "size": [
+        5,
+        14,
+        4
+      ],
+      "material": "dark",
+      "group": "Platform"
+    },
+    {
+      "name": "CarButton",
+      "center": [
+        39,
+        43,
+        38
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "material": "green",
+      "group": "Platform"
+    },
+    {
+      "name": "TravelGateTop",
+      "center": [
+        0,
+        73,
+        37
+      ],
+      "size": [
+        80,
+        3,
+        3
+      ],
+      "material": "yellow",
+      "group": "Platform"
+    },
+    {
+      "name": "TravelGateMid",
+      "center": [
+        0,
+        36,
+        37
+      ],
+      "size": [
+        80,
+        3,
+        3
+      ],
+      "material": "edge",
+      "group": "Platform"
+    },
+    {
+      "name": "TravelGateToe",
+      "center": [
+        0,
+        9,
+        37
+      ],
+      "size": [
+        80,
+        8,
+        3
+      ],
+      "material": "hazard",
+      "group": "Platform"
+    },
+    {
+      "name": "TravelGateBar-36",
+      "center": [
+        -36,
+        42,
+        37
+      ],
+      "size": [
+        1,
+        58,
+        1
+      ],
+      "material": "dark",
+      "group": "Platform"
+    },
+    {
+      "name": "TravelGateBar-27",
+      "center": [
+        -27,
+        42,
+        37
+      ],
+      "size": [
+        1,
+        58,
+        1
+      ],
+      "material": "dark",
+      "group": "Platform"
+    },
+    {
+      "name": "TravelGateBar-18",
+      "center": [
+        -18,
+        42,
+        37
+      ],
+      "size": [
+        1,
+        58,
+        1
+      ],
+      "material": "dark",
+      "group": "Platform"
+    },
+    {
+      "name": "TravelGateBar-9",
+      "center": [
+        -9,
+        42,
+        37
+      ],
+      "size": [
+        1,
+        58,
+        1
+      ],
+      "material": "dark",
+      "group": "Platform"
+    },
+    {
+      "name": "TravelGateBar0",
+      "center": [
+        0,
+        42,
+        37
+      ],
+      "size": [
+        1,
+        58,
+        1
+      ],
+      "material": "dark",
+      "group": "Platform"
+    },
+    {
+      "name": "TravelGateBar9",
+      "center": [
+        9,
+        42,
+        37
+      ],
+      "size": [
+        1,
+        58,
+        1
+      ],
+      "material": "dark",
+      "group": "Platform"
+    },
+    {
+      "name": "TravelGateBar18",
+      "center": [
+        18,
+        42,
+        37
+      ],
+      "size": [
+        1,
+        58,
+        1
+      ],
+      "material": "dark",
+      "group": "Platform"
+    },
+    {
+      "name": "TravelGateBar27",
+      "center": [
+        27,
+        42,
+        37
+      ],
+      "size": [
+        1,
+        58,
+        1
+      ],
+      "material": "dark",
+      "group": "Platform"
+    },
+    {
+      "name": "TravelGateBar36",
+      "center": [
+        36,
+        42,
+        37
+      ],
+      "size": [
+        1,
+        58,
+        1
+      ],
+      "material": "dark",
+      "group": "Platform"
+    }
+  ],
+  "description": "Place the controller in front of a clear 3 \u00d7 3 \u00d7 7 shaft. The caged platform travels three blocks between two docks.",
+  "cost": 28,
+  "quantity": 1,
+  "groups": {
+    "Platform": [
+      0,
+      0,
+      0
+    ]
+  },
+  "motion": null,
+  "collision": null
+}

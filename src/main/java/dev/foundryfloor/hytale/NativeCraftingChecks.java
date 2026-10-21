@@ -4,12 +4,18 @@ import com.hypixel.hytale.builtin.crafting.CraftingPlugin;
 import com.hypixel.hytale.protocol.BenchType;
 import com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType;
 import com.hypixel.hytale.server.core.asset.type.blocktype.config.bench.CraftingBench;
+import com.hypixel.hytale.server.core.asset.type.item.config.Item;
 import java.util.*;
 
 /** Fail startup if the pinned native registry cannot actually offer the intended bench recipes. */
 final class NativeCraftingChecks {
     private NativeCraftingChecks() {}
     static void verify() {
+        for(String id:FoundryPlugin.ITEMS)if(!id.equals(Item.getAssetMap().getAsset(id).getBlockId()))throw new IllegalStateException("Foundry item cannot place its native block: "+id);
+        var lift=BlockType.getAssetMap().getAsset("FF_LiftAssembly");
+        if(lift==null)throw new IllegalStateException("Native freight lift assembly is missing");
+        for(int step=0;step<=60;step++)if(lift.getBlockForState(String.format(Locale.ROOT,"Step%02d",step))==null)throw new IllegalStateException("Native lift held pose is missing: "+step);
+        if(lift.getBlockForState("Dock00")==null||lift.getBlockForState("Dock60")==null)throw new IllegalStateException("Native lift dock configuration is missing");
         var type=BlockType.getAssetMap().getAsset("FF_FoundryBench");
         if(type==null||!(type.getBench() instanceof CraftingBench bench)||!bench.getId().equals("FoundryFloor")||bench.getCategories().length!=5)throw new IllegalStateException("Foundry Workbench requires its native five-category crafting configuration");
         Set<String> expected=new HashSet<>(FoundryPlugin.ITEMS);expected.remove("FF_FoundryBench");Set<String> actual=new HashSet<>();

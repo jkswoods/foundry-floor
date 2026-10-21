@@ -1,0 +1,357 @@
+{
+  "TranslationProperties": {
+    "Name": "server.foundryFloor.FF_FreightLift.name",
+    "Description": "server.foundryFloor.FF_FreightLift.description"
+  },
+  "Icon": "Icons/Items/FF_FreightLift.png",
+  "MaxStack": 1,
+  "Categories": [],
+  "PlayerAnimationsId": "Block",
+  "Interactions": {
+    "Primary": "Block_Primary",
+    "Secondary": "Block_Secondary"
+  },
+  "BlockType": {
+    "Material": "Solid",
+    "DrawType": "Model",
+    "Opacity": "Transparent",
+    "CustomModel": "Blocks/FoundryFloor/FF_FreightLift.blockymodel",
+    "CustomModelTexture": [
+      {
+        "Texture": "Blocks/FoundryFloor/FactoryAtlas.png",
+        "Weight": 1
+      }
+    ],
+    "VariantRotation": "NESW",
+    "HitboxType": "FF_LiftDock00",
+    "BlockSoundSetId": "FF_Metal",
+    "PhysicalMaterialId": "Metal",
+    "BlockParticleSetId": "Metal",
+    "ParticleColor": "#657578",
+    "Interactions": {
+      "Use": "FF_RuntimeUse"
+    },
+    "InteractionHint": "server.foundryFloor.liftUse",
+    "State": {
+      "Definitions": {
+        "Step00": {
+          "HitboxType": "FF_LiftStep00",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose00.blockyanim"
+        },
+        "Dock00": {
+          "HitboxType": "FF_LiftDock00",
+          "CustomModel": "Blocks/FoundryFloor/FF_FreightLift.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose00.blockyanim"
+        },
+        "Step01": {
+          "HitboxType": "FF_LiftStep01",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose01.blockyanim"
+        },
+        "Step02": {
+          "HitboxType": "FF_LiftStep02",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose02.blockyanim"
+        },
+        "Step03": {
+          "HitboxType": "FF_LiftStep03",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose03.blockyanim"
+        },
+        "Step04": {
+          "HitboxType": "FF_LiftStep04",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose04.blockyanim"
+        },
+        "Step05": {
+          "HitboxType": "FF_LiftStep05",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose05.blockyanim"
+        },
+        "Step06": {
+          "HitboxType": "FF_LiftStep06",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose06.blockyanim"
+        },
+        "Step07": {
+          "HitboxType": "FF_LiftStep07",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose07.blockyanim"
+        },
+        "Step08": {
+          "HitboxType": "FF_LiftStep08",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose08.blockyanim"
+        },
+        "Step09": {
+          "HitboxType": "FF_LiftStep09",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose09.blockyanim"
+        },
+        "Step10": {
+          "HitboxType": "FF_LiftStep10",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose10.blockyanim"
+        },
+        "Step11": {
+          "HitboxType": "FF_LiftStep11",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose11.blockyanim"
+        },
+        "Step12": {
+          "HitboxType": "FF_LiftStep12",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose12.blockyanim"
+        },
+        "Step13": {
+          "HitboxType": "FF_LiftStep13",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose13.blockyanim"
+        },
+        "Step14": {
+          "HitboxType": "FF_LiftStep14",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose14.blockyanim"
+        },
+        "Step15": {
+          "HitboxType": "FF_LiftStep15",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose15.blockyanim"
+        },
+        "Step16": {
+          "HitboxType": "FF_LiftStep16",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose16.blockyanim"
+        },
+        "Step17": {
+          "HitboxType": "FF_LiftStep17",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose17.blockyanim"
+        },
+        "Step18": {
+          "HitboxType": "FF_LiftStep18",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose18.blockyanim"
+        },
+        "Step19": {
+          "HitboxType": "FF_LiftStep19",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose19.blockyanim"
+        },
+        "Step20": {
+          "HitboxType": "FF_LiftStep20",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose20.blockyanim"
+        },
+        "Step21": {
+          "HitboxType": "FF_LiftStep21",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose21.blockyanim"
+        },
+        "Step22": {
+          "HitboxType": "FF_LiftStep22",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose22.blockyanim"
+        },
+        "Step23": {
+          "HitboxType": "FF_LiftStep23",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose23.blockyanim"
+        },
+        "Step24": {
+          "HitboxType": "FF_LiftStep24",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose24.blockyanim"
+        },
+        "Step25": {
+          "HitboxType": "FF_LiftStep25",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose25.blockyanim"
+        },
+        "Step26": {
+          "HitboxType": "FF_LiftStep26",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose26.blockyanim"
+        },
+        "Step27": {
+          "HitboxType": "FF_LiftStep27",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose27.blockyanim"
+        },
+        "Step28": {
+          "HitboxType": "FF_LiftStep28",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose28.blockyanim"
+        },
+        "Step29": {
+          "HitboxType": "FF_LiftStep29",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose29.blockyanim"
+        },
+        "Step30": {
+          "HitboxType": "FF_LiftStep30",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose30.blockyanim"
+        },
+        "Step31": {
+          "HitboxType": "FF_LiftStep31",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose31.blockyanim"
+        },
+        "Step32": {
+          "HitboxType": "FF_LiftStep32",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose32.blockyanim"
+        },
+        "Step33": {
+          "HitboxType": "FF_LiftStep33",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose33.blockyanim"
+        },
+        "Step34": {
+          "HitboxType": "FF_LiftStep34",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose34.blockyanim"
+        },
+        "Step35": {
+          "HitboxType": "FF_LiftStep35",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose35.blockyanim"
+        },
+        "Step36": {
+          "HitboxType": "FF_LiftStep36",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose36.blockyanim"
+        },
+        "Step37": {
+          "HitboxType": "FF_LiftStep37",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose37.blockyanim"
+        },
+        "Step38": {
+          "HitboxType": "FF_LiftStep38",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose38.blockyanim"
+        },
+        "Step39": {
+          "HitboxType": "FF_LiftStep39",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose39.blockyanim"
+        },
+        "Step40": {
+          "HitboxType": "FF_LiftStep40",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose40.blockyanim"
+        },
+        "Step41": {
+          "HitboxType": "FF_LiftStep41",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose41.blockyanim"
+        },
+        "Step42": {
+          "HitboxType": "FF_LiftStep42",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose42.blockyanim"
+        },
+        "Step43": {
+          "HitboxType": "FF_LiftStep43",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose43.blockyanim"
+        },
+        "Step44": {
+          "HitboxType": "FF_LiftStep44",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose44.blockyanim"
+        },
+        "Step45": {
+          "HitboxType": "FF_LiftStep45",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose45.blockyanim"
+        },
+        "Step46": {
+          "HitboxType": "FF_LiftStep46",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose46.blockyanim"
+        },
+        "Step47": {
+          "HitboxType": "FF_LiftStep47",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose47.blockyanim"
+        },
+        "Step48": {
+          "HitboxType": "FF_LiftStep48",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose48.blockyanim"
+        },
+        "Step49": {
+          "HitboxType": "FF_LiftStep49",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose49.blockyanim"
+        },
+        "Step50": {
+          "HitboxType": "FF_LiftStep50",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose50.blockyanim"
+        },
+        "Step51": {
+          "HitboxType": "FF_LiftStep51",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose51.blockyanim"
+        },
+        "Step52": {
+          "HitboxType": "FF_LiftStep52",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose52.blockyanim"
+        },
+        "Step53": {
+          "HitboxType": "FF_LiftStep53",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose53.blockyanim"
+        },
+        "Step54": {
+          "HitboxType": "FF_LiftStep54",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose54.blockyanim"
+        },
+        "Step55": {
+          "HitboxType": "FF_LiftStep55",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose55.blockyanim"
+        },
+        "Step56": {
+          "HitboxType": "FF_LiftStep56",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose56.blockyanim"
+        },
+        "Step57": {
+          "HitboxType": "FF_LiftStep57",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose57.blockyanim"
+        },
+        "Step58": {
+          "HitboxType": "FF_LiftStep58",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose58.blockyanim"
+        },
+        "Step59": {
+          "HitboxType": "FF_LiftStep59",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose59.blockyanim"
+        },
+        "Step60": {
+          "HitboxType": "FF_LiftStep60",
+          "CustomModel": "Blocks/FoundryFloor/FF_LiftTravel.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose60.blockyanim"
+        },
+        "Dock60": {
+          "HitboxType": "FF_LiftDock60",
+          "CustomModel": "Blocks/FoundryFloor/FF_FreightLift.blockymodel",
+          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose60.blockyanim"
+        }
+      }
+    },
+    "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_LiftPose00.blockyanim"
+  },
+  "ItemSoundSetId": "FF_ISS_Metal"
+}

@@ -6,12 +6,17 @@ import java.util.*;
 /** Server-owned placement claims. Pending native placements never enter the saved snapshot. */
 public final class FoundryRegistry {
     public static final int MAX_BLOCKS=16384;
-    public record Claim(BlockPos origin,String itemId,int rotation,UUID owner,Footprint footprint,String state,int liftStep) {
+    public record Claim(BlockPos origin,String itemId,int rotation,UUID owner,Footprint footprint,String state,int liftStep,Set<UUID> passengers,BlockPos linkedTo) {
+        public Claim(BlockPos origin,String itemId,int rotation,UUID owner,Footprint footprint,String state,int liftStep) {
+            this(origin,itemId,rotation,owner,footprint,state,liftStep,Set.of(),null);
+        }
         public Claim {
             Objects.requireNonNull(origin);Objects.requireNonNull(owner);Objects.requireNonNull(footprint);
+            passengers=Set.copyOf(passengers);
+            if(passengers.size()>8)throw new IllegalArgumentException("Lift carries at most eight registered passengers");
             if(!itemId.matches("FF_[A-Za-z0-9_]+")||itemId.length()>100||rotation<0||rotation>=64||state.length()>50||liftStep<0||liftStep>60)throw new IllegalArgumentException("Invalid Foundry claim");
         }
-        public Claim withState(String next,int step) { return new Claim(origin,itemId,rotation,owner,footprint,next,step); }
+        public Claim withState(String next,int step) { return new Claim(origin,itemId,rotation,owner,footprint,next,step,passengers,linkedTo); }
     }
     private final Map<BlockPos,Claim> blocks=new TreeMap<>();
     private final Map<BlockPos,Claim> pending=new HashMap<>();
@@ -37,12 +42,16 @@ public final class FoundryRegistry {
         if(!c.owner.equals(actor))throw new SecurityException("This Foundry block belongs to another player");return c;
     }
     public synchronized void state(BlockPos p,UUID actor,String state,int step) { Claim c=owned(p,actor);blocks.put(p,c.withState(state,step)); }
+    public synchronized void passengers(BlockPos p,UUID actor,Set<UUID> passengers) { Claim c=owned(p,actor);blocks.put(p,new Claim(c.origin,c.itemId,c.rotation,c.owner,c.footprint,c.state,c.liftStep,passengers,c.linkedTo)); }
+    public synchronized void link(BlockPos p,UUID actor,BlockPos target) { Claim c=owned(p,actor);blocks.put(p,new Claim(c.origin,c.itemId,c.rotation,c.owner,c.footprint,c.state,c.liftStep,c.passengers,target)); }
     public synchronized byte[] snapshot() {
         try(var bytes=new ByteArrayOutputStream();var out=new DataOutputStream(bytes)) {
-            out.writeInt(0x46465231);out.writeInt(blocks.size());
+            out.writeInt(0x46465232);out.writeInt(blocks.size());
             for(Claim c:blocks.values()) {
                 pos(out,c.origin);out.writeUTF(c.itemId);out.writeInt(c.rotation);out.writeLong(c.owner.getMostSignificantBits());out.writeLong(c.owner.getLeastSignificantBits());out.writeUTF(c.state);out.writeInt(c.liftStep);
                 var cells=new TreeSet<>(c.footprint.cells());out.writeInt(cells.size());for(BlockPos p:cells)pos(out,p);
+                var riders=new TreeSet<>(c.passengers);out.writeInt(riders.size());for(UUID rider:riders) { out.writeLong(rider.getMostSignificantBits());out.writeLong(rider.getLeastSignificantBits()); }
+                out.writeBoolean(c.linkedTo!=null);if(c.linkedTo!=null)pos(out,c.linkedTo);
             }
             return bytes.toByteArray();
         } catch(IOException e) { throw new UncheckedIOException(e); }
@@ -50,12 +59,18 @@ public final class FoundryRegistry {
     public static FoundryRegistry restore(byte[] bytes) throws IOException {
         if(bytes.length>16*1024*1024)throw new IOException("Foundry snapshot exceeds bound");
         try(var in=new DataInputStream(new ByteArrayInputStream(bytes))) {
-            if(in.readInt()!=0x46465231)throw new IOException("Unsupported Foundry snapshot");
+            int format=in.readInt();if(format!=0x46465231&&format!=0x46465232)throw new IOException("Unsupported Foundry snapshot");
             int count=in.readInt();if(count<0||count>MAX_BLOCKS)throw new IOException("Invalid Foundry block count");FoundryRegistry r=new FoundryRegistry();
             for(int i=0;i<count;i++) {
                 BlockPos p=pos(in);String id=in.readUTF();int rot=in.readInt();UUID owner=new UUID(in.readLong(),in.readLong());String state=in.readUTF();int step=in.readInt();int n=in.readInt();
                 if(n<1||n>2048)throw new IOException("Invalid assembly footprint size");Set<BlockPos> cells=new HashSet<>();for(int j=0;j<n;j++)if(!cells.add(pos(in)))throw new IOException("Duplicate assembly cell");
-                Claim c=new Claim(p,id,rot,owner,new Footprint(cells),state,step);if(!r.reserve(c))throw new IOException("Overlapping or duplicate saved Foundry assembly");r.finishPlacement(p,true);
+                Set<UUID> riders=new HashSet<>();BlockPos linked=null;
+                if(format==0x46465232) {
+                    int size=in.readInt();if(size<0||size>8)throw new IOException("Invalid passenger count");
+                    for(int j=0;j<size;j++)if(!riders.add(new UUID(in.readLong(),in.readLong())))throw new IOException("Duplicate passenger ticket");
+                    if(in.readBoolean())linked=pos(in);
+                }
+                Claim c=new Claim(p,id,rot,owner,new Footprint(cells),state,step,riders,linked);if(!r.reserve(c))throw new IOException("Overlapping or duplicate saved Foundry assembly");r.finishPlacement(p,true);
             }
             if(in.read()!=-1)throw new IOException("Trailing Foundry snapshot bytes");return r;
         } catch(IllegalArgumentException e) { throw new IOException("Invalid Foundry snapshot",e); }

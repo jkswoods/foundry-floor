@@ -79,7 +79,7 @@
       "group": null
     }
   ],
-  "description": "Wall control model with separate up/down buttons; reserved for a server lift controller.",
+  "description": "Use to link to the nearest owned freight lift within twelve blocks; calls the cab to this floor.",
   "cost": 3,
   "quantity": 1,
   "groups": {},

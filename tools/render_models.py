@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Read actual exported Hytale nodes and render textured, depth-tested review images."""
 from pathlib import Path
-import json,math
+import json,math,sys
 import numpy as np
 from PIL import Image,ImageDraw,ImageFont,ImageFilter
 ROOT=Path(__file__).resolve().parents[1]
@@ -100,6 +100,7 @@ def main():
     place('SafetyGate',-96,96,-64,90)
     place('CallPanel',80,0,-48)
     place('CargoPallet',-32,0,48);place('CargoPallet',0,0,48)
+    place('FoundryBench',-80,0,40)
     place('ServiceHatch',32,0,16)
     for x in [-128,-64,0]:place('WallLamp',x,48,-112)
     write(ROOT/'data/showcase-layout.json',placements)
@@ -129,4 +130,14 @@ def main():
     for c in checks:c['icon']='rendered from exported native geometry';c['offlineModelRender']='art/previews/'+c['itemId']+'.png'
     write(ROOT/'data/asset-checklist.json',checks)
     print(f'Rendered {len(catalog)} native models, icons, assembled factory and moving-state comparisons.')
-if __name__=='__main__':main()
+def technical():
+    OUT.mkdir(parents=True,exist_ok=True)
+    for mid in ['FF_LiftController','FF_LiftTravel']:
+        model=json.loads((ROOT/'assets/Common/Blocks/FoundryFloor'/(mid+'.blockymodel')).read_text())
+        render(faces(model),600,520).save(OUT/(mid+'.png'))
+        if mid=='FF_LiftTravel':
+            clip=json.loads((ROOT/'assets/Common/Blocks/FoundryFloor/Animations/FF_LiftPose30.blockyanim').read_text())
+            render(faces(model,clip,0),600,520).save(OUT/(mid+'_Held30.png'))
+    print('Rendered the native lift controller, closed travel gate and mid-shaft held pose. Runtime icons unchanged.')
+if __name__=='__main__':
+    technical() if '--technical' in sys.argv else main()
