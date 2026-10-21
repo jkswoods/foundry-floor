@@ -6,7 +6,7 @@ The collection contains26 original models: the dedicated Foundry Workbench and25
 
 This private development repository contains original Hytale/Blockbench assets, native recipes, server-owned placement/mechanical controls and an experimental bounded freight-lift controller with held collision poses, native passenger velocity, call-panel links and saved passenger records. Native crafting, controls and passenger travel acceptance remain in progress. No tested playable release has been published.
 
-The player-guide draft covers the bench, recipes, building layouts, controls, installation and current limitations. Native usage screenshots are still pending. Build it with MkDocs1.6.1 using `python -m pip install -r requirements-docs.txt` then `python -m mkdocs build --strict`; output is `build/player-site/`. No public docs host is enabled.
+The player-guide draft covers the bench, recipes, building layouts, controls, installation and current limitations. Native usage screenshots are still pending. Build it with MkDocs1.6.1 using `python -m pip install -r requirements-docs.txt` then `python -m mkdocs build --strict`; output is `build/player-site/`. `python3 tools/package_player_guide.py` creates a separate deployable guide preview archive with notices. No public docs host is enabled.
 
 ## Reproducible build
 
