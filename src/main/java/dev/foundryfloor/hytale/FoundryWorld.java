@@ -20,6 +20,7 @@ public final class FoundryWorld implements Resource<EntityStore> {
     int connectionScan;
     final Map<BlockPos,Long> cooldowns=new HashMap<>();
     final Set<BlockPos> retiredReconciled=new HashSet<>();
+    final Map<BlockPos,NativeDoorMotion.Motion> doorMotions=new HashMap<>();
     private String write() { return Base64.getEncoder().encodeToString(registry.snapshot()); }
     private void read(String value) {
         try { registry=FoundryRegistry.restore(Base64.getDecoder().decode(value)); }

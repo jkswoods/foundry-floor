@@ -6,7 +6,7 @@
       "name": "RailPost0",
       "position": {
         "x": -14,
-        "y": 18,
+        "y": 46,
         "z": -14
       },
       "orientation": {
@@ -113,7 +113,7 @@
       "name": "RailPost1",
       "position": {
         "x": -14,
-        "y": 18,
+        "y": 46,
         "z": 14
       },
       "orientation": {
@@ -220,7 +220,7 @@
       "name": "RailTop",
       "position": {
         "x": -14,
-        "y": 32,
+        "y": 60,
         "z": 0
       },
       "orientation": {
@@ -327,7 +327,7 @@
       "name": "RailMid",
       "position": {
         "x": -14,
-        "y": 20,
+        "y": 48,
         "z": 0
       },
       "orientation": {
@@ -434,7 +434,7 @@
       "name": "RailToe",
       "position": {
         "x": -14,
-        "y": 8,
+        "y": 36,
         "z": 0
       },
       "orientation": {
@@ -541,7 +541,7 @@
       "name": "RailFoot0",
       "position": {
         "x": -14,
-        "y": 4.5,
+        "y": 32.5,
         "z": -14
       },
       "orientation": {
@@ -648,7 +648,7 @@
       "name": "RailFoot1",
       "position": {
         "x": -14,
-        "y": 4.5,
+        "y": 32.5,
         "z": 14
       },
       "orientation": {
@@ -755,7 +755,7 @@
       "name": "EndRailPost0",
       "position": {
         "x": 14,
-        "y": 18,
+        "y": 46,
         "z": -14
       },
       "orientation": {
@@ -862,7 +862,7 @@
       "name": "EndRailTop",
       "position": {
         "x": 1,
-        "y": 32,
+        "y": 60,
         "z": -14
       },
       "orientation": {
@@ -969,7 +969,7 @@
       "name": "EndRailMid",
       "position": {
         "x": 0,
-        "y": 20,
+        "y": 48,
         "z": -14
       },
       "orientation": {
@@ -1076,7 +1076,7 @@
       "name": "EndRailToe",
       "position": {
         "x": 0,
-        "y": 8,
+        "y": 36,
         "z": -14
       },
       "orientation": {
@@ -1183,7 +1183,7 @@
       "name": "EndRailFoot0",
       "position": {
         "x": 14,
-        "y": 4.5,
+        "y": 32.5,
         "z": -14
       },
       "orientation": {
@@ -1290,7 +1290,7 @@
       "name": "DeckLeft",
       "position": {
         "x": -15,
-        "y": 2,
+        "y": 30,
         "z": 0
       },
       "orientation": {
@@ -1397,7 +1397,7 @@
       "name": "DeckRight",
       "position": {
         "x": 15,
-        "y": 2,
+        "y": 30,
         "z": 0
       },
       "orientation": {
@@ -1504,7 +1504,7 @@
       "name": "DeckBack",
       "position": {
         "x": 0,
-        "y": 2,
+        "y": 30,
         "z": -15
       },
       "orientation": {
@@ -1611,7 +1611,7 @@
       "name": "DeckGrating0",
       "position": {
         "x": -13.5,
-        "y": 3,
+        "y": 31,
         "z": 1.0
       },
       "orientation": {
@@ -1718,7 +1718,7 @@
       "name": "DeckGrating1",
       "position": {
         "x": -10.0,
-        "y": 3,
+        "y": 31,
         "z": 1.0
       },
       "orientation": {
@@ -1825,7 +1825,7 @@
       "name": "DeckGrating2",
       "position": {
         "x": -6.0,
-        "y": 3,
+        "y": 31,
         "z": 1.0
       },
       "orientation": {
@@ -1932,7 +1932,7 @@
       "name": "DeckGrating3",
       "position": {
         "x": -2.0,
-        "y": 3,
+        "y": 31,
         "z": 1.0
       },
       "orientation": {
@@ -2039,7 +2039,7 @@
       "name": "DeckGrating4",
       "position": {
         "x": 2.0,
-        "y": 3,
+        "y": 31,
         "z": 1.0
       },
       "orientation": {
@@ -2146,7 +2146,7 @@
       "name": "DeckGrating5",
       "position": {
         "x": 6.0,
-        "y": 3,
+        "y": 31,
         "z": 1.0
       },
       "orientation": {
@@ -2253,7 +2253,7 @@
       "name": "DeckGrating6",
       "position": {
         "x": 10.0,
-        "y": 3,
+        "y": 31,
         "z": 1.0
       },
       "orientation": {
@@ -2360,7 +2360,7 @@
       "name": "DeckGrating7",
       "position": {
         "x": 13.5,
-        "y": 3,
+        "y": 31,
         "z": 1.0
       },
       "orientation": {
@@ -2467,7 +2467,7 @@
       "name": "DeckBearer0",
       "position": {
         "x": 0.0,
-        "y": 1,
+        "y": 29,
         "z": -8
       },
       "orientation": {
@@ -2574,7 +2574,7 @@
       "name": "DeckBearer1",
       "position": {
         "x": 0.0,
-        "y": 1,
+        "y": 29,
         "z": 8
       },
       "orientation": {

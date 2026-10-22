@@ -2,6 +2,8 @@
 
 Player testing covered the controls below, including native use, collision and normal save/reload.
 
+The current draft repair keeps the personnel door's glass and steel together throughout its motion. Its revised appearance is awaiting player feedback.
+
 | Block | Use action | Space to leave clear |
 | --- | --- | --- |
 | Rolling loading-bay shutter | Retracts or closes eleven slats | Full curtain opening, guides and overhead hood |

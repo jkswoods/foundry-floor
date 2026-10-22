@@ -10,9 +10,17 @@
 
 ## Catwalks and stairs
 
-Choose open, left-rail, right-rail, both-rail or outer-corner catwalks. Adjacent walkways remove their shared edge frames and internal side rails. A stair flight rises one block over a one-block run. Place flights side by side, facing the same way, to create wider stairs with the internal handrails removed. Place the top landing one block higher in the next cell beyond the highest tread. A catwalk or a full block can fill this landing.
+Choose open, left-rail, right-rail, both-rail or outer-corner catwalks. Adjacent walkways remove their shared edge frames and internal side rails. A stair flight rises one block over a one-block run. Place flights side by side, facing the same way, to create wider stairs with the internal handrails removed. Align the next landing's top surface with the highest tread. Catwalk decks are now top-aligned in their cells, so a landing at the same base height as the flight meets that tread.
 
 Grated decks use continuous walking collision so feet cannot fall into the small visual gaps. Independent **Safety railing** has a visible placement preview. Use **R** to check its direction before placing.
+
+### Building on factory surfaces
+
+The draft repair for issues #1 and #2 adds native support faces to structural floors, walls, roofs, window frames and column tops. Floors and open catwalk decks support workbenches and other furniture. Give a wide bench enough neighbouring floor cells and clear headroom; rails still occupy their real space.
+
+If an older safety-edge floor refused a workbench, load the floor and its neighbours briefly after updating. The repair clears obsolete invisible upper cells without requiring you to dismantle the floor.
+
+Thin catwalks now occupy the upper one-eighth of their block cell, flush with full-height floors and drain grates. Previously placed catwalk decks move upward within their existing cells after this asset update. Check existing stair landings and adjust their placement if necessary. Low pallets, loose ducts and rails remain props rather than full-height foundation blocks. The draft's native appearance and placement are awaiting player feedback.
 
 ## Walls, windows and roof
 

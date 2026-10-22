@@ -25,4 +25,5 @@ find src/main/java/dev/foundryfloor/hytale -name '*.java' | sort > build/plugin-
 find src/test/native -name '*.java' | sort > build/native-test-sources.txt
 "$FF_JDK/bin/javac" --release 25 -Xlint:all -cp "build/classes:$FF_SERVER" -d build/test-classes @build/native-test-sources.txt
 "$FF_JDK/bin/java" -ea -cp "build/classes:build/test-classes:$FF_SERVER" dev.foundryfloor.hytale.NativeFootprintTests | tee build/reports/native-tests.txt
+python3 src/test/assets/architecture_test.py
 python3 tools/package_runtime.py

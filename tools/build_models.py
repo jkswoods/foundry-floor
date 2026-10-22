@@ -92,6 +92,11 @@ def models():
     # The corner shares its post and foot; do not export coincident duplicates.
     end=[p for p in end if not any(all(p[k]==a[k] for k in ('center','size','material','group')) for a in corner)]
     add('CatwalkCorner','Catwalk · outer corner','Catwalks',corner+end,'Outside railing for a right-angle landing.',6,2)
+    # Native placement is cell based. Like the stock platforms, a thin deck must
+    # end at the top of its cell or a block placed above it appears to float.
+    for m in MODELS:
+        if m['id'] in {'FF_Catwalk','FF_CatwalkLeft','FF_CatwalkRight','FF_CatwalkBridge','FF_CatwalkCorner'}:
+            for p in m['parts']:p['center'][1]+=28
     stairs=[]
     for i in range(8):
         z=14-i*4;y=i*4
@@ -215,6 +220,7 @@ def node(name, position, shape=None, children=None):
 
 def export_model(m):
     nodes=[];groups={};elements=[];bbgroups={}
+    targets=copy.deepcopy((m['motion'] or {}).get('targets',{}))
     for g,pivot in m['groups'].items():
         group=node(g,pivot,children=[]);nodes.append(group);groups[g]=group
         bbgroups[g]=dict(name=g,origin=pivot,rotation=[0,0,0],uuid=uid(m['id']+'/'+g),children=[])
@@ -243,7 +249,7 @@ def export_model(m):
         for action,reverse in [('Open',False),('Close',True)]:
             anim=dict(formatVersion=1,duration=round(m['motion']['duration']*60),holdLastKeyframe=True,nodeAnimations={})
             animators={}
-            for g,t in m['motion']['targets'].items():
+            for g,t in targets.items():
                 channel='position' if 'position' in t else 'orientation'
                 a=v([0,0,0]) if channel=='position' else q()
                 b=v(t['position']) if channel=='position' else q(t['axis'],t['angle'])
@@ -276,25 +282,64 @@ def transform(p,m,amount):
     size=[abs(co)*sx+abs(si)*sz,sy,abs(si)*sx+abs(co)*sz] if t['axis'][1] else [sx,abs(co)*sy+abs(si)*sz,abs(si)*sy+abs(co)*sz]
     return [rot[i]+pivot[i] for i in range(3)],size
 
-def hitboxes(m,opened=False):
+def hitboxes(m,opened=False,amount=None):
     # Grate tops deliberately collide as decks: tiny visual gaps do not trap feet.
     base=m['id'].split('_Connect',1)[0]
-    if base in ['FF_FloorPlate','FF_HazardFloor','FF_ConcreteFloor']:
+    if base in ['FF_FloorPlate','FF_HazardFloor','FF_ConcreteFloor','FF_FactoryRoof']:
         ps=[part('Floor',(0,16,0),(32,32,32))]
     elif base.startswith('FF_Catwalk') and base!='FF_CatwalkStairs':
-        ps=[part('WalkableDeck',(0,2,0),(32,4,32))]+[p for p in m['parts'] if 'Rail' in p['name']]
+        ps=[part('WalkableDeck',(0,30,0),(32,4,32))]+[p for p in m['parts'] if 'Rail' in p['name']]
     elif base=='FF_DrainGrate':ps=[part('Floor',(0,16,0),(32,32,32))]
     else:ps=m['parts']
     boxes=[]
     for p in ps:
-        c,s=transform(p,m,1 if opened else 0)
+        c,s=transform(p,m,(1 if opened else 0) if amount is None else amount)
         lo=[(c[i]-s[i]/2)/32+(0 if i==1 else .5) for i in range(3)]
         hi=[(c[i]+s[i]/2)/32+(0 if i==1 else .5) for i in range(3)]
         boxes.append(dict(Min=dict(zip('XYZ',lo)),Max=dict(zip('XYZ',hi))))
     return dict(Boxes=boxes)
 
+def export_door_poses(m,item):
+    """Static whole-door poses keep native translucent and opaque passes together.
+
+    Playback is a bounded server state sequence; no client alpha animation is
+    required. Editable sources retain the original hinge animation.
+    """
+    path=COMMON/'Blocks/FoundryFloor'/f"{m['id']}.blockymodel"
+    def shapes(nodes):
+        for n in nodes:
+            if n.get('shape',{}).get('type')=='box':yield n['name'],n['shape']
+            yield from shapes(n.get('children',[]))
+    source=dict(shapes(json.loads(path.read_text())['nodes']));defs={}
+    for step in range(17):
+        amount=step/16;nodes=[]
+        for p in m['parts']:
+            shape=copy.deepcopy(source[p['name']]);shape['offset']=v([0,0,0])
+            c,_=transform(p,m,amount);n=node(p['name'],c,shape)
+            target=(m['motion'] or {}).get('targets',{}).get(p['group'])
+            if target:n['orientation']=q(target['axis'],target['angle']*amount)
+            nodes.append(n)
+        name=f"{m['id']}_Pose{step:02d}"
+        ref=f'Blocks/FoundryFloor/DoorPoses/{name}.blockymodel'
+        write(COMMON/ref,dict(lod='auto',nodes=nodes))
+        write(SERVER/'Item/Block/Hitboxes/FoundryFloor'/f'{name}.json',hitboxes(m,amount=amount))
+        defs[f'DoorPose{step:02d}']=dict(CustomModel=ref,HitboxType=name)
+    defs['Closed']=copy.deepcopy(defs['DoorPose00']);defs['Open']=copy.deepcopy(defs['DoorPose16']);defs['Open']['SoundOcclusionOpacity']=0
+    item['BlockType']['State']=dict(Definitions=defs)
+
+def building_support(mid):
+    # DrawType=Model does not inherit the support faces of a solid cube.
+    # Only structural full cells and actual grid-height decks provide them.
+    full={'FF_FloorPlate','FF_HazardFloor','FF_ConcreteFloor','FF_DrainGrate','FF_FactoryWall','FF_FactoryRoof'}
+    decks={'FF_Catwalk','FF_CatwalkLeft','FF_CatwalkRight','FF_CatwalkBridge','FF_CatwalkCorner','FF_FactoryWindow','FF_WindowPane','FF_SteelColumn'}
+    faces=['Up','Down','North','East','South','West'] if mid in full else ['Up'] if mid in decks else []
+    # A rail's upper filler is not a second full floor: support comes only
+    # from the anchor cell's actual top plane, never from decoration above it.
+    return dict(Supporting={face:[dict(FaceType='Full',Filler=[dict(X=0,Y=0,Z=0)])] for face in faces}) if faces else {}
+
 def export_item(m):
     mid=m['id'];b=dict(Material='Solid',DrawType='Model',Opacity='Transparent',CustomModel='Blocks/FoundryFloor/'+mid+'.blockymodel',CustomModelTexture=[dict(Texture='Blocks/FoundryFloor/FactoryAtlas.png',Weight=1)],VariantRotation='NESW',HitboxType=mid,BlockSoundSetId='FF_Metal',PhysicalMaterialId='Metal',BlockParticleSetId='Metal',ParticleColor='#657578',Gathering=dict(Breaking=dict(GatherType='Benches')),PlacementSettings=dict(BlockPreviewVisibility='AlwaysVisible',AllowRotationKey=True))
+    b.update(building_support(mid))
     if mid in ['FF_PipeStraight','FF_PipeElbow']:
         b['VariantRotation']='Pipe';b['IgnoreSupportWhenPlaced']=True
         if mid=='FF_PipeElbow':b['VariantRotation']='All';b['PlacementSettings']['RotationMode']='BlockNormal'
@@ -328,6 +373,7 @@ def export_item(m):
         b['Bench']=dict(Type='Crafting',Id='FoundryFloor',Categories=[dict(Id='Foundry_'+c,Icon='Icons/CraftingCategories/FoundryFloor/'+icon+'.png',Name='server.foundryFloor.bench.'+c) for c,icon in icons.items()],TierLevels=[dict(CraftingTimeReductionModifier=0)],LocalOpenSoundEventId='FF_SFX_bench_tools_ui',LocalCloseSoundEventId='FF_SFX_bench_tools_ui',CompletedSoundEventId='FF_SFX_bench_tools')
         b['BlockEntity']=dict(Components=dict(BenchBlock={}))
     else:item['Recipe']['BenchRequirement']=[dict(Type='Crafting',Id='FoundryFloor',Categories=['Foundry_'+category[m['category']]])]
+    if mid=='FF_PersonnelDoor':export_door_poses(m,item)
     write(SERVER/'Item/Items/FoundryFloor'/(mid+'.json'),item)
 
 def main():

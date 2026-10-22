@@ -24,7 +24,50 @@ public final class NativeFootprintTests {
         if(cells.size()!=9||!cells.contains(new BlockPos(-1,2,0))||!cells.contains(new BlockPos(1,0,0)))throw new AssertionError("Native shutter footprint convention changed: "+cells);
         try { FillerBlockUtil.forEachFillerBlock(1f,unit,(x,y,z)->{});throw new AssertionError("Float argument is a threshold, not model scale"); }
         catch(IllegalArgumentException expected) { }
+        // Custom-model floors must satisfy the same native Full bottom-face
+        // requirement as a stock workbench. Model collision alone supplies none.
+        if(com.hypixel.hytale.builtin.blockphysics.BlockPhysicsUtil.doesMatchFaceType(new org.joml.Vector3i(),"Full",BlockFace.UP,Map.of()))throw new AssertionError("Missing support must reject a supported-only item");
+        for(String name:List.of("FF_FloorPlate","FF_HazardFloor","FF_ConcreteFloor","FF_DrainGrate","FF_Catwalk","FF_CatwalkLeft","FF_CatwalkRight","FF_CatwalkBridge","FF_CatwalkCorner","FF_FactoryWall","FF_FactoryRoof","FF_FactoryWindow","FF_WindowPane","FF_SteelColumn")) {
+            var item=JsonParser.parseString(Files.readString(Path.of("assets/Server/Item/Items/FoundryFloor/"+name+".json"))).getAsJsonObject();
+            var base=item.getAsJsonObject("BlockType");List<JsonObject> variants=new ArrayList<>();variants.add(base);
+            if(base.has("State"))for(var e:base.getAsJsonObject("State").getAsJsonObject("Definitions").entrySet())if(e.getKey().startsWith("Connect"))variants.add(e.getValue().getAsJsonObject());
+            for(var variant:variants) {
+            var up=(variant.has("Supporting")?variant:base).getAsJsonObject("Supporting").getAsJsonArray("Up");
+            var supports=new BlockFaceSupport[up.size()];
+            for(int i=0;i<supports.length;i++)supports[i]=BlockFaceSupport.CODEC.decode(org.bson.BsonDocument.parse(up.get(i).toString()),new com.hypixel.hytale.codec.ExtraInfo());
+            for(Rotation yaw:Rotation.values()) {
+                var rotated=Arrays.stream(supports).map(s->BlockFaceSupport.rotate(s,yaw,Rotation.None,Rotation.None)).toArray(BlockFaceSupport[]::new);
+                if(!com.hypixel.hytale.builtin.blockphysics.BlockPhysicsUtil.doesMatchFaceType(new org.joml.Vector3i(),"Full",BlockFace.UP,Map.of(BlockFace.UP,rotated)))throw new AssertionError(name+" does not support a workbench at "+yaw);
+                if(com.hypixel.hytale.builtin.blockphysics.BlockPhysicsUtil.doesMatchFaceType(new org.joml.Vector3i(0,1,0),"Full",BlockFace.UP,Map.of(BlockFace.UP,rotated)))throw new AssertionError(name+" incorrectly treats an upper rail/decorative filler as a full floor");
+                checks++;
+            }
+            }
+        }
+        // Every open catwalk/deck variant ends exactly at the next cell's floor.
+        // Thin bottom-aligned models left a 7/8-block gap below placed furniture.
+        for(String stem:List.of("FF_Catwalk","FF_CatwalkLeft","FF_CatwalkRight","FF_CatwalkBridge","FF_CatwalkCorner","FF_DrainGrate"))for(int mask=0;mask<16;mask++) {
+            String name=stem+(mask==0?"":String.format(Locale.ROOT,"_Connect%02X",mask));
+            var array=JsonParser.parseString(Files.readString(Path.of("assets/Server/Item/Block/Hitboxes/FoundryFloor/"+name+".json"))).getAsJsonObject().getAsJsonArray("Boxes");
+            var deck=array.get(0).getAsJsonObject();var lo=deck.getAsJsonObject("Min");var hi=deck.getAsJsonObject("Max");
+            if(hi.get("Y").getAsDouble()!=1||hi.get("X").getAsDouble()!=1||hi.get("Z").getAsDouble()!=1||lo.get("X").getAsDouble()!=0||lo.get("Z").getAsDouble()!=0)throw new AssertionError(name+" has no continuous grid-height deck");
+            checks++;
+        }
         var root=new BlockPos(10,80,10);
+        for(int i=0;i<=NativeDoorMotion.STEPS;i++) {
+            var path=Path.of(String.format(Locale.ROOT,"assets/Server/Item/Block/Hitboxes/FoundryFloor/FF_PersonnelDoor_Pose%02d.json",i));
+            var array=JsonParser.parseString(Files.readString(path)).getAsJsonObject().getAsJsonArray("Boxes");List<Box> detail=new ArrayList<>();
+            for(var element:array) {var o=element.getAsJsonObject();var a=o.getAsJsonObject("Min");var b=o.getAsJsonObject("Max");detail.add(new Box(a.get("X").getAsDouble(),a.get("Y").getAsDouble(),a.get("Z").getAsDouble(),b.get("X").getAsDouble(),b.get("Y").getAsDouble(),b.get("Z").getAsDouble()));}
+            for(Rotation yaw:Rotation.values()) {
+                var rotation=RotationTuple.of(yaw,Rotation.None,Rotation.None);var forward=new org.joml.Vector3i(0,0,1);rotation.applyRotationTo(forward);cells.clear();
+                FillerBlockUtil.forEachFillerBlock(new TestBoxes(detail.toArray(Box[]::new)).get(rotation.index()),(x,y,z)->cells.add(new BlockPos(x,y,z)));
+                for(var cell:cells)if(cell.y()<0||cell.y()>1||!(cell.x()==0&&cell.z()==0||cell.x()==forward.x&&cell.z()==forward.z))throw new AssertionError("Door pose enters neighbouring wall: "+i+" "+yaw+" "+cell);
+                checks++;
+            }
+        }
+        for(long t=0;t<=NativeDoorMotion.DURATION;t+=50_000_000L) {
+            int open=NativeDoorMotion.step(true,t),close=NativeDoorMotion.step(false,t);
+            if(open+close!=NativeDoorMotion.STEPS||open<0||open>NativeDoorMotion.STEPS)throw new AssertionError("Door reverse timeline mismatch");checks++;
+        }
         // A door must fit a 1x2 gap; controls and stairs must not reserve the
         // neighbouring wall/landing merely because a detail crosses a boundary.
         for(String name:List.of("FF_PersonnelDoor","FF_PersonnelDoor_Open","FF_RollerShutter","FF_CatwalkStairs","FF_CatwalkStairs_Connect02","FF_CatwalkStairs_Connect08","FF_CatwalkStairs_Connect0A","FF_SafetyRail","FF_PipeStraight","FF_PipeElbow")) {

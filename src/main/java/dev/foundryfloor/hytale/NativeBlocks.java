@@ -74,7 +74,7 @@ final class NativeBlocks {
      * so it cannot discover old decorations outside that shape on its own. */
     static boolean repairLegacyFillers(World w,FoundryRegistry registry,FoundryRegistry.Claim claim) {
         String id=claim.itemId();
-        if(!Set.of("FF_RollerShutter","FF_CatwalkStairs","FF_PersonnelDoor","FF_SafetyGate","FF_PipeStraight","FF_PipeElbow","FF_LiftAssembly").contains(id))return true;
+        if(!Set.of("FF_FloorPlate","FF_HazardFloor","FF_ConcreteFloor","FF_DrainGrate","FF_RollerShutter","FF_CatwalkStairs","FF_PersonnelDoor","FF_SafetyGate","FF_PipeStraight","FF_PipeElbow","FF_LiftAssembly").contains(id))return true;
         BlockPos root=claim.origin();BlockType actual=block(w,root);
         if(!id.equals(itemId(actual)))return false;
         Set<BlockPos> expected=placedFootprint(actual,root,claim.rotation()).cells();

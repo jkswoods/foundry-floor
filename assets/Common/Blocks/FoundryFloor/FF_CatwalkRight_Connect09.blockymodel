@@ -6,7 +6,7 @@
       "name": "DeckRight",
       "position": {
         "x": 15,
-        "y": 2,
+        "y": 30,
         "z": 0
       },
       "orientation": {
@@ -113,7 +113,7 @@
       "name": "DeckFront",
       "position": {
         "x": 0,
-        "y": 2,
+        "y": 30,
         "z": 15
       },
       "orientation": {
@@ -220,7 +220,7 @@
       "name": "DeckGrating0",
       "position": {
         "x": -14.0,
-        "y": 3,
+        "y": 31,
         "z": -1.0
       },
       "orientation": {
@@ -327,7 +327,7 @@
       "name": "DeckGrating1",
       "position": {
         "x": -10.0,
-        "y": 3,
+        "y": 31,
         "z": -1.0
       },
       "orientation": {
@@ -434,7 +434,7 @@
       "name": "DeckGrating2",
       "position": {
         "x": -6.0,
-        "y": 3,
+        "y": 31,
         "z": -1.0
       },
       "orientation": {
@@ -541,7 +541,7 @@
       "name": "DeckGrating3",
       "position": {
         "x": -2.0,
-        "y": 3,
+        "y": 31,
         "z": -1.0
       },
       "orientation": {
@@ -648,7 +648,7 @@
       "name": "DeckGrating4",
       "position": {
         "x": 2.0,
-        "y": 3,
+        "y": 31,
         "z": -1.0
       },
       "orientation": {
@@ -755,7 +755,7 @@
       "name": "DeckGrating5",
       "position": {
         "x": 6.0,
-        "y": 3,
+        "y": 31,
         "z": -1.0
       },
       "orientation": {
@@ -862,7 +862,7 @@
       "name": "DeckGrating6",
       "position": {
         "x": 10.0,
-        "y": 3,
+        "y": 31,
         "z": -1.0
       },
       "orientation": {
@@ -969,7 +969,7 @@
       "name": "DeckGrating7",
       "position": {
         "x": 13.5,
-        "y": 3,
+        "y": 31,
         "z": -1.0
       },
       "orientation": {
@@ -1076,7 +1076,7 @@
       "name": "DeckBearer0",
       "position": {
         "x": -1.0,
-        "y": 1,
+        "y": 29,
         "z": -8
       },
       "orientation": {
@@ -1183,7 +1183,7 @@
       "name": "DeckBearer1",
       "position": {
         "x": -1.0,
-        "y": 1,
+        "y": 29,
         "z": 8
       },
       "orientation": {

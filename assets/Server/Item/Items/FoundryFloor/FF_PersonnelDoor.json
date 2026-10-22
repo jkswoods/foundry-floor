@@ -46,14 +46,82 @@
     },
     "State": {
       "Definitions": {
-        "Open": {
-          "HitboxType": "FF_PersonnelDoor_Open",
-          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_PersonnelDoor_Open.blockyanim",
-          "SoundOcclusionOpacity": 0
+        "DoorPose00": {
+          "CustomModel": "Blocks/FoundryFloor/DoorPoses/FF_PersonnelDoor_Pose00.blockymodel",
+          "HitboxType": "FF_PersonnelDoor_Pose00"
+        },
+        "DoorPose01": {
+          "CustomModel": "Blocks/FoundryFloor/DoorPoses/FF_PersonnelDoor_Pose01.blockymodel",
+          "HitboxType": "FF_PersonnelDoor_Pose01"
+        },
+        "DoorPose02": {
+          "CustomModel": "Blocks/FoundryFloor/DoorPoses/FF_PersonnelDoor_Pose02.blockymodel",
+          "HitboxType": "FF_PersonnelDoor_Pose02"
+        },
+        "DoorPose03": {
+          "CustomModel": "Blocks/FoundryFloor/DoorPoses/FF_PersonnelDoor_Pose03.blockymodel",
+          "HitboxType": "FF_PersonnelDoor_Pose03"
+        },
+        "DoorPose04": {
+          "CustomModel": "Blocks/FoundryFloor/DoorPoses/FF_PersonnelDoor_Pose04.blockymodel",
+          "HitboxType": "FF_PersonnelDoor_Pose04"
+        },
+        "DoorPose05": {
+          "CustomModel": "Blocks/FoundryFloor/DoorPoses/FF_PersonnelDoor_Pose05.blockymodel",
+          "HitboxType": "FF_PersonnelDoor_Pose05"
+        },
+        "DoorPose06": {
+          "CustomModel": "Blocks/FoundryFloor/DoorPoses/FF_PersonnelDoor_Pose06.blockymodel",
+          "HitboxType": "FF_PersonnelDoor_Pose06"
+        },
+        "DoorPose07": {
+          "CustomModel": "Blocks/FoundryFloor/DoorPoses/FF_PersonnelDoor_Pose07.blockymodel",
+          "HitboxType": "FF_PersonnelDoor_Pose07"
+        },
+        "DoorPose08": {
+          "CustomModel": "Blocks/FoundryFloor/DoorPoses/FF_PersonnelDoor_Pose08.blockymodel",
+          "HitboxType": "FF_PersonnelDoor_Pose08"
+        },
+        "DoorPose09": {
+          "CustomModel": "Blocks/FoundryFloor/DoorPoses/FF_PersonnelDoor_Pose09.blockymodel",
+          "HitboxType": "FF_PersonnelDoor_Pose09"
+        },
+        "DoorPose10": {
+          "CustomModel": "Blocks/FoundryFloor/DoorPoses/FF_PersonnelDoor_Pose10.blockymodel",
+          "HitboxType": "FF_PersonnelDoor_Pose10"
+        },
+        "DoorPose11": {
+          "CustomModel": "Blocks/FoundryFloor/DoorPoses/FF_PersonnelDoor_Pose11.blockymodel",
+          "HitboxType": "FF_PersonnelDoor_Pose11"
+        },
+        "DoorPose12": {
+          "CustomModel": "Blocks/FoundryFloor/DoorPoses/FF_PersonnelDoor_Pose12.blockymodel",
+          "HitboxType": "FF_PersonnelDoor_Pose12"
+        },
+        "DoorPose13": {
+          "CustomModel": "Blocks/FoundryFloor/DoorPoses/FF_PersonnelDoor_Pose13.blockymodel",
+          "HitboxType": "FF_PersonnelDoor_Pose13"
+        },
+        "DoorPose14": {
+          "CustomModel": "Blocks/FoundryFloor/DoorPoses/FF_PersonnelDoor_Pose14.blockymodel",
+          "HitboxType": "FF_PersonnelDoor_Pose14"
+        },
+        "DoorPose15": {
+          "CustomModel": "Blocks/FoundryFloor/DoorPoses/FF_PersonnelDoor_Pose15.blockymodel",
+          "HitboxType": "FF_PersonnelDoor_Pose15"
+        },
+        "DoorPose16": {
+          "CustomModel": "Blocks/FoundryFloor/DoorPoses/FF_PersonnelDoor_Pose16.blockymodel",
+          "HitboxType": "FF_PersonnelDoor_Pose16"
         },
         "Closed": {
-          "HitboxType": "FF_PersonnelDoor",
-          "CustomModelAnimation": "Blocks/FoundryFloor/Animations/FF_PersonnelDoor_Close.blockyanim"
+          "CustomModel": "Blocks/FoundryFloor/DoorPoses/FF_PersonnelDoor_Pose00.blockymodel",
+          "HitboxType": "FF_PersonnelDoor_Pose00"
+        },
+        "Open": {
+          "CustomModel": "Blocks/FoundryFloor/DoorPoses/FF_PersonnelDoor_Pose16.blockymodel",
+          "HitboxType": "FF_PersonnelDoor_Pose16",
+          "SoundOcclusionOpacity": 0
         }
       }
     }
