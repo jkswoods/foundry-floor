@@ -38,6 +38,20 @@
     "PlacementSettings": {
       "BlockPreviewVisibility": "AlwaysVisible",
       "AllowRotationKey": true
+    },
+    "Supporting": {
+      "Up": [
+        {
+          "FaceType": "Full",
+          "Filler": [
+            {
+              "X": 0,
+              "Y": 0,
+              "Z": 0
+            }
+          ]
+        }
+      ]
     }
   },
   "ItemSoundSetId": "FF_ISS_Metal",

@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased — door glass and building support repairs
+
+- Give the translucent personnel-door pane a direct hinge animation track so it follows the door leaf during opening and closing.
+- Declare native support faces on structural surfaces so workbenches and supported furniture can be placed on them.
+- Align all catwalk deck variants with the top of the block grid and drain grates; furniture no longer needs to sit above a bottom-aligned thin deck.
+- Keep roof collision continuous at its full-block surface. Existing catwalks move within their cells; check older stair landings after updating.
+- Add native support-matching and shipped-model regression checks. This draft candidate awaits player testing.
+
 ## 0.2.0-dev.2 — public alpha, Hytale 0.7.3
 
 - Published the source, player guide and versioned prerelease downloads.

@@ -92,6 +92,11 @@ def models():
     # The corner shares its post and foot; do not export coincident duplicates.
     end=[p for p in end if not any(all(p[k]==a[k] for k in ('center','size','material','group')) for a in corner)]
     add('CatwalkCorner','Catwalk · outer corner','Catwalks',corner+end,'Outside railing for a right-angle landing.',6,2)
+    # Native placement is cell based. Like the stock platforms, a thin deck must
+    # end at the top of its cell or a block placed above it appears to float.
+    for m in MODELS:
+        if m['id'] in {'FF_Catwalk','FF_CatwalkLeft','FF_CatwalkRight','FF_CatwalkBridge','FF_CatwalkCorner'}:
+            for p in m['parts']:p['center'][1]+=28
     stairs=[]
     for i in range(8):
         z=14-i*4;y=i*4
@@ -215,6 +220,7 @@ def node(name, position, shape=None, children=None):
 
 def export_model(m):
     nodes=[];groups={};elements=[];bbgroups={}
+    targets=copy.deepcopy((m['motion'] or {}).get('targets',{}))
     for g,pivot in m['groups'].items():
         group=node(g,pivot,children=[]);nodes.append(group);groups[g]=group
         bbgroups[g]=dict(name=g,origin=pivot,rotation=[0,0,0],uuid=uid(m['id']+'/'+g),children=[])
@@ -226,15 +232,24 @@ def export_model(m):
         parent=groups.get(p['group']);local=[c[i]-m['groups'][p['group']][i] for i in range(3)] if parent else c
         n=node(p['name'],local,shape)
         if p.get('rotation'):n['orientation']=q(p['rotation']['axis'],p['rotation']['angle'])
-        (parent['children'] if parent else nodes).append(n)
+        # Give animated translucent geometry its own shaped animation node.
+        # The alpha pass must receive the hinge transform directly rather than
+        # relying on a shapeless ancestor used by the opaque door mesh.
+        direct=p['material']=='glass' and parent and p['group'] in targets
+        if direct:
+            n['position']=v(m['groups'][p['group']]);shape['offset']=v(local)
+            nodes.append(n);targets[p['name']]=copy.deepcopy(targets[p['group']])
+            bbgroups[p['name']]=dict(name=p['name'],origin=m['groups'][p['group']],rotation=[0,0,0],uuid=uid(m['id']+'/'+p['name']),children=[])
+        else:(parent['children'] if parent else nodes).append(n)
         faces={}
         for f in ['north','south','west','east','up','down']:
             w,h=(s[0],s[2]) if f in ['up','down'] else (s[2],s[1]) if f in ['west','east'] else (s[0],s[1])
             faces[f]=dict(uv=[ox,oy,ox+w,oy+h],texture=0)
         e=dict(name=p['name'],type='cube',uuid=uid(m['id']+'/'+p['name']),**{'from':[c[i]-s[i]/2 for i in range(3)],'to':[c[i]+s[i]/2 for i in range(3)]},origin=m['groups'].get(p['group'],c),rotation=[0,0,0],box_uv=False,faces=faces)
+        if direct:e['uuid']=uid(m['id']+'/'+p['name']+'/shape')
         elements.append(e)
         if p.get('rotation'):e['rotation']=[c*p['rotation']['angle'] for c in p['rotation']['axis']]
-        if parent:bbgroups[p['group']]['children'].append(e['uuid'])
+        if parent:bbgroups[p['name'] if direct else p['group']]['children'].append(e['uuid'])
     runtime=dict(lod='auto',nodes=nodes)
     write(COMMON/'Blocks/FoundryFloor'/(m['id']+'.blockymodel'),runtime)
     outliner=[g for g in bbgroups.values()]+[e['uuid'] for e,p in zip(elements,m['parts']) if not p['group']]
@@ -243,7 +258,7 @@ def export_model(m):
         for action,reverse in [('Open',False),('Close',True)]:
             anim=dict(formatVersion=1,duration=round(m['motion']['duration']*60),holdLastKeyframe=True,nodeAnimations={})
             animators={}
-            for g,t in m['motion']['targets'].items():
+            for g,t in targets.items():
                 channel='position' if 'position' in t else 'orientation'
                 a=v([0,0,0]) if channel=='position' else q()
                 b=v(t['position']) if channel=='position' else q(t['axis'],t['angle'])
@@ -279,10 +294,10 @@ def transform(p,m,amount):
 def hitboxes(m,opened=False):
     # Grate tops deliberately collide as decks: tiny visual gaps do not trap feet.
     base=m['id'].split('_Connect',1)[0]
-    if base in ['FF_FloorPlate','FF_HazardFloor','FF_ConcreteFloor']:
+    if base in ['FF_FloorPlate','FF_HazardFloor','FF_ConcreteFloor','FF_FactoryRoof']:
         ps=[part('Floor',(0,16,0),(32,32,32))]
     elif base.startswith('FF_Catwalk') and base!='FF_CatwalkStairs':
-        ps=[part('WalkableDeck',(0,2,0),(32,4,32))]+[p for p in m['parts'] if 'Rail' in p['name']]
+        ps=[part('WalkableDeck',(0,30,0),(32,4,32))]+[p for p in m['parts'] if 'Rail' in p['name']]
     elif base=='FF_DrainGrate':ps=[part('Floor',(0,16,0),(32,32,32))]
     else:ps=m['parts']
     boxes=[]
@@ -293,8 +308,19 @@ def hitboxes(m,opened=False):
         boxes.append(dict(Min=dict(zip('XYZ',lo)),Max=dict(zip('XYZ',hi))))
     return dict(Boxes=boxes)
 
+def building_support(mid):
+    # DrawType=Model does not inherit the support faces of a solid cube.
+    # Only structural full cells and actual grid-height decks provide them.
+    full={'FF_FloorPlate','FF_HazardFloor','FF_ConcreteFloor','FF_DrainGrate','FF_FactoryWall','FF_FactoryRoof'}
+    decks={'FF_Catwalk','FF_CatwalkLeft','FF_CatwalkRight','FF_CatwalkBridge','FF_CatwalkCorner','FF_FactoryWindow','FF_WindowPane','FF_SteelColumn'}
+    faces=['Up','Down','North','East','South','West'] if mid in full else ['Up'] if mid in decks else []
+    # A rail's upper filler is not a second full floor: support comes only
+    # from the anchor cell's actual top plane, never from decoration above it.
+    return dict(Supporting={face:[dict(FaceType='Full',Filler=[dict(X=0,Y=0,Z=0)])] for face in faces}) if faces else {}
+
 def export_item(m):
     mid=m['id'];b=dict(Material='Solid',DrawType='Model',Opacity='Transparent',CustomModel='Blocks/FoundryFloor/'+mid+'.blockymodel',CustomModelTexture=[dict(Texture='Blocks/FoundryFloor/FactoryAtlas.png',Weight=1)],VariantRotation='NESW',HitboxType=mid,BlockSoundSetId='FF_Metal',PhysicalMaterialId='Metal',BlockParticleSetId='Metal',ParticleColor='#657578',Gathering=dict(Breaking=dict(GatherType='Benches')),PlacementSettings=dict(BlockPreviewVisibility='AlwaysVisible',AllowRotationKey=True))
+    b.update(building_support(mid))
     if mid in ['FF_PipeStraight','FF_PipeElbow']:
         b['VariantRotation']='Pipe';b['IgnoreSupportWhenPlaced']=True
         if mid=='FF_PipeElbow':b['VariantRotation']='All';b['PlacementSettings']['RotationMode']='BlockNormal'

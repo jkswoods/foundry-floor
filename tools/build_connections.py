@@ -23,7 +23,7 @@ def parts(m,mask):
     mid=m['id'];p=copy.deepcopy(m['parts'])
     if mid in GRATES:
         prefix='Drain' if mid=='FF_DrainGrate' else 'Deck'
-        p=[x for x in p if not x['name'].startswith(prefix)]+connected_deck(28 if mid=='FF_DrainGrate' else 0,mask,prefix)
+        p=[x for x in p if not x['name'].startswith(prefix)]+connected_deck(28,mask,prefix)
         if mask&8:p=[x for x in p if not x['name'].startswith('Rail')]
         if mask&2:p=[x for x in p if not x['name'].startswith('RightRail')]
         if mask&1:p=[x for x in p if not x['name'].startswith('EndRail')]

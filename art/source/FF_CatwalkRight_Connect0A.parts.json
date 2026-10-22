@@ -7,7 +7,7 @@
       "name": "DeckFront",
       "center": [
         0,
-        2,
+        30,
         15
       ],
       "size": [
@@ -22,7 +22,7 @@
       "name": "DeckBack",
       "center": [
         0,
-        2,
+        30,
         -15
       ],
       "size": [
@@ -37,7 +37,7 @@
       "name": "DeckGrating0",
       "center": [
         -14.0,
-        3,
+        31,
         0.0
       ],
       "size": [
@@ -52,7 +52,7 @@
       "name": "DeckGrating1",
       "center": [
         -10.0,
-        3,
+        31,
         0.0
       ],
       "size": [
@@ -67,7 +67,7 @@
       "name": "DeckGrating2",
       "center": [
         -6.0,
-        3,
+        31,
         0.0
       ],
       "size": [
@@ -82,7 +82,7 @@
       "name": "DeckGrating3",
       "center": [
         -2.0,
-        3,
+        31,
         0.0
       ],
       "size": [
@@ -97,7 +97,7 @@
       "name": "DeckGrating4",
       "center": [
         2.0,
-        3,
+        31,
         0.0
       ],
       "size": [
@@ -112,7 +112,7 @@
       "name": "DeckGrating5",
       "center": [
         6.0,
-        3,
+        31,
         0.0
       ],
       "size": [
@@ -127,7 +127,7 @@
       "name": "DeckGrating6",
       "center": [
         10.0,
-        3,
+        31,
         0.0
       ],
       "size": [
@@ -142,7 +142,7 @@
       "name": "DeckGrating7",
       "center": [
         14.0,
-        3,
+        31,
         0.0
       ],
       "size": [
@@ -157,7 +157,7 @@
       "name": "DeckBearer0",
       "center": [
         0.0,
-        1,
+        29,
         -8
       ],
       "size": [
@@ -172,7 +172,7 @@
       "name": "DeckBearer1",
       "center": [
         0.0,
-        1,
+        29,
         8
       ],
       "size": [
