@@ -26,7 +26,7 @@ Mount a **High-bay industrial pendant** beneath the roof for large warehouse lig
 
 Utility ducts use the native pipe rotation controls for vertical and horizontal runs. Use **R** to select the axis before placing. Straight sections and elbows have matching ports centred on block faces. They are architectural fittings and do not transport fluids, items or energy.
 
-Place an elbow against the straight duct's end face, then use **R** to turn its other port toward the next section. Elbows support all twelve perpendicular face pairs, including turns in a horizontal run. This placement change is undergoing player verification in the repair preview.
+Place an elbow against the straight duct's end face, then use **R** to turn its other port toward the next section. Elbows support all twelve perpendicular face pairs, including turns in a horizontal run. Duct placement and rotation were included in player testing.
 
 **Louvred wall vents** join horizontally and vertically when facing the same direction. Use them to make larger rectangular vents. **Steel cargo pallets** join along shared edges, including a two-by-two square; forklift pockets remain beneath the deck.
 

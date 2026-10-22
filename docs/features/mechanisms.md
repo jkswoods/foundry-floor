@@ -1,6 +1,6 @@
 # Doors, shutters and lighting
 
-The server-side controls below are implemented; native input, collision and save/reload acceptance are still in progress.
+Player testing covered the controls below, including native use, collision and normal save/reload.
 
 | Block | Use action | Space to leave clear |
 | --- | --- | --- |
