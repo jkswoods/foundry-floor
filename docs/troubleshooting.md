@@ -1,8 +1,8 @@
 # Troubleshooting
 
-## I cannot find a download
+## Which file do I install?
 
-There is no tested playable release yet. The [private repository](https://github.com/jkswoods/foundry-floor) is available only to collaborators. Do not substitute the older model-kit archive for the gameplay plugin.
+Download `FoundryFloor-0.2.0-dev.jar` from the [0.2.0-dev.2 release](https://github.com/jkswoods/foundry-floor/releases/tag/v0.2.0-dev.2). The candidate ZIP contains the same JAR and an offline guide. The authoring ZIP is for model editing and is not a game mod.
 
 ## The Foundry Workbench recipe is missing
 
@@ -34,6 +34,6 @@ Hytale rejects offline authentication for dedicated-server connections. Use the 
 
 ## Current limits
 
-In-game recipe quantities, Foundry placement/rotation/walking, mechanical controls, save/reload, human audio approval and real multiplayer acceptance remain open. Loader and automated checks establish a development baseline, not a survival or production support claim.
+This alpha has passed player checks for crafting, placement, mechanisms, normal save/reload, sounds and multiplayer. Other Hytale versions, arbitrary mod combinations and large production servers are not certified. Keep matching world/player backups and report reproducible issues.
 
 Report reproducible mod issues in the [repository issue tracker](https://github.com/jkswoods/foundry-floor/issues), including the mod version, Hytale version and a short reproduction. Remove personal details and tokens from logs before attaching them.

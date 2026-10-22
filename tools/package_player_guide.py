@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Deterministic built player-guide preview; never includes a game build or private evidence."""
 from pathlib import Path
-import hashlib,zipfile
+import argparse,hashlib,zipfile
+parser=argparse.ArgumentParser(description=__doc__);parser.add_argument("--public-alpha",action="store_true");args=parser.parse_args()
 
 ROOT=Path(__file__).resolve().parents[1]
 site=ROOT/'build/player-site'
@@ -28,6 +29,25 @@ The site can also be placed at a separately authorized static hosting destinatio
 The source is https://github.com/jkswoods/foundry-floor (private access required).
 Third-party documentation notices are retained in DOCUMENTATION-NOTICES.md
 and the site's Documentation notices page. No new original-mod license is granted.
+'''
+if args.public_alpha:
+    entries['README.txt']=b'''FOUNDRY FLOOR 0.2.0 - PLAYER GUIDE
+
+This archive is the player documentation, not the installable gameplay mod.
+It covers the public alpha for Hytale0.7.3 / Java25, including installation,
+crafting, connections, controls, compatibility and backups.
+
+Online guide: https://jkswoods.github.io/foundry-floor/
+Downloads: https://github.com/jkswoods/foundry-floor/releases
+Source: https://github.com/jkswoods/foundry-floor
+
+To preview with working search, serve the site folder locally:
+  python3 -m http.server 8000 --bind 127.0.0.1 --directory site
+Then open http://127.0.0.1:8000/ .
+
+Illustrations are original model renders. Gameplay screenshots are not included.
+Third-party documentation notices are retained in DOCUMENTATION-NOTICES.md
+and the site's Documentation notices page. No new redistribution license is granted.
 '''
 entries['SHA256SUMS.txt']=''.join(hashlib.sha256(data).hexdigest()+'  '+name+'\n' for name,data in sorted(entries.items())).encode()
 output=ROOT/'build/FoundryFloor-0.2.0-player-guide-preview.zip'

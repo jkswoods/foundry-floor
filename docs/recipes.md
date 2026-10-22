@@ -1,6 +1,6 @@
 # Recipes
 
-These are the configured recipes for 0.2.0 on Hytale 0.7.3. The native crafting registry resolves all 27 factory recipes. Earlier server transaction checks cover the original 25 recipes; the five new pieces and current player UI/timing are under playtest.
+These are the 27 factory recipes for 0.2.0 on Hytale 0.7.3, plus the Foundry Workbench recipe. The native crafting registry and player crafting checks passed.
 
 ## Foundry Workbench
 

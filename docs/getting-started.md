@@ -1,6 +1,6 @@
 # Your first factory bay
 
-This is the configured building sequence for the development preview. Native crafting and placement verification is still in progress.
+Build a first loading bay with the public alpha.
 
 1. Obtain **8 Iron Ingots** and **4 Copper Ingots** through the base game's material progression. Bring them to a standard Workbench.
 2. Open its crafting category and make one **Foundry Workbench**. Place it with space for its wide top and tool board.
@@ -12,7 +12,7 @@ The factory bench has no fuel slot or power connection. Crafting uses your inven
 
 Place blocks with the normal block-placement input. Use the displayed rotation control before placing directional pieces. Keep the whole preview clear: large assemblies reserve more than their anchor cell.
 
-Mechanical controls use the game's **Use** action, shown as **F** with the default controls. Doors, shutters, the hatch and lights toggle through their saved states. The player who placed an assembly owns its mechanical controls and removal. Other players can use the crafting bench; multiplayer behaviour is still under test.
+Mechanical controls use the game's **Use** action, shown as **F** with the default controls. Doors, shutters, the hatch and lights toggle through their saved states. The player who placed an assembly owns its mechanical controls and removal. Other players can use the crafting bench. Multiplayer was included in player testing.
 
 For a raised walkway, start with a one-block stair flight, add a both-rail catwalk at the landing, and use corner sections where the walkway turns. Keep a hatch opening clear below and leave the full shutter movement area free.
 

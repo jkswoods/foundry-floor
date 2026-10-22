@@ -4,7 +4,7 @@ Foundry Floor is an architectural collection with a small mechanical layer. Ther
 
 ## Start on the ground
 
-Follow the base game's material progression to Iron and Copper Ingots. The configured starting cost is **8 iron + 4 copper** for the Foundry Workbench. Extra iron buys floor blocks in batches. Natural gathering and actual in-game craft consumption are still being verified for this preview.
+Follow the base game's material progression to Iron and Copper Ingots. The configured starting cost is **8 iron + 4 copper** for the Foundry Workbench. Extra iron buys floor blocks in batches. Foundry crafting was included in player testing.
 
 A useful first project is an eight-plate loading bay. Add a connected safety edge where goods enter and concrete around larger equipment.
 

@@ -1,6 +1,10 @@
 # Changelog
 
-## 0.2.0 — repair preview, Hytale 0.7.3
+## 0.2.0-dev.2 — public alpha, Hytale 0.7.3
+
+- Published the source, player guide and versioned prerelease downloads.
+- Added a manually dispatched GitHub Pages workflow with build-only documentation pull-request checks.
+- Completed player QA for remaining mechanisms, crafting/building, normal save/reload, sounds and multiplayer.
 
 - Added connected grates, safety-floor corners, wider stair flights, large vents and pallet squares.
 - Corrected moving model groups, shutter dimensions and held scale, stair landing bounds, placement previews and duct rotation.
@@ -10,7 +14,7 @@
 - Repaired legacy invisible shutter/stair fillers, doorway swing bounds and catwalk landings in copied native test scenes.
 - Added glass alpha blending, controls on both shutter faces and a geometry audit for flickering surfaces across all model variants.
 - Corrected the client animation format and per-face glass transparency flags. Added a real glazed door opening, matching finishes on both door faces and all six wall faces, and the complete elbow rotation set.
-- This repair preview is undergoing player testing; remaining mechanical controls, audio and multiplayer acceptance remain open.
+- Retained original model renders in the guide; current gameplay screenshots are not included yet.
 
 ## 0.1.0 — earlier development preview
 
@@ -22,4 +26,4 @@
 - Added original generated mechanical and workshop sound families.
 - Added the player-guide draft and reproducible source/build structure.
 
-No tested playable release is published yet. Native crafting, operation, audio and multiplayer acceptance remain in progress.
+0.2.0-dev.2 is the current public alpha. The earlier development previews remain historical releases.

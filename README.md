@@ -1,14 +1,16 @@
 # Foundry Floor
 
-Original factory architecture and mechanical blocks for **Hytale 0.7.3 / Java 25**. The collection contains a dedicated Foundry Workbench and 27 factory blocks: connected steel grates, catwalks, wider stairs, safety edges, walls, roofs, windows, industrial lighting, vents, ducts, pallets, doors, shutters and lighting.
+Original factory architecture and mechanical blocks for **Hytale 0.7.3 / Java 25**. The collection contains a dedicated Foundry Workbench and 27 factory blocks: connected steel grates, catwalks, wider stairs, safety edges, walls, roofs, windows, industrial lighting, vents, ducts, pallets, doors and shutters.
 
-Craft the bench at a stock Workbench with 8 Iron Ingots and 4 Copper Ingots. Its five tabs group Floors, Walkways, Structure, Fixtures and Mechanisms. See the [player guide](docs/index.md), [recipes](docs/recipes.md), [architecture](docs/features/architecture.md).
+Craft the bench at a stock Workbench with 8 Iron Ingots and 4 Copper Ingots. Its five tabs group Floors, Walkways, Structure, Fixtures and Mechanisms. [Download 0.2.0-dev.2](https://github.com/jkswoods/foundry-floor/releases/tag/v0.2.0-dev.2) and read the [online player guide](https://jkswoods.github.io/foundry-floor/). Start with [installation](docs/installation.md), [recipes](docs/recipes.md) and [architecture](docs/features/architecture.md).
 
 ## Development status
 
-The 0.2.0 repair preview is undergoing player testing. Native startup checks 28 craftable item links and 27 bench recipes. Elevators, guide extensions and call panels have been deferred to a future release. Hidden inert assets retain older-world compatibility and owner dismantling; they expose no recipes, controls, passenger motion or empty-shaft reservation. Ordinary gameplay, audio and multiplayer verification continue.
+This **0.2.0 public alpha** targets Hytale 0.7.3 / Java 25. Player testing covered crafting, placement, mechanical controls, normal save/reload, sounds and multiplayer. Automated checks cover recipe registration, collision bounds and older-world compatibility. Keep matching world/player backups; this prerelease does not promise compatibility with other game versions or every mod combination.
 
-The earlier 0.1.0 development candidate targets 0.7.2. Keep historical candidate files separate from the current 0.7.3 preview. No tested final release or public distribution license has been selected. Repository access is private: [jkswoods/foundry-floor](https://github.com/jkswoods/foundry-floor).
+Elevators, guide extensions and call panels are deferred to a future release. Older placed parts remain inert and owner-dismantleable, with no controls, passenger movement or empty-shaft reservation. They cannot be crafted or placed again.
+
+The earlier 0.1.0 candidate targets Hytale 0.7.2. Use the 0.2.0 downloads for 0.7.3. No redistribution license has been selected; third-party notices remain in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
 ## Build
 
@@ -26,8 +28,8 @@ The build runs focused core and pinned native collision checks, compiles the plu
 
 Runtime sound families were generated through the connected ElevenLabs Sound Effects workflow. Sanitized selected-take metadata is in `assets/SOURCE-AUDIO.json`; raw recordings and private development evidence are excluded from the repository.
 
-Install the pinned documentation dependency with `python3 -m pip install -r requirements-docs.txt`, then run `bash tools/build_player_guide.sh`. Set `FF_DOCS_PYTHON` to select an existing Python environment. Output is `build/player-site/`. The branded guide includes installation, recipes, connections, controls, ownership and known limits. Current native media and acceptance are being completed. No public documentation host is enabled.
+Install the pinned documentation dependency with `python3 -m pip install -r requirements-docs.txt`, then run `bash tools/build_player_guide.sh`. Set `FF_DOCS_PYTHON` to select an existing Python environment. Output is `build/player-site/`. The branded guide includes installation, recipes, connections, controls, ownership and known limits. The online guide is published at https://jkswoods.github.io/foundry-floor/ through GitHub Pages. Its workflow builds docs pull requests without deploying, and publishes from `main` on manual dispatch. The illustrations are original model renders; gameplay screenshots have not been added.
 
-`python3 tools/package_player_guide.py` creates a deployable guide archive. `python3 tools/package_authoring.py` creates a separate editable model kit. These ZIPs are not game mods. `python3 tools/package_development.py --source-commit COMMIT_SHA` bundles reviewed artifacts and checksums into a versioned private candidate; a candidate is separate from the final tested gameplay release.
+`python3 tools/package_player_guide.py --public-alpha` creates a deployable guide archive. `python3 tools/package_authoring.py` creates a separate editable model kit. These ZIPs are not game mods. `python3 tools/package_development.py --source-commit COMMIT_SHA --version 0.2.0-dev.2 --public-alpha` bundles the reviewed runtime and guide with checksums.
 
 Back up worlds and player data with matching JARs. The 0.2.0 reader migrates older ownership records and retains earlier FFR1–FFR4 records, including retired content. To downgrade, restore the matching complete backup rather than changing the JAR alone.

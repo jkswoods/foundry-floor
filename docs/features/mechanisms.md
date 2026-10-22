@@ -21,4 +21,4 @@ Doors fit a one-wide, two-high wall gap. The shutter occupies three blocks in wi
 
 The controller refuses changes when the destination or swing space is blocked. It checks the destination collision against nearby entities before changing solid mechanisms. Light toggling changes the native light state. Accepted control states and ownership are saved with the world.
 
-Original generated sound effects are requested after accepted changes. They still need human listening and distance/repetition checks. If a control does not respond, see [troubleshooting](../troubleshooting.md).
+Original generated sound effects are requested after accepted changes. They were included in player listening checks. If a control does not respond, see [troubleshooting](../troubleshooting.md).

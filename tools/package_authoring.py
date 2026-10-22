@@ -23,8 +23,8 @@ Elevator work is deferred and excluded from this authoring release.
 
 This is a model/rig authoring archive. It is not an installable gameplay JAR.
 Crafting, mechanical authority, and collision require the
-separate gameplay plugin, which is still undergoing native verification.
-No tested playable release or public distribution license is declared here.
+separate gameplay plugin available in the project releases.
+No redistribution license has been selected for the original mod.
 All included geometry and texture artwork is original project material.
 '''
 output=ROOT/'build/FoundryFloor-0.2.0-authoring-kit.zip';output.parent.mkdir(parents=True,exist_ok=True)

@@ -29,6 +29,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--source-commit', required=True, help='Full reviewed Git commit for the source and guide')
     parser.add_argument('--version', default='0.2.0-dev.1')
+    parser.add_argument('--public-alpha',action='store_true',help='Package the player-approved public alpha profile')
     args = parser.parse_args()
     if not re.fullmatch(r'[0-9a-f]{40}', args.source_commit):
         parser.error('Use a full lowercase Git commit SHA')
@@ -102,6 +103,40 @@ Source commit: {args.source_commit}
 No game client, server, stock assets or toolchains are bundled. No public
 original-mod distribution license or production support is declared.
 See THIRD_PARTY_NOTICES.md and the player-guide documentation notices.
+'''.encode()
+    if args.public_alpha:
+        metadata.update(profile='public development alpha',status='Player QA accepted for crafting, building, mechanisms, normal save/reload, sounds and multiplayer; elevator deferred')
+        readme=f'''FOUNDRY FLOOR {args.version} - PUBLIC ALPHA
+
+Original factory architecture and mechanical controls for Hytale0.7.3 / Java25.
+The collection includes the Foundry Workbench and27 factory recipes.
+
+INSTALL
+Back up your world and player files with matching JARs. Close the world/server,
+then place FoundryFloor-0.2.0-dev.jar in UserData/Mods (or server mods directory).
+Keep only one Foundry JAR installed and enable the mod for your world.
+The other ZIP files are documentation/model sources, not installable game mods.
+
+STATUS
+Player testing covered crafting, placement, mechanisms, save/reload, sounds
+and multiplayer. This is a prerelease, with no guarantee for arbitrary mod
+combinations, other game versions or large production servers.
+Elevators, guide extensions and call panels are deferred. Existing old parts
+are inert and owner-dismantleable; no empty-shaft reservation remains.
+The guide currently uses original model renders; native screenshots are pending.
+
+CONTENTS
+The JAR is the installable mod. The guide ZIP is an offline copy of the site.
+BUILD.json records the source commit and exact runtime/guide hashes.
+SHA256SUMS.txt verifies this archive's other members.
+
+LINKS
+Player guide: https://jkswoods.github.io/foundry-floor/
+Source and issues: https://github.com/jkswoods/foundry-floor
+Source commit: {args.source_commit}
+
+No game binaries, stock assets or toolchains are bundled. No redistribution
+license has been selected. Retained third-party notices are included.
 '''.encode()
     members = {runtime.name: runtime_bytes, guide.name: guide_bytes,
                'README.txt': readme, 'BUILD.json': (json.dumps(metadata, indent=2) + '\n').encode(),

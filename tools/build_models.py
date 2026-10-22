@@ -339,7 +339,7 @@ def main():
     write(SERVER/'Item/Block/Sounds/FoundryFloor/FF_Metal.json',dict(Parent='Metal',SoundEvents=dict(Build='FF_SFX_metal_handling',Break='FF_SFX_metal_handling')))
     write(SERVER/'Item/Block/Sounds/FoundryFloor/FF_Glass.json',dict(Parent='Metal',SoundEvents=dict(Build='FF_SFX_glass_handling',Break='FF_SFX_glass_handling')))
     write(SERVER/'Audio/ItemSounds/FoundryFloor/FF_ISS_Glass.json',dict(Parent='ISS_Default',SoundEvents=dict(Drag='FF_SFX_glass_handling_ui',Drop='FF_SFX_glass_handling_ui')))
-    write(ASSETS/'manifest.json',dict(Group='FoundryFloor',Name='FoundryFloor',Version='0.2.0',Description='Original modular factory architecture, crafting and mechanical controls. Private development build.',Main='dev.foundryfloor.hytale.FoundryPlugin',ServerVersion='=0.7.3',IncludesAssetPack=True))
+    write(ASSETS/'manifest.json',dict(Group='FoundryFloor',Name='FoundryFloor',Version='0.2.0',Description='Original modular factory architecture, crafting and mechanical controls. Development alpha.',Main='dev.foundryfloor.hytale.FoundryPlugin',ServerVersion='=0.7.3',IncludesAssetPack=True))
     write(SERVER/'Item/RootInteractions/FoundryFloor/FF_RuntimeUse.json',dict(Interactions=[dict(Type='FF_Use')]))
     for id,changes in [('FF_Toggle',{'default':'Open','Closed':'Open','Open':'Closed'}),('FF_ToggleLamp',{'default':'Off','Off':'On','On':'Off'})]:
         write(SERVER/'Item/RootInteractions/FoundryFloor'/(id+'.json'),dict(Interactions=[dict(Type='ChangeState',Changes=changes)]))
