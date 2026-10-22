@@ -1,8 +1,30 @@
 # Foundry Floor
 
-Original factory architecture and mechanical blocks for **Hytale 0.7.3 / Java 25**. The collection contains a dedicated Foundry Workbench and 27 factory blocks: connected steel grates, catwalks, wider stairs, safety edges, walls, roofs, windows, industrial lighting, vents, ducts, pallets, doors and shutters.
+[Player guide](https://jkswoods.github.io/foundry-floor/) · [Download the alpha](https://github.com/jkswoods/foundry-floor/releases/tag/v0.2.0-dev.2)
 
-Craft the bench at a stock Workbench with 8 Iron Ingots and 4 Copper Ingots. Its five tabs group Floors, Walkways, Structure, Fixtures and Mechanisms. [Download 0.2.0-dev.2](https://github.com/jkswoods/foundry-floor/releases/tag/v0.2.0-dev.2) and read the [online player guide](https://jkswoods.github.io/foundry-floor/). Start with [installation](docs/installation.md), [recipes](docs/recipes.md) and [architecture](docs/features/architecture.md).
+![Foundry Floor — Build the factory around your machines](docs/assets/brand/banner.svg)
+
+**Build the factory around your machines.** Original factory architecture and mechanical blocks for **Hytale 0.7.3 / Java 25**, with a shared steel, brass and safety-yellow palette.
+
+![Foundry Floor assembly with steel floors, elevated catwalks, stairs, columns, shutter and Foundry Workbench](docs/assets/models/factory-assembly.png)
+
+*Original model render showing the factory building pieces together.*
+
+- A dedicated Foundry Workbench and **27 factory blocks**.
+- Connected steel grates, catwalks, wider stairs and safety edges.
+- Walls, roofs, windows and bolted steel frames for the factory shell.
+- Doors, shutters, a service hatch and industrial lighting.
+- Vents, utility ducts and cargo pallets to finish the workshop.
+
+Craft the bench at a stock Workbench with **8 Iron Ingots and 4 Copper Ingots**. Its five tabs group Floors, Walkways, Structure, Fixtures and Mechanisms. Ducts and vents are architectural props.
+
+[Install](docs/installation.md) · [Your first factory bay](docs/getting-started.md) · [Recipes](docs/recipes.md) · [Architecture](docs/features/architecture.md) · [Mechanisms](docs/features/mechanisms.md)
+
+## The Foundry Workbench in Hytale
+
+![Foundry Workbench with its steel worktop, tool board, drawer and vice, captured in Hytale](docs/assets/native/foundry-workbench.png)
+
+*Native capture from the earlier 0.1.0 development build on Hytale 0.7.2. The workbench uses the same original factory design; current 0.7.3 guide captures are still pending.*
 
 ## Development status
 
@@ -28,7 +50,7 @@ The build runs focused core and pinned native collision checks, compiles the plu
 
 Runtime sound families were generated through the connected ElevenLabs Sound Effects workflow. Sanitized selected-take metadata is in `assets/SOURCE-AUDIO.json`; raw recordings and private development evidence are excluded from the repository.
 
-Install the pinned documentation dependency with `python3 -m pip install -r requirements-docs.txt`, then run `bash tools/build_player_guide.sh`. Set `FF_DOCS_PYTHON` to select an existing Python environment. Output is `build/player-site/`. The branded guide includes installation, recipes, connections, controls, ownership and known limits. The online guide is published at https://jkswoods.github.io/foundry-floor/ through GitHub Pages. Its workflow builds docs pull requests without deploying, and publishes from `main` on manual dispatch. The illustrations are original model renders; gameplay screenshots have not been added.
+Install the pinned documentation dependency with `python3 -m pip install -r requirements-docs.txt`, then run `bash tools/build_player_guide.sh`. Set `FF_DOCS_PYTHON` to select an existing Python environment. Output is `build/player-site/`. The branded guide includes installation, recipes, connections, controls, ownership and known limits. The online guide is published at https://jkswoods.github.io/foundry-floor/ through GitHub Pages. Its workflow builds docs pull requests without deploying, and publishes from `main` on manual dispatch. The guide uses original model renders; this README also includes the earlier native Workbench capture above.
 
 `python3 tools/package_player_guide.py --public-alpha` creates a deployable guide archive. `python3 tools/package_authoring.py` creates a separate editable model kit. These ZIPs are not game mods. `python3 tools/package_development.py --source-commit COMMIT_SHA --version 0.2.0-dev.2 --public-alpha` bundles the reviewed runtime and guide with checksums.
 
