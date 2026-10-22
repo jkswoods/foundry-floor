@@ -232,24 +232,15 @@ def export_model(m):
         parent=groups.get(p['group']);local=[c[i]-m['groups'][p['group']][i] for i in range(3)] if parent else c
         n=node(p['name'],local,shape)
         if p.get('rotation'):n['orientation']=q(p['rotation']['axis'],p['rotation']['angle'])
-        # Give animated translucent geometry its own shaped animation node.
-        # The alpha pass must receive the hinge transform directly rather than
-        # relying on a shapeless ancestor used by the opaque door mesh.
-        direct=p['material']=='glass' and parent and p['group'] in targets
-        if direct:
-            n['position']=v(m['groups'][p['group']]);shape['offset']=v(local)
-            nodes.append(n);targets[p['name']]=copy.deepcopy(targets[p['group']])
-            bbgroups[p['name']]=dict(name=p['name'],origin=m['groups'][p['group']],rotation=[0,0,0],uuid=uid(m['id']+'/'+p['name']),children=[])
-        else:(parent['children'] if parent else nodes).append(n)
+        (parent['children'] if parent else nodes).append(n)
         faces={}
         for f in ['north','south','west','east','up','down']:
             w,h=(s[0],s[2]) if f in ['up','down'] else (s[2],s[1]) if f in ['west','east'] else (s[0],s[1])
             faces[f]=dict(uv=[ox,oy,ox+w,oy+h],texture=0)
         e=dict(name=p['name'],type='cube',uuid=uid(m['id']+'/'+p['name']),**{'from':[c[i]-s[i]/2 for i in range(3)],'to':[c[i]+s[i]/2 for i in range(3)]},origin=m['groups'].get(p['group'],c),rotation=[0,0,0],box_uv=False,faces=faces)
-        if direct:e['uuid']=uid(m['id']+'/'+p['name']+'/shape')
         elements.append(e)
         if p.get('rotation'):e['rotation']=[c*p['rotation']['angle'] for c in p['rotation']['axis']]
-        if parent:bbgroups[p['name'] if direct else p['group']]['children'].append(e['uuid'])
+        if parent:bbgroups[p['group']]['children'].append(e['uuid'])
     runtime=dict(lod='auto',nodes=nodes)
     write(COMMON/'Blocks/FoundryFloor'/(m['id']+'.blockymodel'),runtime)
     outliner=[g for g in bbgroups.values()]+[e['uuid'] for e,p in zip(elements,m['parts']) if not p['group']]
@@ -291,7 +282,7 @@ def transform(p,m,amount):
     size=[abs(co)*sx+abs(si)*sz,sy,abs(si)*sx+abs(co)*sz] if t['axis'][1] else [sx,abs(co)*sy+abs(si)*sz,abs(si)*sy+abs(co)*sz]
     return [rot[i]+pivot[i] for i in range(3)],size
 
-def hitboxes(m,opened=False):
+def hitboxes(m,opened=False,amount=None):
     # Grate tops deliberately collide as decks: tiny visual gaps do not trap feet.
     base=m['id'].split('_Connect',1)[0]
     if base in ['FF_FloorPlate','FF_HazardFloor','FF_ConcreteFloor','FF_FactoryRoof']:
@@ -302,11 +293,39 @@ def hitboxes(m,opened=False):
     else:ps=m['parts']
     boxes=[]
     for p in ps:
-        c,s=transform(p,m,1 if opened else 0)
+        c,s=transform(p,m,(1 if opened else 0) if amount is None else amount)
         lo=[(c[i]-s[i]/2)/32+(0 if i==1 else .5) for i in range(3)]
         hi=[(c[i]+s[i]/2)/32+(0 if i==1 else .5) for i in range(3)]
         boxes.append(dict(Min=dict(zip('XYZ',lo)),Max=dict(zip('XYZ',hi))))
     return dict(Boxes=boxes)
+
+def export_door_poses(m,item):
+    """Static whole-door poses keep native translucent and opaque passes together.
+
+    Playback is a bounded server state sequence; no client alpha animation is
+    required. Editable sources retain the original hinge animation.
+    """
+    path=COMMON/'Blocks/FoundryFloor'/f"{m['id']}.blockymodel"
+    def shapes(nodes):
+        for n in nodes:
+            if n.get('shape',{}).get('type')=='box':yield n['name'],n['shape']
+            yield from shapes(n.get('children',[]))
+    source=dict(shapes(json.loads(path.read_text())['nodes']));defs={}
+    for step in range(17):
+        amount=step/16;nodes=[]
+        for p in m['parts']:
+            shape=copy.deepcopy(source[p['name']]);shape['offset']=v([0,0,0])
+            c,_=transform(p,m,amount);n=node(p['name'],c,shape)
+            target=(m['motion'] or {}).get('targets',{}).get(p['group'])
+            if target:n['orientation']=q(target['axis'],target['angle']*amount)
+            nodes.append(n)
+        name=f"{m['id']}_Pose{step:02d}"
+        ref=f'Blocks/FoundryFloor/DoorPoses/{name}.blockymodel'
+        write(COMMON/ref,dict(lod='auto',nodes=nodes))
+        write(SERVER/'Item/Block/Hitboxes/FoundryFloor'/f'{name}.json',hitboxes(m,amount=amount))
+        defs[f'DoorPose{step:02d}']=dict(CustomModel=ref,HitboxType=name)
+    defs['Closed']=copy.deepcopy(defs['DoorPose00']);defs['Open']=copy.deepcopy(defs['DoorPose16']);defs['Open']['SoundOcclusionOpacity']=0
+    item['BlockType']['State']=dict(Definitions=defs)
 
 def building_support(mid):
     # DrawType=Model does not inherit the support faces of a solid cube.
@@ -354,6 +373,7 @@ def export_item(m):
         b['Bench']=dict(Type='Crafting',Id='FoundryFloor',Categories=[dict(Id='Foundry_'+c,Icon='Icons/CraftingCategories/FoundryFloor/'+icon+'.png',Name='server.foundryFloor.bench.'+c) for c,icon in icons.items()],TierLevels=[dict(CraftingTimeReductionModifier=0)],LocalOpenSoundEventId='FF_SFX_bench_tools_ui',LocalCloseSoundEventId='FF_SFX_bench_tools_ui',CompletedSoundEventId='FF_SFX_bench_tools')
         b['BlockEntity']=dict(Components=dict(BenchBlock={}))
     else:item['Recipe']['BenchRequirement']=[dict(Type='Crafting',Id='FoundryFloor',Categories=['Foundry_'+category[m['category']]])]
+    if mid=='FF_PersonnelDoor':export_door_poses(m,item)
     write(SERVER/'Item/Items/FoundryFloor'/(mid+'.json'),item)
 
 def main():

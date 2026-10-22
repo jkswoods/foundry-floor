@@ -30,34 +30,6 @@
       "shapeStretch": [],
       "shapeVisible": [],
       "shapeUvOffset": []
-    },
-    "WiredWindow": {
-      "position": [],
-      "orientation": [
-        {
-          "time": 0,
-          "delta": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0,
-            "w": 1.0
-          },
-          "interpolationType": "smooth"
-        },
-        {
-          "time": 48,
-          "delta": {
-            "x": -0.0,
-            "y": -0.7071067811865475,
-            "z": -0.0,
-            "w": 0.7071067811865476
-          },
-          "interpolationType": "smooth"
-        }
-      ],
-      "shapeStretch": [],
-      "shapeVisible": [],
-      "shapeUvOffset": []
     }
   }
 }

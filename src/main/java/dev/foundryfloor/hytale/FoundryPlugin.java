@@ -52,7 +52,8 @@ public final class FoundryPlugin extends JavaPlugin {
             BlockType base=BlockType.getAssetMap().getAsset(claim.itemId()),nextType=base.getBlockForState(next);
             if(!NativeBlocks.clear(w,NativeBlocks.placedFootprint(nextType,p,claim.rotation()),p))throw new IllegalArgumentException("Clear the door or gate swing space first");
             if(!lamp&&entityInClosingShape(store,claim,nextType))throw new IllegalArgumentException("Someone is in the mechanism's movement space");
-            if(!NativeBlocks.state(w,claim,next))throw new IllegalStateException("Native state change could not be confirmed");
+            if(claim.itemId().equals("FF_PersonnelDoor"))NativeDoorMotion.start(store,claim,next);
+            else if(!NativeBlocks.state(w,claim,next))throw new IllegalStateException("Native state change could not be confirmed");
             state.registry.state(p,player.getUuid(),next,0);state.cooldowns.put(p,now+(claim.itemId().equals("FF_RollerShutter")?2_700_000_000L:1_000_000_000L));
             // Playback is requested only after the native state and owner record commit.
             String cue=claim.itemId().equals("FF_RollerShutter")?"shutter_travel":"mechanical_latch";play(store,p,cue);
@@ -75,7 +76,7 @@ public final class FoundryPlugin extends JavaPlugin {
         if(map.getAsset(id)!=null)SoundUtil.playSoundEvent3d(map.getIndex(id),com.hypixel.hytale.protocol.SoundCategory.SFX,p.x()+.5,p.y()+.5,p.z()+.5,store);
     }
     static final class Tick extends TickingSystem<EntityStore> {
-        @Override public void tick(float dt,int index,Store<EntityStore> store) { var s=data(store);int n=Math.min(256,s.confirmedActions.size());for(int i=0;i<n;i++)s.confirmedActions.remove().run();NativeRetiredLift.reconcile(store);NativeConnections.tick(store); }
+        @Override public void tick(float dt,int index,Store<EntityStore> store) { var s=data(store);int n=Math.min(256,s.confirmedActions.size());for(int i=0;i<n;i++)s.confirmedActions.remove().run();NativeRetiredLift.reconcile(store);NativeDoorMotion.tick(store);NativeConnections.tick(store); }
     }
     static final class Placement extends EntityEventSystem<EntityStore,PlaceBlockEvent> {
         Placement() { super(PlaceBlockEvent.class); }
@@ -108,7 +109,7 @@ public final class FoundryPlugin extends JavaPlugin {
             if(!p.equals(claim.origin())) { event.setCancelled(true);message(player,"Dismantle the retired elevator at its controller pedestal");return; }
             if(!claim.owner().equals(player.getUuid())||s.confirmedActions.size()>=256) { event.setCancelled(true);message(player,"Only the owner may remove this assembly");return; }
             if(claim.itemId().equals("FF_FreightLift")&&!NativeRetiredLift.removalReady(w,claim)) { event.setCancelled(true);message(player,"Load the retired cab before dismantling its controller");return; }
-            s.confirmedActions.add(()->{if(!claim.itemId().equals(NativeBlocks.itemId(NativeBlocks.block(w,p)))) { if(claim.itemId().equals("FF_FreightLift"))NativeRetiredLift.removeCab(w,claim);s.registry.remove(p,player.getUuid());NativeConnections.changed(s,p);s.cooldowns.remove(p);s.retiredReconciled.remove(p); }});
+            s.confirmedActions.add(()->{if(!claim.itemId().equals(NativeBlocks.itemId(NativeBlocks.block(w,p)))) { if(claim.itemId().equals("FF_FreightLift"))NativeRetiredLift.removeCab(w,claim);s.registry.remove(p,player.getUuid());NativeConnections.changed(s,p);s.cooldowns.remove(p);s.retiredReconciled.remove(p);s.doorMotions.remove(p); }});
         }
     }
 }

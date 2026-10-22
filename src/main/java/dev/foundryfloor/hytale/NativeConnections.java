@@ -25,6 +25,7 @@ final class NativeConnections {
             if(data.reconciledConnections.contains(c.origin())||NativeBlocks.section(world,c.origin())==null)continue;
             if(!c.itemId().equals(NativeBlocks.itemId(NativeBlocks.block(world,c.origin()))))continue;
             if(!NativeBlocks.repairLegacyFillers(world,data.registry,c))continue;
+            if(c.itemId().equals("FF_PersonnelDoor")&&!data.doorMotions.containsKey(c.origin())&&!NativeDoorMotion.restore(store,c))continue;
             // Old development saves reserved a door's open space and oversized decoration.
             // Recompute against the current base asset once its actual block is loaded.
             if(!c.itemId().equals("FF_FreightLift"))data.registry.footprint(c.origin(),c.owner(),NativeBlocks.footprint(c.itemId(),c.origin(),c.rotation()));

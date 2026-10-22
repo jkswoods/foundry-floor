@@ -1750,6 +1750,119 @@
           }
         },
         {
+          "id": "993d54d8-a763-5787-bcc6-fdc4c415e04c",
+          "name": "WiredWindow",
+          "position": {
+            "x": 12,
+            "y": 12,
+            "z": 0
+          },
+          "orientation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 1.0
+          },
+          "shape": {
+            "type": "box",
+            "offset": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "stretch": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "settings": {
+              "size": {
+                "x": 14,
+                "y": 14,
+                "z": 0.5
+              }
+            },
+            "unwrapMode": "custom",
+            "visible": true,
+            "doubleSided": false,
+            "shadingMode": "standard",
+            "textureLayout": {
+              "front": {
+                "offset": {
+                  "x": 0,
+                  "y": 384
+                },
+                "mirror": {
+                  "x": false,
+                  "y": false
+                },
+                "angle": 0,
+                "transparent": true
+              },
+              "back": {
+                "offset": {
+                  "x": 0,
+                  "y": 384
+                },
+                "mirror": {
+                  "x": false,
+                  "y": false
+                },
+                "angle": 0,
+                "transparent": true
+              },
+              "left": {
+                "offset": {
+                  "x": 0,
+                  "y": 384
+                },
+                "mirror": {
+                  "x": false,
+                  "y": false
+                },
+                "angle": 0,
+                "transparent": true
+              },
+              "right": {
+                "offset": {
+                  "x": 0,
+                  "y": 384
+                },
+                "mirror": {
+                  "x": false,
+                  "y": false
+                },
+                "angle": 0,
+                "transparent": true
+              },
+              "top": {
+                "offset": {
+                  "x": 0,
+                  "y": 384
+                },
+                "mirror": {
+                  "x": false,
+                  "y": false
+                },
+                "angle": 0,
+                "transparent": true
+              },
+              "bottom": {
+                "offset": {
+                  "x": 0,
+                  "y": 384
+                },
+                "mirror": {
+                  "x": false,
+                  "y": false
+                },
+                "angle": 0,
+                "transparent": true
+              }
+            }
+          }
+        },
+        {
           "id": "a72ca96c-44b5-5132-89f0-0222fcc1115b",
           "name": "WindowWireX",
           "position": {
@@ -2282,119 +2395,6 @@
               "y": false
             },
             "angle": 0
-          }
-        }
-      }
-    },
-    {
-      "id": "993d54d8-a763-5787-bcc6-fdc4c415e04c",
-      "name": "WiredWindow",
-      "position": {
-        "x": -12,
-        "y": 31,
-        "z": 0
-      },
-      "orientation": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0,
-        "w": 1.0
-      },
-      "shape": {
-        "type": "box",
-        "offset": {
-          "x": 12,
-          "y": 12,
-          "z": 0
-        },
-        "stretch": {
-          "x": 1,
-          "y": 1,
-          "z": 1
-        },
-        "settings": {
-          "size": {
-            "x": 14,
-            "y": 14,
-            "z": 0.5
-          }
-        },
-        "unwrapMode": "custom",
-        "visible": true,
-        "doubleSided": false,
-        "shadingMode": "standard",
-        "textureLayout": {
-          "front": {
-            "offset": {
-              "x": 0,
-              "y": 384
-            },
-            "mirror": {
-              "x": false,
-              "y": false
-            },
-            "angle": 0,
-            "transparent": true
-          },
-          "back": {
-            "offset": {
-              "x": 0,
-              "y": 384
-            },
-            "mirror": {
-              "x": false,
-              "y": false
-            },
-            "angle": 0,
-            "transparent": true
-          },
-          "left": {
-            "offset": {
-              "x": 0,
-              "y": 384
-            },
-            "mirror": {
-              "x": false,
-              "y": false
-            },
-            "angle": 0,
-            "transparent": true
-          },
-          "right": {
-            "offset": {
-              "x": 0,
-              "y": 384
-            },
-            "mirror": {
-              "x": false,
-              "y": false
-            },
-            "angle": 0,
-            "transparent": true
-          },
-          "top": {
-            "offset": {
-              "x": 0,
-              "y": 384
-            },
-            "mirror": {
-              "x": false,
-              "y": false
-            },
-            "angle": 0,
-            "transparent": true
-          },
-          "bottom": {
-            "offset": {
-              "x": 0,
-              "y": 384
-            },
-            "mirror": {
-              "x": false,
-              "y": false
-            },
-            "angle": 0,
-            "transparent": true
           }
         }
       }

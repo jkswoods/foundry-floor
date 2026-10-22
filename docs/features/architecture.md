@@ -18,6 +18,8 @@ Grated decks use continuous walking collision so feet cannot fall into the small
 
 The draft repair for issues #1 and #2 adds native support faces to structural floors, walls, roofs, window frames and column tops. Floors and open catwalk decks support workbenches and other furniture. Give a wide bench enough neighbouring floor cells and clear headroom; rails still occupy their real space.
 
+If an older safety-edge floor refused a workbench, load the floor and its neighbours briefly after updating. The repair clears obsolete invisible upper cells without requiring you to dismantle the floor.
+
 Thin catwalks now occupy the upper one-eighth of their block cell, flush with full-height floors and drain grates. Previously placed catwalk decks move upward within their existing cells after this asset update. Check existing stair landings and adjust their placement if necessary. Low pallets, loose ducts and rails remain props rather than full-height foundation blocks. The draft's native appearance and placement are awaiting player feedback.
 
 ## Walls, windows and roof

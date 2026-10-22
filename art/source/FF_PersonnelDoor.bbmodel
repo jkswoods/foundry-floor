@@ -1571,7 +1571,7 @@
     {
       "name": "WiredWindow",
       "type": "cube",
-      "uuid": "f91ea21c-7ae0-5aa5-8f6a-9443e364bc0f",
+      "uuid": "cd869c14-8a06-5733-8598-d1a8c45612f5",
       "from": [
         -7.0,
         36.0,
@@ -1846,25 +1846,9 @@
         "59c85fcf-f580-5ffd-b31c-f0b6bf1d820a",
         "de0c5b9b-5261-5dc8-ac10-69976559b8f5",
         "c755bffb-4289-5098-ba47-2261bb328b1a",
+        "cd869c14-8a06-5733-8598-d1a8c45612f5",
         "e8798644-9655-5c00-b8ae-4c9118ff4597",
         "d0294173-0343-524c-a5ab-8427dd06bede"
-      ]
-    },
-    {
-      "name": "WiredWindow",
-      "origin": [
-        -12,
-        31,
-        0
-      ],
-      "rotation": [
-        0,
-        0,
-        0
-      ],
-      "uuid": "cd869c14-8a06-5733-8598-d1a8c45612f5",
-      "children": [
-        "f91ea21c-7ae0-5aa5-8f6a-9443e364bc0f"
       ]
     },
     "e9e943f7-56c2-5b13-b57f-7f5d10e398e9",
@@ -1923,38 +1907,6 @@
               "uuid": "f5f4d13d-be9e-52b0-a2aa-f9d8c1c3818f"
             }
           ]
-        },
-        "cd869c14-8a06-5733-8598-d1a8c45612f5": {
-          "name": "WiredWindow",
-          "type": "bone",
-          "keyframes": [
-            {
-              "channel": "rotation",
-              "time": 0,
-              "interpolation": "linear",
-              "data_points": [
-                {
-                  "x": "0",
-                  "y": "0",
-                  "z": "0"
-                }
-              ],
-              "uuid": "8617a11f-db4c-56e1-8c23-c4e66353c07c"
-            },
-            {
-              "channel": "rotation",
-              "time": 0.8,
-              "interpolation": "linear",
-              "data_points": [
-                {
-                  "x": "0",
-                  "y": "-90",
-                  "z": "0"
-                }
-              ],
-              "uuid": "cb7ca230-9d6d-55b2-9511-610cbfa36521"
-            }
-          ]
         }
       }
     },
@@ -1995,38 +1947,6 @@
                 }
               ],
               "uuid": "b360d88e-a616-57f0-85ce-141e01f5e6b4"
-            }
-          ]
-        },
-        "cd869c14-8a06-5733-8598-d1a8c45612f5": {
-          "name": "WiredWindow",
-          "type": "bone",
-          "keyframes": [
-            {
-              "channel": "rotation",
-              "time": 0,
-              "interpolation": "linear",
-              "data_points": [
-                {
-                  "x": "0",
-                  "y": "-90",
-                  "z": "0"
-                }
-              ],
-              "uuid": "6d8873c8-bac9-5963-bfcc-ca5e981235d8"
-            },
-            {
-              "channel": "rotation",
-              "time": 0.8,
-              "interpolation": "linear",
-              "data_points": [
-                {
-                  "x": "0",
-                  "y": "0",
-                  "z": "0"
-                }
-              ],
-              "uuid": "36d0b47e-c1e3-5df4-9b47-6a1de9f72965"
             }
           ]
         }
