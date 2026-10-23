@@ -1,6 +1,6 @@
 # Foundry Floor
 
-![Foundry Floor — build the factory around your machines](assets/brand/banner.svg)
+![Foundry Floor — build the factory around your machines](assets/brand/banner-cinematic-v2.png)
 
 Build industrial factories with modular floors, connected catwalks, structural blocks, lighting and working doors and shutters.
 

@@ -2,7 +2,7 @@
 
 [Player guide](https://jkswoods.github.io/foundry-floor/) · [Download the alpha](https://github.com/jkswoods/foundry-floor/releases/tag/v0.2.0-dev.2)
 
-![Foundry Floor — Build the factory around your machines](docs/assets/brand/banner.svg)
+![Foundry Floor — Build the factory around your machines](docs/assets/brand/banner-cinematic-v2.png)
 
 Build industrial factories with modular floors, connected catwalks, structural blocks, lighting and working doors and shutters.
 
