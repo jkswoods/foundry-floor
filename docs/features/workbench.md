@@ -6,6 +6,10 @@ The Foundry Workbench is a separate crafting bench for the factory collection. I
 
 *Original model render. A current-build native crafting screenshot is still pending.*
 
+![The Foundry Workbench captured in Hytale](../assets/native/foundry-workbench.png)
+
+*Earlier 0.1.0 / Hytale 0.7.2 native design view. A current 0.7.3 crafting-UI capture is still pending.*
+
 ## Make the bench
 
 At a standard **Workbench**, use **8 Iron Ingots + 4 Copper Ingots** to craft **1 Foundry Workbench**. Its five tabs offer the 27 factory recipes. Opening the bench, crafting and removal were included in player testing.

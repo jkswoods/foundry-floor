@@ -1,9 +1,15 @@
-# Gallery
+# Screenshots and model renders
 
-These are **original model renders**, not native gameplay screenshots. The alpha guide currently uses model renders; in-world and crafting screenshots will be added separately.
+## Native Workbench view
 
-![Original Foundry Workbench model](assets/models/FF_FoundryBench.png)
+![Foundry Workbench in Hytale](assets/native/foundry-workbench.png)
 
-*The steel worktop, vice, drawer and tool board share the factory palette.*
+*Earlier native design view: Foundry Floor 0.1.0 on Hytale 0.7.2. This does not verify the current 0.7.3 build. New in-world, crafting-UI and mechanism captures are still pending.*
 
-Native images will also appear beside the [workbench](features/workbench.md) and [mechanism](features/mechanisms.md) instructions when clean captures are available.
+## The collection together
+
+![Steel floors, raised catwalks, stairs, columns, shutter and workbench](assets/models/factory-assembly.png)
+
+*Original model render. It illustrates the collection's design and is not a gameplay screenshot.*
+
+The [Workbench guide](features/workbench.md) and [mechanism guide](features/mechanisms.md) explain their actual recipes and controls.

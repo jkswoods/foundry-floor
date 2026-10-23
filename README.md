@@ -4,27 +4,26 @@
 
 ![Foundry Floor — Build the factory around your machines](docs/assets/brand/banner.svg)
 
-**Build the factory around your machines.** Original factory architecture and mechanical blocks for **Hytale 0.7.3 / Java 25**, with a shared steel, brass and safety-yellow palette.
+Build industrial factories with modular floors, connected catwalks, structural blocks, lighting and working doors and shutters.
 
-![Foundry Floor assembly with steel floors, elevated catwalks, stairs, columns, shutter and Foundry Workbench](docs/assets/models/factory-assembly.png)
+![The Foundry Workbench with its steel worktop, tool board and vice in Hytale](docs/assets/native/foundry-workbench.png)
 
-*Original model render showing the factory building pieces together.*
+*Earlier native design view: Foundry Floor 0.1.0 on Hytale 0.7.2. Current 0.7.3 world and crafting captures are still pending.*
 
-- A dedicated Foundry Workbench and **27 factory blocks**.
+- A dedicated **Foundry Workbench** and **27 factory blocks**.
 - Connected steel grates, catwalks, wider stairs and safety edges.
-- Walls, roofs, windows and bolted steel frames for the factory shell.
-- Doors, shutters, a service hatch and industrial lighting.
-- Vents, utility ducts and cargo pallets to finish the workshop.
+- Steel frames, walls, roofs and windows for the factory shell.
+- Doors, shutters, a service hatch and guarded industrial lights.
 
 Craft the bench at a stock Workbench with **8 Iron Ingots and 4 Copper Ingots**. Its five tabs group Floors, Walkways, Structure, Fixtures and Mechanisms. Ducts and vents are architectural props.
 
-[Install](docs/installation.md) · [Your first factory bay](docs/getting-started.md) · [Recipes](docs/recipes.md) · [Architecture](docs/features/architecture.md) · [Mechanisms](docs/features/mechanisms.md)
+[Install](docs/installation.md) · [Build your first bay](docs/getting-started.md) · [Recipes](docs/recipes.md) · [Mechanisms](docs/features/mechanisms.md)
 
-## The Foundry Workbench in Hytale
+## Build at factory scale
 
-![Foundry Workbench with its steel worktop, tool board, drawer and vice, captured in Hytale](docs/assets/native/foundry-workbench.png)
+![Factory assembly combining floors, catwalks, stairs, columns, shutter and workbench](docs/assets/models/factory-assembly.png)
 
-*Native capture from the earlier 0.1.0 development build on Hytale 0.7.2. The workbench uses the same original factory design; current 0.7.3 guide captures are still pending.*
+*Original model render of the building collection. It is separate from the native gameplay capture above.*
 
 ## Development status
 

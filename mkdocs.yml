@@ -16,6 +16,7 @@ markdown_extensions:
   - tables
   - fenced_code
 extra_css:
+  - assets/publication.css
   - assets/brand/foundry.css
 exclude_docs: |
   /CATALOG.md
