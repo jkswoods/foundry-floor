@@ -1,6 +1,6 @@
 # Foundry Floor
 
-[Player guide](https://jkswoods.github.io/foundry-floor/) · [Download the alpha](https://github.com/jkswoods/foundry-floor/releases/tag/v0.2.0-dev.2)
+[Player guide](https://jkswoods.github.io/foundry-floor/) · [Download the alpha](https://github.com/jkswoods/foundry-floor/releases)
 
 ![Foundry Floor — Build the factory around your machines](docs/assets/brand/banner-cinematic-v2.png)
 
@@ -8,7 +8,7 @@ Build industrial factories with modular floors, connected catwalks, structural b
 
 ![The Foundry Workbench with its steel worktop, tool board and vice in Hytale](docs/assets/native/foundry-workbench.png)
 
-*Earlier native design view: Foundry Floor 0.1.0 on Hytale 0.7.2. Current 0.7.3 world and crafting captures are still pending.*
+*Earlier native design view: Foundry Floor on Hytale 0.7.2. Current 0.7.3 world and crafting captures are still pending.*
 
 - A dedicated **Foundry Workbench** and **27 factory blocks**.
 - Connected steel grates, catwalks, wider stairs and safety edges.
@@ -27,11 +27,11 @@ Craft the bench at a stock Workbench with **8 Iron Ingots and 4 Copper Ingots**.
 
 ## Development status
 
-This **0.2.0 public alpha** targets Hytale 0.7.3 / Java 25. Player testing covered crafting, placement, mechanical controls, normal save/reload, sounds and multiplayer. Automated checks cover recipe registration, collision bounds and older-world compatibility. Keep matching world/player backups; this prerelease does not promise compatibility with other game versions or every mod combination.
+This development support line targets Hytale 0.7 / Java 25. Player testing covered crafting, placement, mechanical controls, normal save/reload, sounds and multiplayer. Automated checks cover recipe registration, collision bounds and older-world compatibility. Keep matching world/player backups; this prerelease does not promise compatibility with other game versions or every mod combination.
 
 Elevators, guide extensions and call panels are deferred to a future release. Older placed parts remain inert and owner-dismantleable, with no controls, passenger movement or empty-shaft reservation. They cannot be crafted or placed again.
 
-The earlier 0.1.0 candidate targets Hytale 0.7.2. Use the 0.2.0 downloads for 0.7.3. No redistribution license has been selected; third-party notices remain in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+Choose a download whose declared game-patch requirements include your installed Hytale version. No redistribution license has been selected; third-party notices remain in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
 ## Build
 
@@ -41,7 +41,7 @@ Supply a separately installed JDK 25 and the official Hytale 0.7.3 server JAR. N
 FF_JAVA_HOME=/path/to/jdk25 FF_SERVER_JAR=/path/to/HytaleServer.jar bash tools/build.sh
 ```
 
-The build runs focused core and pinned native collision checks, compiles the plugin and writes `build/libs/FoundryFloor-0.2.0-dev.jar` with deterministic ZIP ordering/timestamps. The checked-in native assets are sufficient for the main build; it does not regenerate audio. Run `bash tools/build.sh --core` for the core tests alone.
+The build runs focused core and pinned native collision checks, compiles the plugin and writes the mod JAR under `build/libs/`, printing its filename with deterministic ZIP ordering/timestamps. The checked-in native assets are sufficient for the main build; it does not regenerate audio. Run `bash tools/build.sh --core` for the core tests alone.
 
 ## Authoring and documentation
 
@@ -53,7 +53,7 @@ The [versioned player guide](https://jkswoods.github.io/foundry-floor/) is maint
 
 `python3 tools/package_authoring.py` creates the separate editable model kit. The legacy development-bundle helper accepts an independently built guide archive from `docs`. These ZIPs are not game mods.
 
-Back up worlds and player data with matching JARs. The 0.2.0 reader migrates older ownership records and retains earlier FFR1–FFR4 records, including retired content. To downgrade, restore the matching complete backup rather than changing the JAR alone.
+Back up worlds and player data with matching JARs. The support branch’s reader migrates older ownership records and retains earlier FFR1–FFR4 records, including retired content. To downgrade, restore the matching complete backup rather than changing the JAR alone.
 
 ## Compatibility and builds
 
@@ -63,3 +63,5 @@ Current source targets Hytale `>=0.7.3 <0.8.0` and uses the `hytale0.7` support 
 
 See [the contribution guide](CONTRIBUTING.md) for feature and bug-fix PR targets.
 Maintainers handle forward/back ports, and support-branch PRs require owner approval.
+
+The player guide follows the Hytale support line and is updated independently of mod releases. Select downloads by their game compatibility and read the selected file’s release notes for included changes and artifact checksums.
