@@ -2,3 +2,10 @@ build/
 .cache/
 __pycache__/
 .publication-policy.json
+
+candidate/
+*.pyc
+cf-*.json
+cf-request.env
+candidate-run.json
+curseforge-upload.json

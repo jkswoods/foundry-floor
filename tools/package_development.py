@@ -6,6 +6,7 @@ import hashlib
 import json
 import re
 import zipfile
+from release_pipeline import config, filename
 
 ROOT = Path(__file__).resolve().parents[1]
 STAMP = (2026, 10, 21, 0, 0, 0)
@@ -28,15 +29,15 @@ def read_archive(path):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--source-commit', required=True, help='Full reviewed Git commit for the source and guide')
-    parser.add_argument('--version', default='0.2.0-dev.1')
+    parser.add_argument('--version', default=config(ROOT/'release.json')['version'])
     parser.add_argument('--public-alpha',action='store_true',help='Package the player-approved public alpha profile')
     args = parser.parse_args()
     if not re.fullmatch(r'[0-9a-f]{40}', args.source_commit):
         parser.error('Use a full lowercase Git commit SHA')
-    if not re.fullmatch(r'0\.2\.0-dev\.[1-9][0-9]*', args.version):
-        parser.error('Use a 0.2.0-dev.N candidate version')
+    if args.version != config(ROOT/'release.json')['version']:
+        parser.error('Bundle version must match the manifest/release configuration')
 
-    runtime = ROOT / 'build/libs/FoundryFloor-0.2.0-dev.jar'
+    runtime = ROOT / 'build/libs' / filename(config(ROOT/'release.json'))
     guide = ROOT / 'build/FoundryFloor-0.2.0-player-guide-preview.zip'
     authoring = ROOT / 'build/FoundryFloor-0.2.0-authoring-kit.zip'
     for path in [runtime, guide, authoring]:
@@ -48,7 +49,7 @@ def main():
     if any(n.endswith('.class') and not n.startswith('dev/foundryfloor/') for n in jar_members):
         raise SystemExit('Unexpected runtime class')
     manifest = json.loads(jar_members['manifest.json'])
-    if manifest.get('Main') != 'dev.foundryfloor.hytale.FoundryPlugin' or manifest.get('ServerVersion') != '=0.7.3':
+    if manifest.get('Main') != 'dev.foundryfloor.hytale.FoundryPlugin' or manifest.get('ServerVersion') != config(ROOT/'release.json')['serverVersion']:
         raise SystemExit('Unexpected runtime compatibility or entry point')
     guide_members = read_archive(guide)
     if 'site/index.html' not in guide_members or 'DOCUMENTATION-NOTICES.md' not in guide_members:
@@ -74,7 +75,7 @@ experimental mechanical controls for Hytale 0.7.3 / Java 25.
 
 INSTALL
 Back up the complete test world and player data with the matching JARs.
-Close the world/server normally. Install only FoundryFloor-0.2.0-dev.jar in
+Close the world/server normally. Install only {runtime.name} in
 UserData/Mods (or the server mods directory), then enable FoundryFloor in a
 separate test world. Keep one version installed. Do not install these ZIPs
 as game mods. The included player-guide archive contains installation,
@@ -90,7 +91,7 @@ listening and real multiplayer acceptance are pending.
 This candidate is not the final tested development release.
 
 CONTENTS
-FoundryFloor-0.2.0-dev.jar is the gameplay plugin and original runtime assets.
+{runtime.name} is the gameplay plugin and original runtime assets.
 FoundryFloor-0.2.0-player-guide-preview.zip is the built player guide.
 BUILD.json identifies the reviewed source and exact artifact hashes.
 SHA256SUMS.txt checks every other file in this archive.
@@ -113,7 +114,7 @@ The collection includes the Foundry Workbench and27 factory recipes.
 
 INSTALL
 Back up your world and player files with matching JARs. Close the world/server,
-then place FoundryFloor-0.2.0-dev.jar in UserData/Mods (or server mods directory).
+then place {runtime.name} in UserData/Mods (or server mods directory).
 Keep only one Foundry JAR installed and enable the mod for your world.
 The other ZIP files are documentation/model sources, not installable game mods.
 

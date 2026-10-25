@@ -2,8 +2,9 @@
 """Deterministic mod-only JAR: classes plus original native assets; no game binaries or reports."""
 from pathlib import Path
 import hashlib,json,zipfile
+from release_pipeline import config, filename
 ROOT=Path(__file__).resolve().parents[1]
-out=ROOT/'build/libs/FoundryFloor-0.2.0-dev.jar'
+out=ROOT/'build/libs'/filename(config(ROOT/'release.json'))
 entries={}
 for folder in [ROOT/'build/classes',ROOT/'assets']:
     for p in folder.rglob('*'):

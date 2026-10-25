@@ -1,9 +1,9 @@
 {
   "Group": "FoundryFloor",
   "Name": "FoundryFloor",
-  "Version": "0.2.0",
+  "Version": "0.2.1",
   "Description": "Original modular factory architecture, crafting and mechanical controls. Development alpha.",
   "Main": "dev.foundryfloor.hytale.FoundryPlugin",
-  "ServerVersion": "=0.7.3",
+  "ServerVersion": ">=0.7.3 <0.8.0",
   "IncludesAssetPack": true
 }

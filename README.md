@@ -54,3 +54,7 @@ Install the pinned documentation dependency with `python3 -m pip install -r requ
 `python3 tools/package_player_guide.py --public-alpha` creates a deployable guide archive. `python3 tools/package_authoring.py` creates a separate editable model kit. These ZIPs are not game mods. `python3 tools/package_development.py --source-commit COMMIT_SHA --version 0.2.0-dev.2 --public-alpha` bundles the reviewed runtime and guide with checksums.
 
 Back up worlds and player data with matching JARs. The 0.2.0 reader migrates older ownership records and retains earlier FFR1–FFR4 records, including retired content. To downgrade, restore the matching complete backup rather than changing the JAR alone.
+
+## Compatibility and builds
+
+Current source targets Hytale `>=0.7.3 <0.8.0` and uses the `hytale0.7` support branch. See [build and release instructions](docs/build-and-release.md) for the SDK pin, candidate checks, versioned filenames and CurseForge workflow.
