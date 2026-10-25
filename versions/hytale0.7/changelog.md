@@ -1,10 +1,12 @@
 ---
-title: "Changelog"
+title: "Support-line changes"
 ---
 
-# Changelog {#changelog}
+# Support-line changes {#changelog}
 
-## Unreleased — door glass and building support repairs {#unreleased-door-glass-and-building-support-repairs}
+Changes described here belong to the **Hytale 0.7 support line**. Download availability, numbered release history and the changes included in a particular file are recorded on [GitHub releases](https://github.com/jkswoods/foundry-floor/releases).
+
+## Door glass and building support repairs — validation pending {#unreleased-door-glass-and-building-support-repairs}
 
 - Move the complete personnel door, including its translucent pane, through matching whole-door poses during opening and closing.
 - Declare native support faces on structural surfaces so workbenches and supported furniture can be placed on them.
@@ -13,7 +15,7 @@ title: "Changelog"
 - Add native support-matching and shipped-model regression checks. This draft candidate awaits player testing.
 - Remove obsolete invisible upper cells left by older safety-edge and floor models, while preserving the floor itself and neighbouring blocks. This repair also runs for already placed connected safety floors when their chunks load.
 
-## 0.2.0-dev.2 — public alpha, Hytale 0.7.3 {#020-dev2-public-alpha-hytale-073}
+## Factory collection and mechanisms {#020-dev2-public-alpha-hytale-073}
 
 - Published the source, player guide and versioned prerelease downloads.
 - Added a manually dispatched GitHub Pages workflow with build-only documentation pull-request checks.
@@ -29,7 +31,7 @@ title: "Changelog"
 - Corrected the client animation format and per-face glass transparency flags. Added a real glazed door opening, matching finishes on both door faces and all six wall faces, and the complete elbow rotation set.
 - Retained original model renders in the guide; current gameplay screenshots are not included yet.
 
-## 0.1.0 — earlier development preview {#010-earlier-development-preview}
+## Earlier factory foundations {#010-earlier-development-preview}
 
 - Added the original factory collection: 25 block models and a dedicated Foundry Workbench.
 - Added five bench tabs with native recipe definitions and verified native bench/catalog transaction quantities.
@@ -39,4 +41,4 @@ title: "Changelog"
 - Added original generated mechanical and workshop sound families.
 - Added the player-guide draft and reproducible source/build structure.
 
-0.2.0-dev.2 is the current public alpha. The earlier development previews remain historical releases.
+For numbered release history and file availability, use [GitHub releases](https://github.com/jkswoods/foundry-floor/releases).

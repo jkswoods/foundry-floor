@@ -4,7 +4,7 @@ title: "Documentation third-party notices"
 
 # Documentation third-party notices {#documentation-third-party-notices}
 
-The built player guide includes the following documentation software, theme and font assets supplied with MkDocs1.6.1. Original Foundry artwork and mod source are separate; these notices grant no new license for them. The downloaded game and toolchains are not included.
+Earlier guide exports included the following MkDocs software, theme and font assets; their notices are retained below. The current DocMD renderer and dependencies are recorded in the docs branch’s package lockfile. Original Foundry artwork and mod source are separate; these notices grant no new license for them. The downloaded game and toolchains are not included.
 
 ## MkDocs1.6.1 {#mkdocs161}
 

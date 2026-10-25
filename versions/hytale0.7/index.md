@@ -10,11 +10,11 @@ Build industrial factories with modular floors, connected catwalks, structural b
 
 ![The Foundry Workbench in Hytale](/assets/hytale0.7/native/foundry-workbench.png)
 
-*Earlier native design view: Foundry Floor 0.1.0 on Hytale 0.7.2. Current 0.7.3 world and crafting captures are still pending.*
+*Earlier native design view: Foundry Floor on Hytale 0.7.2. Current 0.7.3 world and crafting captures are still pending.*
 
-<div class="mod-status"><strong>0.2.0 public alpha · Hytale 0.7.3 · Java 25</strong><br>Player-tested crafting, building, mechanisms, sounds, normal save/reload and multiplayer. This is a prerelease: keep matching world/player backups.</div>
+<div class="mod-status"><strong>Hytale 0.7 guide · Java 25 · Development alpha</strong><br>Player-tested crafting, building, mechanisms, sounds, normal save/reload and multiplayer. This is a prerelease: keep matching world/player backups.</div>
 
-<div class="mod-actions"><a class="mod-button" href="https://github.com/jkswoods/foundry-floor/releases/tag/v0.2.0-dev.2">Download the alpha</a><a class="mod-button mod-button-secondary" href="getting-started/">Build your first bay</a></div>
+<div class="mod-actions"><a class="mod-button" href="https://github.com/jkswoods/foundry-floor/releases">Download the alpha</a><a class="mod-button mod-button-secondary" href="getting-started/">Build your first bay</a></div>
 
 Start with [installation](installation.md) and the [first factory bay](getting-started.md). The [recipe table](recipes.md) lists every configured input and output. The collection complements your machines; its ducts and vents are architectural props.
 

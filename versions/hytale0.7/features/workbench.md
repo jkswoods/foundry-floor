@@ -12,7 +12,7 @@ The Foundry Workbench is a separate crafting bench for the factory collection. I
 
 ![The Foundry Workbench captured in Hytale](/assets/hytale0.7/native/foundry-workbench.png)
 
-*Earlier 0.1.0 / Hytale 0.7.2 native design view. A current 0.7.3 crafting-UI capture is still pending.*
+*Earlier Hytale 0.7.2 native design view. A current 0.7.3 crafting-UI capture is still pending.*
 
 ## Make the bench {#make-the-bench}
 

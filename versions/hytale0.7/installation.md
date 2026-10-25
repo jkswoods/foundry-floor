@@ -4,13 +4,15 @@ title: "Installation"
 
 # Installation {#installation}
 
-This public alpha targets **Hytale 0.7.3** and **Java 25**. [Download 0.2.0-dev.2](https://github.com/jkswoods/foundry-floor/releases/tag/v0.2.0-dev.2) or browse the [source repository](https://github.com/jkswoods/foundry-floor).
+This guide follows the **Hytale 0.7 support line**. Published files can lag behind branch changes; read the chosen file’s release notes for the features it includes.
+
+This guide covers Foundry Floor for **Hytale 0.7 / Java 25**. Choose a compatible file from [Releases](https://github.com/jkswoods/foundry-floor/releases), checking its game-patch requirements and release notes. The [source repository](https://github.com/jkswoods/foundry-floor) provides the support branch’s build instructions.
 
 ## Install the alpha {#install-the-alpha}
 
 1. Back up the complete test world and player data together with the matching mod JARs.
 2. Close that world or stop its server normally.
-3. Put one `FoundryFloor-0.2.0-dev.jar` in Hytale's `UserData/Mods` folder. Remove the older Foundry JAR when updating so only one version remains. On macOS, this is `~/Library/Application Support/Hytale/UserData/Mods/`.
+3. Put one compatible Foundry Floor JAR in Hytale's `UserData/Mods` folder. Remove the older Foundry JAR when updating so only one version remains. On macOS, this is `~/Library/Application Support/Hytale/UserData/Mods/`.
 4. Create a separate test world and enable **FoundryFloor** in that world's Mods tab.
 5. Check the server log for the Foundry Floor startup message. It checks the native item links, workbench recipes and mechanism assets.
 
@@ -26,7 +28,7 @@ Supply your own JDK 25 and the official Hytale 0.7.3 server JAR:
 FF_JAVA_HOME=/path/to/jdk25 FF_SERVER_JAR=/path/to/HytaleServer.jar bash tools/build.sh
 ```
 
-The build runs the focused checks and creates `build/libs/FoundryFloor-0.2.0-dev.jar`. Game binaries and stock assets are separate dependencies.
+The build runs the focused checks and prints the mod JAR filename under `build/libs/`. Game binaries and stock assets are separate dependencies.
 
 ## Update or remove {#update-or-remove}
 

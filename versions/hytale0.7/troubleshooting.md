@@ -6,7 +6,7 @@ title: "Troubleshooting"
 
 ## Which file do I install? {#which-file-do-i-install}
 
-Download `FoundryFloor-0.2.0-dev.jar` from the [0.2.0-dev.2 release](https://github.com/jkswoods/foundry-floor/releases/tag/v0.2.0-dev.2). The candidate ZIP contains the same JAR and an offline guide. The authoring ZIP is for model editing and is not a game mod.
+Choose an installable mod JAR marked for your Hytale version from [Releases](https://github.com/jkswoods/foundry-floor/releases). Check that file’s release notes and compatibility requirements. The authoring ZIP is for model editing and is not a game mod.
 
 ## The Foundry Workbench recipe is missing {#the-foundry-workbench-recipe-is-missing}
 

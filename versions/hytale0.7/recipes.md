@@ -4,7 +4,7 @@ title: "Recipes"
 
 # Recipes {#recipes}
 
-These are the 27 factory recipes for 0.2.0 on Hytale 0.7.3, plus the Foundry Workbench recipe. The native crafting registry and player crafting checks passed.
+These are the 27 factory recipes for the Hytale 0.7 support line, plus the Foundry Workbench recipe. The native crafting registry and player crafting checks passed.
 
 ## Foundry Workbench {#foundry-workbench}
 

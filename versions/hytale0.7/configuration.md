@@ -4,7 +4,7 @@ title: "Configuration and access"
 
 # Configuration and access {#configuration-and-access}
 
-Version 0.2.0 has no player-facing configuration file, power requirements, bench tiers or upgrade modules. Install the mod and enable it for the intended world.
+The Hytale 0.7 support branch has no player-facing configuration file, power requirements, bench tiers or upgrade modules. Install the mod and enable it for the intended world.
 
 ## Ownership {#ownership}
 
