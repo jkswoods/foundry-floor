@@ -17,7 +17,7 @@ Build industrial factories with modular floors, connected catwalks, structural b
 
 Craft the bench at a stock Workbench with **8 Iron Ingots and 4 Copper Ingots**. Its five tabs group Floors, Walkways, Structure, Fixtures and Mechanisms. Ducts and vents are architectural props.
 
-[Install](docs/installation.md) · [Build your first bay](docs/getting-started.md) · [Recipes](docs/recipes.md) · [Mechanisms](docs/features/mechanisms.md)
+[Install](https://jkswoods.github.io/foundry-floor/hytale0.7/installation/) · [Build your first bay](https://jkswoods.github.io/foundry-floor/hytale0.7/getting-started/) · [Recipes](https://jkswoods.github.io/foundry-floor/hytale0.7/recipes/) · [Mechanisms](https://jkswoods.github.io/foundry-floor/hytale0.7/features/mechanisms/)
 
 ## Build at factory scale
 
@@ -49,12 +49,17 @@ The build runs focused core and pinned native collision checks, compiles the plu
 
 Runtime sound families were generated through the connected ElevenLabs Sound Effects workflow. Sanitized selected-take metadata is in `assets/SOURCE-AUDIO.json`; raw recordings and private development evidence are excluded from the repository.
 
-Install the pinned documentation dependency with `python3 -m pip install -r requirements-docs.txt`, then run `bash tools/build_player_guide.sh`. Set `FF_DOCS_PYTHON` to select an existing Python environment. Output is `build/player-site/`. The branded guide includes installation, recipes, connections, controls, ownership and known limits. The online guide is published at https://jkswoods.github.io/foundry-floor/ through GitHub Pages. Its workflow builds docs pull requests without deploying, and publishes from `main` on manual dispatch. The guide uses original model renders; this README also includes the earlier native Workbench capture above.
+The [versioned player guide](https://jkswoods.github.io/foundry-floor/) is maintained on the separate [`docs` branch](https://github.com/jkswoods/foundry-floor/tree/docs). In that checkout, run `npm ci --ignore-scripts`, `npm run build` and `npm run check`. Select `docs` when manually dispatching its Pages workflow.
 
-`python3 tools/package_player_guide.py --public-alpha` creates a deployable guide archive. `python3 tools/package_authoring.py` creates a separate editable model kit. These ZIPs are not game mods. `python3 tools/package_development.py --source-commit COMMIT_SHA --version 0.2.0-dev.2 --public-alpha` bundles the reviewed runtime and guide with checksums.
+`python3 tools/package_authoring.py` creates the separate editable model kit. The legacy development-bundle helper accepts an independently built guide archive from `docs`. These ZIPs are not game mods.
 
 Back up worlds and player data with matching JARs. The 0.2.0 reader migrates older ownership records and retains earlier FFR1–FFR4 records, including retired content. To downgrade, restore the matching complete backup rather than changing the JAR alone.
 
 ## Compatibility and builds
 
-Current source targets Hytale `>=0.7.3 <0.8.0` and uses the `hytale0.7` support branch. See [build and release instructions](docs/build-and-release.md) for the SDK pin, candidate checks, versioned filenames and CurseForge workflow.
+Current source targets Hytale `>=0.7.3 <0.8.0` and uses the `hytale0.7` support branch. See [build and release instructions](https://jkswoods.github.io/foundry-floor/hytale0.7/build-and-release/) for the SDK pin, candidate checks, versioned filenames and CurseForge workflow.
+
+## Contributing
+
+See [the contribution guide](CONTRIBUTING.md) for feature and bug-fix PR targets.
+Maintainers handle forward/back ports, and support-branch PRs require owner approval.
