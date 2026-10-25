@@ -1,0 +1,5 @@
+/* Mod identity overrides for the shared publication layout. */
+:root { --pub-accent: #d3a43e; --pub-accent-ink: #17272d; --pub-link: #245b6b; }
+.model-row { display:flex; flex-wrap:wrap; gap:16px; margin:24px 0; }
+.model-row img { width:220px; height:190px; object-fit:contain; background:var(--pub-chrome); }
+@media(max-width:768px) { .model-row img { width:100%; height:auto; } }

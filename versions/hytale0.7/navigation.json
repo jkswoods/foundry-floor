@@ -1,0 +1,83 @@
+[
+  {
+    "title": "Overview",
+    "path": "/",
+    "icon": "house"
+  },
+  {
+    "title": "Installation",
+    "path": "/installation",
+    "icon": "download"
+  },
+  {
+    "title": "First factory bay",
+    "path": "/getting-started",
+    "icon": "rocket"
+  },
+  {
+    "title": "The Foundry Workbench",
+    "path": "/features/workbench",
+    "icon": "hammer"
+  },
+  {
+    "title": "Block collection",
+    "children": [
+      {
+        "title": "Overview",
+        "path": "/features",
+        "icon": "house"
+      },
+      {
+        "title": "Floors and walkways",
+        "path": "/features/architecture",
+        "icon": "blocks"
+      },
+      {
+        "title": "Doors, shutters and lighting",
+        "path": "/features/mechanisms",
+        "icon": "book-open"
+      }
+    ],
+    "icon": "blocks"
+  },
+  {
+    "title": "Recipes",
+    "path": "/recipes",
+    "icon": "book-open"
+  },
+  {
+    "title": "Building progression",
+    "path": "/progression",
+    "icon": "chart-no-axes-combined"
+  },
+  {
+    "title": "Configuration and access",
+    "path": "/configuration",
+    "icon": "settings"
+  },
+  {
+    "title": "Troubleshooting",
+    "path": "/troubleshooting",
+    "icon": "circle-help"
+  },
+  {
+    "title": "Gallery",
+    "path": "/gallery",
+    "icon": "images"
+  },
+  {
+    "title": "Changelog",
+    "path": "/changelog",
+    "icon": "history"
+  },
+  {
+    "title": "Documentation notices",
+    "path": "/third-party",
+    "icon": "scale"
+  },
+  {
+    "title": "Build and releases",
+    "path": "/build-and-release",
+    "icon": "workflow"
+  }
+]
